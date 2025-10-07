@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { Home } from './componenets/home/home';
-import { MusicPage } from './componenets/music-page/music-page';
-import { MusicVideoPage } from './componenets/music-video-page/music-video-page';
+import { Home } from './components/home/home';
+import { MusicPage } from './components/music-page/music-page';
+import { MusicVideoPage } from './components/music-video-page/music-video-page';
 
-import { MoviesILike } from './componenets/stuff-i-like/movies-i-like/movies-i-like';
+import { MoviesILike } from './components/stuff-i-like/movies-i-like/movies-i-like';
 
 export const routes: Routes = [
 

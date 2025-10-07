@@ -9,7 +9,7 @@ import { Video } from '../../models/video';
 })
 export class MusicVideoPage implements OnInit {
 
-   videoArray: Video[] = [
+  videoArray: Video[] = [
       { videoName: "iwannabewithu", videoLink: "watch?v=YkP9q16iW28", videoGif: "music-video-gifs/iwbwu-gif-lowres-optimize.gif"},
       { videoName: "its not ok", videoLink: "watch?v=ppvbEUWRtaM", videoGif: "music-video-gifs/its-not-ok-gif-lowres-optimize.gif"},
       { videoName: "beside u", videoLink: "watch?v=90RplBr36UM", videoGif: "music-video-gifs/beside-u-gif-lowres-optimize.gif"}
