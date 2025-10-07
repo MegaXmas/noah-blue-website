@@ -1,0 +1,32 @@
+.tv-container {
+    position: relative;
+    width: 90%;
+    max-width: 100%; /* adjust as needed */
+    margin: 0 auto;
+}
+
+@media (max-width: 575.98px) {
+    .tv-container {
+        width: 100%;
+}
+}
+
+.crt-gif {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 2;
+    pointer-events: none;
+}
+    
+.mv-gif {
+    position: absolute;
+    top: 4%;
+    left: 25.1%;
+    width: 49%;
+    height: 85%;
+    z-index: 1;
+    object-fit: scale-down;
+    transform: scale(0.84, .69);
+}

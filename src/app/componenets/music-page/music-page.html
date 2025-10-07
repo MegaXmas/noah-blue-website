@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row justify-content-center d-flex mt-3">
+        <!-- Call the method directly in the template - Angular handles the security -->
+        <iframe 
+            data-testid="embed-iframe" 
+            [src]="getSafeSpotifyUrl()" 
+            title="spotify-embed"
+            width="100" 
+            height="152" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+<div class="container-sm mt-3">
+    <div class="row justify-content-center">
+        <div class="col d-flex p-0 gap-0 mx-auto justify-content-center album-art">
+            <a class="btn p-0" button-type="button" (click)="selectSong('whyareyousurprised')" id="whyareyousurprised-button">
+            <figure class="figure mt-0 shadow-lg">
+                <img src="album-art/whyareyousurprised.jpg" class="figure-img img-fluid rounded-1 album-art" alt="whyareyousurprised">
+                <figcaption class="figure-caption text-center p-3">whyareyousurprised?</figcaption>
+            </figure>
+            </a>
+        </div>
+
+        <div class="col d-flex p-0 gap-2 mx-auto justify-content-center album-art">
+            <a class="btn p-0" button-type="button" (click)="selectSong('iwannabewithu')" id="iwannabewithu-button">
+            <figure class="figure mt-0 shadow-lg">
+                <img src="album-art/iwannabewithu.jpeg" class="figure-img img-fluid rounded-1 album-art" alt="iwannabewithu">
+                <figcaption class="figure-caption text-center p-3" >iwannabewithu</figcaption>
+            </figure>
+            </a>
+        </div>
+
+        <div class="col d-flex p-0 gap-2 mx-auto justify-content-center album-art">
+            <a class="btn p-0" button-type="button" (click)="selectSong('beside u')" id="beside-u-button">
+            <figure class="figure mt-0 shadow-lg">
+                <img src="album-art/beside-u.jpg" class="figure-img img-fluid rounded-1 album-art" alt="beside u">
+                <figcaption class="figure-caption text-center p-3">beside u</figcaption>
+            </figure>
+            </a>
+        </div>
+
+        <div class="col d-flex p-0 gap-2 mx-auto justify-content-center album-art">
+            <a class="btn p-0" button-type="button" (click)="selectSong('its not ok')" id="its-not-ok-button">
+            <figure class="figure mt-0 shadow-lg">
+                <img src="album-art/its not ok.jpg" class="figure-img img-fluid rounded-1 album-art" alt="its not ok">
+                <figcaption class="figure-caption text-center p-3">its not ok</figcaption>
+            </figure>
+            </a>
+        </div>
+
+        <div class="col d-flex p-0 gap-2 mx-auto justify-content-center album-art">
+            <a class="btn p-0" button-type="button" (click)="selectSong('ill see u in my dreams')" id="ill-see-u-in-my-dreams-button">
+            <figure class="figure mt-0 shadow-lg">
+                <img src="album-art/ill see u in my dreams ep.jpg" class="figure-img img-fluid rounded-1 album-art" alt="ill see u in my dreams">
+                <figcaption class="figure-caption text-center p-3">ill see u in my dreams</figcaption>
+            </figure>
+            </a>
+        </div>
+    </div>
+</div>

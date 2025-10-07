@@ -1,0 +1,31 @@
+<!-- TODO: make scrolling list-group of imges via css animation like a marquee 
+<!-- TODO: make tooltips pop up when an image is hovered over, also make the animation stop during hover
+<!-- TODO: make a scrollspy associated with the list-group with descriptions and links
+<!-- TODO: make a button at the bottom of the page to turn off the autoscroll
+<!-- TODO: find out get to get data from a page like letterboxd and display it on my page -->
+<div class="container mt-3">
+    <div class="row d-flex align-items-center">
+        <div class="col-8 p-3 mt-4 align-items-center marquee-container">
+            <div id="movie-marque" class="list-group list-group-horizontal marquee-content">
+                <a class="list-group-item marquee-item list-group-item-action" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="1" href="#list-item-1">Item 1</a>
+                <a class="list-group-item marquee-item list-group-item-action" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="1" href="#list-item-2">Item 2</a>
+                <a class="list-group-item marquee-item list-group-item-action" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="1" href="#list-item-3">Item 3</a>
+                <a class="list-group-item marquee-item list-group-item-action" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="1" href="#list-item-4">Item 4</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row d-flex align-items-center">
+        <div class="col-8 p-3 mt-2 align-items-center">
+            <div id="movie-scrollspy" data-bs-spy="scroll" data-bs-target="#movie-marque" data-bs-smooth-scroll="true" class="scrollspy-example movie-scrollspy bg-body-tertiary p-3 rounded-2" tabindex="0">
+                <h4 id="list-item-1">Item 1</h4>
+                    <p>iaujdrfnbgladksjbnv;asdjhnvlajdnbvlajhdbfvljEALDI;VJBALIFDJVBADLIJFVBLAIDJFNV;ADJFV;JADFNBVJDAFVLJADBFVLKJADSBLV JBSDDLVKJBADSDLKJVBNSLDJVHBASDLKJDFBVLKZDJVBIL</p>
+                <h4 id="list-item-2">Item 2</h4>
+                    <p>iaujdrfnbgladksjbnv;asdjhnvlajdnbvlajhdbfvljEALDI;VJBALIFDJVBADLIJFVBLAIDJFNV;ADJFV;JADFNBVJDAFVLJADBFVLKJADSBLV JBSDDLVKJBADSDLKJVBNSLDJVHBASDLKJDFBVLKZDJVBIL</p>
+                <h4 id="list-item-3">Item 3</h4>
+                    <p>iaujdrfnbgladksjbnv;asdjhnvlajdnbvlajhdbfvljEALDI;VJBALIFDJVBADLIJFVBLAIDJFNV;ADJFV;JADFNBVJDAFVLJADBFVLKJADSBLV JBSDDLVKJBADSDLKJVBNSLDJVHBASDLKJDFBVLKZDJVBIL</p>
+                <h4 id="list-item-4">Item 4</h4>
+                    <p>iaujdrfnbgladksjbnv;asdjhnvlajdnbvlajhdbfvljEALDI;VJBALIFDJVBADLIJFVBLAIDJFNV;ADJFV;JADFNBVJDAFVLJADBFVLKJADSBLV JBSDDLVKJBADSDLKJVBNSLDJVHBASDLKJDFBVLKZDJVBIL</p>
+        </div>
+    </div>
+</div>  

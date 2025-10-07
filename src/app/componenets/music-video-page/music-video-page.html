@@ -1,0 +1,38 @@
+<div class="row">
+
+  <div class="col-lg-8 col-sm-12 order-lg-2 order-md-first order-sm-first p-lg-0 p-3">
+    <div class="tv-container bg-primary">
+
+      <img src="/gifs/twin-peaks-crt-cropped.gif" class="crt-gif" alt="crt-display" aria-details="a crt display which clips of a music video are playing">
+
+        <a [href]="getVideoLink()" target="_blank" rel="noopener noreferrer">
+         <img [src]="currentVideoGif()" class="mv-gif" alt="selected-mv" aria-details="current music video selected">
+        </a>
+    </div>
+
+  </div>
+
+
+
+  <div class="list-group col-lg-2 col-md-6 col-sm-6 order-lg-3 order-md-2 order-sm-2 p-lg-0 p-2">
+    
+    <div class="btn-group-vertical" role="group" id="video-shelf" aria-label="vertical button group">
+      <button type="button" class="" id="iwannabewithyou-button" (click)="selectVideo('iwannabewithu')" aria-current="true">iwannabewithu</button>
+      <button type="button" class="" id="its-not-ok-button" (click)="selectVideo('its not ok')" aria-current="false">its not ok</button>
+      <button type="button" class="" id="beside-u-button" (click)="selectVideo('beside u')" aria-current="false">beside u</button>
+    </div>
+
+  </div>
+
+  <div class="col-lg-2 col-md-6 col-sm-6 order-lg-1 order-md-last order-sm-last p-lg-0 p-2">
+  
+    <ul class="list-group" id="sidebar">
+      <li class="list-group-item">sidebar 1</li>
+      <li class="list-group-item">sidebar 2</li>
+      <li class="list-group-item">sidebar 3</li>
+    </ul>
+
+  </div>
+
+</div>
+<!-- scale down gifs for better loading times -->

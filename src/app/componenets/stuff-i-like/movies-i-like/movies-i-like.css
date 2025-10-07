@@ -1,0 +1,49 @@
+.marquee-container {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 15px 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+
+    animation-name: marquee;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+
+    display: flex;
+}
+
+.marquee-item {
+
+    padding: 0 20px;
+    font-size: 1.4rem;
+    color: #fefeff;
+    background-color: #477d52;
+
+    text-align: center;
+    align-items: center;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+.marquee-item:current {
+    animation-play-state: paused;
+}
+
+.movie-scrollspy {
+    height: 200px;
+    overflow-y: scroll;
+}
