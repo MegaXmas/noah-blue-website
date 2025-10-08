@@ -25,6 +25,9 @@
     color: #fefeff;
     background-color: #477d52;
 
+    height: 50%;
+    width: 50%;
+
     text-align: center;
     align-items: center;
 }
@@ -39,7 +42,7 @@
     animation-play-state: paused;
 }
 
-.marquee-item:current {
+.marquee-item:focus .marquee-content {
     animation-play-state: paused;
 }
 

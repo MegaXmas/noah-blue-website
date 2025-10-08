@@ -1,21 +1,48 @@
 <!-- TODO: make scrolling list-group of imges via css animation like a marquee 
-<!-- TODO: make tooltips pop up when an image is hovered over, also make the animation stop during hover
 <!-- TODO: make a scrollspy associated with the list-group with descriptions and links
-<!-- TODO: make a button at the bottom of the page to turn off the autoscroll
-<!-- TODO: find out get to get data from a page like letterboxd and display it on my page -->
+<!-- TODO: make a button at the bottom of the page to turn off the autoscroll -->
+<!-- TODO: create the css for displaying information about the movie when hovering -->
+
+
 <div class="container mt-3">
     <div class="row d-flex align-items-center">
+
         <div class="col-8 p-3 mt-4 align-items-center marquee-container">
             <div id="movie-marque" class="list-group list-group-horizontal marquee-content">
-                <a class="list-group-item marquee-item list-group-item-action" placement="top" ngbTooltip="Tooltip on top" data-bs-title="1" href="#list-item-1">Item 1</a>
-                <a class="list-group-item marquee-item list-group-item-action" placement="top" ngbTooltip="Tooltip on top" data-bs-title="1" href="#list-item-2">Item 2</a>
-                <a class="list-group-item marquee-item list-group-item-action" placement="top" ngbTooltip="Tooltip on top" data-bs-title="1" href="#list-item-3">Item 3</a>
-                <a class="list-group-item marquee-item list-group-item-action" placement="top" ngbTooltip="Tooltip on top" data-bs-title="1" href="#list-item-4">Item 4</a>
+                <img [src]="getMoviePoster(0)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(0)" (focus)="setAllCurrentMovieData(0)" [alt]="getMovieTitle(0)">
+                <img [src]="getMoviePoster(1)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(1)" (focus)="setAllCurrentMovieData(1)" [alt]="getMovieTitle(1)">
+                <img [src]="getMoviePoster(2)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(2)" (focus)="setAllCurrentMovieData(2)" [alt]="getMovieTitle(2)">
+                <img [src]="getMoviePoster(3)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(3)" (focus)="setAllCurrentMovieData(3)" [alt]="getMovieTitle(3)">
+                <img [src]="getMoviePoster(4)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(4)" (focus)="setAllCurrentMovieData(4)" [alt]="getMovieTitle(4)">
+                <img [src]="getMoviePoster(5)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(5)" (focus)="setAllCurrentMovieData(5)" [alt]="getMovieTitle(5)">
+                <img [src]="getMoviePoster(6)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(6)" (focus)="setAllCurrentMovieData(6)" [alt]="getMovieTitle(6)">
+                <img [src]="getMoviePoster(7)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(7)" (focus)="setAllCurrentMovieData(7)" [alt]="getMovieTitle(7)">
+                <img [src]="getMoviePoster(8)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(8)" (focus)="setAllCurrentMovieData(8)" [alt]="getMovieTitle(8)">
+                <img [src]="getMoviePoster(9)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(9)" (focus)="setAllCurrentMovieData(9)" [alt]="getMovieTitle(9)">
+                <img [src]="getMoviePoster(10)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(10)" (focus)="setAllCurrentMovieData(10)" [alt]="getMovieTitle(10)">
+                <img [src]="getMoviePoster(11)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(11)" (focus)="setAllCurrentMovieData(11)" [alt]="getMovieTitle(11)">
+                <img [src]="getMoviePoster(12)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(12)" (focus)="setAllCurrentMovieData(12)" [alt]="getMovieTitle(12)">
+                <img [src]="getMoviePoster(13)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(13)" (focus)="setAllCurrentMovieData(13)" [alt]="getMovieTitle(13)">
+                <img [src]="getMoviePoster(14)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(14)" (focus)="setAllCurrentMovieData(14)" [alt]="getMovieTitle(14)">
+                <img [src]="getMoviePoster(15)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(15)" (focus)="setAllCurrentMovieData(15)" [alt]="getMovieTitle(15)">
+                <img [src]="getMoviePoster(16)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(16)" (focus)="setAllCurrentMovieData(16)" [alt]="getMovieTitle(16)">
+                <img [src]="getMoviePoster(17)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(17)" (focus)="setAllCurrentMovieData(17)" [alt]="getMovieTitle(17)">
+                <img [src]="getMoviePoster(18)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(18)" (focus)="setAllCurrentMovieData(18)" [alt]="getMovieTitle(18)">
+                <img [src]="getMoviePoster(19)" class="list-group-item marquee-item list-group-item-action" (mouseover)="setAllCurrentMovieData(19)" (focus)="setAllCurrentMovieData(19)" [alt]="getMovieTitle(19)">
             </div>
         </div>
     </div>
 
+
     <div class="row d-flex align-items-center">
+        <h2 class="fs-1 text-center border border-3 p-0" id="movie-header">  {{ currentMovieTitle() }} </h2> 
+        <p class="fs-4 border border-3 mt-0" id="movie-review"> {{ currentMovieReview() }} </p>
+    </div>
+
+</div>
+
+
+    <!-- <div class="row d-flex align-items-center">
         <div class="col-8 p-3 mt-2 align-items-center">
             <div id="movie-scrollspy" data-bs-spy="scroll" data-bs-target="#movie-marque" data-bs-smooth-scroll="true" class="scrollspy-example movie-scrollspy bg-body-tertiary p-3 rounded-2" tabindex="0">
                 <h4 id="list-item-1">Item 1</h4>
@@ -28,4 +55,4 @@
                     <p>iaujdrfnbgladksjbnv;asdjhnvlajdnbvlajhdbfvljEALDI;VJBALIFDJVBADLIJFVBLAIDJFNV;ADJFV;JADFNBVJDAFVLJADBFVLKJADSBLV JBSDDLVKJBADSDLKJVBNSLDJVHBASDLKJDFBVLKZDJVBIL</p>
         </div>
     </div>
-</div>  
+</div>   -->
