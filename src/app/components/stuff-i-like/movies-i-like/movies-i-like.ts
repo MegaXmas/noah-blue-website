@@ -169,11 +169,6 @@ export class MoviesILike implements OnInit{
       moviePoster: "https://a.ltrbxd.com/resized/sm/upload/a3/0q/kf/h8/jUFjMoLh8T2CWzHUSjKCojI5SHu-0-2000-0-3000-crop.jpg?v=6285ee260e", 
       movieLink: "https://letterboxd.com/film/harry-potter-and-the-prisoner-of-azkaban/", 
       movieReview: ""},
-
-          { movieTitle:"", 
-      moviePoster: "", 
-      movieLink: "", 
-      movieReview: ""},
   ]
 
 
@@ -184,10 +179,13 @@ export class MoviesILike implements OnInit{
 
 
   ngOnInit(): void {
-    console.log(this.movieArray.length - 1 + " movies displayed")
+    console.log(this.movieArray.length + " movies displayed")
 
     this.currentMovieTitle.set("Hover over a movie for my thoughts!")
     this.currentMovieReview.set("*yapping*")
+
+    const marqueeDuration = this.movieArray.length * 1;
+    document.documentElement.style.setProperty('--marquee-duration', `${marqueeDuration}s`)
   };
 
 
@@ -236,5 +234,15 @@ export class MoviesILike implements OnInit{
     this.setCurrentMoviePoster(index);
     this.setCurrentMovieLink(index);
     this.setCurrentMovieReview(index);
+  }
+
+  pauseAnimation() {
+    const track = document.querySelector('.marquee-track') as HTMLElement;
+    if (track) track.style.animationPlayState = 'paused';
+  }
+
+  resumeAnimation() {
+    const track = document.querySelector('.marquee-track') as HTMLElement;
+    if (track) track.style.animationPlayState = 'running';
   }
 }

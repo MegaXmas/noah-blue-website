@@ -1,25 +1,3 @@
-/* .marquee-container {
-
-    width: max-content!important;
-    display: flex !important;
-    background-color: #f8f9fa;
-    padding: 15px 0;
-
-} */
-
-/* .marquee-content {
-
-    flex: 0 0 auto;
-
-    animation-name: marquee;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-
-
-} */
-
 .marquee-wrapper {
     padding: 10px;
     background-color: rgb(54, 163, 105);
@@ -36,29 +14,19 @@
     width: max-content;
     padding: 5px;
     max-width: 20%;
-
 }
 
 .marquee-track {
     display: flex;
 
     animation-name: marquee;
-    animation-duration: 10s;
+    animation-duration: 37s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
 }
 
 @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
-
-.marquee-wrapper .marquee-item:focus .marquee-track {
-    animation-play-state: paused;
-}
-
-.marquee-wrapper .marquee-item:hover .marquee-track {
-    animation-play-state: paused;
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
