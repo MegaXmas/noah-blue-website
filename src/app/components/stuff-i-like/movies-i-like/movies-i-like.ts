@@ -177,14 +177,17 @@ export class MoviesILike implements OnInit{
   ]
 
 
-  currentMovieTitle: WritableSignal<string> = signal("Hover over a movie for my thoughts!");
+  currentMovieTitle: WritableSignal<string> = signal("");
   currentMoviePoster: WritableSignal<string> = signal("");
   currentMovieLink: WritableSignal<string> = signal("");
-  currentMovieReview: WritableSignal<string> = signal("*yapping*");
+  currentMovieReview: WritableSignal<string> = signal("");
 
 
   ngOnInit(): void {
     console.log(this.movieArray.length - 1 + " movies displayed")
+
+    this.currentMovieTitle.set("Hover over a movie for my thoughts!")
+    this.currentMovieReview.set("*yapping*")
   };
 
 
@@ -229,7 +232,6 @@ export class MoviesILike implements OnInit{
   }
   
   setAllCurrentMovieData(index: number): void {
-    this.setCurrentMovieTitle(index);
     this.setCurrentMovieTitle(index);
     this.setCurrentMoviePoster(index);
     this.setCurrentMovieLink(index);
