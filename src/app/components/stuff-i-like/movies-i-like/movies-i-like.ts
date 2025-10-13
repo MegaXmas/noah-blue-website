@@ -1,17 +1,19 @@
-import { Component, signal, WritableSignal, OnInit } from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
-import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { FavoriteMovie } from '../../../models/favorite-movie';
 
 
 @Component({
   selector: 'app-movies-i-like',
-  imports: [NgbTooltipModule, ],
+  imports: [],
   templateUrl: './movies-i-like.html',
   styleUrl: './movies-i-like.css'
 })
 export class MoviesILike implements OnInit{
   
+  private readonly platformId = inject(PLATFORM_ID);
+
   movieArray: FavoriteMovie[] =  [
     { movieTitle: "Twin Peaks: Fire Walk with Me", 
       moviePoster: "https://a.ltrbxd.com/resized/sm/upload/xb/qg/78/zd/tOQekTHJmVCgfUYXTb6dLAu6l8W-0-2000-0-3000-crop.jpg?v: 647348df81", 
@@ -179,14 +181,55 @@ export class MoviesILike implements OnInit{
 
 
   ngOnInit(): void {
-    console.log(this.movieArray.length + " movies displayed")
+    console.log(this.movieArray.length - 1 + " movies displayed")
 
     this.currentMovieTitle.set("Hover over a movie for my thoughts!")
     this.currentMovieReview.set("*yapping*")
 
-    const marqueeDuration = this.movieArray.length * 1;
-    document.documentElement.style.setProperty('--marquee-duration', `${marqueeDuration}s`)
-  };
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
+        this.calculateMarqueeAnimation();
+      }, 100);
+
+      window.addEventListener('resize', () => {
+        this.calculateMarqueeAnimation();
+      });
+    }
+  }
+
+  calculateMarqueeAnimation() {
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    const track = document.querySelector('.marquee-track') as HTMLElement;
+    
+    if (track) {
+      // Get the FULL width of the entire track (both sets of images)
+      const trackWidth = track.scrollWidth;
+      
+      // Move exactly half the distance (one complete set)
+      const scrollDistance = trackWidth / 2;
+      
+      document.documentElement.style.setProperty('--scroll-distance', `-${scrollDistance}px`);
+      
+      // Set animation duration
+      const duration = this.movieArray.length * 0.5;
+      document.documentElement.style.setProperty('--marquee-duration', `${duration}s`);
+    }
+  }
+
+  pauseAnimation() {
+    if (isPlatformBrowser(this.platformId)) {
+      const track = document.querySelector('.marquee-track') as HTMLElement;
+      if (track) track.style.animationPlayState = 'paused';
+    }
+  }
+
+  resumeAnimation() {
+    if (isPlatformBrowser(this.platformId)) {
+      const track = document.querySelector('.marquee-track') as HTMLElement;
+      if (track) track.style.animationPlayState = 'running';
+    }
+  }
 
 
   getMovieTitle(index: number): string {
@@ -236,13 +279,4 @@ export class MoviesILike implements OnInit{
     this.setCurrentMovieReview(index);
   }
 
-  pauseAnimation() {
-    const track = document.querySelector('.marquee-track') as HTMLElement;
-    if (track) track.style.animationPlayState = 'paused';
-  }
-
-  resumeAnimation() {
-    const track = document.querySelector('.marquee-track') as HTMLElement;
-    if (track) track.style.animationPlayState = 'running';
-  }
 }

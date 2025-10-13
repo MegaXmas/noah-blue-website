@@ -1,35 +1,43 @@
-<!-- TODO: make scrolling list-group of imges via css animation like a marquee 
-<!-- TODO: make a scrollspy associated with the list-group with descriptions and links
 <!-- TODO: make a button at the bottom of the page to turn off the autoscroll -->
 <!-- TODO: create the css for displaying information about the movie when hovering -->
 
 
 <div class="container mt-3">
     <div class="row justify-content-center align-self-center">
-        <div class="col-8 p-3 mt-4 marquee-wrapper">
-            <div id="movie-marque" class="list-group list-group-horizontal justify-content-center align-self-center marquee-content">
-                <div class="marquee-track">
-                    <!-- First set -->
-                    @for (movie of movieArray; track movie.movieTitle; let i = $index) {
-                        <img 
-                            [src]="movie.moviePoster" 
-                            class="list-group-item marquee-item list-group-item-action" 
-                            (mouseover)="setAllCurrentMovieData(i); pauseAnimation()" 
-                            (mouseleave)="resumeAnimation()"
-                            (focus)="setAllCurrentMovieData(i); pauseAnimation()"
-                            [alt]="movie.movieTitle">
-                    }
-                    <!-- Duplicate set for seamless loop -->
-                    @for (movie of movieArray; track movie.movieTitle; let i = $index) {
-                        <img 
-                            [src]="movie.moviePoster" 
-                            class="list-group-item marquee-item list-group-item-action" 
-                            (mouseover)="setAllCurrentMovieData(i); pauseAnimation()" 
-                            (mouseleave)="resumeAnimation()"
-                            (focus)="setAllCurrentMovieData(i); pauseAnimation()"
-                            [alt]="movie.movieTitle">
-                    }
+
+        <div class="col-8 marquee-wrapper-outer">
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <div id="movie-marque" class="list-group list-group-horizontal justify-content-center align-self-center marquee-content">
+
+                        <div class="marquee-track">
+                            
+                            @for (movie of movieArray; track movie.movieTitle; let i = $index) {
+                                <img 
+                                    [src]="movie.moviePoster" 
+                                    class="marquee-item list-group-item list-group-item-action" 
+                                    (mouseover)="setAllCurrentMovieData(i); pauseAnimation()" 
+                                    (focus)="setAllCurrentMovieData(i); pauseAnimation()"
+                                    (mouseleave)="resumeAnimation()"
+                                    [alt]="movie.movieTitle"
+                                >
+                            }
+                            
+                            @for (movie of movieArray; track movie.movieTitle; let i = $index) {
+                                <img 
+                                    [src]="movie.moviePoster" 
+                                    class="marquee-item list-group-item list-group-item-action" 
+                                    (mouseover)="setAllCurrentMovieData(i); pauseAnimation()" 
+                                    (focus)="setAllCurrentMovieData(i); pauseAnimation()"
+                                    (mouseleave)="resumeAnimation()"
+                                    [alt]="movie.movieTitle"
+                                >
+                            }
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -39,21 +47,3 @@
         <h2 class="fs-1 text-center border border-3 p-0" id="movie-header">  {{ currentMovieTitle() }} </h2> 
         <p class="fs-4 border border-3 mt-0" id="movie-review"> {{ currentMovieReview() }} </p>
     </div>
-
-
-
-
-    <!-- <div class="row d-flex align-items-center">
-        <div class="col-8 p-3 mt-2 align-items-center">
-            <div id="movie-scrollspy" data-bs-spy="scroll" data-bs-target="#movie-marque" data-bs-smooth-scroll="true" class="scrollspy-example movie-scrollspy bg-body-tertiary p-3 rounded-2" tabindex="0">
-                <h4 id="list-item-1">Item 1</h4>
-                    <p>iaujdrfnbgladksjbnv;asdjhnvlajdnbvlajhdbfvljEALDI;VJBALIFDJVBADLIJFVBLAIDJFNV;ADJFV;JADFNBVJDAFVLJADBFVLKJADSBLV JBSDDLVKJBADSDLKJVBNSLDJVHBASDLKJDFBVLKZDJVBIL</p>
-                <h4 id="list-item-2">Item 2</h4>
-                    <p>iaujdrfnbgladksjbnv;asdjhnvlajdnbvlajhdbfvljEALDI;VJBALIFDJVBADLIJFVBLAIDJFNV;ADJFV;JADFNBVJDAFVLJADBFVLKJADSBLV JBSDDLVKJBADSDLKJVBNSLDJVHBASDLKJDFBVLKZDJVBIL</p>
-                <h4 id="list-item-3">Item 3</h4>
-                    <p>iaujdrfnbgladksjbnv;asdjhnvlajdnbvlajhdbfvljEALDI;VJBALIFDJVBADLIJFVBLAIDJFNV;ADJFV;JADFNBVJDAFVLJADBFVLKJADSBLV JBSDDLVKJBADSDLKJVBNSLDJVHBASDLKJDFBVLKZDJVBIL</p>
-                <h4 id="list-item-4">Item 4</h4>
-                    <p>iaujdrfnbgladksjbnv;asdjhnvlajdnbvlajhdbfvljEALDI;VJBALIFDJVBADLIJFVBLAIDJFNV;ADJFV;JADFNBVJDAFVLJADBFVLKJADSBLV JBSDDLVKJBADSDLKJVBNSLDJVHBASDLKJDFBVLKZDJVBIL</p>
-        </div>
-    </div>
-</div>   -->
