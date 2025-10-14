@@ -1,4 +1,4 @@
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteMovie } from '../../../models/favorite-movie';
@@ -10,9 +10,10 @@ import { FavoriteMovie } from '../../../models/favorite-movie';
   templateUrl: './movies-i-like.html',
   styleUrl: './movies-i-like.css'
 })
-export class MoviesILike implements OnInit{
+export class MoviesILike implements OnInit, OnDestroy {
   
   private readonly platformId = inject(PLATFORM_ID);
+  private resizeListener?: () => void;
 
   movieArray: FavoriteMovie[] =  [
     { movieTitle: "Twin Peaks: Fire Walk with Me", 
@@ -181,19 +182,22 @@ export class MoviesILike implements OnInit{
 
 
   ngOnInit(): void {
-    console.log(this.movieArray.length - 1 + " movies displayed")
-
+    console.log(this.movieArray.length + " movies displayed")
     this.currentMovieTitle.set("Hover over a movie for my thoughts!")
     this.currentMovieReview.set("*yapping*")
-
+    
     if (isPlatformBrowser(this.platformId)) {
+
+      this.resizeListener = () => {
+        this.calculateMarqueeAnimation();
+      };
+      
       setTimeout(() => {
         this.calculateMarqueeAnimation();
       }, 100);
+      
 
-      window.addEventListener('resize', () => {
-        this.calculateMarqueeAnimation();
-      });
+      window.addEventListener('resize', this.resizeListener);
     }
   }
 
@@ -203,16 +207,16 @@ export class MoviesILike implements OnInit{
     const track = document.querySelector('.marquee-track') as HTMLElement;
     
     if (track) {
-      // Get the FULL width of the entire track (both sets of images)
+      
       const trackWidth = track.scrollWidth;
       
-      // Move exactly half the distance (one complete set)
+    
       const scrollDistance = trackWidth / 2;
       
       document.documentElement.style.setProperty('--scroll-distance', `-${scrollDistance}px`);
       
-      // Set animation duration
-      const duration = this.movieArray.length * 0.5;
+      
+      const duration = this.movieArray.length * 0.9;
       document.documentElement.style.setProperty('--marquee-duration', `${duration}s`);
     }
   }
@@ -258,17 +262,17 @@ export class MoviesILike implements OnInit{
   }
 
   setCurrentMoviePoster(index: number): WritableSignal<string> {
-    this.currentMovieTitle.set(this.getMoviePoster(index))
+    this.currentMoviePoster.set(this.getMoviePoster(index))
     return this.currentMoviePoster
   }
 
   setCurrentMovieLink(index: number): WritableSignal<string> {
-    this.currentMovieTitle.set(this.getMovieLink(index))
+    this.currentMovieLink.set(this.getMovieLink(index))
     return this.currentMovieLink
   }
     
   setCurrentMovieReview(index: number): WritableSignal<string> {
-    this.currentMovieTitle.set(this.getMovieReview(index))
+    this.currentMovieReview.set(this.getMovieReview(index))
     return this.currentMovieReview
   }
   
@@ -277,6 +281,12 @@ export class MoviesILike implements OnInit{
     this.setCurrentMoviePoster(index);
     this.setCurrentMovieLink(index);
     this.setCurrentMovieReview(index);
+  }
+
+ngOnDestroy(): void {
+    if (isPlatformBrowser(this.platformId) && this.resizeListener) {
+      window.removeEventListener('resize', this.resizeListener);
+    }
   }
 
 }
