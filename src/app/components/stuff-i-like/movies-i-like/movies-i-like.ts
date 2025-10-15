@@ -16,10 +16,15 @@ export class MoviesILike implements OnInit, OnDestroy {
   private resizeListener?: () => void;
 
   movieArray: FavoriteMovie[] =  [
-    { movieTitle: "Twin Peaks: Fire Walk with Me", 
-      moviePoster: "https://a.ltrbxd.com/resized/sm/upload/xb/qg/78/zd/tOQekTHJmVCgfUYXTb6dLAu6l8W-0-2000-0-3000-crop.jpg?v: 647348df81", 
-      movieLink:"https://letterboxd.com/film/twin-peaks-fire-walk-with-me/", 
-      movieReview: ""},
+    { movieTitle: "Twin Peaks: Fire Walk with Me",
+      moviePoster: "https://a.ltrbxd.com/resized/sm/upload/xb/qg/78/zd/tOQekTHJmVCgfUYXTb6dLAu6l8W-0-2000-0-3000-crop.jpg?v=647348df81",
+      movieLink: "https://letterboxd.com/film/twin-peaks-fire-walk-with-me/",
+      movieReview: `this movie is just perfect in every single aspect. the writing, directing, use of previously established symbolic imagery– just everything. \
+                    there are so many great surreal scenes that are downright horrifying. \
+                    i am fascinated by the lore and mythology of twin peaks, and "fire walk with me" has my favorite portrayals, hints, and reveals of the series's famously impenetrable secrets. \
+                    sheryl lee brilliantly depicts the drug addled psychosis and bipolar frenzy of a girl who exists halfway within reality, and halfway in a dream. \
+                    laura palmer almost literally, lives in the dream we dream when we watch this movie. \
+                    \n"we are like the spider. we weave our life and then move along in it. we are like the dreamer who dreams and then lives in the dream." -david lynch` },
     { movieTitle: "Perfect Blue", 
       moviePoster: "https://a.ltrbxd.com/resized/film-poster/4/6/1/7/5/46175-perfect-blue-0-2000-0-3000-crop.jpg?v=1ed5878cce", 
       movieLink: "https://letterboxd.com/film/perfect-blue/", 

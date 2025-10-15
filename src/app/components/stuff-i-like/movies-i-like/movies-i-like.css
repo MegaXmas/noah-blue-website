@@ -1,3 +1,9 @@
+/* TODO create highlight animations on hover */
+/* TODO change systle to showing title and a design on hover (maybe some static or something) */
+
+
+/* ======== MARQUEE STUFF====== */
+
 .marquee-wrapper-outer {
     padding: 10px;
     background-color: rgb(54, 163, 105);
@@ -19,16 +25,10 @@
 .marquee-item {
     width: 200px;
     height: 300px;
-    padding: 0; /* Remove padding */
-    margin: 5px; /* Use margin instead */
+    padding: 0;
+    margin: 5px;
     object-fit: cover;
-}
-
-@media (max-width: 768px) {
-    .marquee-item {
-        width: 150px;
-        height: 225px;
-    }
+    border: 5px solid green;
 }
 
 .marquee-track {
@@ -43,4 +43,48 @@
     100% { 
         transform: translateX(var(--scroll-distance, -50%)); 
     }
+}
+
+/* ======MOVIE REVIEW SECTION====== */
+
+.letterboxd-profile {
+    width: 150px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(93, 147, 228); 
+    border-radius: 15%;
+}
+
+.currentMoviePoster {
+    width: 204px;
+    height: 308px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: gold; 
+    border-radius: 8px;
+    margin: 5px;
+}
+
+/* =======MEDIA FLEX====== */
+
+@media (max-width: 768px) {
+    .marquee-item {
+        width: 150px;
+        height: 225px;
+    }
+    .currentMoviePoster {
+        width: 152px;
+        height: 229px;
+        border-width: 3px;
+        border-radius: 4px;
+    }
+    .currentMovieTitle {
+        text-align: right;
+    }
+}
+
+/* ======MISC====== */
+
+p {
+white-space: pre-line;
 }
