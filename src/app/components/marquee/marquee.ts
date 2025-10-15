@@ -1,4 +1,4 @@
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input} from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input, AfterViewInit} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';
@@ -8,16 +8,16 @@ import { FavoriteStuff } from '../../models/favorite-stuff';
   selector: 'app-marquee',
   imports: [],
   templateUrl: './marquee.html',
-  styleUrl: './marquee.css'
+  styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css']
 })
-export class Marquee implements OnInit, OnDestroy {
+export class Marquee implements OnInit, OnDestroy, AfterViewInit {
 
   private readonly platformId = inject(PLATFORM_ID);
   private resizeListener?: () => void;
   private resumeTimeout?: number;
 
 
-  stuffArray = input.required<FavoriteStuff[]>();
+  stuffArray = input<FavoriteStuff[]>();
 
   currentStuffTitle: WritableSignal<string> = signal("");
   currentStuffArt: WritableSignal<string> = signal("");
@@ -27,12 +27,15 @@ export class Marquee implements OnInit, OnDestroy {
 
   relevantProfile = input.required<string>();
   profilePicture = input.required<string>();
+  profilePictureClass = input.required<string>();
+
+  relevantImgClass = input.required<string>();
 
 
 // ======ON INIT/DESTROY======
   ngOnInit(): void {
 
-    console.log(this.stuffArray.length + " stuffs displayed")
+    console.log(this.stuffArray.length + " stuff displayed")
     this.currentStuffTitle.set("Hover over a stuff for my thoughts!")
     this.currentStuffReview.set("*yapping*")
     
@@ -49,6 +52,12 @@ export class Marquee implements OnInit, OnDestroy {
 
       window.addEventListener('resize', this.resizeListener);
     }
+  }
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId))
+
+      this.calculateMarqueeAnimation()
   }
 
   ngOnDestroy(): void {
@@ -114,7 +123,7 @@ export class Marquee implements OnInit, OnDestroy {
 
   // ======ARRAY DATA METHODS======
   setAllCurrentStuffData(index: number): void {
-    const selectedStuff = this.stuffArray()[index];
+    const selectedStuff = this.stuffArray()![index];
     this.currentStuffTitle.set(selectedStuff.stuffTitle);
     this.currentStuffArt.set(selectedStuff.stuffArt);
     this.currentStuffLink.set(selectedStuff.stuffLink);

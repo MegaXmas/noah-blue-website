@@ -46,15 +46,19 @@
             <div class="container">
             <div class=" row align-items-center">
                 <div class="col-4">
-                    <a [href]="currentStuffLink()" target="_blank" rel="noopener noreferrer"> <img class="currentStuffArt" [src]="currentStuffArt()" [alt]="" [id]="currentStuffTitle() + 'art'"></a>
+                    <a [href]="currentStuffLink()" target="_blank" rel="noopener noreferrer"> 
+                        <img [class]="relevantImgClass()" [src]="currentStuffArt()" [alt]="currentStuffTitle() + 'art'" [id]="currentStuffTitle() + 'art'">
+                    </a>
                 </div>
 
-                <div class="col-4 text-center currentStuffTitle">
-                    <a [href]="currentStuffLink()" target="_blank" rel="noopener noreferrer"> {{ currentStuffTitle() }} </a>
+                <div class="col-4 text-center current-stuff-title">
+                    <a [href]="currentStuffLink()" [class]="" target="_blank" rel="noopener noreferrer"> {{ currentStuffTitle() }} </a>
                 </div>
 
                 <div class="col-4">
-                    <a [href]="relevantProfile()" target="_blank" rel="noopener noreferrer"> <img class="relevant-profile" [src]="profilePicture()" alt="relevant-profile"></a>
+                    <a [href]="relevantProfile()" target="_blank" rel="noopener noreferrer"> 
+                        <img [class]=" profilePictureClass()" [src]="profilePicture()" alt="relevant-profile">
+                    </a>
                 </div>
             </div>
             </div>
