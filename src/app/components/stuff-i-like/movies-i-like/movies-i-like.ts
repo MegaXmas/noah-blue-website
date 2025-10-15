@@ -1,5 +1,4 @@
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, ViewChild, AfterViewInit} from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, signal, WritableSignal, OnInit, OnDestroy} from '@angular/core';
 
 import { FavoriteMovie } from '../../../models/favorite-movie';
 
@@ -13,13 +12,8 @@ import { FavoriteStuff } from '../../../models/favorite-stuff';
   templateUrl: './movies-i-like.html',
   styleUrl: './movies-i-like.css'
 })
-export class MoviesILike implements OnInit, OnDestroy, AfterViewInit {
+export class MoviesILike implements OnInit, OnDestroy {
   
-  private readonly platformId = inject(PLATFORM_ID);
-  private resizeListener?: () => void;
-  private resumeTimeout?: number;
-
-  @ViewChild('marquee') childMarquee!: Marquee;
 
   movieArray: FavoriteMovie[] =  [
     { movieTitle: "Twin Peaks: Fire Walk with Me",
@@ -194,6 +188,9 @@ export class MoviesILike implements OnInit, OnDestroy, AfterViewInit {
     }));
   }
 
+  letterboxdProfile: string = "https://letterboxd.com/MegaXmas/"
+  letterboxdProfilePic: string = "https://a.ltrbxd.com/resized/avatar/upload/1/1/7/8/0/4/9/9/shard/avtr-0-220-0-220-crop.jpg?v=4fb09fb5fb"
+
   currentMovieTitle: WritableSignal<string> = signal("");
   currentMoviePoster: WritableSignal<string> = signal("");
   currentMovieLink: WritableSignal<string> = signal("");
@@ -203,134 +200,11 @@ export class MoviesILike implements OnInit, OnDestroy, AfterViewInit {
   ngOnInit(): void {
 
     console.log(this.movieArray.length + " movies displayed")
-    this.currentMovieTitle.set("Hover over a movie for my thoughts!")
-    this.currentMovieReview.set("*yapping*")
-    
-    if (isPlatformBrowser(this.platformId)) {
-
-
-      this.resizeListener = () => {
-        this.calculateMarqueeAnimation();
-      };
-      
-      setTimeout(() => {
-        this.calculateMarqueeAnimation();
-      }, 100);
-      
-
-      window.addEventListener('resize', this.resizeListener);
-    }
-  }
-
-  ngAfterViewInit() {
-
-  }
-
-  calculateMarqueeAnimation() {
-    if (!isPlatformBrowser(this.platformId)) return;
-
-    const track = document.querySelector('.marquee-track') as HTMLElement;
-    
-    if (track) {
-      
-      const trackWidth = track.scrollWidth;
-      
-    
-      const scrollDistance = trackWidth / 2;
-      
-      document.documentElement.style.setProperty('--scroll-distance', `-${scrollDistance}px`);
-      
-      
-      const duration = this.movieArray.length * 0.9;
-      document.documentElement.style.setProperty('--marquee-duration', `${duration}s`);
-    }
-  }
-
-  pauseAnimation() {
-    if (this.resumeTimeout) {
-      clearTimeout(this.resumeTimeout);
-      this.resumeTimeout = undefined;
-    }
-
-    if (isPlatformBrowser(this.platformId)) {
-      const track = document.querySelector('.marquee-track') as HTMLElement;
-      if (track) track.style.animationPlayState = 'paused';
-    }
-  }
-
-  resumeAnimation() {
-    if (this.resumeTimeout) {
-      clearTimeout(this.resumeTimeout);
-    }
-    
-    this.resumeTimeout = window.setTimeout(() => {
-      if (isPlatformBrowser(this.platformId)) {
-        const track = document.querySelector('.marquee-track') as HTMLElement;
-        if (track) track.style.animationPlayState = 'running';
-      }
-      this.resumeTimeout = undefined;
-    }, 250);
-  }
-
-  getMovieTitle(index: number): string {
-    const movie = this.movieArray[index]; 
-    return movie.movieTitle
-    }
-
-  getMoviePoster(index: number): string {
-    const movie = this.movieArray[index]; 
-    return movie.moviePoster
-    }
-  
-  getMovieLink(index: number): string {
-    const movie = this.movieArray[index]; 
-    return movie.movieLink
-    }
-
-  getMovieReview(index: number): string {
-    const movie = this.movieArray[index]; 
-    return movie.movieReview
-    }
-
-  setCurrentMovieTitle(index: number): WritableSignal<string> {
-    this.currentMovieTitle.set(this.getMovieTitle(index))
-    return this.currentMovieTitle
-  }
-
-  setCurrentMoviePoster(index: number): WritableSignal<string> {
-    this.currentMoviePoster.set(this.getMoviePoster(index))
-    return this.currentMoviePoster
-  }
-
-  setCurrentMovieLink(index: number): WritableSignal<string> {
-    this.currentMovieLink.set(this.getMovieLink(index))
-    return this.currentMovieLink
-  }
-    
-  setCurrentMovieReview(index: number): WritableSignal<string> {
-    this.currentMovieReview.set(this.getMovieReview(index))
-    return this.currentMovieReview
-  }
-  
-  setAllCurrentMovieData(index: number): void {
-    this.setCurrentMovieTitle(index);
-    this.setCurrentMoviePoster(index);
-    this.setCurrentMovieLink(index);
-    this.setCurrentMovieReview(index);
   }
 
   ngOnDestroy(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      if (this.resizeListener) {
-        window.removeEventListener('resize', this.resizeListener);
-      }
-      if (this.resumeTimeout) {
-        clearTimeout(this.resumeTimeout);
-      } 
-      if (this.childMarquee.stuffArray()) {
-        this.childMarquee.stuffArray.set([])
-      }
-    }
+
+    console.log("leaving movies-i-like page")
   }
 
 }

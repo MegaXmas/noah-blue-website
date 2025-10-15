@@ -1,6 +1,4 @@
-// TODO: figure out how to use input() to transfer array data. the array in one component holds objects of a different type, figure out how to deal with that  
-
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, Input, input} from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';
@@ -25,6 +23,10 @@ export class Marquee implements OnInit, OnDestroy {
   currentStuffArt: WritableSignal<string> = signal("");
   currentStuffLink: WritableSignal<string> = signal("");
   currentStuffReview: WritableSignal<string> = signal("");
+
+
+  relevantProfile = input.required<string>();
+  profilePicture = input.required<string>();
 
 
 // ======ON INIT/DESTROY======
@@ -111,47 +113,6 @@ export class Marquee implements OnInit, OnDestroy {
 
 
   // ======ARRAY DATA METHODS======
-
-  getStuffTitle(index: number): string {
-    const stuff = this.stuffArray.call(index) 
-    return stuff.stuffTitle
-    }
-
-  getStuffArt(index: number): string {
-    const stuff = this.stuffArray[index]; 
-    return stuff.stuffArt
-    }
-  
-  getStuffLink(index: number): string {
-    const stuff = this.stuffArray[index]; 
-    return stuff.stuffLink
-    }
-
-  getStuffReview(index: number): string {
-    const stuff = this.stuffArray[index]; 
-    return stuff.stuffReview
-    }
-
-  setCurrentStuffTitle(index: number): WritableSignal<string> {
-    this.currentStuffTitle.set(this.getStuffTitle(index))
-    return this.currentStuffTitle
-  }
-
-  setCurrentStuffArt(index: number): WritableSignal<string> {
-    this.currentStuffArt.set(this.getStuffArt(index))
-    return this.currentStuffArt
-  }
-
-  setCurrentStuffLink(index: number): WritableSignal<string> {
-    this.currentStuffLink.set(this.getStuffLink(index))
-    return this.currentStuffLink
-  }
-    
-  setCurrentStuffReview(index: number): WritableSignal<string> {
-    this.currentStuffReview.set(this.getStuffReview(index))
-    return this.currentStuffReview
-  }
-  
   setAllCurrentStuffData(index: number): void {
     const selectedStuff = this.stuffArray()[index];
     this.currentStuffTitle.set(selectedStuff.stuffTitle);
@@ -161,4 +122,3 @@ export class Marquee implements OnInit, OnDestroy {
   }
 
 }
-
