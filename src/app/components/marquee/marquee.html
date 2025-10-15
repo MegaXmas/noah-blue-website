@@ -8,7 +8,7 @@
 
                         <div class="marquee-track">
                             
-                            @for (stuff of stuffArray; track stuff.stuffTitle; let i = $index) {
+                            @for (stuff of stuffArray(); track stuff.stuffTitle!; let i = $index) {
                                 <img 
                                     [src]="stuff.stuffArt" 
                                     class="marquee-item list-group-item list-group-item-action" 
@@ -19,7 +19,7 @@
                                 >
                             }
                             
-                            @for (stuff of stuffArray; track stuff.stuffTitle; let i = $index) {
+                            @for (stuff of stuffArray(); track stuff.stuffTitle; let i = $index) {
                                 <img 
                                     [src]="stuff.stuffArt" 
                                     class="marquee-item list-group-item list-group-item-action" 

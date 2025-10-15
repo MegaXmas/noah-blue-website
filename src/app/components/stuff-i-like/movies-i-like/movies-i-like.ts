@@ -1,20 +1,24 @@
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy } from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, ViewChild, AfterViewInit} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteMovie } from '../../../models/favorite-movie';
 
+import { Marquee } from '../../marquee/marquee';
+
 
 @Component({
   selector: 'app-movies-i-like',
-  imports: [],
+  imports: [Marquee],
   templateUrl: './movies-i-like.html',
   styleUrl: './movies-i-like.css'
 })
-export class MoviesILike implements OnInit, OnDestroy {
+export class MoviesILike implements OnInit, OnDestroy, AfterViewInit {
   
   private readonly platformId = inject(PLATFORM_ID);
   private resizeListener?: () => void;
   private resumeTimeout?: number;
+
+  @ViewChild('marquee') childMarquee!: Marquee;
 
   movieArray: FavoriteMovie[] =  [
     { movieTitle: "Twin Peaks: Fire Walk with Me",
@@ -188,11 +192,13 @@ export class MoviesILike implements OnInit, OnDestroy {
 
 
   ngOnInit(): void {
+
     console.log(this.movieArray.length + " movies displayed")
     this.currentMovieTitle.set("Hover over a movie for my thoughts!")
     this.currentMovieReview.set("*yapping*")
     
     if (isPlatformBrowser(this.platformId)) {
+
 
       this.resizeListener = () => {
         this.calculateMarqueeAnimation();
@@ -205,6 +211,10 @@ export class MoviesILike implements OnInit, OnDestroy {
 
       window.addEventListener('resize', this.resizeListener);
     }
+  }
+
+  ngAfterViewInit() {
+    this.childMarquee.stuffArray.set(this.movieArray);
   }
 
   calculateMarqueeAnimation() {
@@ -253,6 +263,9 @@ export class MoviesILike implements OnInit, OnDestroy {
     }, 250);
   }
 
+  getMovieArray(): Array<FavoriteMovie> {
+    return this.movieArray
+  }
 
   getMovieTitle(index: number): string {
     const movie = this.movieArray[index]; 
@@ -308,6 +321,9 @@ export class MoviesILike implements OnInit, OnDestroy {
       }
       if (this.resumeTimeout) {
         clearTimeout(this.resumeTimeout);
+      } 
+      if (this.childMarquee.stuffArray()) {
+        this.childMarquee.stuffArray.set([])
       }
     }
   }

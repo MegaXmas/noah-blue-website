@@ -1,6 +1,6 @@
 // TODO: figure out how to use input() to transfer array data. the array in one component holds objects of a different type, figure out how to deal with that  
 
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, viewChild, contentChild, Input, input } from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, Input, input } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';
@@ -18,11 +18,10 @@ export class Marquee implements OnInit, OnDestroy {
   private resizeListener?: () => void;
   private resumeTimeout?: number;
 
-  array = input<Array>
 
+  emptyArray: any[] = []
 
-
-  stuffArray: WritableSignal<Array<FavoriteStuff>> =  signal([]);
+  stuffArray: WritableSignal<any[]> = signal([]);
 
   currentStuffTitle: WritableSignal<string> = signal("");
   currentStuffArt: WritableSignal<string> = signal("");
@@ -30,8 +29,8 @@ export class Marquee implements OnInit, OnDestroy {
   currentStuffReview: WritableSignal<string> = signal("");
 
 
+// ======ON INIT/DESTROY======
   ngOnInit(): void {
-
 
     console.log(this.stuffArray.length + " stuffs displayed")
     this.currentStuffTitle.set("Hover over a stuff for my thoughts!")
@@ -52,6 +51,23 @@ export class Marquee implements OnInit, OnDestroy {
     }
   }
 
+  ngOnDestroy(): void {
+  if (isPlatformBrowser(this.platformId)) {
+    if (this.resizeListener) {
+      window.removeEventListener('resize', this.resizeListener);
+    }
+    if (this.resumeTimeout) {
+      clearTimeout(this.resumeTimeout);
+    }
+    if (this.stuffArray()) {
+        this.stuffArray.set([])
+      }
+    }
+  }
+
+
+
+  // ======MARQUEE STUFF======
   calculateMarqueeAnimation() {
     if (!isPlatformBrowser(this.platformId)) return;
 
@@ -98,7 +114,11 @@ export class Marquee implements OnInit, OnDestroy {
     }, 250);
   }
 
-  setCurrentArray(array: Array<object>): void {
+
+  // ======ARRAY DATA METHODS======
+  setCurrentArray(event: Event): void {
+
+    const array = (EventTarget as HTML)
 
   }
 
@@ -147,19 +167,6 @@ export class Marquee implements OnInit, OnDestroy {
     this.setCurrentStuffArt(index);
     this.setCurrentStuffLink(index);
     this.setCurrentStuffReview(index);
-  }
-
-  ngOnDestroy(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      if (this.resizeListener) {
-        window.removeEventListener('resize', this.resizeListener);
-      }
-      if (this.resumeTimeout) {
-        clearTimeout(this.resumeTimeout);
-      }
-    }
-
-    this.stuffArray.length = 0;
   }
 
 }
