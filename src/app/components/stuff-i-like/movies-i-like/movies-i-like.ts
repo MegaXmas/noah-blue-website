@@ -14,6 +14,7 @@ export class MoviesILike implements OnInit, OnDestroy {
   
   private readonly platformId = inject(PLATFORM_ID);
   private resizeListener?: () => void;
+  private resumeTimeout?: number;
 
   movieArray: FavoriteMovie[] =  [
     { movieTitle: "Twin Peaks: Fire Walk with Me",
@@ -227,6 +228,11 @@ export class MoviesILike implements OnInit, OnDestroy {
   }
 
   pauseAnimation() {
+    if (this.resumeTimeout) {
+      clearTimeout(this.resumeTimeout);
+      this.resumeTimeout = undefined;
+    }
+
     if (isPlatformBrowser(this.platformId)) {
       const track = document.querySelector('.marquee-track') as HTMLElement;
       if (track) track.style.animationPlayState = 'paused';
@@ -234,10 +240,17 @@ export class MoviesILike implements OnInit, OnDestroy {
   }
 
   resumeAnimation() {
-    if (isPlatformBrowser(this.platformId)) {
-      const track = document.querySelector('.marquee-track') as HTMLElement;
-      if (track) track.style.animationPlayState = 'running';
+    if (this.resumeTimeout) {
+      clearTimeout(this.resumeTimeout);
     }
+    
+    this.resumeTimeout = window.setTimeout(() => {
+      if (isPlatformBrowser(this.platformId)) {
+        const track = document.querySelector('.marquee-track') as HTMLElement;
+        if (track) track.style.animationPlayState = 'running';
+      }
+      this.resumeTimeout = undefined;
+    }, 250);
   }
 
 
@@ -288,9 +301,14 @@ export class MoviesILike implements OnInit, OnDestroy {
     this.setCurrentMovieReview(index);
   }
 
-ngOnDestroy(): void {
-    if (isPlatformBrowser(this.platformId) && this.resizeListener) {
-      window.removeEventListener('resize', this.resizeListener);
+  ngOnDestroy(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      if (this.resizeListener) {
+        window.removeEventListener('resize', this.resizeListener);
+      }
+      if (this.resumeTimeout) {
+        clearTimeout(this.resumeTimeout);
+      }
     }
   }
 
