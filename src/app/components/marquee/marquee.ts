@@ -1,6 +1,6 @@
 // TODO: figure out how to use input() to transfer array data. the array in one component holds objects of a different type, figure out how to deal with that  
 
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, Input, input } from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, Input, input} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';
@@ -19,9 +19,7 @@ export class Marquee implements OnInit, OnDestroy {
   private resumeTimeout?: number;
 
 
-  emptyArray: any[] = []
-
-  stuffArray: WritableSignal<any[]> = signal([]);
+  stuffArray = input.required<FavoriteStuff[]>();
 
   currentStuffTitle: WritableSignal<string> = signal("");
   currentStuffArt: WritableSignal<string> = signal("");
@@ -53,14 +51,11 @@ export class Marquee implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
   if (isPlatformBrowser(this.platformId)) {
-    if (this.resizeListener) {
-      window.removeEventListener('resize', this.resizeListener);
-    }
-    if (this.resumeTimeout) {
-      clearTimeout(this.resumeTimeout);
-    }
-    if (this.stuffArray()) {
-        this.stuffArray.set([])
+      if (this.resizeListener) {
+        window.removeEventListener('resize', this.resizeListener);
+      }
+      if (this.resumeTimeout) {
+        clearTimeout(this.resumeTimeout);
       }
     }
   }
@@ -116,14 +111,9 @@ export class Marquee implements OnInit, OnDestroy {
 
 
   // ======ARRAY DATA METHODS======
-  setCurrentArray(event: Event): void {
-
-    const array = (EventTarget as HTML)
-
-  }
 
   getStuffTitle(index: number): string {
-    const stuff = this.stuffArray[index]; 
+    const stuff = this.stuffArray.call(index) 
     return stuff.stuffTitle
     }
 
@@ -163,10 +153,11 @@ export class Marquee implements OnInit, OnDestroy {
   }
   
   setAllCurrentStuffData(index: number): void {
-    this.setCurrentStuffTitle(index);
-    this.setCurrentStuffArt(index);
-    this.setCurrentStuffLink(index);
-    this.setCurrentStuffReview(index);
+    const selectedStuff = this.stuffArray()[index];
+    this.currentStuffTitle.set(selectedStuff.stuffTitle);
+    this.currentStuffArt.set(selectedStuff.stuffArt);
+    this.currentStuffLink.set(selectedStuff.stuffLink);
+    this.currentStuffReview.set(selectedStuff.stuffReview);
   }
 
 }

@@ -4,6 +4,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { FavoriteMovie } from '../../../models/favorite-movie';
 
 import { Marquee } from '../../marquee/marquee';
+import { FavoriteStuff } from '../../../models/favorite-stuff';
 
 
 @Component({
@@ -184,6 +185,14 @@ export class MoviesILike implements OnInit, OnDestroy, AfterViewInit {
       movieReview: ""},
   ]
 
+  get movieItems(): FavoriteStuff[] {
+    return this.movieArray.map(m => ({
+    stuffTitle: m.movieTitle,
+    stuffArt: m.moviePoster,
+    stuffLink: m.movieLink,
+    stuffReview: m.movieReview
+    }));
+  }
 
   currentMovieTitle: WritableSignal<string> = signal("");
   currentMoviePoster: WritableSignal<string> = signal("");
@@ -214,7 +223,7 @@ export class MoviesILike implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.childMarquee.stuffArray.set(this.movieArray);
+
   }
 
   calculateMarqueeAnimation() {
@@ -261,10 +270,6 @@ export class MoviesILike implements OnInit, OnDestroy, AfterViewInit {
       }
       this.resumeTimeout = undefined;
     }, 250);
-  }
-
-  getMovieArray(): Array<FavoriteMovie> {
-    return this.movieArray
   }
 
   getMovieTitle(index: number): string {
