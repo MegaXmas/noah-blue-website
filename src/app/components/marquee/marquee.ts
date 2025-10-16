@@ -1,4 +1,4 @@
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input, AfterViewInit} from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';
@@ -10,7 +10,7 @@ import { FavoriteStuff } from '../../models/favorite-stuff';
   templateUrl: './marquee.html',
   styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css']
 })
-export class Marquee implements OnInit, OnDestroy, AfterViewInit {
+export class Marquee implements OnInit, OnDestroy {
 
   private readonly platformId = inject(PLATFORM_ID);
   private resizeListener?: () => void;
@@ -31,12 +31,14 @@ export class Marquee implements OnInit, OnDestroy, AfterViewInit {
 
   relevantImgClass = input.required<string>();
 
+  kindOfStuff = input.required<string>();
+
 
 // ======ON INIT/DESTROY======
   ngOnInit(): void {
 
-    console.log(this.stuffArray.length + " stuff displayed")
-    this.currentStuffTitle.set("Hover over a stuff for my thoughts!")
+    console.log("MARQUEE COMPONENT: " + this.stuffArray()!.length + " stuff displayed")
+    this.currentStuffTitle.set("Hover over a " + this.kindOfStuff() + " for my thoughts!")
     this.currentStuffReview.set("*yapping*")
     
     if (isPlatformBrowser(this.platformId)) {
@@ -52,13 +54,10 @@ export class Marquee implements OnInit, OnDestroy, AfterViewInit {
 
       window.addEventListener('resize', this.resizeListener);
     }
+
+    console.log("MARQUEE COMPONENT: " + JSON.stringify(this.stuffArray()));
   }
 
-  ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId))
-
-      this.calculateMarqueeAnimation()
-  }
 
   ngOnDestroy(): void {
   if (isPlatformBrowser(this.platformId)) {
@@ -82,14 +81,16 @@ export class Marquee implements OnInit, OnDestroy, AfterViewInit {
     if (track) {
       
       const trackWidth = track.scrollWidth;
+      console.log("MARQUEE COMPONENT: track width is " + trackWidth + " px")
       
     
       const scrollDistance = trackWidth / 2;
+      console.log("MARQUEE COMPONENT: scroll distance is " + scrollDistance + " px")
       
       document.documentElement.style.setProperty('--scroll-distance', `-${scrollDistance}px`);
       
       
-      const duration = this.stuffArray.length * 0.9;
+      const duration = this.stuffArray()!.length * 0.9;
       document.documentElement.style.setProperty('--marquee-duration', `${duration}s`);
     }
   }
@@ -111,7 +112,7 @@ export class Marquee implements OnInit, OnDestroy, AfterViewInit {
       clearTimeout(this.resumeTimeout);
     }
     
-    this.resumeTimeout = window.setTimeout(() => {
+    this.resumeTimeout = globalThis.window.setTimeout(() => {
       if (isPlatformBrowser(this.platformId)) {
         const track = document.querySelector('.marquee-track') as HTMLElement;
         if (track) track.style.animationPlayState = 'running';

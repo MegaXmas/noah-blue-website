@@ -13,13 +13,12 @@
 
 .marquee-wrapper {
     width: max-content;
-    /* NO padding here */
 }
 
 .marquee-content {
     overflow: hidden;
     display: flex;
-    gap: 0; /* Remove any gap */
+    gap: 0; 
 }
 
 .marquee-track {
@@ -36,15 +35,6 @@
     }
 }
 
-.current-movie-poster {
-    width: 204px;
-    height: 308px;
-    border-width: 7px;
-    border-style: solid;
-    border-color: gold; 
-    border-radius: 8px;
-    margin: 5px;
-}
 
 /* =======MEDIA FLEX====== */
 
@@ -53,6 +43,7 @@
         text-align: right;
     }
 }
+
 
 /* ======MISC====== */
 

@@ -1,4 +1,4 @@
-import { Component, signal, WritableSignal, OnInit, OnDestroy, inject} from '@angular/core';
+import { Component, signal, WritableSignal, OnInit, OnDestroy} from '@angular/core';
 
 import { FavoriteMovie } from '../../../models/favorite-movie';
 
@@ -192,6 +192,7 @@ export class MoviesILike implements OnInit, OnDestroy {
   letterboxdProfileStyle: string = "letterboxd-profile"
 
   moviePosterStyle: string = "current-movie-poster"
+  movieString: string = "movie"
 
   currentMovieTitle: WritableSignal<string> = signal("");
   currentMoviePoster: WritableSignal<string> = signal("");
@@ -201,31 +202,12 @@ export class MoviesILike implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
-    console.log(this.movieArray.length + " movies displayed")
-    
+    console.log("MOVIESILIKECOMPONENT: " + this.movieArray.length + " movies displayed")
+    console.log("MOVIESILIKECOMPONENT: " + JSON.stringify(this.movieArray))
   }
 
   ngOnDestroy(): void {
 
     console.log("leaving movies-i-like page")
   }
-
-  //   calculateMarqueeAnimation() {;
-
-  //   const track = document.querySelector('.marquee-track') as HTMLElement;
-    
-  //   if (track) {
-      
-  //     const trackWidth = track.scrollWidth;
-      
-    
-  //     const scrollDistance = trackWidth / 2;
-      
-  //     document.documentElement.style.setProperty('--scroll-distance', `-${scrollDistance}px`);
-      
-      
-  //     const duration = this.movieArray.length * 0.9;
-  //     document.documentElement.style.setProperty('--marquee-duration', `${duration}s`);
-  //   }
-  // }
 }
