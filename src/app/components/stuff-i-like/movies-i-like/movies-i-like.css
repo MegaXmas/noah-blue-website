@@ -4,24 +4,6 @@
 
 /* ======== MARQUEE STUFF====== */
 
-.marquee-wrapper-outer {
-    padding: 10px;
-    background-color: rgb(54, 163, 105);
-    width: max-content;
-    overflow: hidden;
-}
-
-.marquee-wrapper {
-    width: max-content;
-    /* NO padding here */
-}
-
-.marquee-content {
-    overflow: hidden;
-    display: flex;
-    gap: 0; /* Remove any gap */
-}
-
 .marquee-item {
     width: 200px;
     height: 300px;
@@ -31,19 +13,6 @@
     border: 5px solid green;
 }
 
-.marquee-track {
-    display: flex;
-    animation: marquee var(--marquee-duration, 20s) linear infinite;
-}
-
-@keyframes marquee {
-    0% { 
-        transform: translateX(0); 
-    }
-    100% { 
-        transform: translateX(var(--scroll-distance, -50%)); 
-    }
-}
 
 /* ======MOVIE REVIEW SECTION====== */
 
@@ -55,7 +24,7 @@
     border-radius: 15%;
 }
 
-.currentMoviePoster {
+.current-movie-poster {
     width: 204px;
     height: 308px;
     border-width: 7px;
@@ -72,19 +41,21 @@
         width: 150px;
         height: 225px;
     }
-    .currentMoviePoster {
+    .current-movie-poster {
         width: 152px;
         height: 229px;
         border-width: 3px;
         border-radius: 4px;
     }
-    .currentMovieTitle {
+    .current-movie-title {
         text-align: right;
     }
 }
+
 
 /* ======MISC====== */
 
 p {
 white-space: pre-line;
 }
+

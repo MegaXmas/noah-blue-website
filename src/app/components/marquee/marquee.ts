@@ -1,6 +1,4 @@
-// TODO: figure out how to use input() to transfer array data. the array in one component holds objects of a different type, figure out how to deal with that  
-
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, Input, input } from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';
@@ -10,7 +8,7 @@ import { FavoriteStuff } from '../../models/favorite-stuff';
   selector: 'app-marquee',
   imports: [],
   templateUrl: './marquee.html',
-  styleUrl: './marquee.css'
+  styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css']
 })
 export class Marquee implements OnInit, OnDestroy {
 
@@ -19,9 +17,7 @@ export class Marquee implements OnInit, OnDestroy {
   private resumeTimeout?: number;
 
 
-  emptyArray: any[] = []
-
-  stuffArray: WritableSignal<any[]> = signal([]);
+  stuffArray = input<FavoriteStuff[]>();
 
   currentStuffTitle: WritableSignal<string> = signal("");
   currentStuffArt: WritableSignal<string> = signal("");
@@ -29,11 +25,20 @@ export class Marquee implements OnInit, OnDestroy {
   currentStuffReview: WritableSignal<string> = signal("");
 
 
+  relevantProfile = input.required<string>();
+  profilePicture = input.required<string>();
+  profilePictureClass = input.required<string>();
+
+  relevantImgClass = input.required<string>();
+
+  kindOfStuff = input.required<string>();
+
+
 // ======ON INIT/DESTROY======
   ngOnInit(): void {
 
-    console.log(this.stuffArray.length + " stuffs displayed")
-    this.currentStuffTitle.set("Hover over a stuff for my thoughts!")
+    console.log("MARQUEE COMPONENT: " + this.stuffArray()!.length + " stuff displayed")
+    this.currentStuffTitle.set("Hover over a " + this.kindOfStuff() + " for my thoughts!")
     this.currentStuffReview.set("*yapping*")
     
     if (isPlatformBrowser(this.platformId)) {
@@ -49,18 +54,18 @@ export class Marquee implements OnInit, OnDestroy {
 
       window.addEventListener('resize', this.resizeListener);
     }
+
+    console.log("MARQUEE COMPONENT: " + JSON.stringify(this.stuffArray()));
   }
+
 
   ngOnDestroy(): void {
   if (isPlatformBrowser(this.platformId)) {
-    if (this.resizeListener) {
-      window.removeEventListener('resize', this.resizeListener);
-    }
-    if (this.resumeTimeout) {
-      clearTimeout(this.resumeTimeout);
-    }
-    if (this.stuffArray()) {
-        this.stuffArray.set([])
+      if (this.resizeListener) {
+        window.removeEventListener('resize', this.resizeListener);
+      }
+      if (this.resumeTimeout) {
+        clearTimeout(this.resumeTimeout);
       }
     }
   }
@@ -76,14 +81,16 @@ export class Marquee implements OnInit, OnDestroy {
     if (track) {
       
       const trackWidth = track.scrollWidth;
+      console.log("MARQUEE COMPONENT: track width is " + trackWidth + " px")
       
     
       const scrollDistance = trackWidth / 2;
+      console.log("MARQUEE COMPONENT: scroll distance is " + scrollDistance + " px")
       
       document.documentElement.style.setProperty('--scroll-distance', `-${scrollDistance}px`);
       
       
-      const duration = this.stuffArray.length * 0.9;
+      const duration = this.stuffArray()!.length * 0.9;
       document.documentElement.style.setProperty('--marquee-duration', `${duration}s`);
     }
   }
@@ -105,7 +112,7 @@ export class Marquee implements OnInit, OnDestroy {
       clearTimeout(this.resumeTimeout);
     }
     
-    this.resumeTimeout = window.setTimeout(() => {
+    this.resumeTimeout = globalThis.window.setTimeout(() => {
       if (isPlatformBrowser(this.platformId)) {
         const track = document.querySelector('.marquee-track') as HTMLElement;
         if (track) track.style.animationPlayState = 'running';
@@ -116,58 +123,12 @@ export class Marquee implements OnInit, OnDestroy {
 
 
   // ======ARRAY DATA METHODS======
-  setCurrentArray(event: Event): void {
-
-    const array = (EventTarget as HTML)
-
-  }
-
-  getStuffTitle(index: number): string {
-    const stuff = this.stuffArray[index]; 
-    return stuff.stuffTitle
-    }
-
-  getStuffArt(index: number): string {
-    const stuff = this.stuffArray[index]; 
-    return stuff.stuffArt
-    }
-  
-  getStuffLink(index: number): string {
-    const stuff = this.stuffArray[index]; 
-    return stuff.stuffLink
-    }
-
-  getStuffReview(index: number): string {
-    const stuff = this.stuffArray[index]; 
-    return stuff.stuffReview
-    }
-
-  setCurrentStuffTitle(index: number): WritableSignal<string> {
-    this.currentStuffTitle.set(this.getStuffTitle(index))
-    return this.currentStuffTitle
-  }
-
-  setCurrentStuffArt(index: number): WritableSignal<string> {
-    this.currentStuffArt.set(this.getStuffArt(index))
-    return this.currentStuffArt
-  }
-
-  setCurrentStuffLink(index: number): WritableSignal<string> {
-    this.currentStuffLink.set(this.getStuffLink(index))
-    return this.currentStuffLink
-  }
-    
-  setCurrentStuffReview(index: number): WritableSignal<string> {
-    this.currentStuffReview.set(this.getStuffReview(index))
-    return this.currentStuffReview
-  }
-  
   setAllCurrentStuffData(index: number): void {
-    this.setCurrentStuffTitle(index);
-    this.setCurrentStuffArt(index);
-    this.setCurrentStuffLink(index);
-    this.setCurrentStuffReview(index);
+    const selectedStuff = this.stuffArray()![index];
+    this.currentStuffTitle.set(selectedStuff.stuffTitle);
+    this.currentStuffArt.set(selectedStuff.stuffArt);
+    this.currentStuffLink.set(selectedStuff.stuffLink);
+    this.currentStuffReview.set(selectedStuff.stuffReview);
   }
 
 }
-

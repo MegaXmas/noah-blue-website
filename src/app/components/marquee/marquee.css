@@ -13,22 +13,12 @@
 
 .marquee-wrapper {
     width: max-content;
-    /* NO padding here */
 }
 
 .marquee-content {
     overflow: hidden;
     display: flex;
-    gap: 0; /* Remove any gap */
-}
-
-.marquee-item {
-    width: 200px;
-    height: 300px;
-    padding: 0;
-    margin: 5px;
-    object-fit: cover;
-    border: 5px solid green;
+    gap: 0; 
 }
 
 .marquee-track {
@@ -45,43 +35,15 @@
     }
 }
 
-/* ======MOVIE REVIEW SECTION====== */
-
-.letterboxd-profile {
-    width: 150px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgb(93, 147, 228); 
-    border-radius: 15%;
-}
-
-.currentMoviePoster {
-    width: 204px;
-    height: 308px;
-    border-width: 7px;
-    border-style: solid;
-    border-color: gold; 
-    border-radius: 8px;
-    margin: 5px;
-}
 
 /* =======MEDIA FLEX====== */
 
 @media (max-width: 768px) {
-    .marquee-item {
-        width: 150px;
-        height: 225px;
-    }
-    .currentMoviePoster {
-        width: 152px;
-        height: 229px;
-        border-width: 3px;
-        border-radius: 4px;
-    }
-    .currentMovieTitle {
+    .current-stuff-title {
         text-align: right;
     }
 }
+
 
 /* ======MISC====== */
 
