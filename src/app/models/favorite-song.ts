@@ -5,5 +5,6 @@ export interface FavoriteSong {
     songAlbumTitle: string;
     songAlbumCover: string;
     songLink: string;
-    songReview: string
+    songReview: string;
+    songLyrics: string;
 }
