@@ -94,9 +94,14 @@ export class SongsILike implements OnInit, OnDestroy {
       songReview: ``,
       songLyrics: ``,
       },
-  ]
+  ];
 
+  spotifyProfile: string = `https://open.spotify.com/user/12169723921?si=99d85c1c15624876`;
+  spotifyProfilePic: string = `https://i.scdn.co/image/ab6775700000ee85e50df101871d2a39bf96f9a9`;
+  spotifyProfileStyle: string = ``;
 
+  albumCoverStyle: string = ``;
+  songString: string = `song`;
 
 
   ngOnInit(): void {
@@ -107,5 +112,5 @@ export class SongsILike implements OnInit, OnDestroy {
   ngOnDestroy(): void {
       
     console.log(`leaving songs-i-like page`)
-  }
+  };
 }
