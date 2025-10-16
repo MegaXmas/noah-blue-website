@@ -13,7 +13,7 @@ export const routes: Routes = [
     { path: 'music', component: MusicPage },
     { path: 'music-videos', component: MusicVideoPage},
     { path: 'movies-i-like', component:  MoviesILike },
-    { path: '/songs-i-like', component: SongsILike },
+    { path: 'songs-i-like', component: SongsILike },
 
 
     { path: '**', redirectTo: '' } // wildcard route for a 404 page

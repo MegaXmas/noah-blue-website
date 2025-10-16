@@ -1,4 +1,4 @@
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input} from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input, Input} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';

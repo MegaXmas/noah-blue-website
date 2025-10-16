@@ -1,7 +1,4 @@
-export interface FavoriteStuff {
+import { FavoriteMovie } from "./favorite-movie";
+import { FavoriteSong } from "./favorite-song";
 
-    stuffTitle: string;
-    stuffArt: string;
-    stuffLink: string;
-    stuffReview: string
-}
+export type FavoriteStuff = FavoriteMovie | FavoriteSong | null;
