@@ -1,7 +1,9 @@
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input, Input} from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input, computed} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';
+
+import { FavoriteSong } from '../../models/favorite-song';
 
 
 @Component({
@@ -19,10 +21,32 @@ export class Marquee implements OnInit, OnDestroy {
 
   stuffArray = input<FavoriteStuff[]>();
 
-  currentStuffTitle: WritableSignal<string> = signal("");
-  currentStuffArt: WritableSignal<string> = signal("");
-  currentStuffLink: WritableSignal<string> = signal("");
-  currentStuffReview: WritableSignal<string> = signal("");
+  currentFavoriteItem: WritableSignal<FavoriteStuff | null> = signal(null);
+
+  // isSong = computed(() => {
+  //   const currentItem = this.currentFavoriteItem();
+  //   if (this.kindOfItem() == `song` && `songTitle` in currentItem!) {
+  //   return currentItem !== null && 'songArtist' in currentItem; }
+  // });
+
+  // currentSongArtist = computed(() => {
+  //   const currentItem = this.currentFavoriteItem();
+  //   return this.isSong() ? (currentItem as FavoriteSong).songArtist : '';
+  // });
+
+  // currentSongLyrics = computed(() => {
+  //   const currentItem = this.currentFavoriteItem();
+  //   return this.isSong() ? (currentItem as FavoriteSong).songLyrics : '';
+  // });
+  
+
+  currentItemTitle: WritableSignal<string> = signal("");
+  currentItemArt: WritableSignal<string> = signal("");
+  currentItemLink: WritableSignal<string> = signal("");
+  currentItemReview: WritableSignal<string> = signal("");
+
+  currentSongArtist:  WritableSignal<string> = signal("");
+  currentSongLyrics: WritableSignal<string> = signal("");
 
 
   relevantProfile = input.required<string>();
@@ -31,15 +55,15 @@ export class Marquee implements OnInit, OnDestroy {
 
   relevantImgClass = input.required<string>();
 
-  kindOfStuff = input.required<string>();
+  kindOfItem = input.required<string>();
 
 
 // ======ON INIT/DESTROY======
   ngOnInit(): void {
 
-    console.log("MARQUEE COMPONENT: " + this.stuffArray()!.length + " stuff displayed")
-    this.currentStuffTitle.set("Hover over a " + this.kindOfStuff() + " for my thoughts!")
-    this.currentStuffReview.set("*yapping*")
+    console.log("MARQUEE COMPONENT: " + this.stuffArray()!.length + " items displayed")
+    this.currentItemTitle.set("Hover over a " + this.kindOfItem() + " for my thoughts!")
+    this.currentItemReview.set("*yapping*")
     
     if (isPlatformBrowser(this.platformId)) {
 
@@ -123,12 +147,33 @@ export class Marquee implements OnInit, OnDestroy {
 
 
   // ======ARRAY DATA METHODS======
-  setAllCurrentStuffData(index: number): void {
-    const selectedStuff = this.stuffArray()![index];
-    this.currentStuffTitle.set(selectedStuff.stuffTitle);
-    this.currentStuffArt.set(selectedStuff.stuffArt);
-    this.currentStuffLink.set(selectedStuff.stuffLink);
-    this.currentStuffReview.set(selectedStuff.stuffReview);
-  }
+  // setAllCurrentItemData(index: number): void {
+  //   const selectedItem = this.stuffArray()![index];
+  //   this.currentItemTitle.set(selectedItem.stuffTitle);
+  //   this.currentItemArt.set(selectedItem.stuffArt);
+  //   this.currentItemLink.set(selectedItem.stuffLink);
+  //   this.currentItemReview.set(selectedItem.stuffReview);
+  // }
 
+  setAllCurrentItemData(index: number): void {
+    const items = this.stuffArray();
+    if (!items || index >= items.length) return;
+    
+    const item = items[index];
+    this.currentFavoriteItem.set(item); // Store the full item
+    
+    if (this.kindOfItem() == `movie` && `movieTitle` in item!) {
+      this.currentItemTitle.set(item.movieTitle);
+      this.currentItemArt.set(item.moviePoster);
+      this.currentItemLink.set(item.movieLink);
+      this.currentItemReview.set(item.movieReview);
+    } else if (this.kindOfItem() == `song` && `songTitle` in item!) {
+      this.currentItemTitle.set(item.songTitle);
+      this.currentItemArt.set(item.songAlbumCover);
+      this.currentItemLink.set(item.songLink);
+      this.currentItemReview.set(item.songReview);
+      this.currentSongArtist.set(item.songArtist);
+      this.currentSongLyrics.set(item.songLyrics);
+    }
+  }
 }
