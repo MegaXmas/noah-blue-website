@@ -3,7 +3,8 @@ import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';
 
-import { FavoriteSong } from '../../models/favorite-song';
+import { FavoriteSong } from '../../models/favorite-song'
+import { FavoriteMovie } from '../../models/favorite-movie';
 
 
 @Component({
@@ -21,24 +22,9 @@ export class Marquee implements OnInit, OnDestroy {
 
   stuffArray = input<FavoriteStuff[]>();
 
+  kindOfItem = input.required<string>();
+
   currentFavoriteItem: WritableSignal<FavoriteStuff | null> = signal(null);
-
-  // isSong = computed(() => {
-  //   const currentItem = this.currentFavoriteItem();
-  //   if (this.kindOfItem() == `song` && `songTitle` in currentItem!) {
-  //   return currentItem !== null && 'songArtist' in currentItem; }
-  // });
-
-  // currentSongArtist = computed(() => {
-  //   const currentItem = this.currentFavoriteItem();
-  //   return this.isSong() ? (currentItem as FavoriteSong).songArtist : '';
-  // });
-
-  // currentSongLyrics = computed(() => {
-  //   const currentItem = this.currentFavoriteItem();
-  //   return this.isSong() ? (currentItem as FavoriteSong).songLyrics : '';
-  // });
-  
 
   currentItemTitle: WritableSignal<string> = signal("");
   currentItemArt: WritableSignal<string> = signal("");
@@ -55,9 +41,7 @@ export class Marquee implements OnInit, OnDestroy {
 
   relevantImgClass = input.required<string>();
 
-  kindOfItem = input.required<string>();
-
-
+  
 // ======ON INIT/DESTROY======
   ngOnInit(): void {
 
@@ -162,12 +146,14 @@ export class Marquee implements OnInit, OnDestroy {
     const item = items[index];
     this.currentFavoriteItem.set(item); // Store the full item
     
-    if (this.kindOfItem() == `movie` && `movieTitle` in item!) {
+    if (this.kindOfItem() === `movie` && `movieTitle` in item!) {
+      const movie = item as FavoriteMovie;
       this.currentItemTitle.set(item.movieTitle);
       this.currentItemArt.set(item.moviePoster);
       this.currentItemLink.set(item.movieLink);
       this.currentItemReview.set(item.movieReview);
-    } else if (this.kindOfItem() == `song` && `songTitle` in item!) {
+    } else if (this.kindOfItem() === `song` && `songTitle` in item!) {
+      const song = item as FavoriteSong;
       this.currentItemTitle.set(item.songTitle);
       this.currentItemArt.set(item.songAlbumCover);
       this.currentItemLink.set(item.songLink);

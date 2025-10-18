@@ -8,9 +8,7 @@
 
                         <div class="marquee-track">
                             
-                            @if (kindOfItem() == `song`) { 
-                                (stuff of stuffArray(); 
-                                 track stuff.stuffTitle!; let i = $index) }
+                            @for (stuff of stuffArray(); track stuff.stuffTitle; let i = $index) {
                                 <img 
                                     [src]="stuff.stuffArt" 
                                     class="marquee-item list-group-item list-group-item-action" 
@@ -53,8 +51,12 @@
                     </a>
                 </div>
 
-                <div class="col-4 text-center current-stuff-title">
-                    <a [href]="currentItemLink()" [class]="" target="_blank" rel="noopener noreferrer"> {{ currentItemTitle() }} </a>
+                <div class="col-4 text-center current-item-title">
+                    <a [href]="currentItemLink()" [class]="" target="_blank" rel="noopener noreferrer"> {{ currentItemTitle() }} 
+                        @if (kindOfItem() === `song`) {
+                            - {{ currentSongArtist() }}
+                        }
+                    </a>
                 </div>
 
                 <div class="col-4">
@@ -70,6 +72,9 @@
     </div>
 
     <div class="row">
-        <p class="fs-4 border border-3 mt-0" id="stuff-review"> {{ currentItemReview() }} </p>
+        <p class="fs-4 border border-3 mt-0" id="item-review"> {{ currentItemReview() }} </p>
+        @if (kindOfItem() === `song`) {
+            <p class="fs-4 border border-3 mt-0 text text-center" id="song-lyrics" > {{ currentSongLyrics() }} </p> 
+        }
     </div>
 </div>
