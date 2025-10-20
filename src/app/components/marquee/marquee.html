@@ -40,10 +40,10 @@
 </div>
 
 <div class="container mt-1">
-    <div class="row">
-        <h2 class="fs-1 text-center border border-3 p-0" id="stuff-header">  
+    <div class="row fs-1">
+        <h2 class="text-center border border-3 p-0" id="stuff-header">  
 
-            <div class="container">
+            <div class="container mt-0">
             <div class=" row align-items-center">
                 <div class="col-4">
                     <a [href]="currentItemLink()" target="_blank" rel="noopener noreferrer"> 
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="col-4 text-center current-item-title">
-                    <a [href]="currentItemLink()" class="tex" target="_blank" rel="noopener noreferrer"> {{ currentItemTitle() }} 
+                    <a [href]="currentItemLink()" target="_blank" rel="noopener noreferrer"> {{ currentItemTitle() }} 
                         @if (kindOfItem() === `song`) {
                             - {{ currentSongArtist() }}
                         }
@@ -74,7 +74,7 @@
     <div class="row">
         <p class="fs-4 border border-3 mt-0" id="item-review"> {{ currentItemReview() }} </p>
         @if (kindOfItem() === `song`) {
-            <p class="fs-4 border border-3 mt-0 text-center" id="song-lyrics" > {{ currentSongLyrics() }} </p> 
+            <p class="fs-4 border border-3 mt-0 text-center" id="song-lyrics" [innerHTML]="currentSongLyrics()"></p> 
         }
     </div>
 </div>

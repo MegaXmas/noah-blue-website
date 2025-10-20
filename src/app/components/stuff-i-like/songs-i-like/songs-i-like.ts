@@ -23,7 +23,7 @@ export class SongsILike implements OnInit, OnDestroy {
                   \n in the background..." \
                   \n such beautiful songwriting man it gets me everytime...` },
     { songTitle: `LIFE EATER`,
-      songArtist: `nothing,nowhere.`, songAlbumTitle: `BLOODLUST`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b273e29c71fe5a3f5aa301b4bf76`,
+      songArtist: `nothing,\u200Bnowhere.`, songAlbumTitle: `BLOODLUST`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b273e29c71fe5a3f5aa301b4bf76`,
       songLink: `track/04LKJh8KqRAFWKHgEKpGPq?si=1fa92c39893f4b9e`,
       songReview: `i love a sad banger. the progression from soft whispy vocals to emotional pent up screaming really does it for me. instrumental perfectly captures the tone too. this is my favorite nn song. \
                   when i found out that, out of all the songs on bloodlust, this was the song homie jayvee had the most creative control on it was a serindipitous moment lol.`,
@@ -71,7 +71,7 @@ export class SongsILike implements OnInit, OnDestroy {
                   \n i never thought ud drive me to the clinic~~~ \
                   \n baby, im stuck in sin city \
                   \n tryna get me hooked, why so fishy? \
-                  \n might run off, might <i><b>go missiiinnngg</b></i> \
+                  \n might run off, might <strong><em>go missiiinnngg</em></strong> \
                   \n no lights on, going 150"`, 
       },
     { songTitle: ``,
