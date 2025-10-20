@@ -6,7 +6,6 @@ import { FavoriteStuff } from '../../../models/favorite-stuff';
 import { Marquee } from '../../marquee/marquee';
 
 
-
 @Component({
   selector: 'app-movies-i-like',
   imports: [Marquee],

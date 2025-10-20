@@ -1,1 +1,7 @@
-
+.sidebar-left {
+    position: absolute;
+    max-width: 15.6vw;
+    background-color: burlywood;
+    transform: translateY(50);
+    display: auto;
+}
