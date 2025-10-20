@@ -5,7 +5,9 @@
 /* ======== MARQUEE STUFF====== */
 
 .marquee-wrapper-outer {
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
     background-color: rgb(54, 163, 105);
     width: max-content;
     overflow: hidden;
