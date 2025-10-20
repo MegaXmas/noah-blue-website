@@ -1,4 +1,4 @@
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input, computed} from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';
@@ -11,7 +11,7 @@ import { FavoriteMovie } from '../../models/favorite-movie';
   selector: 'app-marquee',
   imports: [],
   templateUrl: './marquee.html',
-  styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css']
+  styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css', '../stuff-i-like/songs-i-like/songs-i-like.css']
 })
 export class Marquee implements OnInit, OnDestroy {
 
@@ -39,11 +39,15 @@ export class Marquee implements OnInit, OnDestroy {
   profilePicture = input.required<string>();
   profilePictureClass = input.required<string>();
 
+
   relevantImgClass = input.required<string>();
+  marqueeArtClass: WritableSignal<string> = signal("");
 
   
 // ======ON INIT/DESTROY======
   ngOnInit(): void {
+
+    this.marqueeArtClass.set(`marquee-item-` + this.kindOfItem())
 
     console.log("MARQUEE COMPONENT: " + this.stuffArray()!.length + " items displayed")
     this.currentItemTitle.set("Hover over a " + this.kindOfItem() + " for my thoughts!")
@@ -63,7 +67,7 @@ export class Marquee implements OnInit, OnDestroy {
       window.addEventListener('resize', this.resizeListener);
     }
 
-    console.log("MARQUEE COMPONENT: " + JSON.stringify(this.stuffArray()));
+    // console.log("MARQUEE COMPONENT: " + JSON.stringify(this.stuffArray()));
   }
 
 
@@ -77,7 +81,6 @@ export class Marquee implements OnInit, OnDestroy {
       }
     }
   }
-
 
 
   // ======MARQUEE STUFF======
@@ -131,13 +134,25 @@ export class Marquee implements OnInit, OnDestroy {
 
 
   // ======ARRAY DATA METHODS======
-  // setAllCurrentItemData(index: number): void {
-  //   const selectedItem = this.stuffArray()![index];
-  //   this.currentItemTitle.set(selectedItem.stuffTitle);
-  //   this.currentItemArt.set(selectedItem.stuffArt);
-  //   this.currentItemLink.set(selectedItem.stuffLink);
-  //   this.currentItemReview.set(selectedItem.stuffReview);
-  // }
+
+  // Get the art/poster for any item type
+  getItemArt(item: FavoriteStuff): string {
+    switch (item!.type) {
+        case 'movie':
+            return item!.moviePoster;  // TypeScript knows it's FavoriteMovie!
+        case 'song':
+            return item!.songAlbumCover;
+    }
+  }
+
+  getItemTitle(item: FavoriteStuff): string {
+    switch (item!.type) {
+        case 'movie':
+            return item!.movieTitle;
+        case 'song':
+            return item!.songTitle;
+    }
+  }
 
   setAllCurrentItemData(index: number): void {
     const items = this.stuffArray();

@@ -1,5 +1,6 @@
 export interface FavoriteSong {
 
+    type: `song`;
     songTitle: string;
     songArtist: string;
     songAlbumTitle: string;

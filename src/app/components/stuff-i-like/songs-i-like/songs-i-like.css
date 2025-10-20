@@ -1,3 +1,58 @@
+/* ======== MARQUEE STUFF====== */
+
+.marquee-item-song {
+    width: 200px;
+    padding: 0;
+    margin: 5px;
+    object-fit: cover;
+    border: 5px solid green;
+}
+
+
+/* ======MOVIE REVIEW SECTION====== */
+
+.spotify-profile {
+    width: 150px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(93, 147, 228); 
+    border-radius: 15%;
+}
+
+.current-album-cover {
+    width: 200px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: gold; 
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* =======MEDIA FLEX====== */
+
+@media (max-width: 768px) {
+    .marquee-item-song {
+        width: 150px;
+    }
+
+    .current-album-cover {
+        width: 150px;
+        border-width: 3px;
+        border-radius: 3px;
+    }
+
+    .spotify-profile {
+        width: 100;
+    }
+
+    .current-song-title {
+        text-align: right;
+    }
+
+}
+
+
+/* ======MISC====== */
 
 p {
 white-space: pre-line;

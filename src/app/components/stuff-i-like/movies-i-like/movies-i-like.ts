@@ -1,9 +1,10 @@
 import { Component, signal, WritableSignal, OnInit, OnDestroy} from '@angular/core';
 
 import { FavoriteMovie } from '../../../models/favorite-movie';
+import { FavoriteStuff } from '../../../models/favorite-stuff';
 
 import { Marquee } from '../../marquee/marquee';
-import { FavoriteStuff } from '../../../models/favorite-stuff';
+
 
 
 @Component({
@@ -176,16 +177,16 @@ export class MoviesILike implements OnInit, OnDestroy {
       moviePoster: `https://a.ltrbxd.com/resized/sm/upload/a3/0q/kf/h8/jUFjMoLh8T2CWzHUSjKCojI5SHu-0-2000-0-3000-crop.jpg?v=6285ee260e`, 
       movieLink: `https://letterboxd.com/film/harry-potter-and-the-prisoner-of-azkaban/`, 
       movieReview: ``},
-  ];
+  ].map(m => ({ ...m, type: 'movie' as const }));;
 
-  get movieItems(): FavoriteStuff[] {
-    return this.movieArray.map(m => ({
-    stuffTitle: m.movieTitle,
-    stuffArt: m.moviePoster,
-    stuffLink: m.movieLink,
-    stuffReview: m.movieReview
-    }));
-  };
+  // get movieItems(): FavoriteStuff[] {
+  //   return this.movieArray.map(m => ({
+  //   stuffTitle: m.movieTitle,
+  //   stuffArt: m.moviePoster,
+  //   stuffLink: m.movieLink,
+  //   stuffReview: m.movieReview
+  //   }));
+  // };
 
   letterboxdProfile: string = `https://letterboxd.com/MegaXmas/`;
   letterboxdProfilePic: string = `https://a.ltrbxd.com/resized/avatar/upload/1/1/7/8/0/4/9/9/shard/avtr-0-220-0-220-crop.jpg?v=4fb09fb5fb`;

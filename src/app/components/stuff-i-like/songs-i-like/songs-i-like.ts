@@ -93,13 +93,14 @@ export class SongsILike implements OnInit, OnDestroy {
       songReview: ``,
       songLyrics: ``,
       },
-  ];
+  ].map(s => ({ ...s, type: 'song' as const }));
 
   spotifyProfile: string = `https://open.spotify.com/user/12169723921?si=99d85c1c15624876`;
   spotifyProfilePic: string = `https://i.scdn.co/image/ab6775700000ee85e50df101871d2a39bf96f9a9`;
-  spotifyProfileStyle: string = ``;
+  spotifyProfileStyle: string = `spotify-profile`;
 
-  albumCoverStyle: string = ``;
+
+  albumCoverStyle: string = `current-album-cover`;
   songString: string = `song`;
 
 

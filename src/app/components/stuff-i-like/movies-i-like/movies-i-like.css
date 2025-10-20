@@ -4,7 +4,7 @@
 
 /* ======== MARQUEE STUFF====== */
 
-.marquee-item {
+.marquee-item-movie {
     width: 200px;
     height: 300px;
     padding: 0;
@@ -37,19 +37,26 @@
 /* =======MEDIA FLEX====== */
 
 @media (max-width: 768px) {
-    .marquee-item {
+    .marquee-item-movie {
         width: 150px;
         height: 225px;
     }
+
     .current-movie-poster {
         width: 152px;
         height: 229px;
         border-width: 3px;
         border-radius: 4px;
     }
+
+    .letterboxd-profile {
+        width: 100px;
+    }
+
     .current-movie-title {
         text-align: right;
     }
+    
 }
 
 
