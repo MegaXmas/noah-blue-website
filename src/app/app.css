@@ -1,0 +1,21 @@
+.main-content {
+    margin-left: 0px; 
+}
+
+@media (max-width: 1200px) {
+    .main-content {
+        margin-left: 170px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 140px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        margin-left: 0;
+    }   
+}
