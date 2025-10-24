@@ -2,7 +2,13 @@
 /* TODO change systle to showing title and a design on hover (maybe some static or something) */
 
 
-/* ======== MARQUEE STUFF====== */
+/* ======*MARQUEE STUFF====== */
+
+.marquee-border {
+    border-style: ridge;
+    border-width: 10px;
+    border-color: rgb(0, 0, 0);
+}
 
 .marquee-wrapper-outer {
     padding-top: 10px;
@@ -11,6 +17,7 @@
     background-color: rgb(54, 163, 105);
     width: max-content;
     overflow: hidden;
+
 }
 
 .marquee-wrapper {
@@ -38,7 +45,7 @@
 }
 
 
-/* =======MEDIA FLEX====== */
+/* ======*MEDIA FLEX====== */
 
 @media (max-width: 768px) {
     .current-stuff-title {
@@ -48,7 +55,7 @@
 }
 
 
-/* ======MISC====== */
+/* ======*MISC====== */
 
 p {
 white-space: pre-line;

@@ -1,7 +1,16 @@
 .sidebar-left {
-    position: absolute;
+    position: sticky;
     max-width: 15.6vw;
     background-color: burlywood;
-    transform: translateY(50);
-    display: auto;
+    transform: translateY(50%);
+    display: block;
+    float: inline-start;
+}
+.navbar-responsive-text {
+    font-size: clamp(2vw, 1.5vw, 1vw)!important;
+    align-items: center
+}
+
+@media .navbar-responsive-text {
+    
 }
