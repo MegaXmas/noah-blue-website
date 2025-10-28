@@ -1,3 +1,5 @@
+/* ======* CRT DISPLAY STUFF ====== */
+
 .tv-container {
     position: relative;
     width: 90%;
@@ -29,4 +31,15 @@
     z-index: 1;
     object-fit: scale-down;
     transform: scale(0.84, .69);
+}
+
+/* ======* VIDEO SHELF BUTTON STUFF ====== */
+
+.video-shelf {
+    align-items: center!important;
+}
+
+.video-shelf-button {
+    width: 50vw!important;
+    padding: 2px!important;
 }

@@ -1,7 +1,6 @@
 import { Component, signal, WritableSignal, OnInit, OnDestroy} from '@angular/core';
 
 import { FavoriteMovie } from '../../../models/favorite-movie';
-import { FavoriteStuff } from '../../../models/favorite-stuff';
 
 import { Marquee } from '../../marquee/marquee';
 

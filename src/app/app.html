@@ -1,17 +1,19 @@
 <app-header></app-header>
-
 <div class="container-fluid">
     <div class="row">
-
-        <!--======== SIDEBAR ========-->
-        <div class="col-lg-2 col-md-3 d-none d-md-block">
+        <!--======== SIDEBAR LEFT ========-->
+        <div class="col-lg-2 col-6 order-lg-1 order-md-2 order-sm-2 order-2">
             <app-sidebar-left></app-sidebar-left>
         </div>
-
+        
         <!--======== MAIN CONTENT ========-->
-        <div class="col-lg-10 col-md-9 col-12">
+        <div class="col-lg-8 col-12 order-lg-2 order-md-1 order-sm-1 order-1">
             <router-outlet></router-outlet>
         </div>
-
+        
+        <!--======== SIDEBAR RIGHT ========-->
+        <div class="col-lg-2 col-6 order-lg-3 order-md-3 order-sm-3 order-3">
+            <app-sidebar-right></app-sidebar-right>
+        </div>
     </div>
 </div>

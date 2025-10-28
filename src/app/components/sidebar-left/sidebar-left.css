@@ -1,8 +1,11 @@
 .sidebar-left {
     background-color: burlywood;
     padding: 1rem;
+    margin-top: 3px;
     height: fit-content;
     transform: translateY(50%);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .sidebar-left h2 {
@@ -12,9 +15,17 @@
 .sidebar-left .nav-link {
     color: #333;
     padding: 0.75rem;
+    pointer-events: all!important;
 }
 
 .sidebar-left .nav-link:hover {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+}
+
+
+@media (max-width: 991px) {
+    .sidebar-left {
+        transform: translateY(0%);
+    }
 }
