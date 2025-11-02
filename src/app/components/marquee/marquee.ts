@@ -1,6 +1,7 @@
 import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input} from '@angular/core';
-import { isPlatformBrowser, LowerCasePipe } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 
+import { TextAestheticPipe } from '../../pipes/text-aesthetic.pipe';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';
 
@@ -10,14 +11,13 @@ import { FavoriteMovie } from '../../models/favorite-movie';
 
 @Component({
   selector: 'app-marquee',
-  imports: [LowerCasePipe],
+  imports: [TextAestheticPipe],
   templateUrl: './marquee.html',
   styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css', '../stuff-i-like/songs-i-like/songs-i-like.css']
 })
 export class Marquee implements OnInit, OnDestroy {
 
   private readonly platformId = inject(PLATFORM_ID);
-  private readonly lowerCasePipe = inject(LowerCasePipe)
   private resizeListener?: () => void;
   private resumeTimeout?: number;
 
@@ -54,6 +54,8 @@ export class Marquee implements OnInit, OnDestroy {
     console.log("MARQUEE COMPONENT: " + this.stuffArray()!.length + " items displayed")
     this.currentItemTitle.set("Hover over a " + this.kindOfItem() + " for my thoughts!")
     this.currentItemReview.set("*yapping*")
+
+    
     
     if (isPlatformBrowser(this.platformId)) {
 

@@ -77,7 +77,7 @@
     </div>
 
     <div class="row">
-        <p class="fs-4 border border-3 mt-0 mb-0" id="item-review"> {{ currentItemReview() | lowercase }} </p>
+        <p class="fs-4 border border-3 mt-0 mb-0" id="item-review" [innerHTML]="currentItemReview() | textAestheticPipe"></p>
         @if (kindOfItem() === `song`) {
             <p class="fs-4 border border-3 mt-0 text-center" id="song-lyrics" [innerHTML]="currentSongLyrics()"></p> 
         }

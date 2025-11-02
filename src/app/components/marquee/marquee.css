@@ -33,6 +33,7 @@
 .marquee-track {
     display: flex;
     animation: marquee var(--marquee-duration, 20s) linear infinite;
+    animation-delay: 1500ms;
 }
 
 @keyframes marquee {
