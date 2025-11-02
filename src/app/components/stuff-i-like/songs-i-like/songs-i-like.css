@@ -1,4 +1,4 @@
-/* ======== MARQUEE STUFF====== */
+/* ======== MARQUEE STUFF ====== */
 
 .marquee-item-song {
     width: 200px;
@@ -8,8 +8,29 @@
     border: 5px solid green;
 }
 
+/* ======== SONG LIST STUFF ====== */
 
-/* ======MOVIE REVIEW SECTION====== */
+.full-song-list {
+    max-width: fit-content;
+    max-height: 25vh;
+    overflow-y: scroll; /* Use overflow-y instead of overflow */
+    border: 5px solid blueviolet !important;
+}
+
+.full-song-list .list-group-item {
+    border-left: none;
+    border-right: none;
+}
+
+.full-song-list .list-group-item:first-child {
+    border-top: none;
+}
+
+.full-song-list .list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* ======SONG REVIEW SECTION====== */
 
 .spotify-profile {
     width: 150px;

@@ -1,3 +1,14 @@
+<div class="container-lg d-flex justify-content-center">
+
+    <ul class="list-group full-song-list mt-2">
+        @for (song of songArray; track song.songTitle; let i = $index) {
+            <a (click)="selectSong(i)" class="list-group-item list-group-item-action text-center" 
+                target="_blank" rel="noopener noreferrer"> <b>{{ song.songArtist }}</b> - {{ song.songTitle }} </a>
+        }
+    </ul>
+
+</div>
+
 <app-marquee [stuffArray]="songArray" 
 [relevantProfile]="this.spotifyProfile" [profilePicture]="this.spotifyProfilePic" [profilePictureClass]="this.spotifyProfileStyle" 
 [relevantImgClass]="this.albumCoverStyle" [kindOfItem]="this.songString"/>
