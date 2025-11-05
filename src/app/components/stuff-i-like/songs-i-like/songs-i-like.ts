@@ -184,6 +184,18 @@ songArray: FavoriteSong[] = [
 		songReview: ``,
 		songLyrics: ``,
 		},
+	{ songTitle: `Sweet Disposition`,
+		songArtist: `the temper trap`, songAlbumTitle: `conditions`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b27357a0868419086b576553c9f4`,
+		songLink: `https://open.spotify.com/track/5RoIXwyTCdyUjpMMkk4uPd?si=874c5df9257744c8`,
+		songReview: ``,
+		songLyrics: ``,
+		},
+	{ songTitle: `Dark Blue`,
+		songArtist: `jacks's mannequin`, songAlbumTitle: `everything in transit`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b273ca9cb73f907a5714c038bd24`,
+		songLink: `https://open.spotify.com/track/3tZwKujD64Ad6vlDVxZOrg?si=e0785dd5cc7745c2`,
+		songReview: ``,
+		songLyrics: ``,
+		},
 	{ songTitle: `All That I've Got`,
 		songArtist: `the used`, songAlbumTitle: `all that ive got`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b273840bd76cfcb271385978a6a6`,
 		songLink: `https://open.spotify.com/track/6IxQ0PdozaZKch1m8tGCwb?si=0a54d46f09614107`,
@@ -244,7 +256,7 @@ songArray: FavoriteSong[] = [
 		songReview: ``,
 		songLyrics: ``,
 		},
-	{ songTitle: `Free Fallin' - Live at the Nokia Theatre, Los Angeles, CA - December 2007`,
+	{ songTitle: `Free Fallin' - Live 2007`,
 		songArtist: `john mayer`, songAlbumTitle: `where the light is: john mayer live`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b2735b9c332f9f76cabc137e400f`,
 		songLink: `https://open.spotify.com/track/4LloVtxNZpeh7q7xdi1DQc?si=4289e5abb61c4416`,
 		songReview: ``,
@@ -325,14 +337,31 @@ songArray: FavoriteSong[] = [
 	{ songTitle: `Calling All Cars`,
 		songArtist: `senses fail`, songAlbumTitle: `still searching`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b2739df48b372c06a24c03fa17a6`,
 		songLink: `https://open.spotify.com/track/4LtUNqSiFZzm70a7kM8hnc?si=13c200757b7c4999`,
-		songReview: ``,
+		songReview: `review`,
 		songLyrics: ``,
 		},
 	{ songTitle: `Weight of the Wind`,
 		songArtist: `nothing,\u200Bnowhere.`, songAlbumTitle: `who are you?`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b2735734b84fefb7bf855c822fca`,
 		songLink: `https://open.spotify.com/track/7avXR8uTcmE9Cy69tcQoew?si=492bb40c11584208`,
-		songReview: ``,
-		songLyrics: ``,
+		songReview: `yap yap`,
+		songLyrics: `"And I can hear the pain in the way that you say my name
+					^^~~~~The cold gaze in your eyes~~~~^/^
+
+					Tell me all the things that keep you up at night
+					If you sleep forever then you'll never have to fight
+
+					Damn, 
+					how did it get like this?
+					I still hate my life, I'm still full of shit
+					And I got a thing for destruction
+					Down all the pills, 
+					said ^!^fuck the instructions^/!^
+
+					I can make the things that I love dieeeee
+					Ruin everything that's kept me aliveeeee
+					Push away the people who stood by my sideeee
+					They ask me why I do it
+					^^I don't know whyyyyyy^/^ :("`,
 		},	
 	{ songTitle: `ctrl alt del`,
 		songArtist: `corbin`, songAlbumTitle: `ghost with skin`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b27362ca5d840aaf7a55db118534`,
@@ -356,13 +385,30 @@ songArray: FavoriteSong[] = [
 		songArtist: `kurtains`, songAlbumTitle: `florence fields`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b2738201cb664d7af648b2ab6d0b`,
 		songLink: `https://open.spotify.com/track/0o4hxw4uTsKNId65cK6NBG?si=e0bf9ffc1b9b49d1`,
 		songReview: ``,
-		songLyrics: ``,
+		songLyrics: `Girl, I'll call you when I finish up at work
+					And I promise to you that I'll make it worth it
+					And I'm sorry that I couldn't make it work when
+					You needed me the most and I was hopeless
+					~~~~Girl, I can make it up to you, I swear~~~~
+					^^~~~~And I can tell you find it hard~~~~^/^
+					But I just wanna show you that I care
+					^^And I didn't mean to hurt you… <33333^/^`,
 		},
 	{ songTitle: `whatever it takes`,
 		songArtist: `convolk + sewerperson + guardin`, songAlbumTitle: `whatever it takes`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b2730b67e663e96eb22258098622`,
 		songLink: `https://open.spotify.com/track/4paTIojVRwNvVfS70Q0nvT?si=383f86e8abd54e97`,
 		songReview: ``,
-		songLyrics: ``,
+		songLyrics: `Every move that I make
+					Every promise I break 
+					I'll be there for you
+					I'll do whatever it takes 
+					I'll do whatever it takes 
+					to be there for you
+
+					I could fall again and get stuck with you for a night again
+					^^I miss you on my skin 
+					come make me feel right agaaaain^/^
+					(i totally used these lyrics in my song ^^”i wish that i could hate u”^/^ because theyre just so relatable to me :)`,
 		},
 	{ songTitle: `Dont Wanna Dance`,
 		songArtist: `caspr (ppg casper) + pasto flaco`, songAlbumTitle: `dont wanna dance`, songAlbumCover: `https://cdn-images.dzcdn.net/images/cover/d1c7c1185f6f9855d0d55b1555da4a56/0x1900-000000-80-0-0.jpg`,
@@ -380,7 +426,25 @@ songArray: FavoriteSong[] = [
 		songArtist: `bibio`, songAlbumTitle: `silver wilkinson`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b2736ca462741e173b33aa0b37e1`,
 		songLink: `https://open.spotify.com/track/7DZIXHoj13Dwe0ys58zcyP?si=112f1414a1784143`,
 		songReview: ``,
-		songLyrics: ``,
+		songLyrics: `He sees you
+					More than you could know...
+					In his chair at night
+					He can't clear his mind...
+
+					Silence hurts
+					No-distractions-ache
+					Then he gets the call
+					And he drives for miles...
+
+					You won't remember
+					But he wanted you
+					He'd like to tell you
+					That he wanted you
+
+					You won't remember
+					But he wanted you
+					He'd like to tell you
+					That you're haunting him :(`,
 		},
 	{ songTitle: `thingsudo2me`,
 		songArtist: `ericdoa + brakence`, songAlbumTitle: `coa`, songAlbumCover: `https://i1.sndcdn.com/artworks-w8gH5Vwjx8Ue-0-t500x500.jpg`,
@@ -476,7 +540,31 @@ songArray: FavoriteSong[] = [
 		songArtist: `empire! empire! (i was a lonely estate)`, songAlbumTitle: `what it takes to move forward`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b2736f2ba946a4e085499ec8e7e5`,
 		songLink: `https://open.spotify.com/track/2HvaFrmZW0e1YYcuitZoKy?si=890a0a1260a34347`,
 		songReview: ``,
-		songLyrics: ``,
+		songLyrics: `Will the same mistakes haunt you 
+					like they used to do?
+					Or are you afraid 
+					that your body won't let you choose?
+
+					You cannot accept the things you can't control
+					And I know your mind is young ^^but your body's old!!!^/^
+					And you can't forgive yourself, 
+					though no one else could blame you 
+					for this…..
+
+					And already I can't remember 
+					if the heart was ever aware
+					That the body it kept alive was 
+					^^wearing out^/^ 
+					was ^^~~~shutting dooooownn~~~^/^
+					And toniiiiight, 
+					when it realized, 
+					^!^^UP^you gave up 
+					⬇️ it cried out!!!!^/UP^^/!^ ⬇️
+
+					<i>Only now I realize
+					I always knew
+					(~~~~i always knew!!!~~~~)
+					I always knewwwww 💔</i>`,
 		},
 	{ songTitle: `The More You Talk The Less I Hear`,
 		songArtist: `armor for sleep`, songAlbumTitle: `what to do when you are dead`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b2733439ed02bb1efcd748df6baa`,
@@ -547,12 +635,6 @@ songArray: FavoriteSong[] = [
 	{ songTitle: `follow`,
 		songArtist: `sullii`, songAlbumTitle: `wake up nect to me`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b273e8e7b399c1c32046e3b6537a`,
 		songLink: `https://open.spotify.com/track/7ob6TeZ57I3UsAulzArKdJ?si=cf45d4e7aadc47ad`,
-		songReview: ``,
-		songLyrics: ``,
-		},
-	{ songTitle: `Dark Blue`,
-		songArtist: `jacks's mannequin`, songAlbumTitle: `everything in transit`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b273ca9cb73f907a5714c038bd24`,
-		songLink: `https://open.spotify.com/track/3tZwKujD64Ad6vlDVxZOrg?si=e0785dd5cc7745c2`,
 		songReview: ``,
 		songLyrics: ``,
 		},
@@ -709,12 +791,6 @@ songArray: FavoriteSong[] = [
 	{ songTitle: `40 Over`,
 		songArtist: `seaway`, songAlbumTitle: `vacation`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b273595165ca9661d370c8597dfc`,
 		songLink: `https://open.spotify.com/track/2ENGOYVtlYd39z9CJbkj27?si=82457b88a3c04b63`,
-		songReview: ``,
-		songLyrics: ``,
-		},
-	{ songTitle: `Sweet Disposition`,
-		songArtist: `the temper trap`, songAlbumTitle: `conditions`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b27357a0868419086b576553c9f4`,
-		songLink: `https://open.spotify.com/track/5RoIXwyTCdyUjpMMkk4uPd?si=874c5df9257744c8`,
 		songReview: ``,
 		songLyrics: ``,
 		},
@@ -2122,7 +2198,6 @@ songArray: FavoriteSong[] = [
 
 
 	private readonly sanitizer = inject(DomSanitizer);
-	private readonly parentMarquee = inject(Marquee);
 
 
 
@@ -2143,8 +2218,8 @@ songArray: FavoriteSong[] = [
 	
 	songSelected = output<number>();
 
-	selectSong(index: number): void {
-		this.songSelected.emit(index)
+	selectSong(index: number, marqueeComponent: Marquee): void {
+		marqueeComponent.setAllCurrentItemData(index);
 	}
 
 	  // This method creates the safe URL when Angular needs it

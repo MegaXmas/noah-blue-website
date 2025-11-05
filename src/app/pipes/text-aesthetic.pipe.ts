@@ -2,17 +2,21 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-    name: 'textAestheticPipe',
+    name: `textAestheticPipe`,
 })
 
 export class TextAestheticPipe implements PipeTransform {
 
     transform(text: string): string {
         return text.toLowerCase().
-                    replaceAll('^^', '<i><b>').
-                    replaceAll('^/^', '</i></b>').
-                    replaceAll('^!^', '<strong><em>').
-                    replaceAll('^/!^', '</em></strong>');
+                    replaceAll(`^^`, `<i><b>`).
+                    replaceAll(`^/^`, `</i></b>`).
+                    replaceAll(`^!^`, `<strong><em>`).
+                    replaceAll(`^/!^`, `</em></strong>`).
+                    replaceAll(`you`, `u`).
+                    replaceAll(` are`, ` r`).
+                    replaceAll(`'re`, `r`).
+                    replaceAll(`'`, ``);
 
     }
 }
