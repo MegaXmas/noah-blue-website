@@ -61,3 +61,7 @@
 p {
 white-space: pre-line;
 }
+
+.uppercase-marker {
+    text-transform: uppercase;
+}
