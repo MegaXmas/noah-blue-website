@@ -7,11 +7,12 @@ import { FavoriteStuff } from '../../models/favorite-stuff';
 
 import { FavoriteSong } from '../../models/favorite-song'
 import { FavoriteMovie } from '../../models/favorite-movie';
+import { StuffSearchSidebar } from "../stuff-i-like/stuff-search-sidebar/stuff-search-sidebar";
 
 
 @Component({
   selector: 'app-marquee',
-  imports: [TextAestheticPipe],
+  imports: [TextAestheticPipe, StuffSearchSidebar],
   templateUrl: './marquee.html',
   styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css', '../stuff-i-like/songs-i-like/songs-i-like.css']
 })
@@ -24,7 +25,7 @@ export class Marquee implements OnInit, OnDestroy {
 
   stuffArray = input<FavoriteStuff[]>();
 
-  kindOfItem = input.required<string>();
+  kindOfItem = input<string>();
 
   currentFavoriteItem: WritableSignal<FavoriteStuff | null> = signal(null);
 
@@ -37,12 +38,12 @@ export class Marquee implements OnInit, OnDestroy {
   currentSongLyrics: WritableSignal<string> = signal("");
 
 
-  relevantProfile = input.required<string>();
-  profilePicture = input.required<string>();
-  profilePictureClass = input.required<string>();
+  relevantProfile = input<string>();
+  profilePicture = input<string>();
+  profilePictureClass = input<string>();
 
 
-  relevantImgClass = input.required<string>();
+  relevantImgClass = input<string>();
   marqueeArtClass: WritableSignal<string> = signal("");
 
   

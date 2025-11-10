@@ -1,4 +1,4 @@
-import { Component, signal, Signal, WritableSignal } from '@angular/core';
+import { Component, inject, input, signal, Signal, WritableSignal } from '@angular/core';
 
 import { Marquee } from '../../marquee/marquee';
 import { FavoriteStuff } from '../../../models/favorite-stuff';
@@ -11,11 +11,12 @@ import { FavoriteStuff } from '../../../models/favorite-stuff';
 })
 export class StuffSearchSidebar {
 
-  stuffArray: WritableSignal<FavoriteStuff[]> = signal([])
+  private readonly marquee = inject(Marquee)
 
-  findItemType(marqueeComponent: Marquee): Signal<string> {
-    return marqueeComponent.kindOfItem
-  }
+  stuffArray = input.required<FavoriteStuff[] | undefined>()
+
+  kindOfItem = input.required<string | undefined>()
+
 
 	selectItem(index: number, marqueeComponent: Marquee): void {
 		marqueeComponent.setAllCurrentItemData(index);

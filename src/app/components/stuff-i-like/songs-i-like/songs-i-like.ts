@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, inject, output, EventEmitter} from '@angular/core'
+import { Component, OnInit, OnDestroy, inject, output } from '@angular/core'
 import { FavoriteSong } from '../../../models/favorite-song';
 
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
