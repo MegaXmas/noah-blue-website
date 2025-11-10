@@ -5,13 +5,11 @@ import { FavoriteStuff } from '../../../models/favorite-stuff';
 
 @Component({
   selector: 'app-stuff-search-sidebar',
-  imports: [Marquee],
+  imports: [],
   templateUrl: './stuff-search-sidebar.html',
   styleUrl: './stuff-search-sidebar.css'
 })
 export class StuffSearchSidebar {
-
-  private readonly marquee = inject(Marquee)
 
   stuffArray = input.required<FavoriteStuff[] | undefined>()
 

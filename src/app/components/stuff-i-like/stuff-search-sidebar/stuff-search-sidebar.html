@@ -1,14 +1,3 @@
-<app-marquee #marqueeRef></app-marquee>
-
 <div class="container-lg d-flex justify-content-center">
-
-    <ul class="list-group full-song-list m-2">
-        @if (kindOfItem() === "song") {
-            @for (song of stuffArray(); track song; let i = $index) {
-                <a (click)="selectItem(i, marqueeRef)" class="list-group-item list-group-item-action text-center" 
-                    target="_blank" rel="noopener noreferrer"> <b>{{ song.songArtist }}</b> - {{ song.songTitle }} </a>
-            }
-        }
-    </ul>
 
 </div>
