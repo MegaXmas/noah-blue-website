@@ -3535,15 +3535,15 @@ I got what you want, but you don't need thaaaaat 😞`,
 	private readonly sanitizer = inject(DomSanitizer);
 
 
-
 	ngOnInit(): void {
-	console.log(`SONGSILIKECOMPONENT: ` + this.songArray.length + ` songs displayed`)
-	// console.log(`SONGsILIKECOMPONENT: ` + JSON.stringify(this.songArray))
+		console.log("SONGS I LIKE COMPONENT: initializing component")
+		console.log(`SONGS I LIKE COMPONENT: ` + this.songArray.length + ` songs displayed`)
+		// console.log(`SONGsILIKECOMPONENT: ` + JSON.stringify(this.songArray))
 	}
 
 	ngOnDestroy(): void {
-		
-	console.log(`leaving songs-i-like page`)
+		console.log("SONGS I LIKE COMPONENT: destroying component")
+		console.log(`SONGS I LIKE COMPONENT: leaving songs-i-like page`)
 	};
 
 	getSongTitle(index: number): string {
@@ -3556,10 +3556,4 @@ I got what you want, but you don't need thaaaaat 😞`,
 	selectSong(index: number, marqueeComponent: Marquee): void {
 		marqueeComponent.setAllCurrentItemData(index);
 	}
-
-	  // This method creates the safe URL when Angular needs it
-  	// getSafeSpotifyUrl(): SafeResourceUrl {
-	// 	const fullUrl = `https://open.spotify.com/embed/${this.currentSongLink()}`;
-	// 	return this.sanitizer.bypassSecurityTrustResourceUrl(fullUrl);
-	// }
 }

@@ -3,24 +3,14 @@
     padding: 1rem;
     margin-top: 3px;
     height: fit-content;
-    transform: translateY(50%);
-    z-index: 1;
+    transform: translateY(25%);
     pointer-events: none;
+    z-index: 1;
+    overflow: scroll;
 }
 
 .sidebar-right h2 {
     font-size: 1.25rem;
-}
-
-.sidebar-right .nav-link {
-    color: #333;
-    padding: 0.75rem;
-    pointer-events: all!important;
-}
-
-.sidebar-right .nav-link:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
 }
 
 @media (max-width: 991px) {
