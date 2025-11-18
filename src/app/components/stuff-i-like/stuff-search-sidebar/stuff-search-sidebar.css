@@ -1,9 +1,12 @@
 .stuff-search-sidebar {
-    max-height: 50vh;
+    max-height: 300px;
     max-width: fit-content!important;
     overflow: scroll;
 }
 
+h2 {
+    font-size: 1.25rem;
+}
 
 .stuff-search-sidebar .list-group-item {
     color: #333;

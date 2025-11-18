@@ -30,6 +30,14 @@ export class ArrayDataService {
 
   setArrayItemIndex(index: number) {
     this.selectedArrayItemIndex.set(index);
+
+    if (this.selectedArrayItemIndex() === index) {
+      console.log(`ARRAY DATA SERVICE: selected item index set successfully at: ${this.selectedArrayItemIndex()}.`)
+    } else {
+      console.log(`ARRAY DATA SERVICE: selected item failed to set successfully.
+                  index recieved: ${index}
+                  current stored index: ${this.selectedArrayItemIndex()}`)
+    }
   }
 
   getArrayItemIndex(): number {

@@ -1,4 +1,4 @@
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input, effect} from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input, effect, untracked, computed} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { TextAestheticPipe } from '../../pipes/text-aesthetic.pipe';
@@ -31,17 +31,46 @@ export class Marquee implements OnInit, OnDestroy {
 
   public indexFromService: WritableSignal<number> = signal(0); 
 
-  private readonly selectionListner = effect(() => {
-    console.log(`MARQUEE COMPONENT: item with index ${this.indexFromService()} selected.
-                updating currentFavoriteItem`)
 
-    this.setAllCurrentItemData(this.indexFromService());
-    if (this.arrayDataService.selectedArrayItemIndex() === this.indexFromService()) {
-      console.log(`MARQUEE COMPONENT: index ${this.indexFromService()} properly updated`)
+  private readonly selectionListner = effect(() => {
+    let newServiceIndex = this.arrayDataService.getArrayItemIndex();
+
+    const stuff = untracked(() => this.stuffArray());
+
+    let currentItem = untracked(() => this.currentFavoriteItem());
+    let currentItemTitle = untracked(() => this.currentItemTitle());
+
+    const displayIndex = stuff.indexOf(currentItem);
+
+    console.log(`MARQUEE COMPONENT: item with index ${newServiceIndex} selected.`);
+    console.log(`MARQUEE COMPONENT: currentItemTitle: ${currentItemTitle}
+                  current displayed index: ${displayIndex}`
+    );
+
+    console.log(`MARQUEE COMPONENT: setting indexFromService to: ${newServiceIndex}`);
+    this.indexFromService.set(newServiceIndex);
+    let currentServiceIndex = this.indexFromService();
+    if (newServiceIndex === currentServiceIndex) {
+      console.log(`MARQUEE COMPONENT: index ${currentServiceIndex} properly updated`)
     } else {
       console.log(`MARQUEE COMPONENT: index failed to be sent by array-data-service. 
-                  selected index: ${this.indexFromService()}
-                  index currently stored in marquee component:  + ${this.indexFromService()}`)
+                  selected index: ${newServiceIndex}
+                  service index currently stored in marquee component: ${currentServiceIndex}`)
+    };
+
+    console.log(`MARQUEE COMPONENT: attempting to set currentFavoriteItem to stuffArray[] index: ${newServiceIndex}`);
+    this.setAllCurrentItemData(currentServiceIndex);
+    currentItem = untracked(() => this.currentFavoriteItem());
+    currentItemTitle = untracked(() => this.currentItemTitle());
+    if (currentItem === stuff.at(newServiceIndex) || currentServiceIndex) {
+      console.log(`MARQUEE COMPONENT: currentFavoriteItem updated successfully with index ${currentServiceIndex}.
+                  currentItemTitle: ${currentItemTitle}`)
+    } else {
+      console.log(`MARQUEE COMPONENT: currentFavoriteItem failed to update successfully.
+                  currentItemTitle: ${currentItemTitle}
+                  index of currentFavoriteItem: ${stuff.indexOf(currentItem)}.
+                  index recieved from service: ${currentServiceIndex}.
+                  index stored in array-data-service: ${newServiceIndex}`)
     }
   });
 

@@ -5,6 +5,8 @@ import { FavoriteStuff } from '../../../models/favorite-stuff';
 import { FavoriteMovie } from '../../../models/favorite-movie';
 import { FavoriteSong } from '../../../models/favorite-song';
 
+// TODO: display all items in array
+// TODO: make the list navigate the marquee to the proper item when selected
 
 @Component({
   selector: 'app-stuff-search-sidebar',

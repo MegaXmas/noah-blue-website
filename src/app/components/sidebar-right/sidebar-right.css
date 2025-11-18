@@ -2,11 +2,10 @@
     background-color: burlywood;
     padding: 1rem;
     margin-top: 3px;
-    height: fit-content;
-    transform: translateY(25%);
+    height: 330px;
+    transform: translateY(50%);
     pointer-events: none;
     z-index: 1;
-    overflow: scroll;
 }
 
 .sidebar-right h2 {
