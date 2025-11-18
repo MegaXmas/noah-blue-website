@@ -1,1 +1,19 @@
+.stuff-search-sidebar {
+    max-height: 300px;
+    max-width: fit-content!important;
+    overflow: scroll;
+}
 
+h2 {
+    font-size: 1.25rem;
+}
+
+.stuff-search-sidebar .list-group-item {
+    color: #333;
+    padding: 0.75rem;
+    pointer-events: all!important;
+}
+
+.stuff-search-sidebar .list-group-item:hover {  
+    cursor: pointer;
+}

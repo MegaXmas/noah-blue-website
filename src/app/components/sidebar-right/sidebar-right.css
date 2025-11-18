@@ -2,25 +2,14 @@
     background-color: burlywood;
     padding: 1rem;
     margin-top: 3px;
-    height: fit-content;
+    height: 330px;
     transform: translateY(50%);
-    z-index: 1;
     pointer-events: none;
+    z-index: 1;
 }
 
 .sidebar-right h2 {
     font-size: 1.25rem;
-}
-
-.sidebar-right .nav-link {
-    color: #333;
-    padding: 0.75rem;
-    pointer-events: all!important;
-}
-
-.sidebar-right .nav-link:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
 }
 
 @media (max-width: 991px) {

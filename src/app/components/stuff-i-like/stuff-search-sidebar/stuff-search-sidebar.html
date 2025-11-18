@@ -1,14 +1,18 @@
-<app-marquee #marqueeRef></app-marquee>
+<ul class="list-group align-items-center stuff-search-sidebar">
 
-<div class="container-lg d-flex justify-content-center">
+    @for (item of stuffArray(); track item; let i = $index) {
+        @if (isSong(item)) {
+            <a (click)="selectItem(i)" class="list-group-item list-group-item-action text-center" 
+                target="_blank" rel="noopener noreferrer">
 
-    <ul class="list-group full-song-list m-2">
-        @if (kindOfItem() === "song") {
-            @for (song of stuffArray(); track song; let i = $index) {
-                <a (click)="selectItem(i, marqueeRef)" class="list-group-item list-group-item-action text-center" 
-                    target="_blank" rel="noopener noreferrer"> <b>{{ song.songArtist }}</b> - {{ song.songTitle }} </a>
-            }
+                <b>{{ item.songArtist }} - {{ item.songTitle }}</b></a>
         }
-    </ul>
+        @if (isMovie(item)) {
+            <a (click)="selectItem(i)" class="list-group-item list-group-item-action text-center"    
+                target="_blank" rel="noopener noreferrer">
 
-</div>
+                <b>{{ item.movieTitle }}</b></a>
+        }
+    }
+    
+</ul>
