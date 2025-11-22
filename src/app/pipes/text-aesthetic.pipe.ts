@@ -41,9 +41,14 @@ export class TextAestheticPipe implements PipeTransform {
             .replaceAll('^/^', '</i></b>')
             .replaceAll('^!^', '<strong><em>')
             .replaceAll('^/!^', '</em></strong>')
-
+            
             ;
 
-        return this.sanitizer.bypassSecurityTrustHtml(withAestheticText);
+        const withStyles = withAestheticText
+            .replaceAll(/\[alert\](.*?)\[\/alert\]/gs, '<span class="alert">$1</span>')
+            .replaceAll(/\[tangent\](.*?)\[\/tangent\]/gs, '<span class="tangent">$1</span>')
+            ;    
+
+        return this.sanitizer.bypassSecurityTrustHtml(withStyles);
     }
 }

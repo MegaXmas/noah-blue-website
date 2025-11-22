@@ -5,6 +5,7 @@ import { MusicVideoPage } from './components/music-video-page/music-video-page';
 
 import { MoviesILike } from './components/stuff-i-like/movies-i-like/movies-i-like';
 import { SongsILike } from './components/stuff-i-like/songs-i-like/songs-i-like';
+import { GamesILike } from './components/stuff-i-like/games-i-like/games-i-like';
 
 export const routes: Routes = [
 
@@ -14,6 +15,7 @@ export const routes: Routes = [
     { path: 'music-videos', component: MusicVideoPage},
     { path: 'movies-i-like', component:  MoviesILike },
     { path: 'songs-i-like', component: SongsILike },
+    { path: 'games-i-like', component: GamesILike },
 
 
     { path: '**', redirectTo: '' } // wildcard route for a 404 page

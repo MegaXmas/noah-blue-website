@@ -1,6 +1,7 @@
 <ul class="list-group align-items-center stuff-search-sidebar">
 
     @for (item of stuffArray(); track item; let i = $index) {
+
         @if (isSong(item)) {
             <a (click)="selectItem(i)" class="list-group-item list-group-item-action text-center" 
                 target="_blank" rel="noopener noreferrer">
@@ -12,6 +13,12 @@
                 target="_blank" rel="noopener noreferrer">
 
                 <b>{{ item.movieTitle }}</b></a>
+        }
+        @if (isGame(item)) {
+                <a (click)="selectItem(i)" class="list-group-item list-group-item-action text-center"    
+                    target="_blank" rel="noopener noreferrer">
+
+                    <b>{{ item.gameTitle }}</b></a>
         }
     }
     

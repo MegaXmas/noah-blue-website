@@ -45,13 +45,32 @@
     }
 }
 
+/* ======*REVIEW STUFF====== */ 
+
+    .current-profile {
+        margin-left: 0vw;
+    }
+
+    .current-stuff-title {
+        text-align: center;
+
+    }
 
 /* ======*MEDIA FLEX====== */
 
-@media (max-width: 768px) {
-    .current-stuff-title {
-        text-align: right;
+    @media (max-width: 768px) {
+        .current-stuff-title {
+            display: inline-block;
+            text-align: center;
+        }
+
+    @media (max-width: 555px) {
+        .current-stuff-title {
+            text-decoration: underline;
+            text-align: center;
+        }
     }
+
 
 }
 

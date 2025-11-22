@@ -7,14 +7,17 @@ import { FavoriteStuff } from '../../models/favorite-stuff';
 
 import { FavoriteSong } from '../../models/favorite-song'
 import { FavoriteMovie } from '../../models/favorite-movie';
+import { FavoriteGame } from '../../models/favorite-game';
+
 import { ArrayDataService } from '../../services/array-data-service';
+
 
 
 @Component({
   selector: 'app-marquee',
   imports: [TextAestheticPipe],
   templateUrl: './marquee.html',
-  styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css', '../stuff-i-like/songs-i-like/songs-i-like.css']
+  styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css', '../stuff-i-like/songs-i-like/songs-i-like.css', '../stuff-i-like/games-i-like/games-i-like.css']
 })
 export class Marquee implements OnInit, OnDestroy {
 
@@ -213,6 +216,8 @@ export class Marquee implements OnInit, OnDestroy {
             return item!.moviePoster;
         case 'song':
             return item!.songAlbumCover;
+        case `game`:
+            return item!.gamePoster;
     }
   }
 
@@ -222,6 +227,8 @@ export class Marquee implements OnInit, OnDestroy {
             return item!.movieTitle;
         case 'song':
             return item!.songTitle;
+        case `game`:
+            return item!.gameTitle;
     }
   }
 
@@ -246,6 +253,12 @@ export class Marquee implements OnInit, OnDestroy {
         this.currentItemReview.set(item.songReview);
         this.currentSongArtist.set(item.songArtist);
         this.currentSongLyrics.set(item.songLyrics);
+    } else if (this.kindOfItem() === `game` && `gameTitle` in item!) {
+      const game = item as FavoriteGame;
+        this.currentItemTitle.set(item.gameTitle);
+        this.currentItemArt.set(item.gamePoster);
+        this.currentItemLink.set(item.gameLink);
+        this.currentItemReview.set(item.gameReview);
     }
   }
 }

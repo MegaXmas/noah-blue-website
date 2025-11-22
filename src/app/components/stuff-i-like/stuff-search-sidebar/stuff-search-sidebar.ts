@@ -4,6 +4,7 @@ import { ArrayDataService } from '../../../services/array-data-service';
 import { FavoriteStuff } from '../../../models/favorite-stuff';
 import { FavoriteMovie } from '../../../models/favorite-movie';
 import { FavoriteSong } from '../../../models/favorite-song';
+import { FavoriteGame } from '../../../models/favorite-game';
 
 // TODO: display all items in array
 // TODO: make the list navigate the marquee to the proper item when selected
@@ -70,7 +71,10 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
   isMovie(item: FavoriteStuff): item is FavoriteMovie {
     return item?.type === 'movie';
   }
-
+  
+  isGame(item: FavoriteStuff): item is FavoriteGame {
+    return item?.type === 'game';
+  }
 
   selectItem(index: number) {
     console.log("SIDEBAR SEARCH COMPONENT: item with index " + index + " selected" )
