@@ -207,7 +207,8 @@ export class Marquee implements OnInit, OnDestroy {
   // ======ARRAY DATA METHODS======
 
   sendArrayData(): void {
-    this.arrayDataService.setArrayData(this.stuffArray())
+    this.arrayDataService.setArrayData(this.stuffArray());
+    this.arrayDataService.itemType.set(this.kindOfItem());
   }
 
   getItemArt(item: FavoriteStuff): string {

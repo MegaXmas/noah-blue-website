@@ -2,6 +2,7 @@
     max-height: 300px;
     max-width: fit-content!important;
     overflow: scroll;
+    pointer-events: all;
 }
 
 h2 {
@@ -16,4 +17,8 @@ h2 {
 
 .stuff-search-sidebar .list-group-item:hover {  
     cursor: pointer;
+}
+
+.stuff-search-sidebar input {
+    pointer-events: all!important;
 }

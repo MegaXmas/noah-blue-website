@@ -1,4 +1,4 @@
-import { Component, inject, signal, WritableSignal, OnInit, OnDestroy, effect } from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, OnDestroy, effect, computed, untracked } from '@angular/core';
 import { ArrayDataService } from '../../../services/array-data-service';
 
 import { FavoriteStuff } from '../../../models/favorite-stuff';
@@ -6,8 +6,6 @@ import { FavoriteMovie } from '../../../models/favorite-movie';
 import { FavoriteSong } from '../../../models/favorite-song';
 import { FavoriteGame } from '../../../models/favorite-game';
 
-// TODO: display all items in array
-// TODO: make the list navigate the marquee to the proper item when selected
 
 @Component({
   selector: 'app-stuff-search-sidebar',
@@ -17,33 +15,40 @@ import { FavoriteGame } from '../../../models/favorite-game';
 })
 export class StuffSearchSidebar implements OnDestroy, OnInit {
 
-  private readonly arrayDataService= inject(ArrayDataService);
-
-  stuffArray: WritableSignal<FavoriteStuff[]> = signal([]);
+  private readonly arrayDataService = inject(ArrayDataService);
 
 
   // ======ON INIT / ON DESTROY======
 
   ngOnInit(): void {
     console.log("SIDEBAR SEARCH COMPONENT: initializing component")
+
+    console.log(`item type is ${this.itemType()}`)
   }
 
   ngOnDestroy(): void {
     console.log(`SIDEBAR SEARCH COMPONENT: destroying component`)
 
-      // this.stuffArray.set([]);
+      this.stuffArray.set([]);
 
-      // if (this.stuffArray().length === 0 ) {
-      //   console.log("SIDEBAR SEARCH COMPONENT: array data cleansed");
-      // } else {
-      //   console.log("items in array = " + this.stuffArray().length + 
-      //               `\narray data cleanse failed`);
-      // };
+      if (this.stuffArray().length === 0 ) {
+        console.log("SIDEBAR SEARCH COMPONENT: array data cleansed");
+      } else {
+        console.log("items in array = " + this.stuffArray().length + 
+                    `\narray data cleanse failed`);
+      };
+
+
   }
 
 
-
   // ======ARRAY DATA METHODS======
+
+  stuffArray: WritableSignal<FavoriteStuff[]> = signal([]);
+
+  itemType: WritableSignal<string> = signal('');
+
+
 
   private readonly arrayDataListener = effect(() => {
     const dataFromService = this.arrayDataService.stuffArrayData();
@@ -59,6 +64,7 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
       };
   });
 
+
   requestArrayData(): void {
     this.stuffArray.set(this.arrayDataService.getArrayData());
   }
@@ -73,20 +79,80 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
   }
   
   isGame(item: FavoriteStuff): item is FavoriteGame {
+
     return item?.type === 'game';
   }
 
-  selectItem(index: number) {
-    console.log("SIDEBAR SEARCH COMPONENT: item with index " + index + " selected" )
-    this.arrayDataService.setArrayItemIndex(index);
+  selectItem(item: FavoriteStuff) {
+    const originalIndex = this.stuffArray().indexOf(item);
+    this.arrayDataService.setArrayItemIndex(originalIndex);
 
-    if (this.arrayDataService.selectedArrayItemIndex() === index) {
-      console.log("SIDEBAR SEARCH COMPONENT: index " + index + " sent to array-data-service")
+    console.log(`SIDEBAR SEARCH COMPONENT: item "` + Object.values(item!)[0] + `" with index ` + originalIndex + ` selected` )
+    this.arrayDataService.setArrayItemIndex(originalIndex);
+
+    if (this.arrayDataService.selectedArrayItemIndex() === originalIndex) {
+      console.log("SIDEBAR SEARCH COMPONENT: index " + originalIndex + " sent to array-data-service")
     } else {
       console.log(`SIDEBAR SEARCH COMPONENT: index failed to be sent to array-data-service 
-                  selected index: ` + index + `
+                  selected index: ` + originalIndex + `
                   index currently stored in array-data-service: ` + this.arrayDataService.selectedArrayItemIndex())
     }
   }
+
+  placeholderText = computed(() => {
+    const type = this.itemType();
+    const length = this.stuffArray().length;
+
+    console.log('Computing placeholder:', type, length);
+
+    return `search ${length} of my fav ${type}s ♥️`;
+  });
+
+  searchText: WritableSignal<string> = signal('');
+
+  private readonly itemTypeListener = effect(() => {
+    const typeFromService = this.arrayDataService.itemType();
+    console.log('1. Type from service:', typeFromService);
+    console.log('2. Current array length:', this.stuffArray().length);
+    console.log('3. Current itemType:', this.itemType());
+    
+    this.itemType.set(typeFromService);
+    
+    // ✅ Clear the search input when page changes
+    untracked(() => {
+      this.searchText.set('');
+    });
+    
+    console.log('4. Updated itemType:', this.itemType());
+    console.log('5. Placeholder:', this.placeholderText());
+  });
+
+
+  filteredItems = computed(() => {
+    const search = this.searchText().toLowerCase();
+    const items = this.stuffArray()
+
+    if (!search) return items;
+    
+    return items.filter(item => {
+      if (this.isSong(item)) {
+        return item.songTitle.toLowerCase().includes(search) || 
+              item.songArtist.toLowerCase().includes(search);
+      }
+      if (this.isMovie(item)) {
+        return item.movieTitle.toLowerCase().includes(search);
+      }
+      if (this.isGame(item)) {
+        return item.gameTitle.toLowerCase().includes(search);
+      }
+      return false;
+    });
+  });
+
+    onSearchInput(event: Event): void {
+      const input = event.target as HTMLInputElement;
+      this.searchText.set(input.value);
+      console.log(`search input ${this.searchText()}`)
+    }
 
 }

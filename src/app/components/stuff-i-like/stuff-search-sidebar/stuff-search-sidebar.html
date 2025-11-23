@@ -1,25 +1,37 @@
-<ul class="list-group align-items-center stuff-search-sidebar">
+<div>Search: "{{ searchText() }}" | Results: {{ filteredItems().length }}</div>
 
-    @for (item of stuffArray(); track item; let i = $index) {
+
+
+<div class="list-group align-items-center stuff-search-sidebar">
+
+    <input 
+        type="text" 
+        class="form-control mb-2"
+        [placeholder]="placeholderText()"
+        [value]="searchText()"
+        (input)="onSearchInput($event)"
+    />
+
+    @for (item of filteredItems(); track item) {
 
         @if (isSong(item)) {
-            <a (click)="selectItem(i)" class="list-group-item list-group-item-action text-center" 
+            <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center" 
                 target="_blank" rel="noopener noreferrer">
 
                 <b>{{ item.songArtist }} - {{ item.songTitle }}</b></a>
         }
         @if (isMovie(item)) {
-            <a (click)="selectItem(i)" class="list-group-item list-group-item-action text-center"    
+            <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center"    
                 target="_blank" rel="noopener noreferrer">
 
                 <b>{{ item.movieTitle }}</b></a>
         }
         @if (isGame(item)) {
-                <a (click)="selectItem(i)" class="list-group-item list-group-item-action text-center"    
+                <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center"    
                     target="_blank" rel="noopener noreferrer">
 
                     <b>{{ item.gameTitle }}</b></a>
         }
     }
     
-</ul>
+</div>

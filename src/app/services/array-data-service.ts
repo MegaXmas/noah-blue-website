@@ -1,5 +1,7 @@
 import { Injectable, signal, WritableSignal } from '@angular/core';
 import { FavoriteStuff } from '../models/favorite-stuff';
+import { FavoriteSong } from '../models/favorite-song';
+import { FavoriteMovie } from '../models/favorite-movie';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +9,9 @@ import { FavoriteStuff } from '../models/favorite-stuff';
 export class ArrayDataService {
   
   public stuffArrayData: WritableSignal<FavoriteStuff[]> = signal([]);
+  public itemType: WritableSignal<string> = signal(``);
 
   public selectedArrayItemIndex: WritableSignal<number> = signal(0);
-
 
 
   setArrayData(arrayData: FavoriteStuff[]) {
