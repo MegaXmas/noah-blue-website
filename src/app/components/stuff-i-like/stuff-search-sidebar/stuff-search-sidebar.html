@@ -1,12 +1,8 @@
-<div>Search: "{{ searchText() }}" | Results: {{ filteredItems().length }}</div>
-
-
-
 <div class="list-group align-items-center stuff-search-sidebar">
 
     <input 
         type="text" 
-        class="form-control mb-2"
+        class="form-control mb-2 sticky-top"
         [placeholder]="placeholderText()"
         [value]="searchText()"
         (input)="onSearchInput($event)"
