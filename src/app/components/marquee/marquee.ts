@@ -85,6 +85,8 @@ export class Marquee implements OnInit, OnDestroy {
 
   kindOfItem = input.required<string>();
 
+  isScrollable = signal(false);
+  scrollbarInactive = signal(true);
 
   currentFavoriteItem: WritableSignal<FavoriteStuff | null> = signal(null);
 
@@ -104,7 +106,6 @@ export class Marquee implements OnInit, OnDestroy {
   relevantImgClass = input<string>();
   marqueeArtClass: WritableSignal<string> = signal("");
 
-  
 
 // ======ON INIT/DESTROY======
   ngOnInit(): void {
@@ -195,23 +196,31 @@ export class Marquee implements OnInit, OnDestroy {
     if (this.resumeTimeout) {
       clearTimeout(this.resumeTimeout);
     }
+
+    if (this.isScrollable()) {
+        console.log(`press buton to resume animation and disable scrollbar`)
+    } else {
     
-    this.resumeTimeout = globalThis.window.setTimeout(() => {
-      if (isPlatformBrowser(this.platformId)) {
-        const track = document.querySelector('.marquee-track') as HTMLElement;
-        if (track) track.style.animationPlayState = 'running';
-      }
-      this.resumeTimeout = undefined;
-    }, 250);
+      this.resumeTimeout = globalThis.window.setTimeout(() => {
+        if (isPlatformBrowser(this.platformId)) {
+          const track = document.querySelector('.marquee-track') as HTMLElement;
+          if (track) track.style.animationPlayState = 'running';
+        }
+        this.resumeTimeout = undefined;
+      }, 250);
+    }
   }
 
   // TODO: make the stop betton work properly with a signal
 
   stopAnimation(event: Event) {
     if (isPlatformBrowser(this.platformId)) {
+
       const scroll = document.querySelector('.marquee-wrapper-outer') as HTMLElement;
       const track = document.querySelector('.marquee-track') as HTMLElement;
       
+      
+      this.isScrollable.set(true);
       if (scroll) scroll.style.overflow = 'scroll';
       
       if (track) {
@@ -223,6 +232,19 @@ export class Marquee implements OnInit, OnDestroy {
       }
       
       this.pauseAnimation();
+    }
+  }
+  
+  playAnimation(event: Event) {
+    if (isPlatformBrowser(this.platformId)) {
+
+      const scroll = document.querySelector('.marquee-wrapper-outer') as HTMLElement;
+      const track = document.querySelector('.marquee-track') as HTMLElement;
+
+      if (scroll) scroll.style.overflow = 'hidden';
+      
+      this.isScrollable.set(false);
+      this.resumeAnimation();
     }
   }
 
