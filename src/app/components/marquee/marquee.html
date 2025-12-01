@@ -1,5 +1,10 @@
-    <!-- ============MARQUEE SECTION============= -->
-<button type="button" class="btn" (click)="stopAnimation($event)">stop scroll</button>
+<!-- ============MARQUEE SECTION============= -->
+@if (isScrollable()) {
+    <button type="button" class="btn" (click)="playAnimation($event)" aria-details="resume scroll animation & disable scrollbar">resume scroll</button>
+}
+@if (!isScrollable()) {
+    <button type="button" class="btn" (click)="stopAnimation($event)" aria-details="stop scroll animation & enable scrollbar">pause scroll</button>
+}
 
 <div class="container-xxl mt-3 mt-sm-1">
     <div class="row justify-content-center align-self-center">

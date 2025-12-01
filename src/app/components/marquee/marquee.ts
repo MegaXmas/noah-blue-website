@@ -131,6 +131,8 @@ export class Marquee implements OnInit, OnDestroy {
       
 
       window.addEventListener('resize', this.resizeListener);
+
+      this.resumeAnimation();
     }
 
     console.log("MARQUEE COMPONENT:sending stuffArray data to array-data-service")
@@ -187,8 +189,6 @@ export class Marquee implements OnInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       const track = document.querySelector('.marquee-track') as HTMLElement;
       if (track) track.style.animationPlayState = 'paused';
-      const scroll = document.querySelector(`.marquee-wrapper-outer`) as HTMLElement;
-      if (scroll) scroll.style.overflow = `scroll`
     }
   }
 
@@ -239,7 +239,6 @@ export class Marquee implements OnInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
 
       const scroll = document.querySelector('.marquee-wrapper-outer') as HTMLElement;
-      const track = document.querySelector('.marquee-track') as HTMLElement;
 
       if (scroll) scroll.style.overflow = 'hidden';
       
