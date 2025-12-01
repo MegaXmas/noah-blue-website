@@ -2,7 +2,7 @@
 /* TODO change systle to showing title and a design on hover (maybe some static or something) */
 
 
-/* ======== MARQUEE STUFF====== */
+/* ======* MARQUEE STUFF ====== */
 
 .marquee-item-movie {
     width: 200px;
@@ -14,7 +14,7 @@
 }
 
 
-/* ======MOVIE REVIEW SECTION====== */
+/* ======* MOVIE REVIEW SECTION ====== */
 
 .letterboxd-profile {
     display: inline-block;
@@ -23,10 +23,12 @@
     border-style: solid;
     border-color: rgb(93, 147, 228); 
     border-radius: 15%;
+    margin-right: 5vw;
+    margin-left: 2vw;
 }
 
 .current-movie-poster {
-    display: block;
+    display: inline-block;
     width: 204px;
     height: 308px;
     border-width: 7px;
@@ -34,37 +36,59 @@
     border-color: gold; 
     border-radius: 8px;
     margin: 5px;
+    margin-left: 5vw;
+    margin-right: 2vw;
 }
 
-/* =======MEDIA FLEX====== */
+/* ======* MEDIA FLEX ====== */
 
-    @media (max-width: 768px) {
-        .marquee-item-movie {
-            width: 150px;
-            height: 225px;
-        }
-
-        .current-movie-poster {
-            width: 152px;
-            height: 229px;
-            border-width: 3px;
-            border-radius: 4px;
-        }
-
-        .letterboxd-profile {
-            width: 100px;
-        }    
-}
-
-    @media (max-width: 555px) {
-        .current-movie-poster {
-            text-decoration: underline;
-            text-align: center;
-        }
+@media (max-width: 768px) {
+    .marquee-item-movie {
+        width: 150px;
+        height: 225px;
+        margin: 3px;
     }
 
+    .current-movie-poster {
+        width: 152px;
+        height: 229px;
+        border-width: 3px;
+        border-radius: 4px;
+        margin-left: -12px;
+    }
 
-/* ======MISC====== */
+    .letterboxd-profile {
+        width: 100px;
+        height: 100px;
+        margin-right: -12px;
+        margin-left: 4px;
+    }    
+}
+
+@media (max-width: 450px) {
+    .marquee-item-movie {
+        width: 100px;
+        height: 150px;
+        margin: 2px;
+        border-width: 3px;  
+        border-radius: 4px;
+    }
+    
+    .current-movie-poster {
+        width: 120px;
+        height: 180px;
+        border-width: 3px;
+        border-radius: 4px;
+    }
+
+    .letterboxd-profile {
+        width: 80px;
+        height: 80px;
+    }    
+}
+
+
+/* ======* MISC ====== */
 
 p {
 white-space: pre-line;

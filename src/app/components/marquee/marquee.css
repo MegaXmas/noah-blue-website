@@ -48,37 +48,59 @@
 /* ======*REVIEW STUFF====== */ 
 
     .current-profile {
-        margin-left: 0vw;
+        display: inline-block;
+        margin-right: 10vw;
     }
 
-    .current-stuff-title {
+    .current-item-title {
         text-align: center;
+        font-size: 2rem;
 
+    }
+
+    .review-font {
+        font-size: 1.5rem;
     }
 
 /* ======*MEDIA FLEX====== */
 
     @media (max-width: 768px) {
-        .current-stuff-title {
+        .current-item-title {
             display: inline-block;
             text-align: center;
         }
 
-    @media (max-width: 555px) {
-        .current-stuff-title {
-            text-decoration: underline;
-            text-align: center;
+        .marquee-border {
+            border-width: 8px;
         }
     }
 
+    @media (max-width: 555px) {
+        .current-item-title {
+            text-decoration: underline;
+            font-size: 1.25rem;
+            padding: 3px!important;
+            
+        }
 
+        .marquee-wrapper-outer {
+            padding-top: 5px;
+    }
+
+        .marquee-border {
+            border-width: 7px;
+        }
+
+        .review-font {
+            font-size: 1rem;
+    }
 }
 
 
 /* ======*MISC====== */
 
 p {
-white-space: pre-line;
+    white-space: pre-line;
 }
 
 .uppercase-marker {

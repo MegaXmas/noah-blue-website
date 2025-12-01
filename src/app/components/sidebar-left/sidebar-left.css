@@ -3,9 +3,10 @@
     padding: 1rem;
     margin-top: 3px;
     height: fit-content;
-    transform: translateY(50%);
+    top: 25vh;
     pointer-events: none;
     z-index: 1;
+    position: sticky;
 }
 
 .sidebar-left h2 {
@@ -26,6 +27,6 @@
 
 @media (max-width: 991px) {
     .sidebar-left {
-        transform: translateY(0%);
+    margin-top: 3px;
     }
 }

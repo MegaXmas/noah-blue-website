@@ -22,7 +22,17 @@ export class GamesILike implements OnInit, OnDestroy {
         { gameTitle: `Disco Elysium`,
     gamePoster: `https://static0.polygonimages.com/wordpress/wp-content/uploads/sharedimages/2024/12/mixcollage-04-dec-2024-08-03-pm-4498.jpg`,
     gameLink: `https://store.steampowered.com/app/632470/Disco_Elysium__The_Final_Cut/`,
-    gameReview: ``,
+    gameReview: `Disco elysium is such a special game. Its hard to even describe what makes it so great. Its more than the sum of its parts. Its a narrative focused crpg (character role playing game) where u take control over harry dubois, detective assigned to a case in the rundown port town of revachol. Before the start of the game, harry depressedly drunk himself into amnesia, so u can choose to role play as whatever kind of man u want. Who is <i>your</i> harry? 
+
+The city of revachol and the world of disco elysium have many mysteries for you to solve, people to meet, and hidden secrets to uncover. The writers of the game have built a world so familiar yet unlike ours that its surreal. The dialogue in this game is masterclass, some of the best writing ive ever read ^!^[up]period[/up]^/!^, not just in video games. As you investigate the lynching you meet some truely interesting characters with multiple branching paths of dialogue fo you to choose from. In my first playthrough I choose to be a person who has absolutely lost his mind and logical perspective of the world and himself. When there was an option to say or do something ridiculous I would always choose it. Over time i learned more and more about the “harry” i wanted to experience the game as. I invested all my points into skills that encourage outrageous dialogue choices. I maxed out this schizophrenic dissociative ability which essentially allows u to hallucinate clues and answers to mysteries. Its really cool when u have this skill at high levels. 
+
+Disco elysium consistently had me laughing out loud at its brilliant comedic writing, but also heavily invested in its world and characters. I was always looking to understand more about this universe. every secret uncovered or mystery solved added more threads to follow to keep you engaged. There are so many perplexing stories and features of this world. The game doesnt shy away from the supernatural. But those enigmatic aspects of this world are used sparingly and respectfully. You always had to hunt these down and invest a lot of time to get anything more than rumors or gossip. 
+
+Twin peaks is my favorite piece of art ive ever consumed, regardless of the medium (movie, book, game, etc). There is nothing quite like twin peaks in the way it weaves its narrative and mysteries. Many people try to emulate or borderline rip off what twin peaks has, but it never has the authenticity of the original. They always feel as if theyre emulating the “spark” lynch created, but it can never be emulated. Only borrowed. I had a twin peaks sized hole in my heart for years after watching it. I was always looking for more that could give me the feeling i felt when i first experienced that show. So far, disco elysium is the ^!^[up]only[/up]^/!^ thing has seemed to fit. It has the originality, the creativity, the world building, the writing, etc, all of the same level, it feels like the creator’s own “spark” created from their mind. Just like twin peaks, 
+disco elysium inspired countless writers and game developers; they both have essentially created their own genre because of how influential they are. 
+
+I cant recommend this game enough. 10/10
+`,
     },
     { gameTitle: `Paper Mario: The Thousand Year Door`,
     gamePoster: `https://i.ebayimg.com/images/g/AwYAAOSwkKBkYEop/s-l1200.jpg`,
@@ -45,21 +55,21 @@ The verdict: 11/10 masterpiece, seminal work, and a required play for any gamer.
 
 [alert]<u>^!^[up]TANGENTIAL RANT ALERT!!!</u>[/up]^/!^[/alert]
 [tangent]
-I also love the fact that sts does not require any “execution” (Execution, in this context, just means the ability to perform the required inputs at the correct times to get a desired result.). As someone who has devoted ^^years^/^ of his life to become a high level player of super smash bros. Melee (ssbm, melee) [see the section about that game for more on my story and opinions of melee]– its so nice to finally be able to sit back, relax, and just use my brain. Ssbm is ^^debatably^/^ the hardest game ever made. Melee has ^^arthritis causing requirements^/^ of speed and frame-tight button presses from its players. it literally takes years just to be able play at a tournament level and actually win matches. I dont have to do practice drills for hours a day like im in the nba to play sts, i can just play and have fun. My strength was never having good execution in that game, anyway. It was always my problem solving. The barrier of execution to be able to do what you want in melee causes a lot of frustration for me when i play, because i know what i am supposed to do, but my fingers are not dexterous enough to keep up with my genius brain. Having a game like sts where there is literally no physical barrier to entry really vibes with me. If i lose, its because i made a mistake or a bad decision– not because i pressed the button a millisecond too late or held my control stick at an angle a few degrees off.
+I also love the fact that sts does not require any “execution” (Execution, in this context, just means the ability to perform the required inputs at the correct times to get a desired result). As someone who has devoted ^^years^/^ of his life to become a high level player of super smash bros. Melee (ssbm, melee) [see the section about that game for more on my story and opinions of melee]– its so nice to finally be able to sit back, relax, and just use my brain. Ssbm is ^^debatably^/^ the hardest game ever made. Melee demands ^^arthritis causing requirements^/^ of speed and frame-tight button presses from its players. it literally takes years just to be able play at a tournament level and actually win matches. I dont have to do practice drills for hours a day like im in the nba to play sts, i can just play and have fun. My strength was never having good execution in that game, anyway. It was always my problem solving. The barrier of execution to be able to do what you want in melee created a lot of frustration for me when i played, because i know what i am supposed to do, but my fingers are not dexterous enough to keep up with my genius brain. Having a game like sts where there is literally no physical barrier to entry really vibes with me. If i lose, its because i made a mistake or a bad decision– not because i pressed the button a millisecond too late or held my control stick at an angle a few degrees off.
 [/tangent]
 
 Final review: 10/10 game is addictive and very dangerous for people with self control issues (i am going to play it right now even though i should be doing something more productive haha 🙃)
 `,
     },
-        { gameTitle: `Elden Ring`,
-    gamePoster: `https://m.media-amazon.com/images/I/6110RSDn3PL._AC_SL1050_.jpg`,
-    gameLink: `https://store.steampowered.com/app/1245620/ELDEN_RING/`,
-    gameReview: ``,
-    },
         { gameTitle: `Demon's Souls`,
     gamePoster: `https://m.media-amazon.com/images/M/MV5BYmI1ZTNiMTUtZTllZi00ZGE5LTg1NzgtMWU2OTcyZDBiYjg0XkEyXkFqcGc@._V1_.jpg`,
     gameLink: `https://www.playstation.com/en-us/games/demons-souls/`,
-    gameReview: ``,
+    gameReview: `Contrary to most, demons souls was actually my first exposure to the soulsborne universe before it was even an established thing. I had a friends older brother who would put me on to shit i would never have known about otherwise. I learned about n64 games that were before my time and about other games that werent mainstream at the time. I played demons souls for the first time at their house when i was like 14 and i really liked it, but since i didnt have it i only got to about the first boss: ^^the tower knight^/^. This is when i knew this game was gonna be for me. The tower knight is still one of my most memorable boss fights in the series. The boss theme music from this fight is one of the best in the entire series. The scale of it was so mindblowing, defeating something this massive seemed like an insurmountable challenge at the time.I think this is something the souls series excels at even to this day– putting u up against a boss so powerful it feels hopeless. Im just a dude with a sword and shield and im choppin on some grass… how am i supposed to defeat this giant moving fortress on my own? Well u have infinite tries, git gud. The satisfaction of winning those unbeatable fights is what keeps me coming back to the series.
+
+When i went back and played demons souls years later and as a more experienced gamer i still really liked the gameplay, but the aspect of demons souls that sets it apart from its “sequels” is its atmosphere. Its funny that the game called “dark souls” feels ^^much less^/^ dark than its predecessor. Demons souls has this gothic, brooding, and hopeless atmosphere. Its as if their is a fog of nihilism hanging over the entire game. When u start the game, u step foot into the doomed kingdom of boletaria. You are not here to save it from evil, this land is forever lost to the cursed fog. U are here only to claim the power the demons hold for urself. The hub world used to travel to the other levels exists in almost another dimension, completely cut off from the outside world. Some of the things and enemies u encounter in its levels are manifestations of pure evil. For example one of my favorite set pieces is a level called “the prison of hope”. This map is a skyscraper-like prison with architecture as unsettling as the fate of its inmates. It is so high in the air it feels like it is floating above an endless void. Escape is impossible.
+
+When u play demons souls u should not be comparing it to “dark souls” or “elden ring”. It is a separate experience with a particular tone. Appreciate it for what it is and u are sure to have a hell of a time.
+`,
     },
             { gameTitle: `Dark Souls`,
     gamePoster: `https://upload.wikimedia.org/wikipedia/en/8/8d/Dark_Souls_Cover_Art.jpg`,
@@ -81,6 +91,11 @@ Final review: 10/10 game is addictive and very dangerous for people with self co
     gameLink: `https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/`,
     gameReview: ``,
     },
+            { gameTitle: `Elden Ring`,
+    gamePoster: `https://m.media-amazon.com/images/I/6110RSDn3PL._AC_SL1050_.jpg`,
+    gameLink: `https://store.steampowered.com/app/1245620/ELDEN_RING/`,
+    gameReview: ``,
+    },
             { gameTitle: `Batman: Arkham Asylum`,
     gamePoster: `https://upload.wikimedia.org/wikipedia/en/4/42/Batman_Arkham_Asylum_Videogame_Cover.jpg`,
     gameLink: `https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/`,
@@ -99,12 +114,12 @@ Final review: 10/10 game is addictive and very dangerous for people with self co
                 { gameTitle: `Life is Strange`,
     gamePoster: `https://upload.wikimedia.org/wikipedia/en/0/0d/Life_Is_Strange_cover_art.png`,
     gameLink: `https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/`,
-    gameReview: ``,
+    gameReview: `Life is strange is strikingly beautiful and captivating. It tugs on your heartstrings and makes you really emotionally invested in its characters. This game also taught me an important life lesson: never mess with a man eating his beans`,
     },
                 { gameTitle: `Detroit: Become Human`,
     gamePoster: `https://cdn.cdkeys.com/496x700/media/catalog/product/c/o/co2228_7_.jpg`,
     gameLink: `https://store.steampowered.com/app/1222140/Detroit_Become_Human/`,
-    gameReview: ``,
+    gameReview: `we smokin red ice in a glass pipe now we bleedin blue. them david cage, motown, ai enhanced robot rocks got me speaking french. we smokin that shit that made elliot page transition. we smokin filtered crack u stupid piece of shit, ill fuckin kill u.`,
     },
                 { gameTitle: `Monster Hunter: World`,
     gamePoster: `https://cdn.displate.com/artwork/857x1200/2025-02-27/8e0d43ca994716344334eeecb7495e7f_c0308bba71147adcfe63f6f776e8e7f5.jpg`,
@@ -119,12 +134,12 @@ Final review: 10/10 game is addictive and very dangerous for people with self co
                     { gameTitle: `Halo 3`,
     gamePoster: `https://m.media-amazon.com/images/I/71qRbrdG3VL._AC_UF894,1000_QL80_.jpg`,
     gameLink: `https://store.steampowered.com/app/976730/Halo_The_Master_Chief_Collection/`,
-    gameReview: ``,
+    gameReview: `Coming home after school, hopping on xbox live, skipping your homework, and playing a bunch of awesome custom games with friends and friends of friends is an experience that will never be recreated. This was a special time in online gaming.`,
     },
                     { gameTitle: `Call of Duty: Modern Warfare 2`,
     gamePoster: `https://upload.wikimedia.org/wikipedia/en/5/52/Call_of_Duty_Modern_Warfare_2_%282009%29_cover.png`,
     gameLink: `https://store.steampowered.com/app/10180/Call_of_Duty_Modern_Warfare_2_2009/`,
-    gameReview: ``,
+    gameReview: `I played so much of this game it was unhealthy. Even after all the sequels i always kept coming back to this one. As i got better it was so fun to challenge myself using a new weapon or build and learning to master it. The replayability was endless. `,
     },
                     { gameTitle: `Rivals of Aether II`,
     gamePoster: `https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8v8r.jpg`,

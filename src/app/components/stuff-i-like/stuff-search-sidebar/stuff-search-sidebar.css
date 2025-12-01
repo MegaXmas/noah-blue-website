@@ -1,12 +1,12 @@
+h2 {
+    font-size: 1.25rem;
+}
+
 .stuff-search-sidebar {
     max-height: 300px;
     max-width: fit-content!important;
     overflow: scroll;
     pointer-events: all;
-}
-
-h2 {
-    font-size: 1.25rem;
 }
 
 .stuff-search-sidebar .list-group-item {
@@ -21,4 +21,30 @@ h2 {
 
 .stuff-search-sidebar input {
     pointer-events: all!important;
+}
+
+.searchbar {
+    pointer-events: all;
+}
+
+.placeholder-text {
+    font-size: 1rem;
+}
+
+.listgroupFont {
+    font-size: 2rem;
+}
+
+
+/* ========= MEDIA FLEX ========== */
+
+@media (max-width: 768px) {
+
+    .placeholder-text {
+        font-size: .75rem;
+    }
+
+    .listgroup-font{
+        font-size: .80rem;
+    }
 }

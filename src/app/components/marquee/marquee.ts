@@ -186,6 +186,8 @@ export class Marquee implements OnInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       const track = document.querySelector('.marquee-track') as HTMLElement;
       if (track) track.style.animationPlayState = 'paused';
+      const scroll = document.querySelector(`.marquee-wrapper-outer`) as HTMLElement;
+      if (scroll) scroll.style.overflow = `scroll`
     }
   }
 
@@ -201,6 +203,27 @@ export class Marquee implements OnInit, OnDestroy {
       }
       this.resumeTimeout = undefined;
     }, 250);
+  }
+
+  // TODO: make the stop betton work properly with a signal
+
+  stopAnimation(event: Event) {
+    if (isPlatformBrowser(this.platformId)) {
+      const scroll = document.querySelector('.marquee-wrapper-outer') as HTMLElement;
+      const track = document.querySelector('.marquee-track') as HTMLElement;
+      
+      if (scroll) scroll.style.overflow = 'scroll';
+      
+      if (track) {
+        // Reset animation
+        track.style.animation = 'none';
+        // Force reflow to restart animation from beginning
+        track.offsetHeight; 
+        track.style.animation = '';
+      }
+      
+      this.pauseAnimation();
+    }
   }
 
 

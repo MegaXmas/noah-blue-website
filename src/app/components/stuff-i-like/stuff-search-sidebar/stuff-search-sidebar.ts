@@ -102,9 +102,14 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
   placeholderText = computed(() => {
     const type = this.itemType();
     const length = this.stuffArray().length;
+    const isSmallScreen = window.innerWidth < 768;
 
-    console.log('Computing placeholder:', type, length);
+    console.log(`Computing placeholder:`, type, length, `vp small?:`, isSmallScreen);
 
+    if (isSmallScreen) {
+      return `search ${type}s ♥️`
+    }
+    
     return `search ${length} of my fav ${type}s ♥️`;
   });
 

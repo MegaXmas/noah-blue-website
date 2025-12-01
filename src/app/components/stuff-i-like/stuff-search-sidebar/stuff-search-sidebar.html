@@ -1,29 +1,29 @@
-<div class="list-group align-items-center stuff-search-sidebar">
+<input 
+    type="text" 
+    class="form-control mb-2 sticky-top border border-2 border-info searchbar placeholder-text"
+    [placeholder]="placeholderText()"
+    [value]="searchText()"
+    (input)="onSearchInput($event)"
+/>
 
-    <input 
-        type="text" 
-        class="form-control mb-2 sticky-top"
-        [placeholder]="placeholderText()"
-        [value]="searchText()"
-        (input)="onSearchInput($event)"
-    />
+<div class="list-group align-items-center stuff-search-sidebar">
 
     @for (item of filteredItems(); track item) {
 
         @if (isSong(item)) {
-            <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center" 
+            <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center listgroup-font" 
                 target="_blank" rel="noopener noreferrer">
 
                 <b>{{ item.songArtist }} - {{ item.songTitle }}</b></a>
         }
         @if (isMovie(item)) {
-            <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center"    
+            <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center listgroup-font"    
                 target="_blank" rel="noopener noreferrer">
 
                 <b>{{ item.movieTitle }}</b></a>
         }
         @if (isGame(item)) {
-                <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center"    
+                <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center listgroup-font"    
                     target="_blank" rel="noopener noreferrer">
 
                     <b>{{ item.gameTitle }}</b></a>

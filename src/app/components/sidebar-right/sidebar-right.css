@@ -2,10 +2,11 @@
     background-color: burlywood;
     padding: 1rem;
     margin-top: 3px;
-    height: 330px;
-    transform: translateY(50%);
+    height: fit-content;
+    top: 25vh; 
     pointer-events: none;
     z-index: 1;
+    position: sticky;
 }
 
 .sidebar-right h2 {
@@ -14,6 +15,6 @@
 
 @media (max-width: 991px) {
     .sidebar-right {
-        transform: translateY(0%);
+        margin-top: 3px;
     }
 }
