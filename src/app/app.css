@@ -8,3 +8,8 @@
 
     min-height: 100vh;
 }
+
+.header-fade {
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
