@@ -1,6 +1,6 @@
 <!-- ============MARQUEE SECTION============= -->
 @if (isScrollable()) {
-    <button type="button" class="btn" (click)="playAnimation($event)" aria-details="resume scroll animation & disable scrollbar">resume scroll</button>
+    <button type="button" class="btn btn-outline-dark" (click)="playAnimation($event)" aria-details="resume scroll animation & disable scrollbar">resume scroll</button>
 }
 @if (!isScrollable()) {
     <button type="button" class="btn" (click)="stopAnimation($event)" aria-details="stop scroll animation & enable scrollbar">pause scroll</button>

@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,800;1,800&display=swap');
+
 .sidebar-left {
     background-color: burlywood;
     padding: 1rem;
     margin-top: 3px;
-    height: fit-content;
+    height: 444.25;
     top: 25vh;
     pointer-events: none;
     z-index: 1;
@@ -10,7 +12,10 @@
 }
 
 .sidebar-left h2 {
-    font-size: 1.25rem;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .sidebar-left .nav-link {

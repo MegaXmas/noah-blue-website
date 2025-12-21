@@ -1,0 +1,10 @@
+.background-home {
+    background-image: url(https://www.twinpeaksblog.com/wp-content/uploads/2019/12/06_TPB_ArtPeaks_TPZtoABox_BoxSidesComplete.jpg);
+    background-origin: visible;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: bottom;
+
+    min-height: 100vh;
+}

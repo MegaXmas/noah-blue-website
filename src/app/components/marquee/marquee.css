@@ -18,6 +18,9 @@
     width: max-content;
     overflow: hidden;
 
+    scrollbar-color: rgb(210, 255, 231) rgb(14, 142, 74);
+    scrollbar-width: auto;
+
 }
 
 .marquee-wrapper {
@@ -60,6 +63,10 @@
 
     .review-font {
         font-size: 1.5rem;
+    }
+
+    .review-scroll {
+        overflow: scroll;
     }
 
 /* ======*MEDIA FLEX====== */
