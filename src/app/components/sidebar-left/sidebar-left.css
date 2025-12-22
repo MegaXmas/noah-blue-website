@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,800;1,800&display=swap');
 
 .sidebar-left {
-    background-color: burlywood;
     padding: 1rem;
     margin-top: 3px;
     height: 444.25;
@@ -12,10 +11,10 @@
 }
 
 .sidebar-left h2 {
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
 }
 
 .sidebar-left .nav-link {
@@ -34,4 +33,26 @@
     .sidebar-left {
     margin-top: 3px;
     }
+}
+
+.newspaper-background {
+    background-image:url(https://png.pngtree.com/png-vector/20250529/ourmid/pngtree-aged-parchment-scroll-with-authentic-old-paper-texture-png-image_16403892.png);
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.newspaper-background::after {
+    content: "";
+    background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+    background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: 0;
 }
