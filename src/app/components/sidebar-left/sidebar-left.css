@@ -36,18 +36,21 @@
 }
 
 .newspaper-background {
-    background-image:url(https://png.pngtree.com/png-vector/20250529/ourmid/pngtree-aged-parchment-scroll-with-authentic-old-paper-texture-png-image_16403892.png);
+    background-image:url("/misc-images/newspaper-left.png");
     background-color: transparent;
-    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     
 }
 
+/* ======* NEWSPAPER TEXTURE ====== */
+
 .newspaper-background::after {
     content: "";
-    background-image: url("https://www.transparenttextures.com/patterns/paper.png");
-    background-repeat: repeat;
+    background-image: url("/misc-images/newspaper-left-texture.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
     top: 0;
     left: 0;

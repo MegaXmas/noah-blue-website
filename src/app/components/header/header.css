@@ -3,7 +3,7 @@
     font-size: 2rem;
     font-weight: bold;
     color: #644647;
-    letter-spacing: 1.2px;
+    letter-spacing: .2rem;
     text-transform: uppercase;
     text-shadow:  
                 0 0 .3px #644647,          /* bottom-right */
@@ -24,7 +24,7 @@
                 0px -2px 2px #47ff52,     /* directly above */
                 -2px 0px 2px #47ff52,     /* directly left */
                 
-                3px 3px 0px #333;       /* bottom-right, further away */
+                4px 4px 2px #000000;       /* bottom-right, further away */
 }
 
 .twin-peaks-icon {
