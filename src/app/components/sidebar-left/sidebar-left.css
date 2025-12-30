@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,800;1,800&display=swap');
 
+/* TODO: rescale left sidebr wi5th new bg */
+
 .sidebar-left {
-    padding: 1rem;
+    background-color: transparent burlywood;
+    padding: 1.5rem;
     margin-top: 3px;
-    height: 444.25;
-    top: 25vh;
+    height: fit-content;
+    top: 25vh; 
     pointer-events: none;
     z-index: 1;
     position: sticky;
+    padding-bottom: 100px;
+    margin-left: 2px;
+    margin-right: -2px;
 }
 
 .sidebar-left h2 {
@@ -15,19 +21,38 @@
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
+
+    letter-spacing: .05rem;
+    font-size: 2rem;
+
+    border-bottom: 6px double #333;
+    padding-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 16px;
+    margin-right: 15px;
 }
 
 .sidebar-left .nav-link {
     color: #333;
-    padding: 0.75rem;
+    font-size: 1.2vw;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+
+    align-self: center;
+    width: 100%;
     pointer-events: all!important;
 }
 
 .sidebar-left .nav-link:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #9a969169;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
     border-radius: 4px;
 }
 
+.sidebar-left .nav-item {
+    color: #333;
+    display: contents;
+}
 
 @media (max-width: 991px) {
     .sidebar-left {
@@ -35,12 +60,15 @@
     }
 }
 
+/* ======* NEWSPAPER BG ====== */
+
 .newspaper-background {
     background-image:url("/misc-images/newspaper-left.png");
     background-color: transparent;
     background-repeat: no-repeat;
-    background-size: contain;
-    
+    background-size: 290px 350px;
+    background-position-x: center;
+    overflow: visible;
 }
 
 /* ======* NEWSPAPER TEXTURE ====== */
@@ -50,7 +78,8 @@
     background-image: url("/misc-images/newspaper-left-texture.png");
     background-color: transparent;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 290px 350px;
+    background-position-x: center;
     position: absolute;
     top: 0;
     left: 0;
