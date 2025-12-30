@@ -15,7 +15,6 @@
     padding-bottom: 100px;
     margin-left: 2px;
     margin-right: -2px;
-    overflow: visible;
 }
 
 .sidebar-left h2 {
@@ -61,11 +60,6 @@
     display: contents;
 }
 
-@media (max-width: 991px) {
-    .sidebar-left {
-    margin-top: 3px;
-    }
-}
 
 /* ======* NEWSPAPER BG ====== */
 
@@ -73,9 +67,8 @@
     background-image:url("/misc-images/newspaper-left.png");
     background-color: transparent;
     background-repeat: no-repeat;
-    background-size: 290px 350px;
+    background-size: 16.5vw 350px;
     background-position-x: center;
-    overflow: visible;
 }
 
 /* ======* NEWSPAPER TEXTURE ====== */
@@ -85,7 +78,7 @@
     background-image: url("/misc-images/newspaper-left-texture.png");
     background-color: transparent;
     background-repeat: no-repeat;
-    background-size: 290px 350px;
+    background-size: 16.5vw 350px;
     background-position-x: center;
     position: absolute;
     top: 0;
@@ -94,4 +87,51 @@
     bottom: 0;
     opacity: 1;
     z-index: 0;
+}
+
+/* MOVE THIS TO THE END! */
+@media (max-width: 991px) {
+    .sidebar-left {
+        margin-top: 3px;
+        padding-bottom: 50px;
+    }
+
+    .sidebar-left h2 {
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+
+        letter-spacing: .02rem;
+        font-size: 1.5rem;
+
+        border-bottom: 4px double #333;
+        padding-top: 0px;
+        margin-bottom: 4px;
+        margin-left: 3.5px;
+        margin-right: 2px;
+    }
+
+    .sidebar-left .nav-link {
+        font-family: "Libre Bodoni", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+
+        color: #333;
+        font-size: 1.5rem;
+        padding-top: 7px;
+        padding-bottom: 7px;
+
+        align-self: center;
+        width:90%;
+        pointer-events: all!important;
+    }
+    
+    .newspaper-background {
+        background-size: 46.4vw 350px;
+    }
+    
+    .newspaper-background::after {
+        background-size: 46.4vw 350px;
+    }
 }
