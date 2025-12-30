@@ -2,7 +2,7 @@
 
 .twin-peaks-font {
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 2rem;
+    font-size: 100%;
     font-weight: bold;
     color: #644647;
     letter-spacing: .2rem;
@@ -31,7 +31,7 @@
 
 .twin-peaks-icon {
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 1.2rem;
+    font-size: 85%;
     font-weight: bold;
     color: #644647;
     letter-spacing: 1px;

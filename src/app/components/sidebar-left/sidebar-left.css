@@ -89,18 +89,14 @@
     z-index: 0;
 }
 
-/* MOVE THIS TO THE END! */
+
 @media (max-width: 991px) {
     .sidebar-left {
         margin-top: 3px;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 
     .sidebar-left h2 {
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-
         letter-spacing: .02rem;
         font-size: 1.5rem;
 
@@ -113,18 +109,10 @@
 
     .sidebar-left .nav-link {
         font-family: "Libre Bodoni", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
 
-        color: #333;
-        font-size: 1.5rem;
-        padding-top: 7px;
-        padding-bottom: 7px;
-
-        align-self: center;
-        width:90%;
-        pointer-events: all!important;
+        font-size: 1.25rem;
+        padding-top: 11px;
+        padding-bottom: 11px;
     }
     
     .newspaper-background {
