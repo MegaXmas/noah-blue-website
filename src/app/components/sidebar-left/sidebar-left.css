@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,800;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 
-/* TODO: rescale left sidebr wi5th new bg */
+/* TODO: @media for nice scaling */
 
 .sidebar-left {
     background-color: transparent burlywood;
@@ -14,6 +15,7 @@
     padding-bottom: 100px;
     margin-left: 2px;
     margin-right: -2px;
+    overflow: visible;
 }
 
 .sidebar-left h2 {
@@ -33,13 +35,18 @@
 }
 
 .sidebar-left .nav-link {
+    font-family: "Libre Bodoni", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
     color: #333;
-    font-size: 1.2vw;
-    padding-top: 0.2vw;
-    padding-bottom: 0.2vw;
+    font-size: 1.5rem;
+    padding-top: 7px;
+    padding-bottom: 7px;
 
     align-self: center;
-    width: 100%;
+    width:90%;
     pointer-events: all!important;
 }
 
