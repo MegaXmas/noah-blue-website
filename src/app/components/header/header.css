@@ -2,7 +2,7 @@
 
 .twin-peaks-font {
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 100%;
+    font-size: clamp(1.125rem, 2vw + 0.5rem, 3rem);
     font-weight: bold;
     color: #644647;
     letter-spacing: .2rem;
@@ -31,7 +31,7 @@
 
 .twin-peaks-icon {
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 85%;
+    font-size: clamp(1rem, 2vw, 2.25rem);
     font-weight: bold;
     color: #644647;
     letter-spacing: 1px;
@@ -56,12 +56,13 @@
                 0px -2.5px 2px #47ff52,       /* directly above */
                 -2.5px 0px 2px #47ff52,       /* directly left */
                 
-                4px 3.9px 1px #333;       /* bottom-right, further away */
+                5px 5px 2px #333;       /* bottom-right, further away */
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
 
-
+    padding-top: 0.2rem;
+    padding-bottom: 1vh;
 }
 
 .social-media-icons {
@@ -75,4 +76,51 @@
     background-size: 100% 45%;
     background-attachment: fixed;
     background-position: center -12px;
+}
+
+@media (max-width: 991px) {
+    .twin-peaks-font {
+        /* More space between letters = easier to read */
+        letter-spacing: .3rem;
+        
+        text-shadow:  
+                /* Much lighter brown fill */
+                0 0 .0px #644647,
+                0 0 .0px #644647,
+                0 0 .05px #644647,
+                0 0 .05px #644647,
+                
+                /* Keep the green glow strong */
+                1.5px 1.5px 0.8px #47ff52,      /* bottom-right */
+                -1.5px -1.5px 0.8px #47ff52,    /* top-left */
+                1px -1.5px 0.8px #47ff52,       /* top-right */
+                -1.5px 1.5px 0.8px #47ff52,     /* bottom-left */
+                0px 1.5px 1px #47ff52,          /* directly below */
+                1.5px 0px 1px #47ff52,          /* directly right */
+                0px -1.5px 1px #47ff52,         /* directly above */
+                -1.5px 0px 1px #47ff52,         /* directly left */
+                
+                4px 3px 1.5px #333; 
+    }
+
+    .twin-peaks-icon {
+        text-shadow:  
+                /* Much lighter brown fill */
+                0 0 .05px #644647,
+                0 0 .05px #644647,
+                0 0 .05px #644647,
+                0 0 .05px #644647,
+                
+                /* Keep the green glow strong */
+                1.5px 1.5px 0.8px #47ff52,      /* bottom-right */
+                -1.5px -1.5px 0.8px #47ff52,    /* top-left */
+                1px -1.5px 0.8px #47ff52,       /* top-right */
+                -1.5px 1.5px 0.8px #47ff52,     /* bottom-left */
+                0px 1.5px 1px #47ff52,          /* directly below */
+                1.5px 0px 1px #47ff52,          /* directly right */
+                0px -1.5px 1px #47ff52,         /* directly above */
+                -1.5px 0px 1px #47ff52,         /* directly left */
+                
+                3px 3px 1.5px #333;
+    }
 }
