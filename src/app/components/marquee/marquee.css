@@ -81,18 +81,26 @@
     }
 
     p::first-line {
+        text-indent: 1em;
         text-transform: uppercase;
         letter-spacing: .1em;
     }
 
     p::first-letter {
         text-transform: uppercase;
-        font-size: 7rem;
+        font-size: 5rem;
         font-weight: bold;
         margin-right: 1rem;
         float: left;
         margin-top: .5rem;
         line-height: 5rem;
+    }
+
+    #item-review {
+        column-count: 2;
+        column-gap: 2em;
+
+        padding-bottom: .4em!important;
     }
 
 /* ======*MEDIA FLEX====== */

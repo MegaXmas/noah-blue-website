@@ -10,12 +10,13 @@ import { FavoriteMovie } from '../../models/favorite-movie';
 import { FavoriteGame } from '../../models/favorite-game';
 
 import { ArrayDataService } from '../../services/array-data-service';
+import { IndentAfterFirstPipe } from '../../pipes/indent-after-first.pipe';
 
 
 
 @Component({
   selector: 'app-marquee',
-  imports: [TextAestheticPipe],
+  imports: [TextAestheticPipe, IndentAfterFirstPipe], 
   templateUrl: './marquee.html',
   styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css', '../stuff-i-like/songs-i-like/songs-i-like.css', '../stuff-i-like/games-i-like/games-i-like.css']
 })
