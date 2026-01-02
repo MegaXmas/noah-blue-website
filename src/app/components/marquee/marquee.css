@@ -50,91 +50,124 @@
 
 /* ======*REVIEW STUFF====== */ 
 
-    .current-profile {
-        display: inline-block;
-        margin-right: 10vw;
-    }
+.current-profile {
+    display: inline-block;
+    margin-right: 10vw;
+}
 
-    .current-item-title {
-        text-align: center;
-        font-size: 2rem;
+.current-item-title {
+    text-align: center;
+    font-size: 2rem;
 
-    }
+}
 
-    .review-font {
-        font-size: 1.5rem;
-    }
+.review-scroll {
+    overflow: scroll;
+}
 
-    .review-scroll {
-        overflow: scroll;
-    }
+h2 {
+    background-color: antiquewhite;
+    background-image: url(https://img.freepik.com/free-photo/concrete-wall-textured-backgrounds-built-structure-concept_53876-14107.jpg);
+    background-repeat: repeat;
+}
 
-    h2 {
-        background-color: antiquewhite;
-        background-image: url(https://img.freepik.com/free-photo/concrete-wall-textured-backgrounds-built-structure-concept_53876-14107.jpg);
-        background-repeat: repeat;
-    }
+p {
+    background-color: antiquewhite;
+    white-space: pre-line;
+}
 
-    p {
-        background-color: antiquewhite;
-        white-space: pre-line;
-    }
+#item-review ::first-line {
+    text-indent: 1em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
 
-    p::first-line {
-        text-indent: 1em;
-        text-transform: uppercase;
-        letter-spacing: .1em;
-    }
+#item-review ::first-letter {
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    float: left;
+    margin-top: .5rem;
+    line-height: 5rem;
+}
 
-    p::first-letter {
-        text-transform: uppercase;
-        font-size: 5rem;
-        font-weight: bold;
-        margin-right: 1rem;
-        float: left;
-        margin-top: .5rem;
-        line-height: 5rem;
-    }
+#item-review {
+    font-size: 1.5rem;
+    column-count: 4;
+    column-gap: 2em;
 
-    #item-review {
-        column-count: 2;
-        column-gap: 2em;
+    padding-bottom: .4em!important;
+}
 
-        padding-bottom: .4em!important;
-    }
+#song-lyrics {
+    font-size: 1.5em;
+}
 
 /* ======*MEDIA FLEX====== */
 
-    @media (max-width: 768px) {
-        .current-item-title {
-            display: inline-block;
-            text-align: center;
-        }
-
-        .marquee-border {
-            border-width: 8px;
-        }
+@media (max-width: 1400px) {
+    #item-review {
+        column-count: 3;
+        column-gap: 1.5em;
+        font-size: 1.37em;
     }
 
-    @media (max-width: 555px) {
-        .current-item-title {
-            text-decoration: underline;
-            font-size: 1.25rem;
-            padding: 3px!important;
-            
-        }
-
-        .marquee-wrapper-outer {
-            padding-top: 5px;
+    #item-review ::first-letter {
+        font-size: 4.5rem;
     }
 
-        .marquee-border {
-            border-width: 7px;
-        }
+}
 
-        .review-font {
-            font-size: 1rem;
+@media (max-width: 992px) {
+    #item-review {
+        font-size: 1.3em;
+    }        
+}
+
+@media (max-width: 768px) {
+    .current-item-title {
+        display: inline-block;
+        text-align: center;
     }
+
+    .marquee-border {
+        border-width: 8px;
+    }
+
+    #item-review ::first-letter {
+        font-size: 3.5em;
+    }
+    
+
+    #item-review {
+        column-count: 3;
+        font-size: 1.14em;
+    }
+}
+
+@media (max-width: 555px) {
+    .current-item-title {
+        text-decoration: underline;
+        font-size: 1.25rem;
+        padding: 3px!important;
+        
+    }
+
+    .marquee-wrapper-outer {
+        padding-top: 5px;
+    }
+
+    .marquee-border {
+        border-width: 7px;
+    }
+
+    #item-review {
+        font-size: 1em;
+        column-count: 2;
+        column-gap: 1.5em;
+    }
+
 }
 
 
