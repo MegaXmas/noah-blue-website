@@ -79,7 +79,7 @@
     </div>
 
     <div class="row">
-        <p class="border border-3 mt-0 mb-0 review-font" id="item-review" [innerHTML]="currentItemReview() | textAestheticPipe"></p>
+        <p class="border border-3 mt-0 mb-2 review-font" id="item-review" [innerHTML]="currentItemReview() | textAestheticPipe"></p>
         @if (kindOfItem() === `song`) {
             <p class="fs-4 border border-3 mt-0 text-center review-font" id="song-lyrics" [innerHTML]="currentSongLyrics() | textAestheticPipe"></p> 
         }

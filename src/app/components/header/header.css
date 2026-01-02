@@ -2,7 +2,7 @@
 
 .twin-peaks-font {
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: clamp(1.125rem, 2vw + 0.5rem, 3rem);
+    font-size: clamp(1.125rem, 2vw + 0.5rem, 2rem);
     font-weight: bold;
     color: #644647;
     letter-spacing: .2rem;
@@ -29,9 +29,19 @@
                 4px 4px 2px #000000;       /* bottom-right, further away */
 }
 
+.music-video-text {
+    line-height: .92;
+    padding-bottom: .5vh;
+    padding-right: 16vw;
+}
+
+.releases-text {
+    margin-right: -3vw;
+}
+
 .twin-peaks-icon {
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: clamp(1rem, 2vw, 2.25rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: bold;
     color: #644647;
     letter-spacing: 1px;
@@ -65,11 +75,6 @@
     padding-bottom: 1vh;
 }
 
-.social-media-icons {
-    height: 100;
-    width: 100;
-}
-
 .header-background-1 {
     background-image: url('https://i.imgur.com/DpUgwWz.png');
     background-repeat: no-repeat;
@@ -81,7 +86,7 @@
 @media (max-width: 991px) {
     .twin-peaks-font {
         /* More space between letters = easier to read */
-        letter-spacing: .3rem;
+        letter-spacing: .2rem;
         
         text-shadow:  
                 /* Much lighter brown fill */
@@ -122,5 +127,9 @@
                 -1.5px 0px 1px #47ff52,         /* directly left */
                 
                 3px 3px 1.5px #333;
+    }
+
+    .music-video-text {
+        padding-right: 0vw;
     }
 }

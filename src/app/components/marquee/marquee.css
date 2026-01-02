@@ -69,6 +69,32 @@
         overflow: scroll;
     }
 
+    h2 {
+        background-color: antiquewhite;
+        background-image: url(https://img.freepik.com/free-photo/concrete-wall-textured-backgrounds-built-structure-concept_53876-14107.jpg);
+        background-repeat: repeat;
+    }
+
+    p {
+        background-color: antiquewhite;
+        white-space: pre-line;
+    }
+
+    p::first-line {
+        text-transform: uppercase;
+        letter-spacing: .1em;
+    }
+
+    p::first-letter {
+        text-transform: uppercase;
+        font-size: 7rem;
+        font-weight: bold;
+        margin-right: 1rem;
+        float: left;
+        margin-top: .5rem;
+        line-height: 5rem;
+    }
+
 /* ======*MEDIA FLEX====== */
 
     @media (max-width: 768px) {
@@ -105,10 +131,6 @@
 
 
 /* ======*MISC====== */
-
-p {
-    white-space: pre-line;
-}
 
 .uppercase-marker {
     text-transform: uppercase;
