@@ -74,23 +74,24 @@ a:has(.current-movie-poster) {
     /* ==#==SMALL SCREEN==== */
         @media (max-width: 768px) {
             .letterboxd-profile img{
-                width: 80px;
-                height: 80px;
+                width: 90px;
+                height: 90px;
+                margin-right: -0vw;
             }
 
             .marquee-item-movie {
-                width: 150px;
-                height: 225px;
+                width: 132px;
+                height: 176px;
                 margin: 3px;
             }
 
 
             .current-movie-poster {
-                width: 100px;
-                height: 150px;
+                width: 125px;
+                height: 167px;
                 border-width: 4px;
                 border-radius: 4px;
-                margin-left: -25px;
+                margin-left: -5vw;
             }
         }
 
@@ -111,12 +112,17 @@ a:has(.current-movie-poster) {
                 border-radius: 4px;
                 margin-left: -.95vw;
             }
+ 
+        }
 
+    /* ==#==SMALLEST SCREEN====*/
+        @media (max-width: 400) {
+            
             .letterboxd-profile img{
                 width: 80px;
                 height: 80px;
-                margin-right: -.95vw;
-            }    
+                margin-left: -1em;
+            }   
         }
 
 /* ======* MISC ====== */
