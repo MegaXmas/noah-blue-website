@@ -1,6 +1,7 @@
 /* TODO create highlight animations on hover */
 /* TODO change systle to showing title and a design on hover (maybe some static or something) */
 
+@import url(https://fonts.googleapis.com/css2?family=League+Gothic&display=swap);
 
 /* ======*MARQUEE STUFF====== */
 
@@ -57,8 +58,28 @@
 
 .current-item-title {
     text-align: center;
-    font-size: 2rem;
 
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 4rem;
+    font-variation-settings:
+    "wdth" 100;
+
+}
+
+.item-link {
+    color: rgb(0, 0, 117);
+}
+
+.item-link:visited {
+    color: #333;
+}
+
+.item-link:hover {
+    color: #5a0078;
 }
 
 .review-scroll {
@@ -76,24 +97,26 @@ p {
     white-space: pre-line;
 }
 
-#item-review ::first-line {
-    text-indent: 1em;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-}
+#item-review::first-line {
+        text-transform: uppercase;
+        letter-spacing: .1em;
+    }
 
-#item-review ::first-letter {
-    text-transform: uppercase;
-    font-size: 5rem;
-    font-weight: bold;
-    margin-right: 1rem;
-    float: left;
-    margin-top: .5rem;
-    line-height: 5rem;
-}
+#item-review::first-letter {
+        text-transform: uppercase;
+        font-size: 3.3em;
+        font-weight: bold;
+        margin-right: .2rem;
+        float: left;
+        margin-top: .5rem;
+        line-height: 5rem;
+        padding-top: 0;
+    }
 
 #item-review {
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.5rem;
+
     column-count: 4;
     column-gap: 2em;
 
@@ -104,87 +127,109 @@ p {
     font-size: 1.5em;
 }
 
-/* ======*MEDIA FLEX====== */
 
-@media (max-width: 1400px) {
-    #item-review {
-        column-count: 3;
-        column-gap: 1.5em;
-        font-size: 1.37em;
+
+
+/* @=====MEDIA FLEX====== */
+/* @==                @== */
+    /* ==#==EXTRA LARGE SCREEN==== */
+        @media (max-width: 1400px) {
+            #item-review {
+                column-count: 3;
+                column-gap: 1.5em;
+                font-size: 1.37em;
+            }
+
+            #item-review::first-letter {
+                font-size: 4.5rem;
+                text-transform: uppercase!important;
+            }
+
+            
+            #song-lyrics {
+                font-size: 1.37em;
+            }
+
+        }
+
+    /* ==#==LARGE SCREEN==== */    
+        @media (min-width: 1200px) { 
+            #Iitem-review {
+                font-size: 1.4em;
+            }
+        }
+
+    /* ==#==MEDIUM SCREEN==== */    
+        @media (max-width: 992px) {
+            #item-review {
+                font-size: 1.3em;
+            }        
+        }
+
+    /* ==#==SMALL SCREEN==== */
+        @media (max-width: 768px) {
+            .current-item-title {
+                font-size: 2.5rem;
+                padding: 3px!important;
+            }
+
+            .marquee-border {
+                border-width: 8px;
+            }
+
+            #item-review::first-letter {
+                font-size: 3.5em;
+                letter-spacing: .1em;
+            }
+            
+
+            #item-review {
+                column-count: 3;
+                font-size: 1.14em;
+            }
+
+            #song-lyrics {
+                font-size: 1.14em;
+            }
+        }
+
+    /* ==#==EXTRA SMALL SCREEN====*/
+        @media (max-width: 576px) {
+
+        /* ======*MARQUEE FOUNDATION====== */
+            .marquee-wrapper-outer {
+                padding-top: 5px;
+            }
+
+            .marquee-border {
+                border-width: 7px;
+            }
+
+        /* ======*REVIEW SCALING====== */
+            .current-item-title {
+                font-size: 2.1rem;
+                padding: 3px!important;
+            }
+
+            #item-review {
+                font-size: 1em;
+                column-count: 2;
+                column-gap: 1.2em;
+            }
+
+            #song-lyrics {
+                font-size: 1em;
+            }
+
+            #item-review::first-letter {
+                font-size: 3.3em!important; 
+
+            }
+        }
+/* @==                @== */
+
+
+    /* ======*MISC====== */
+    .uppercase-marker {
+        text-transform: uppercase;
     }
-
-    #item-review ::first-letter {
-        font-size: 4.5rem;
-    }
-
-    
-    #song-lyrics {
-        font-size: 1.37em;
-    }
-
-}
-
-@media (max-width: 992px) {
-    #item-review {
-        font-size: 1.3em;
-    }        
-}
-
-@media (max-width: 768px) {
-    .current-item-title {
-        display: inline-block;
-        text-align: center;
-    }
-
-    .marquee-border {
-        border-width: 8px;
-    }
-
-    #item-review::first-letter {
-        font-size: 3.5em;
-    }
-    
-
-    #item-review {
-        column-count: 3;
-        font-size: 1.14em;
-    }
-
-    #song-lyrics {
-        font-size: 1.14em;
-    }
-}
-
-@media (max-width: 555px) {
-    .current-item-title {
-        text-decoration: underline;
-        font-size: 1.25rem;
-        padding: 3px!important;
-        
-    }
-
-    .marquee-wrapper-outer {
-        padding-top: 5px;
-    }
-
-    .marquee-border {
-        border-width: 7px;
-    }
-
-    #item-review {
-        font-size: 1em;
-        column-count: 2;
-        column-gap: 1.5em;
-    }
-
-    #song-lyrics {
-        font-size: 1em;
-    }
-}
-
-
-/* ======*MISC====== */
-
-.uppercase-marker {
-    text-transform: uppercase;
-}
