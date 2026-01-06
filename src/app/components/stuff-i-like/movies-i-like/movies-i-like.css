@@ -24,7 +24,8 @@
 /* ======* MOVIE REVIEW SECTION ====== */
 
 .letterboxd-profile img{
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
     width: 150px;
     height: 150px;
     border-width: 4px;
@@ -35,13 +36,20 @@
 }
 
 .current-movie-poster {
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
     width: 204px;
     height: 308px;
     border-width: 7px;
     border-style: solid;
     border-color: gold; 
     border-radius: 8px;
+}
+
+a:has(.current-movie-poster) {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 /* ======* MEDIA FLEX ====== */
@@ -101,13 +109,13 @@
                 height: 150px;
                 border-width: 3px;
                 border-radius: 4px;
-                margin-left: 1vw;
-                margin-right: 2vw;
+                margin-left: -.95vw;
             }
 
             .letterboxd-profile img{
                 width: 80px;
                 height: 80px;
+                margin-right: -.95vw;
             }    
         }
 

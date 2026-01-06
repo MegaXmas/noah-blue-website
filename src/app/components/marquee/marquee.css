@@ -49,12 +49,8 @@
     }
 }
 
-/* ======*REVIEW STUFF====== */ 
 
-.current-profile {
-    display: inline-block;
-    margin-right: 10vw;
-}
+/* ======*REVIEW STUFF====== */ 
 
 .current-item-title {
     text-align: center;
@@ -154,7 +150,7 @@ p {
 
     /* ==#==LARGE SCREEN==== */    
         @media (min-width: 1200px) { 
-            #Iitem-review {
+            #item-review {
                 font-size: 1.4em;
             }
         }
@@ -208,7 +204,7 @@ p {
         /* ======*REVIEW SCALING====== */
             .current-item-title {
                 font-size: 2.1rem;
-                padding: 3px!important;
+                margin-right: -5vw!important;
             }
 
             #item-review {
