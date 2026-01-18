@@ -52,7 +52,7 @@ a:has(.current-movie-poster) {
     margin: 0 auto;
 }
 
-/* ======* MEDIA FLEX ====== */
+
 
 /* @=====MEDIA FLEX====== */
 /* @==                @== */
@@ -63,31 +63,66 @@ a:has(.current-movie-poster) {
 
     /* ==#==LARGE SCREEN==== */    
         @media (min-width: 1200px) { 
-
-        }
-
-    /* ==#==MEDIUM SCREEN==== */    
-        @media (max-width: 992px) {
- 
-        }
-
-    /* ==#==SMALL SCREEN==== */
-        @media (max-width: 768px) {
             .letterboxd-profile img{
-                width: 80px;
-                height: 80px;
+                width: 120px;
+                height: 120px;
             }
 
             .marquee-item-movie {
                 width: 150px;
                 height: 225px;
+            }
+
+
+            .current-movie-poster {
+                width: 150px;
+                height: 225px;
+                border-width: 4px;
+                border-radius: 4px;
+                margin-left: -25px;
+            }
+        }
+
+    /* ==#==MEDIUM SCREEN==== */    
+        @media (max-width: 992px) {
+            .letterboxd-profile img{
+                width: 110px;
+                height: 110px;
+            }
+
+            .marquee-item-movie {
+                width: 133.33px;
+                height: 200px;
                 margin: 3px;
             }
 
 
             .current-movie-poster {
+                width: 125px;
+                height: 187.5px;
+                border-width: 4px;
+                border-radius: 4px;
+                margin-left: -25px;
+            }
+        }
+
+    /* ==#==SMALL SCREEN==== */
+        @media (max-width: 768px) {
+            .letterboxd-profile img{
                 width: 100px;
-                height: 150px;
+                height: 100px;
+            }
+
+            .marquee-item-movie {
+                width: 130px;
+                height: 195px;
+                margin: 3px;
+            }
+
+
+            .current-movie-poster {
+                width: 125px;
+                height: 187.5px;
                 border-width: 4px;
                 border-radius: 4px;
                 margin-left: -25px;
@@ -112,6 +147,15 @@ a:has(.current-movie-poster) {
                 margin-left: -.95vw;
             }
 
+            .letterboxd-profile img{
+                width: 83px;
+                height: 83px;
+                margin-right: 2vw;
+            }    
+        }
+
+    /* ==#==SMALLEST SCREEN====*/
+        @media (max-width: 400px) {
             .letterboxd-profile img{
                 width: 80px;
                 height: 80px;

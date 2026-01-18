@@ -206,15 +206,25 @@
                 font-size: 2.5rem;
                 padding: 3px!important;
             }
+
             #item-review::first-letter {
                 font-size: 3.4em;
-                letter-spacing: .1em;
+                margin-top: .525rem;      
+                margin-right: 0rem;
+                margin-left: -.05rem;
+                padding-right: .7rem;
             }
             
 
             #item-review {
-                column-count: 3;
                 font-size: 1.14em;
+
+                column-count: 3;
+                column-gap: 1.2em;
+
+                padding-bottom: .3em!important;
+
+                line-height: 1.8rem;
             }
 
             #song-lyrics {
