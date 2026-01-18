@@ -237,8 +237,8 @@
 
         /* ======*REVIEW SCALING====== */
             .current-item-title {
-                font-size: 2rem;
-                margin-right: -5vw!important;
+                font-size: 1.8rem;
+                margin-right: -4vw!important;
             }
 
             #item-review {
