@@ -3,126 +3,134 @@
 
 @import url(https://fonts.googleapis.com/css2?family=League+Gothic&display=swap);
 
-/* ======*MARQUEE STUFF====== */
+/* ==#==MARQUEE STUFF====*/
 
-.marquee-border {
-    border-style: ridge;
-    border-width: 10px;
-    border-color: rgb(0, 0, 0);
-}
+    /* ======*MARQUEE STRUCTURE====== */ 
+        .marquee-border {
+            border-style: ridge;
+            border-width: 10px;
+            border-color: rgb(0, 0, 0);
+        }
 
-.marquee-wrapper-outer {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 0px;
-    background-color: rgb(54, 163, 105);
-    width: max-content;
-    overflow: hidden;
+        .marquee-wrapper-outer {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 0px;
+            background-color: rgb(54, 163, 105);
+            width: max-content;
+            overflow: hidden;
 
-    scrollbar-color: rgb(210, 255, 231) rgb(14, 142, 74);
-    scrollbar-width: auto;
+            scrollbar-color: rgb(210, 255, 231) rgb(14, 142, 74);
+            scrollbar-width: auto;
 
-}
+        }
 
-.marquee-wrapper {
-    width: max-content;
-}
+        .marquee-wrapper {
+            width: max-content;
+        }
 
-.marquee-content {
-    overflow: hidden;
-    display: flex;
-    gap: 0; 
-}
-
-.marquee-track {
-    display: flex;
-    animation: marquee var(--marquee-duration, 20s) linear infinite;
-    animation-delay: 1500ms;
-}
-
-@keyframes marquee {
-    0% { 
-        transform: translateX(0); 
-    }
-    100% { 
-        transform: translateX(var(--scroll-distance, -50%)); 
-    }
-}
+        .marquee-content {
+            overflow: hidden;
+            display: flex;
+            gap: 0; 
+        }
 
 
-/* ======*REVIEW STUFF====== */ 
+    /* ======*MARQUEE ANIMATION====== */ 
+        .marquee-track {
+            display: flex;
+            animation: marquee var(--marquee-duration, 20s) linear infinite;
+            animation-delay: 1500ms;
+        }
 
-.current-item-title {
-    text-align: center;
+        @keyframes marquee {
+            0% { 
+                transform: translateX(0); 
+            }
+            100% { 
+                transform: translateX(var(--scroll-distance, -50%)); 
+            }
+        }
 
-    font-family: "League Gothic", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
 
-    font-size: 4rem;
-    font-variation-settings:
-    "wdth" 100;
+/* ==#==REVIEW SECTION====*/
 
-}
+    /* ======*BACKGROUND====== */ 
+        h2 {
+            background-color: antiquewhite;
+            background-image: url(https://img.freepik.com/free-photo/concrete-wall-textured-backgrounds-built-structure-concept_53876-14107.jpg);
+            background-repeat: repeat;
+        }
 
-.item-link {
-    color: rgb(0, 0, 117);
-}
+        p {
+            background-color: antiquewhite;
+            white-space: pre-line;
+        }
 
-.item-link:visited {
-    color: #333;
-}
 
-.item-link:hover {
-    color: #5a0078;
-}
+    /* ======*TEXT====== */ 
+        .current-item-title {
+            text-align: center;
 
-.review-scroll {
-    overflow: scroll;
-}
+            font-family: "League Gothic", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
 
-h2 {
-    background-color: antiquewhite;
-    background-image: url(https://img.freepik.com/free-photo/concrete-wall-textured-backgrounds-built-structure-concept_53876-14107.jpg);
-    background-repeat: repeat;
-}
+            font-size: 4rem;
+            font-variation-settings:
+            "wdth" 100;
 
-p {
-    background-color: antiquewhite;
-    white-space: pre-line;
-}
+        }
 
-#item-review::first-line {
-        text-transform: uppercase;
-        letter-spacing: .1em;
-    }
+        
+        #item-review {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
 
-#item-review::first-letter {
-        text-transform: uppercase;
-        font-size: 3.3em;
-        font-weight: bold;
-        margin-right: .2rem;
-        float: left;
-        margin-top: .5rem;
-        line-height: 5rem;
-        padding-top: 0;
-    }
+            column-count: 4;
+            column-gap: 2em;
 
-#item-review {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
+            padding-bottom: .4em!important;
+        }
 
-    column-count: 4;
-    column-gap: 2em;
+        #item-review::first-line {
+                text-transform: uppercase;
+                letter-spacing: .2em!important;
+            }
 
-    padding-bottom: .4em!important;
-}
+        #item-review::first-letter {
+                text-transform: uppercase;
+                font-size: 3.3em;
+                font-weight: bold;
+                margin-right: .2rem;
+                float: left;
+                margin-top: .5rem;
+                line-height: 5rem;
+                padding-top: 0;
+            }
 
-#song-lyrics {
-    font-size: 1.5em;
-}
+        #song-lyrics {
+            font-size: 1.5em;
+        }
 
+        
+
+        .item-link {
+            color: rgb(0, 0, 117);
+        }
+
+        .item-link:visited {
+            color: #333;
+        }
+
+        .item-link:hover {
+            color: #5a0078;
+        }
+
+        .review-scroll {
+            overflow: scroll;
+        }
 
 
 
@@ -225,15 +233,21 @@ p {
 
             #item-review {
                 font-size: 1em;
+
+
                 column-count: 2;
                 column-gap: 1.2em;
+
+                padding-bottom: .2em!important;
+
+                line-height: 1.45rem;
             }
 
             #item-review::first-letter {
                 font-size: 3.3em;
                 margin-top: .4rem;
                 margin-right: 0rem;
-                margin-left: 0rem;
+                margin-left: -.1rem;
             }
 
             #song-lyrics {
@@ -258,14 +272,15 @@ p {
 
                 padding-bottom: .2em!important;
 
-                line-height: 1.45rem;
+                line-height: 1.475rem;
             }
 
+
             #item-review::first-letter {
-                font-size: 3.2em;
+                font-size: 3.18em;
                 margin-top: .4rem;
                 margin-right: 0rem;
-                margin-left: 0rem;
+                margin-left: -.05rem;
             }   
         }
 /* @==                @== */
