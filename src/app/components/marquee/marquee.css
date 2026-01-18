@@ -81,6 +81,7 @@
             font-variation-settings:
             "wdth" 100;
 
+            margin: 0;
         }
 
         
@@ -175,7 +176,7 @@
 
     /* ======*REVIEW SCALING====== */
             .current-item-title {
-                    font-size: 3rem;
+                    font-size: 2.7rem;
             }
 
             #item-review {
@@ -204,7 +205,6 @@
     /* ======*REVIEW SCALING====== */
             .current-item-title {
                 font-size: 2.5rem;
-                padding: 3px!important;
             }
 
             #item-review::first-letter {
@@ -238,7 +238,6 @@
         /* ======*REVIEW SCALING====== */
             .current-item-title {
                 font-size: 1.8rem;
-                margin-right: -4vw!important;
             }
 
             #item-review {
@@ -255,10 +254,10 @@
 
             #item-review::first-letter {
                 font-size: 3.3em;
-                margin-top: .4rem;
+                margin-top: .36rem;
                 margin-right: 0rem;
                 margin-left: -.05rem;
-                padding-right: .04rem;
+                padding-right: .5rem;
             }
 
             #song-lyrics {
@@ -272,7 +271,6 @@
         /* ======*REVIEW SCALING====== */
             .current-item-title {
                 font-size: 1.8rem;
-                margin-left: 1vw;
             }
 
             #item-review {
@@ -283,7 +281,7 @@
 
                 padding-bottom: .2em!important;
 
-                line-height: 1.475rem;
+                line-height: 1.45rem;
             }
 
 
@@ -292,7 +290,7 @@
                 margin-top: .4rem;
                 margin-right: 0rem;
                 margin-left: -.05rem;
-                padding-right: .04rem;
+                padding-right: .4rem;
             }   
         }
 /* @==                @== */

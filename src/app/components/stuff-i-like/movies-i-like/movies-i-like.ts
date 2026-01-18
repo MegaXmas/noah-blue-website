@@ -175,7 +175,7 @@ Jack o’connell stars in this movie as a 19 year old kid who has experienced no
       moviePoster: `https://a.ltrbxd.com/resized/film-poster/4/9/0/6/2/49062-howl-s-moving-castle-0-2000-0-3000-crop.jpg?v=fde81bda52`, 
       movieLink: `https://letterboxd.com/film/howls-moving-castle/`, 
       movieReview: ``},
-    { movieTitle: `Star Wars: Episode III – Revenge of the Sith`, 
+    { movieTitle: `Star Wars: Episode III`, 
       moviePoster: `https://a.ltrbxd.com/resized/film-poster/5/0/7/0/9/50709-star-wars-episode-iii-revenge-of-the-sith-0-2000-0-3000-crop.jpg?v=cdb8caab10`, 
       movieLink: `https://letterboxd.com/film/star-wars-episode-iii-revenge-of-the-sith/`, 
       movieReview: `Most people have come around on ^^revenge of the sith^/^ at this point. It was not well received when it came out, but what it lacks in narrative subtlety and top tier writing is made up for by how fucking cool and awesome and epic it is. The culmination of 30 years of worldbuilding and foreshadowing had to be this way. At this point in the series ^^star wars^/^ had really perfected the lightsaber choreography, and having so many good fight scenes is just a blast to watch. They were always the climax of the movies and the dopest parts anyway (except for #4), so why not just have a bunch? So many cool setpieces, so many <strong><em>LEGENDARY</strong></em> scenes. I still say “do it” like palpatine all the time. Yea this movie doesn’t break ground like the original trilogy, but it is fucking fun and i dont think it really tired that hard to be anything else.`},
@@ -183,16 +183,12 @@ Jack o’connell stars in this movie as a 19 year old kid who has experienced no
       moviePoster: `https://a.ltrbxd.com/resized/film-poster/2/7/0/6/2706-star-wars-0-2000-0-3000-crop.jpg?v=f1f1271bf5`, 
       movieLink: `https://letterboxd.com/film/star-wars/`, 
       movieReview: `Look if you havent seen this movie already ur probably not gonna see it lol.`},
-    { movieTitle: `Star Wars: Episode V – The Empire Strikes Back`, 
+    { movieTitle: `Star Wars: Episode V`, 
       moviePoster: `https://a.ltrbxd.com/resized/sm/upload/mp/pz/lf/2i/7BuH8itoSrLExs2YZSsM01Qk2no-0-2000-0-3000-crop.jpg?v=27c6c6fba7`, 
       movieLink: `https://letterboxd.com/film/the-empire-strikes-back/`, 
-      movieReview: `My favorite movie in the ^^star wars^/^ series. My rankings go:
-5
-3
-4
-6
-1
-2
+      movieReview: `My favorite movie in the ^^star wars^/^ series. 
+      My rankings:   5 > 3 > 4 > 6 > 1 > 2
+      
 I really did not like the disney trilogy but haven’t watched it enough to the point where i can really share my opinion confidently
 `},
     { movieTitle: `Mean Streets`, 
@@ -215,7 +211,7 @@ I really did not like the disney trilogy but haven’t watched it enough to the 
 I also have to mention the soundtrack. The movie is about a band, and it has a great soundtrack. Not just the band’s songs, but the bgm as well. This movie showed me how powerful music is when used in film to curate the vibe. The choice of music in a scene can completely change its tone. 
 
 If you are a musician, in my humble (but very based and always correct) opinion– this is a 100% required watch. Brb gonna go listen to “lone standing tuft”.`},
-    { movieTitle: `Pirates of the Caribbean: The Curse of the Black Pearl`, 
+    { movieTitle: `Pirates of the Caribbean I`, 
       moviePoster: `https://a.ltrbxd.com/resized/film-poster/2/6/9/5/2695-pirates-of-the-caribbean-the-curse-of-the-black-pearl-0-2000-0-3000-crop.jpg?v=272b36c0d8`, 
       movieLink: `https://letterboxd.com/film/pirates-of-the-caribbean-the-curse-of-the-black-pearl/`, 
       movieReview: `Fun, cool, and infinitely charming.`},
@@ -227,7 +223,7 @@ If you are a musician, in my humble (but very based and always correct) opinion�
       moviePoster: `https://a.ltrbxd.com/resized/film-poster/2/9/8/8/4/29884-millennium-actress-0-2000-0-3000-crop.jpg?v=7c3df2e20f`, 
       movieLink: `https://letterboxd.com/film/millennium-actress/`, 
       movieReview: `I call this soatoshi kon’s “best movie”. Its not my favorite BUT i think if this was written by an american and was made in live action it would have swept the oscars lol. Its incredibly intimate and moving. It feels like someone telling you their life story. 10/10.`},
-    { movieTitle: `Harry Potter and the Prisoner of Azkaban`, 
+    { movieTitle: `Harry Potter III`, 
       moviePoster: `https://a.ltrbxd.com/resized/sm/upload/a3/0q/kf/h8/jUFjMoLh8T2CWzHUSjKCojI5SHu-0-2000-0-3000-crop.jpg?v=6285ee260e`, 
       movieLink: `https://letterboxd.com/film/harry-potter-and-the-prisoner-of-azkaban/`, 
       movieReview: `^^Harry potter^/^ is my guilty pleasure. Though, I dont think the movies or books are generational works of art or anything. It can be messy and sloppily written. Most of the characters are caricatures of classic archetypes with little to no backstory, and we are told almost nothing of their motivations. The series definitely tries to do too much, which cant be accomplished within the restrictions it puts on itself. ^^Harry potter^/^ doesnt really have anything profound to say, or a message u are intended to leave with. And u know what, thats actually a good thing.
