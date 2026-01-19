@@ -1,56 +1,64 @@
 /* TODO create highlight animations on hover */
 /* TODO change systle to showing title and a design on hover (maybe some static or something) */
 
+/* ==#==MARQUEE MOVIE POSTER====*/
+/* ==#==                    ====*/
+    .marquee-item-movie {
+        display: inline-block;
+        width: 200px;
+        height: 300px;
+        margin: 5px;
+        border: 5px solid green;
+        overflow: hidden;
+    }
 
-/* ======* MARQUEE STUFF ====== */
+
+    .marquee-item-movie img{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+/* ==#==                    ====*/
 
 
-.marquee-item-movie {
-    display: inline-block;
-    width: 200px;
-    height: 300px;
-    margin: 5px;
-    border: 5px solid green;
-    overflow: hidden;
-}
 
-.marquee-item-movie img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/* ==#==REVIEW SECTION====*/
+/* ==#==              ====*/
+    .current-movie-poster {
+        display: block;
+        border-style: solid;
+        border-color: gold; 
+        border-radius: 2%;
+        aspect-ratio: 2 / 3;
 
-/* ======* MOVIE REVIEW SECTION ====== */
+        border-width: 7px;
+        margin: 0 auto;
+        width: 12.75rem;
+    }
 
-.letterboxd-profile img{
-    display: block;
-    margin: 0 auto;
-    width: 150px;
-    height: 150px;
-    border-width: 4px;
-    border-style: solid;
-    border-color: rgb(93, 147, 228); 
-    border-radius: 15%;
-    overflow: hidden;
-}
 
-.current-movie-poster {
-    display: block;
-    margin: 0 auto;
-    width: 204px;
-    height: 308px;
-    border-width: 7px;
-    border-style: solid;
-    border-color: gold; 
-    border-radius: 8px;
-}
+    a:has(.current-movie-poster) {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
 
-a:has(.current-movie-poster) {
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-}
+
+
+    .letterboxd-profile img{
+        display: block;
+        border-style: solid;
+        border-color: rgb(93, 147, 228); 
+        overflow: hidden;
+        border-radius: 15%;
+        aspect-ratio: 1 / 1;
+
+        margin: 0 auto;
+        width: 9.375rem;
+        border-width: 4px;
+    }
+/* ==#==             ====*/
 
 
 
