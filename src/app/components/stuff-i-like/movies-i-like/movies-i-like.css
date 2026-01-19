@@ -138,12 +138,13 @@
             }
             
             .current-movie-poster {
-                width: 6.25rem;
+                width: 6.5rem;
                 border-width: 3px;
             }
             
             .letterboxd-profile img {
                 width: 5.1875rem;
+                border-width: 3px;
             }    
         }
 
