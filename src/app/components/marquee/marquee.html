@@ -1,104 +1,104 @@
 <!-- ============MARQUEE SECTION============= -->
-@if (isScrollable()) {
-    <button type="button" class="btn btn-outline-dark" (click)="playAnimation($event)" aria-details="resume scroll animation & disable scrollbar">resume scroll</button>
-}
-@if (!isScrollable()) {
-    <button type="button" class="btn" (click)="stopAnimation($event)" aria-details="stop scroll animation & enable scrollbar">pause scroll</button>
-}
+    @if (isScrollable()) {
+        <button type="button" class="btn btn-outline-dark" (click)="playAnimation($event)" aria-details="resume scroll animation & disable scrollbar">resume scroll</button>
+    }
+    @if (!isScrollable()) {
+        <button type="button" class="btn" (click)="stopAnimation($event)" aria-details="stop scroll animation & enable scrollbar">pause scroll</button>
+    }
 
-<div class="container-xxl mt-3 mt-sm-1">
-    <div class="row justify-content-center align-self-center">
-        
-        <div class="col-12 marquee-wrapper-outer marquee-border">
-            <div class="marquee-wrapper">
-                <div class="marquee-content">
-                    <div id="stuff-marque" class="list-group list-group-horizontal justify-content-center align-self-center marquee-content">
-                        
-                        <div class="marquee-track">
+    <div class="container-xxl mt-3 mt-sm-1">
+        <div class="row justify-content-center align-self-center">
+            
+            <div class="col-12 marquee-wrapper-outer marquee-border">
+                <div class="marquee-wrapper">
+                    <div class="marquee-content">
+                        <div id="stuff-marque" class="list-group list-group-horizontal justify-content-center align-self-center marquee-content">
                             
-                            @for (stuff of stuffArray(); track getItemTitle(stuff); let i = $index) {
-                                <div [class]="marqueeArtClass()">
-                                    <img
-                                    [src]="getItemArt(stuff)"
-                                    (mouseover)="setAllCurrentItemData(i); pauseAnimation()"
-                                    (focus)="setAllCurrentItemData(i); pauseAnimation()"
-                                    (mouseleave)="resumeAnimation()"
-                                    [alt]="getItemTitle(stuff)"
-                                    >
-                                </div>
-                            }
+                            <div class="marquee-track">
+                                
+                                @for (stuff of stuffArray(); track getItemTitle(stuff); let i = $index) {
+                                    <div [class]="marqueeArtClass()">
+                                        <img
+                                        [src]="getItemArt(stuff)"
+                                        (mouseover)="setAllCurrentItemData(i); pauseAnimation()"
+                                        (focus)="setAllCurrentItemData(i); pauseAnimation()"
+                                        (mouseleave)="resumeAnimation()"
+                                        [alt]="getItemTitle(stuff)"
+                                        >
+                                    </div>
+                                }
+                                
+                                @for (stuff of stuffArray(); track getItemTitle(stuff); let i = $index) {
+                                    <div [class]="marqueeArtClass()">
+                                        <img
+                                        [src]="getItemArt(stuff)"
+                                        (mouseover)="setAllCurrentItemData(i); pauseAnimation()"
+                                        (focus)="setAllCurrentItemData(i); pauseAnimation()"
+                                        (mouseleave)="resumeAnimation()"
+                                        [alt]="getItemTitle(stuff)"
+                                        >
+                                    </div>
+                                }
+                            </div>
                             
-                            @for (stuff of stuffArray(); track getItemTitle(stuff); let i = $index) {
-                                <div [class]="marqueeArtClass()">
-                                    <img
-                                    [src]="getItemArt(stuff)"
-                                    (mouseover)="setAllCurrentItemData(i); pauseAnimation()"
-                                    (focus)="setAllCurrentItemData(i); pauseAnimation()"
-                                    (mouseleave)="resumeAnimation()"
-                                    [alt]="getItemTitle(stuff)"
-                                    >
-                                </div>
-                            }
                         </div>
-                        
                     </div>
+                    
                 </div>
-                
             </div>
         </div>
     </div>
-</div>
+
 
 
 <!-- ============REVIEW SECTION============= -->
-
-<div class="container-xxl mt-2 mt-sm-1 mb-2">
-    
-    <div class="row justify-content-around">
-        <h2 class="border border-3 p-0" id="stuff-header">  
-            
-            <div class="container">
-                <div class="row align-items-center justify-content-center p-2 g-3">
-                    
-                    
-                    <div class="col-4">
-                        <a [href]="currentItemLink()" target="_blank" rel="noopener noreferrer"> 
-                            <img [class]="relevantImgClass()" [src]="currentItemArt()" [alt]="currentItemArt()">
-                        </a>
-                    </div>
+    <div class="container-xxl mt-2 mt-sm-1 mb-2">
+        
+        <div class="row justify-content-around">
+            <h2 class="border border-3 p-0" id="stuff-header">  
+                
+                <div class="container">
+                    <div class="row align-items-center justify-content-center p-2 g-3">
                         
-                    <div class="col-4">
-                        <a class="item-link current-item-title d-block" 
-                            [href]="currentItemLink()" 
-                            target="_blank" 
-                            rel="noopener noreferrer"> 
-                            {{ currentItemTitle() }} 
-                            @if (kindOfItem() === 'song') {
-                                - {{ currentSongArtist() }}
-                            }
-                        </a>
-                    </div>
-                    
-                    <div class="col-4">
-                        <a [href]="relevantProfile()" target="_blank" rel="noopener noreferrer"> 
-                            <div class="text-center" [class]="profilePictureClass()">
-                                <img [src]="profilePicture()" alt="relevant-profile">
-                            </div>
-                        </a>
-                    </div>
+                        
+                        <div class="col-4">
+                            <a [href]="currentItemLink()" target="_blank" rel="noopener noreferrer"> 
+                                <img [class]="relevantImgClass()" [src]="currentItemArt()" [alt]="currentItemArt()">
+                            </a>
+                        </div>
+                            
+                        <div class="col-4">
+                            <a class="item-link current-item-title d-block" 
+                                [href]="currentItemLink()" 
+                                target="_blank" 
+                                rel="noopener noreferrer"> 
+                                {{ currentItemTitle() }} 
+                                @if (kindOfItem() === 'song') {
+                                    - {{ currentSongArtist() }}
+                                }
+                            </a>
+                        </div>
+                        
+                        <div class="col-4">
+                            <a [href]="relevantProfile()" target="_blank" rel="noopener noreferrer"> 
+                                <div class="text-center" [class]="profilePictureClass()">
+                                    <img [src]="profilePicture()" alt="relevant-profile">
+                                </div>
+                            </a>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
 
-        </h2>
+            </h2>
+        </div>
+
+        <section class="row">
+            @if (kindOfItem() != `song`) {
+                <p class="border border-3 mt-0 mb-2" id="item-review" [innerHTML]="currentItemReview() | indentAfterFirstPipe | textAestheticPipe"></p>
+            }
+            @if (kindOfItem() === `song`) {
+                <p class="border border-3 mt-0 text-center" id="song-lyrics" [innerHTML]="currentSongLyrics() | textAestheticPipe"></p> 
+            }
+        </section>
     </div>
-
-    <section class="row">
-        @if (kindOfItem() != `song`) {
-            <p class="border border-3 mt-0 mb-2" id="item-review" [innerHTML]="currentItemReview() | indentAfterFirstPipe | textAestheticPipe"></p>
-        }
-        @if (kindOfItem() === `song`) {
-            <p class="border border-3 mt-0 text-center" id="song-lyrics" [innerHTML]="currentSongLyrics() | textAestheticPipe"></p> 
-        }
-    </section>
-</div>

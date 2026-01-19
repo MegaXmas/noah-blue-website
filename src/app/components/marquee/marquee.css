@@ -4,13 +4,14 @@
 @import url(https://fonts.googleapis.com/css2?family=League+Gothic&display=swap);
 
 /* ==#==MARQUEE STUFF====*/
-
+/* ==#==             ====*/
     /* ======*MARQUEE STRUCTURE====== */ 
         .marquee-border {
             border-style: ridge;
             border-width: 10px;
             border-color: rgb(0, 0, 0);
         }
+
 
         .marquee-wrapper-outer {
             padding-top: 10px;
@@ -25,15 +26,18 @@
 
         }
 
+
         .marquee-wrapper {
             width: max-content;
         }
+
 
         .marquee-content {
             overflow: hidden;
             display: flex;
             gap: 0; 
         }
+
 
 
     /* ======*MARQUEE ANIMATION====== */ 
@@ -43,6 +47,7 @@
             animation-delay: 1500ms;
         }
 
+
         @keyframes marquee {
             0% { 
                 transform: translateX(0); 
@@ -51,10 +56,12 @@
                 transform: translateX(var(--scroll-distance, -50%)); 
             }
         }
+/* ==#==             ====*/
+
 
 
 /* ==#==REVIEW SECTION====*/
-
+/* ==#==              ====*/
     /* ======*BACKGROUND====== */ 
         h2 {
             background-color: antiquewhite;
@@ -68,20 +75,23 @@
         }
 
 
+
     /* ======*TEXT====== */ 
         .current-item-title {
             text-align: center;
+            text-decoration: underline;
+            text-decoration-thickness: 5px;
 
             font-family: "League Gothic", sans-serif;
             font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
-
             font-size: 4rem;
             font-variation-settings:
             "wdth" 100;
 
-            margin: 0;
+
+            margin: 0rem;
         }
 
         
@@ -96,10 +106,12 @@
             padding-bottom: .2rem;
         }
 
+
         #item-review::first-line {
             text-transform: uppercase;
             letter-spacing: .3rem;
         }
+
 
         #item-review::first-letter {
             text-transform: uppercase;
@@ -114,27 +126,41 @@
             margin-left: 0rem;
         }
 
+
         #song-lyrics {
             font-size: 1.5rem;
         }
 
         
 
+    /* ======*LINK BEHAVIOR====== */ 
         .item-link {
             color: rgb(0, 0, 117);
         }
+
 
         .item-link:visited {
             color: #333;
         }
 
+
         .item-link:hover {
             color: #5a0078;
         }
 
+
         .review-scroll {
             overflow: scroll;
         }
+/* ==#==              ====*/
+
+
+
+/* ==#==  MISC  ====*/
+        .uppercase-marker {
+            text-transform: uppercase;
+        }
+/* ==#==         ====*/
 
 
 
@@ -238,7 +264,7 @@
     /* ==#==EXTRA SMALL SCREEN====*/
         @media (max-width: 576px) {
 
-        /* ======*REVIEW SCALING====== */
+    /* ======*REVIEW SCALING====== */
             .current-item-title {
                 font-size: 1.8rem;
             }
@@ -271,7 +297,7 @@
     /* ==#==SMALLEST SCREEN====*/
         @media (max-width: 400px) {
 
-        /* ======*REVIEW SCALING====== */
+    /* ======*REVIEW SCALING====== */
             .current-item-title {
                 font-size: 1.8rem;
             }
@@ -299,9 +325,3 @@
             }   
         }
 /* @==                @== */
-
-
-    /* ======*MISC====== */
-        .uppercase-marker {
-            text-transform: uppercase;
-        }
