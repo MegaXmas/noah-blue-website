@@ -5,11 +5,14 @@
 /* ==#==                    ====*/
     .marquee-item-movie {
         display: inline-block;
-        width: 200px;
-        height: 300px;
-        margin: 5px;
-        border: 5px solid green;
+        aspect-ratio: 2 / 3; 
+        border-width: 5px;
+        border-color: green;
+        border-style: solid;
         overflow: hidden;
+
+        width: 12.5rem;
+        margin: 5px;
     }
 
 
@@ -72,102 +75,83 @@
     /* ==#==LARGE SCREEN==== */    
         @media (max-width: 1200px) { 
             .letterboxd-profile img{
-                width: 120px;
-                height: 120px;
+                /* width: 120px;
+                height: 120px; */
             }
 
             .marquee-item-movie {
-                width: 150px;
-                height: 225px;
+                /* width: 150px;
+                height: 225px; */
             }
 
 
             .current-movie-poster {
-                width: 150px;
-                height: 225px;
-                border-width: 4px;
-                border-radius: 4px;
-                margin-left: -25px;
+                /* width: 150px;
+                height: 225px; */
             }
         }
 
     /* ==#==MEDIUM SCREEN==== */    
         @media (max-width: 992px) {
             .letterboxd-profile img{
-                width: 110px;
-                height: 110px;
+                /* width: 110px;
+                height: 110px; */
             }
 
             .marquee-item-movie {
-                width: 133.33px;
-                height: 200px;
-                margin: 3px;
+                /* width: 133.33px;
+                height: 200px; */
             }
 
 
             .current-movie-poster {
-                width: 125px;
+                /* width: 125px;
                 height: 187.5px;
-                border-width: 4px;
-                border-radius: 4px;
-                margin-left: -25px;
+                border-width: 4px; */
             }
         }
 
     /* ==#==SMALL SCREEN==== */
         @media (max-width: 768px) {
             .letterboxd-profile img{
-                width: 100px;
-                height: 100px;
+                /* width: 100px;
+                height: 100px; */
             }
 
             .marquee-item-movie {
-                width: 130px;
-                height: 195px;
-                margin: 3px;
+                /* width: 130px;
+                height: 195px; */
             }
 
 
             .current-movie-poster {
-                width: 125px;
-                height: 187.5px;
-                border-width: 4px;
-                border-radius: 4px;
-                margin-left: -25px;
+                /* width: 125px;
+                height: 187.5px; */
             }
         }
 
     /* ==#==EXTRA SMALL SCREEN====*/
-        @media (max-width: 576px) {
+        @media (max-width: 36em) {
             .marquee-item-movie {
-                width: 100px;
-                height: 150px;
-                margin: 2px;
+                width: 6.25rem;
                 border-width: 3px;
-                border-radius: 4px;
             }
             
             .current-movie-poster {
-                width: 100px;
-                height: 150px;
+                width: 6.25rem;
                 border-width: 3px;
-                border-radius: 4px;
-                margin-left: -.95vw;
             }
-
-            .letterboxd-profile img{
-                width: 83px;
-                height: 83px;
-                margin-right: 2vw;
+            
+            .letterboxd-profile img {
+                width: 5.1875rem;
             }    
         }
 
     /* ==#==SMALLEST SCREEN====*/
-        @media (max-width: 400px) {
-            .letterboxd-profile img{
-                width: 80px;
-                height: 80px;
-                margin-right: -1vw;
+        @media (max-width: 25em) {
+            .letterboxd-profile img {
+                width: 5rem;
+                margin-right: 0;
             }    
         }
 
