@@ -89,30 +89,33 @@
             font-family: 'Times New Roman', Times, serif;
             font-size: 1.5rem;
 
-            column-count: 4;
-            column-gap: 2em;
 
-            padding-bottom: .4em!important;
+            column-count: 4;
+            column-gap: 2rem;
+            line-height: 2rem;
+            padding-bottom: .2rem;
         }
 
         #item-review::first-line {
-                text-transform: uppercase;
-                letter-spacing: .2em!important;
-            }
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+        }
 
         #item-review::first-letter {
-                text-transform: uppercase;
-                font-size: 3.3em;
-                font-weight: bold;
-                margin-right: .2rem;
-                float: left;
-                margin-top: .5rem;
-                line-height: 5rem;
-                padding-top: 0;
-            }
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 5rem;
+            float: left;
+
+
+            font-size: 4.25rem!important;
+            margin-top: .635rem;
+            margin-right: .75rem;
+            margin-left: 0rem;
+        }
 
         #song-lyrics {
-            font-size: 1.5em;
+            font-size: 1.5rem;
         }
 
         
@@ -272,6 +275,8 @@
             .current-item-title {
                 font-size: 1.8rem;
             }
+
+/* TODO: redo margin right left to keep consistant margins */
 
             #item-review {
                 font-size: 1em;

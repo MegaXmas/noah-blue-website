@@ -62,7 +62,7 @@ a:has(.current-movie-poster) {
         }
 
     /* ==#==LARGE SCREEN==== */    
-        @media (min-width: 1200px) { 
+        @media (max-width: 1200px) { 
             .letterboxd-profile img{
                 width: 120px;
                 height: 120px;
