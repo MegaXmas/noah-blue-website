@@ -76,33 +76,34 @@
 
 
 
-    /* ======*TEXT====== */ 
+    /* ======*CURRENT ITEM DISPLAY====== */
         .current-item-title {
             text-align: center;
             text-decoration: underline;
-            text-decoration-thickness: 5px;
 
             font-family: "League Gothic", sans-serif;
             font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
-            font-size: 4rem;
             font-variation-settings:
             "wdth" 100;
 
 
+            font-size: 4rem;
+            text-decoration-thickness: 5px;
             margin: 0rem;
         }
+
 
         
         #item-review {
             font-family: 'Times New Roman', Times, serif;
+
+
             font-size: 1.5rem;
-
-
             column-count: 4;
             column-gap: 2rem;
-            line-height: 2rem;
+            line-height: 1.58;
             padding-bottom: .2rem;
         }
 
@@ -120,10 +121,10 @@
             float: left;
 
 
-            font-size: 4.25rem!important;
-            margin-top: .635rem;
-            margin-right: .75rem;
-            margin-left: 0rem;
+            font-size: 2.5em;
+            margin-top: .6rem;
+            margin-right: .3rem;
+            margin-left: -.1rem;
         }
 
 
@@ -299,7 +300,9 @@
 
     /* ======*REVIEW SCALING====== */
             .current-item-title {
-                font-size: 1.8rem;
+                font-size: 1em;
+                text-decoration-thickness: 2px;
+                margin: 0;
             }
 
 /* TODO: redo margin right left to keep consistant margins */
