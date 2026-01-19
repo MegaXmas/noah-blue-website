@@ -107,12 +107,6 @@
         }
 
 
-        #item-review::first-line {
-            text-transform: uppercase;
-            letter-spacing: .3rem;
-        }
-
-
         #item-review::first-letter {
             text-transform: uppercase;
             font-weight: bold;
@@ -124,6 +118,12 @@
             margin-top: .6rem;
             margin-right: .3rem;
             margin-left: -.1rem;
+        }
+
+
+        #item-review::first-line {
+            text-transform: uppercase;
+            letter-spacing: .3rem;
         }
 
 
@@ -241,7 +241,6 @@
                 margin-top: .525rem;      
                 margin-right: 0rem;
                 margin-left: -.05rem;
-                padding-right: .7rem;
             }
             
 
@@ -286,7 +285,6 @@
                 margin-top: .36rem;
                 margin-right: 0rem;
                 margin-left: -.05rem;
-                padding-right: .5rem;
             }
 
             #song-lyrics {
@@ -295,35 +293,34 @@
         }
 
     /* ==#==SMALLEST SCREEN====*/
-        @media (max-width: 400px) {
+        @media (max-width: 25em) {
 
-    /* ======*REVIEW SCALING====== */
+    /* ======*CURRENT ITEM DISPLAY====== */
             .current-item-title {
-                font-size: 1em;
+                font-size: 1.5rem;
                 text-decoration-thickness: 2px;
-                margin: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: 1rem;
+                margin-right: -.25rem;
             }
 
-/* TODO: redo margin right left to keep consistant margins */
+
 
             #item-review {
-                font-size: 1em;
-
+                font-size: 1rem;
                 column-count: 2;
                 column-gap: 1.2em;
-
-                padding-bottom: .2em!important;
-
-                line-height: 1.45rem;
+                line-height: 1.2;
+                padding-bottom: .2em;
             }
 
 
             #item-review::first-letter {
-                font-size: 3.18em;
-                margin-top: .4rem;
-                margin-right: 0rem;
-                margin-left: -.05rem;
-                padding-right: .4rem;
+                font-size: 2.75em;
+                margin-top: .35rem;
+                margin-right: .3rem;
+                margin-left: -.1rem;
             }   
         }
 /* @==                @== */
