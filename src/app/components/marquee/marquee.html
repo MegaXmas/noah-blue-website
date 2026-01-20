@@ -58,16 +58,16 @@
             <h2 class="border border-3 p-0" id="stuff-header">  
                 
                 <div class="container">
-                    <div class="row align-items-center justify-content-center p-2 g-3">
+                    <div class="row align-items-center justify-content-around p-2">
                         
                         
-                        <div class="col-4">
+                        <div class="col-4 justify-content-center d-flex">
                             <a [href]="currentItemLink()" target="_blank" rel="noopener noreferrer"> 
                                 <img [class]="relevantImgClass()" [src]="currentItemArt()" [alt]="currentItemArt()">
                             </a>
                         </div>
                             
-                        <div class="col-4">
+                        <div class="col-4 justify-content-center d-flex">
                             <a class="item-link current-item-title d-block" 
                                 [href]="currentItemLink()" 
                                 target="_blank" 
@@ -80,11 +80,11 @@
                         </div>
                         
                         <div class="col-4">
-                            <a [href]="relevantProfile()" target="_blank" rel="noopener noreferrer"> 
-                                <div class="text-center" [class]="profilePictureClass()">
+                            <div class="justify-content-center d-flex" [class]="profilePictureClass()">  
+                                <a [href]="relevantProfile()" target="_blank" rel="noopener noreferrer">
                                     <img [src]="profilePicture()" alt="relevant-profile">
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
 
                     </div>
