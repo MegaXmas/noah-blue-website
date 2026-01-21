@@ -6,12 +6,12 @@
     .marquee-item-movie {
         display: inline-block;
         aspect-ratio: 2 / 3; 
-        border-width: 5px;
         border-color: green;
         border-style: solid;
         overflow: hidden;
 
         width: 12.5rem;
+        border-width: 5px;
         margin: 5px;
     }
 
@@ -35,9 +35,9 @@
         border-radius: 2%;
         aspect-ratio: 2 / 3;
 
+        width: 12.75rem;
         border-width: 7px;
         margin: 0 auto;
-        width: 12.75rem;
     }
 
 
@@ -57,108 +57,136 @@
         border-radius: 15%;
         aspect-ratio: 1 / 1;
 
-        margin: 0 auto;
         width: 9.375rem;
         border-width: 4px;
+        margin: 0 auto;
     }
 /* ==#==             ====*/
+
+
+
+/* @=====MISC====== */
+    p {
+    white-space: pre-line;
+    }
+/* @==          @== */
+
 
 
 
 /* @=====MEDIA FLEX====== */
 /* @==                @== */
     /* ==#==EXTRA LARGE SCREEN==== */
-        @media (max-width: 1400px) {
-
-        }
-
-    /* ==#==LARGE SCREEN==== */    
-        @media (max-width: 1200px) { 
-            .letterboxd-profile img{
-                /* width: 120px;
-                height: 120px; */
-            }
-
+        @media (max-width: 87.5em) {
             .marquee-item-movie {
-                /* width: 150px;
-                height: 225px; */
+                width: 10rem;
+                border-width: 4px;
+                margin: 4px;
             }
 
 
             .current-movie-poster {
-                /* width: 150px;
-                height: 225px; */
+                width: 10.5rem;
+                border-width: 5px;
+                margin: 0 auto;
+            }
+
+            .letterboxd-profile img{
+                width: 8rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+        }
+
+    /* ==#==LARGE SCREEN==== */    
+        @media (max-width: 75em) { 
+            .marquee-item-movie {
+                width: 9rem;
+                border-width: 4px;
+                margin: 3px;
+            }
+
+
+            .current-movie-poster {
+                width: 9.5rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+
+            .letterboxd-profile img{
+                width: 7rem;
+                border-width: 3px;
+                margin: 0 auto;
             }
         }
 
     /* ==#==MEDIUM SCREEN==== */    
-        @media (max-width: 992px) {
-            .letterboxd-profile img{
-                /* width: 110px;
-                height: 110px; */
-            }
-
+        @media (max-width: 57.625em) {
             .marquee-item-movie {
-                /* width: 133.33px;
-                height: 200px; */
+                width: 8rem;
+                border-width: 3px;
+                margin: 2px;
             }
 
 
             .current-movie-poster {
-                /* width: 125px;
-                height: 187.5px;
-                border-width: 4px; */
+                width: 8rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+
+            .letterboxd-profile img{
+                width: 6.2rem;
+                border-width: 3px;
+                margin: 0 auto;
             }
         }
 
     /* ==#==SMALL SCREEN==== */
-        @media (max-width: 768px) {
-            .letterboxd-profile img{
-                /* width: 100px;
-                height: 100px; */
-            }
-
+        @media (max-width: 48em) {
             .marquee-item-movie {
-                /* width: 130px;
-                height: 195px; */
+                width: 7rem;
+                border-width: 3px;
+                margin: 2px;
             }
 
 
             .current-movie-poster {
-                /* width: 125px;
-                height: 187.5px; */
+                width: 7rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+
+            .letterboxd-profile img{
+                width: 6rem;
+                border-width: 3px;
+                margin: 0 auto;
             }
         }
 
     /* ==#==EXTRA SMALL SCREEN====*/
         @media (max-width: 36em) {
             .marquee-item-movie {
-                width: 6.25rem;
-                border-width: 3px;
+                width: 6rem;
+                border-width: 2px;
             }
             
             .current-movie-poster {
-                width: 6.5rem;
+                width: 6rem;
                 border-width: 3px;
             }
             
             .letterboxd-profile img {
-                width: 5.1875rem;
-                border-width: 3px;
+                width: 5rem;
+                border-width: 2px;
             }    
         }
 
     /* ==#==SMALLEST SCREEN====*/
         @media (max-width: 25em) {
             .letterboxd-profile img {
-                width: 5rem;
-                margin-right: 0;
+                width: 4.5rem;
+                border-width: 2px;
             }    
         }
-
-/* ======* MISC ====== */
-
-p {
-white-space: pre-line;
-}
-
+/* @==                @== */
