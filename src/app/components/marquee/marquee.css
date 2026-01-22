@@ -60,6 +60,7 @@
 
 
 
+
 /* ==#==REVIEW SECTION====*/
 /* ==#==              ====*/
     /* ======*BACKGROUND====== */ 
@@ -100,10 +101,10 @@
             font-family: 'Times New Roman', Times, serif;
 
 
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             column-count: 4;
             column-gap: 2rem;
-            line-height: 1.58;
+            line-height: 1;
             padding-bottom: .2rem;
         }
 
@@ -115,10 +116,10 @@
             float: left;
 
 
-            font-size: 2.5em;
-            margin-top: .6rem;
+            font-size: 3.97em;
+            margin-top: .28rem;
             margin-right: .3rem;
-            margin-left: -.1rem;
+            margin-left: 0rem;
         }
 
 
@@ -175,11 +176,13 @@
                 margin: 0rem;
             }
 
+
             #item-review {
                 /* column-count: 3;
                 column-gap: 1.5em;
                 font-size: 1.37em; */
             }
+
 
             #item-review::first-letter {
                 /* font-size: 4.5rem; */
@@ -189,7 +192,6 @@
             #song-lyrics {
                 /* font-size: 1.37em; */
             }
-
         }
 
     /* ==#==LARGE SCREEN==== */    
@@ -200,9 +202,11 @@
                 margin: 0rem;
             }
 
+
             #item-review {
                 /* font-size: 1.25em; */
             }
+
 
             #item-review::first-letter {
                 /* font-size: 4.2rem; */
@@ -218,6 +222,7 @@
                 padding-bottom: 3px;
             }
 
+
             .marquee-border {
                 border-width: 7px;
             }
@@ -230,9 +235,11 @@
                 margin: 0rem;
             }
 
+
             #item-review {
                 /* font-size: 1.3em; */
             }        
+
 
             #item-review::first-letter {
                 /* font-size: 4.2rem; */
@@ -248,14 +255,17 @@
                 padding-bottom: 3px;
             }
 
+
             .marquee-border {
                 border-width: 7px;
             }
+
 
             #marquee-container {
                 margin-top: .5rem!important;
                 margin-bottom: .25rem!important;
             }
+
 
     /* ======*REVIEW SCALING====== */
             .current-item-title {
@@ -264,23 +274,28 @@
                 margin: 0rem;
             }
 
+
             #item-review {
                 /* font-size: 1.3em; */
             }        
 
+
             #item-review::first-letter {
                 /* font-size: 4.2rem; */
             }
+
 
             #song-lyrics {
                 /* font-size: 1.14em; */
             }
 
 
+
             h2 {
                 margin-top: auto;
                 margin-bottom: .25rem;
             }
+
 
             #review-container {
                 margin-top: .125rem!important;       
@@ -296,6 +311,7 @@
                 padding-bottom: 2px;
             }
 
+
             .marquee-border {
                 border-width: 6px;
             }
@@ -307,6 +323,8 @@
                 text-decoration-thickness: 2px;
                 margin: 0rem;
             }
+
+
             #item-review {
                 /* font-size: 1em;
 
@@ -319,12 +337,14 @@
                 line-height: 1.46rem; */
             }
 
+
             #item-review::first-letter {
                 /* font-size: 3.3em;
                 margin-top: .36rem;
                 margin-right: 0rem;
                 margin-left: -.05rem; */
             }
+
 
             #song-lyrics {
                 font-size: 1em;
@@ -339,10 +359,6 @@
                 font-size: 1.75rem;
                 text-decoration-thickness: 2px;
                 margin: 0rem;
-            }
-
-            .col-4 {
-                padding: 0!important;
             }
 
 

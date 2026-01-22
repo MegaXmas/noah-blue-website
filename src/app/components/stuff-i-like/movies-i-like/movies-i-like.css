@@ -91,6 +91,7 @@
                 margin: 0 auto;
             }
 
+            
             .letterboxd-profile img{
                 width: 8rem;
                 border-width: 4px;
@@ -112,6 +113,7 @@
                 border-width: 4px;
                 margin: 0 auto;
             }
+
 
             .letterboxd-profile img{
                 width: 7rem;
@@ -135,6 +137,7 @@
                 margin: 0 auto;
             }
 
+
             .letterboxd-profile img{
                 width: 6.2rem;
                 border-width: 3px;
@@ -157,6 +160,7 @@
                 margin: 0 auto;
             }
 
+
             .letterboxd-profile img{
                 width: 6rem;
                 border-width: 3px;
@@ -171,11 +175,13 @@
                 border-width: 2px;
             }
             
+
             .current-movie-poster {
                 width: 6rem;
                 border-width: 3px;
             }
             
+
             .letterboxd-profile img {
                 width: 5rem;
                 border-width: 2px;
