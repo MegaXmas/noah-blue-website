@@ -251,12 +251,19 @@
 
 
             #item-review {
-                /* font-size: 1.3em; */
-            }        
+                font-size: 1.05rem;
+                column-count: 3;
+                column-gap: 1.8rem;
+                line-height: 1.05;
+                padding-bottom: .2rem;
+            }
 
 
             #item-review::first-letter {
-                /* font-size: 4.2rem; */
+                font-size: 4.15em;
+                margin-top: .25rem;
+                margin-right: .3rem;
+                margin-left: 1.6rem;
             }
         }
 
