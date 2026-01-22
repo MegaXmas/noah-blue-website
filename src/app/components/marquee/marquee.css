@@ -221,9 +221,9 @@
 
             #item-review::first-letter {
                 font-size: 3.9em;
-                margin-top: .26rem;
+                margin-top: .27rem;
                 margin-right: .3rem;
-                margin-left: 0rem;
+                margin-left: 1.6rem;
             }
         }
 
