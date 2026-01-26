@@ -90,8 +90,8 @@ songArray: FavoriteSong[] = [
 					If I kept you too close it's 'cause I wanted to keep you longer
 					And if I let you go it’s 'cause I don't wanna need you longer
 
-					^^ur done with this and so am i^/^
-					<i>guess that mkes two of ussss</i>`,
+					[up]^!^ur done with this and so am i^/!^[/up]
+					<i>guess that makes two of ussss</i>`,
 		},
 	{ songTitle: `Aoi Shiori`,
 		songArtist: `galileo galilie`, songAlbumTitle: `portal`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b27349878e5d827207b68f98a733`,

@@ -96,7 +96,7 @@
         }
 
 
-        
+    /* ======*CURRENT REVIEW DISPLAY====== */    
         #item-review {
             font-family: 'Times New Roman', Times, serif;
 
@@ -130,17 +130,25 @@
         }
 
 
+
         #song-lyrics {
-            font-size: 1.5rem;
+            font-family: 'Times New Roman', Times, serif;
+
+
+            font-size: 1.4rem;
+            line-height: 1.2;
+            padding-bottom: .2rem;
+            padding-top: .1rem;
         }
 
         
+
         .review-scroll {
             overflow: scroll;
         }
 
 
-    /* ======*LINK BEHAVIOR====== */ 
+    /* ======*CURRENT ITEM LINK BEHAVIOR====== */ 
         .item-link {
             color: rgb(0, 0, 117);
         }
@@ -154,16 +162,13 @@
         .item-link:hover {
             color: #5a0078;
         }
-
 /* ==#==              ====*/
 
 
 
 /* ==#==  MISC  ====*/
-        .uppercase-marker {
-            text-transform: uppercase;
-        }
-/* ==#==         ====*/
+
+/* ==#==        ====*/
 
 
 
@@ -195,9 +200,14 @@
                 margin-left: 2.25rem;
             }
 
+
+
             
             #song-lyrics {
-                /* font-size: 1.37em; */
+                font-size: 1.4rem;
+                line-height: 1.2;
+                padding-bottom: .2rem;
+                padding-top: .1rem;
             }
         }
 
@@ -224,6 +234,15 @@
                 margin-top: .27rem;
                 margin-right: .3rem;
                 margin-left: 1.6rem;
+            }
+
+
+
+            #song-lyrics {
+                font-size: 1.15rem;
+                line-height: 1.1;
+                padding-bottom: .2rem;
+                padding-top: .1rem;
             }
         }
 
@@ -264,6 +283,15 @@
                 margin-top: .25rem;
                 margin-right: .3rem;
                 margin-left: 1.6rem;
+            }
+
+
+
+            #song-lyrics {
+                font-size: 1.15rem;
+                line-height: 1.1;
+                padding-bottom: .2rem;
+                padding-top: .1rem;
             }
         }
 
@@ -313,12 +341,17 @@
             }
 
 
+
             #song-lyrics {
-                /* font-size: 1.14em; */
+                font-size: 1.1rem;
+                line-height: 1.1;
+                padding-bottom: .2rem;
+                padding-top: .1rem;
             }
 
 
 
+    /* ======*REVIEW FOUNDATION====== */
             h2 {
                 margin-top: auto;
                 margin-bottom: .25rem;
@@ -370,8 +403,12 @@
             }
 
 
+
             #song-lyrics {
-                font-size: 1em;
+                font-size: 1.1rem;
+                line-height: 1.1;
+                padding-bottom: .2rem;
+                padding-top: .1rem;
             }
         }
 
@@ -400,6 +437,15 @@
                 margin-top: .25rem;
                 margin-right: .3rem;
                 margin-left: 1.6rem;
-            } 
+            }
+
+
+
+            #song-lyrics {
+                font-size: 1.075rem;
+                line-height: 1.075;
+                padding-bottom: .2rem;
+                padding-top: .1rem;
+            }
         }
 /* @==                @== */

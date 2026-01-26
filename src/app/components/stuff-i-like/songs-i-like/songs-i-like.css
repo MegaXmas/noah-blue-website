@@ -1,80 +1,208 @@
-/* ======== MARQUEE STUFF ====== */
-
-.marquee-item-song {
-    width: 200px;
-    padding: 0;
-    margin: 5px;
-    object-fit: cover;
-    border: 5px solid green;
-}
-
-/* ======== SONG LIST STUFF ====== */
-
-.full-song-list {
-    max-width: fit-content;
-    max-height: 25vh;
-    overflow-y: scroll; /* Use overflow-y instead of overflow */
-    border: 5px solid blueviolet !important;
-}
-
-.full-song-list .list-group-item {
-    border-left: none;
-    border-right: none;
-}
-
-.full-song-list .list-group-item:first-child {
-    border-top: none;
-}
-
-.full-song-list .list-group-item:last-child {
-    border-bottom: none;
-}
-
-/* ======SONG REVIEW SECTION====== */
-
-.spotify-profile {
-    width: 150px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgb(93, 147, 228); 
-    border-radius: 15%;
-}
-
-.current-album-cover {
-    width: 200px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: gold; 
-    border-radius: 5px;
-    margin: 5px;
-}
-
-/* =======MEDIA FLEX====== */
-
-@media (max-width: 768px) {
+/* ==#==MARQUEE ALBUM ART====*/
+/* ==#==                 ====*/
     .marquee-item-song {
-        width: 150px;
+        display: inline-block;
+        aspect-ratio: 1 / 1;
+        border-style: solid;
+        overflow: hidden;
+
+        width: 12.5rem;
+        border-width: 5px;
+        margin: 3px;
+        padding: 0!important;
     }
 
+
+    .marquee-item-song img{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+/* ==#==                ====*/
+
+
+
+/* ==#==REVIEW SECTION====== */
+/* ==#==              ====== */
     .current-album-cover {
+        display: block;
+        border-color: gold; 
+        border-radius: 2%;
+
+        width: 12.75rem;
+        border-width: 5px;
+        border-style: solid;
+        margin: 0 auto;
+    }
+
+
+    .spotify-profile img{
+        display: block;
+        border-style: solid;
+        border-color: rgb(93, 147, 228); 
+        border-radius: 15%;
+        aspect-ratio: 1 / 1;
+
         width: 150px;
         border-width: 3px;
-        border-radius: 3px;
+    }
+/* ==#==                 ====*/
+
+
+
+/* ==#=== SONG LIST STUFF ====== */
+/* ==#==                     ====*/
+    .full-song-list {
+        max-width: fit-content;
+        max-height: 25vh;
+        overflow-y: scroll;
+        border: 5px solid blueviolet !important;
     }
 
-    .spotify-profile {
-        width: 100;
+
+    .full-song-list .list-group-item {
+        border-left: none;
+        border-right: none;
     }
 
-    .current-song-title {
-        text-align: right;
+
+    .full-song-list .list-group-item:first-child {
+        border-top: none;
     }
 
-}
+    
+    .full-song-list .list-group-item:last-child {
+        border-bottom: none;
+    }
+/* ==#==                     ====*/
 
 
-/* ======MISC====== */
 
-p {
-white-space: pre-line;
-}
+/* ==#===MISC====== */
+
+
+/* ==#==        ====*/
+
+/* @=====MEDIA FLEX====== */
+/* @==                @== */
+    /* ==#==EXTRA LARGE SCREEN==== */
+        @media (max-width: 87.5em) {
+            .marquee-item-song {
+                width: 10rem;
+                border-width: 4px;
+                margin: 4px;
+            }
+
+
+            .current-album-cover {
+                width: 10.5rem;
+                border-width: 5px;
+                margin: 0 auto;
+            }
+
+            
+            .spotify-profile img{
+                width: 8rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+        }
+
+    /* ==#==LARGE SCREEN==== */    
+        @media (max-width: 75em) { 
+            .marquee-item-song {
+                width: 9rem;
+                border-width: 4px;
+                margin: 3px;
+            }
+
+
+            .current-album-cover {
+                width: 9.5rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+
+
+            .spotify-profile img{
+                width: 7rem;
+                border-width: 3px;
+                margin: 0 auto;
+            }
+        }
+
+    /* ==#==MEDIUM SCREEN==== */    
+        @media (max-width: 57.625em) {
+            .marquee-item-song {
+                width: 8rem;
+                border-width: 3px;
+                margin: 2px;
+            }
+
+
+            .current-album-cover {
+                width: 8rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+
+
+            .spotify-profile img{
+                width: 6.2rem;
+                border-width: 3px;
+                margin: 0 auto;
+            }
+        }
+
+    /* ==#==SMALL SCREEN==== */
+        @media (max-width: 48em) {
+            .marquee-item-song {
+                width: 7rem;
+                border-width: 3px;
+                margin: 2px;
+            }
+
+
+            .current-album-cover {
+                width: 7rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+
+
+            .spotify-profile img{
+                width: 6rem;
+                border-width: 3px;
+                margin: 0 auto;
+            }
+        }
+
+    /* ==#==EXTRA SMALL SCREEN====*/
+        @media (max-width: 36em) {
+            .marquee-item-song {
+                width: 6rem;
+                border-width: 2px;
+            }
+            
+
+            .current-album-cover {
+                width: 6rem;
+                border-width: 3px;
+            }
+            
+
+            .spotify-profile img {
+                width: 5rem;
+                border-width: 2px;
+            }    
+        }
+
+    /* ==#==SMALLEST SCREEN====*/
+        @media (max-width: 25em) {
+            .spotify-profile img {
+                width: 4.5rem;
+                border-width: 2px;
+            }    
+        }
+/* @==                @== */
