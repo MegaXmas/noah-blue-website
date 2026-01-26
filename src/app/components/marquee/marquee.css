@@ -100,6 +100,7 @@
         #item-review {
             font-family: 'Times New Roman', Times, serif;
 
+            -webkit-font-smoothing: antialiased;
 
             font-size: 1.4rem;
             column-count: 4;
@@ -133,7 +134,8 @@
 
         #song-lyrics {
             font-family: 'Times New Roman', Times, serif;
-
+            
+            -webkit-font-smoothing: antialiased;
 
             font-size: 1.4rem;
             line-height: 1.2;
@@ -272,7 +274,7 @@
             #item-review {
                 font-size: 1.05rem;
                 column-count: 3;
-                column-gap: 1.8rem;
+                column-gap: 1.6rem;
                 line-height: 1.05;
                 padding-bottom: .2rem;
             }
@@ -315,7 +317,7 @@
                 margin-bottom: .25rem!important;
             }
 
-
+            
     /* ======*REVIEW SCALING====== */
             .current-item-title {
                 font-size: 2.25rem;
@@ -327,7 +329,7 @@
             #item-review {
                 font-size: 1.05rem;
                 column-count: 3;
-                column-gap: 1.8rem;
+                column-gap: 1.6rem;
                 line-height: 1.05;
                 padding-bottom: .2rem;
             }
@@ -348,7 +350,6 @@
                 padding-bottom: .2rem;
                 padding-top: .1rem;
             }
-
 
 
     /* ======*REVIEW FOUNDATION====== */
@@ -389,7 +390,7 @@
             #item-review {
                 font-size: 1.05rem;
                 column-count: 2;
-                column-gap: 1.6rem;
+                column-gap: 1.5rem;
                 line-height: 1.05;
                 padding-bottom: .2rem;
             }
@@ -426,7 +427,7 @@
             #item-review {
                 font-size: 1.05rem;
                 column-count: 2;
-                column-gap: 1.6rem;
+                column-gap: 1.4rem;
                 line-height: 1.04;
                 padding-bottom: .2rem;
             }

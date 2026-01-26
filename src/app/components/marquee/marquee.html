@@ -97,7 +97,7 @@
 
         <section class="row">
             @if (kindOfItem() != `song`) {
-                <p class="border border-3 mt-0 mb-2" id="item-review" [innerHTML]="currentItemReview() | indentAfterFirstPipe | textAestheticPipe"></p>
+                <p class="border border-3 mt-0 mb-2" id="item-review" [innerHTML]="currentItemReview() | textAestheticPipe"></p>
             }
             @if (kindOfItem() === `song`) {
                 <p class="border border-3 mt-0 text-center" id="song-lyrics" [innerHTML]="currentSongLyrics() | textAestheticPipe"></p> 

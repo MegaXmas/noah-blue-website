@@ -196,7 +196,7 @@
 
             .spotify-profile img {
                 width: 5rem;
-                border-width: 2px;
+                border-width: 3px;
             }    
         }
 
@@ -204,7 +204,7 @@
         @media (max-width: 25em) {
             .spotify-profile img {
                 width: 4.5rem;
-                border-width: 2px;
+                border-width: 3px;
             }    
         }
 /* @==                @== */
