@@ -7,6 +7,7 @@
         border-style: solid;
         overflow: hidden;
 
+        
         width: 12.5rem;
         border-width: 5px;
         margin: 5px;
@@ -32,6 +33,7 @@
         border-radius: 2%;
         aspect-ratio: 2 / 3;
 
+
         width: 12.75rem;
         border-width: 7px;
         margin: 0 auto;
@@ -45,6 +47,7 @@
         overflow: hidden;
         border-radius: 15%;
         aspect-ratio: 1 / 1;
+
 
         width: 9.375rem;
         border-width: 4px;

@@ -1,94 +1,208 @@
 
-/* ======== MARQUEE STUFF ====== */
-
-.marquee-item-game {
-    width: 200px;
-    padding: 0;
-    margin: 5px;
-    object-fit:fill;
-    border: 5px solid green;
-}
-
-/* ======== SONG LIST STUFF ====== */
-
-.full-game-list {
-    max-width: fit-content;
-    max-height: 25vh;
-    overflow-y: scroll; /* Use overflow-y instead of overflow */
-    border: 5px solid blueviolet !important;
-}
-
-.full-game-list .list-group-item {
-    border-left: none;
-    border-right: none;
-}
-
-.full-game-list .list-group-item:first-child {
-    border-top: none;
-}
-
-.full-game-list .list-group-item:last-child {
-    border-bottom: none;
-}
-
-/* ======SONG REVIEW SECTION====== */
-
-.discord-profile {
-    width: 150px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgb(93, 147, 228); 
-    border-radius: 15%;
-}
-
-.current-game-art {
-    width: 200px;
-    height: 300px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: gold; 
-    border-radius: 5px;
-    margin: 5px;
-}
-
-/* =======MEDIA FLEX====== */
-
-@media (max-width: 768px) {
+/* ==#==MARQUEE GAME COVER ART====*/
+/* ==#==                      ====*/
     .marquee-item-game {
-        width: 150px;
+        display: inline-block;
+        aspect-ratio: 2 / 3; 
+        border-color: green;
+        border-style: solid;
+        overflow: hidden;
+
+        width: 12.5rem;
+        border-width: 5px;
+        margin: 5px;
     }
 
-    .current-game-cover {
-        width: 150px;
-        border-width: 3px;
-        border-radius: 3px;
+    .marquee-item-game img{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }    
+/* ==#==                      ====*/
+
+
+
+/* ==#==GAME LIST====*/
+/* ==#==         ====*/
+    .full-game-list {
+        max-width: fit-content;
+        max-height: 25vh;
+        overflow-y: scroll;
+        border: 5px solid blueviolet !important;
     }
 
-    .discord-profile {
-        width: 100;
+    .full-game-list .list-group-item {
+        border-left: none;
+        border-right: none;
     }
 
-    .current-game-title {
-        text-align: right;
+    .full-game-list .list-group-item:first-child {
+        border-top: none;
     }
 
-}
+    .full-game-list .list-group-item:last-child {
+        border-bottom: none;
+    }
+/* ==#==         ====*/
 
 
-/* ======MISC====== */
 
-p {
-white-space: pre-line;
-}
+/* ==#==REVIEW SECTION====== */
+/* ==#==              ====== */
+    .current-game-art {
+        display: block;
+        border-color: gold; 
+        border-radius: 2%;
+        border-style: solid;
+        aspect-ratio: 2 / 3;
 
-::ng-deep .alert {
-    display: block;
-    text-align: center;
-    color: crimson;
-    font-weight: bold;
-    margin-bottom: -5.6rem;
-}
+        width: 12.75rem;
+        border-width: 7px;
+        margin: 0 auto;
+    }
 
-::ng-deep .tangent {
-    color:indianred;
-}
+
+    .discord-profile img{
+        display: block;
+        border-style: solid;
+        border-color: rgb(93, 147, 228); 
+        border-radius: 15%;
+        aspect-ratio: 1 / 1;
+
+
+        width: 9.375rem;
+        border-width: 4px;
+    }
+/* ==#==              ====== */
+
+
+
+/* ==#== MISC ====== */
+
+/* ==#==        ===== */
+
+
+
+/* @=====MEDIA FLEX====== */
+/* @==                @== */
+    /* ==#==EXTRA LARGE SCREEN==== */
+        @media (max-width: 87.5em) {
+            .marquee-item-game {
+                width: 10rem;
+                border-width: 4px;
+                margin: 4px;
+            }
+
+
+            .current-game-art {
+                width: 10.5rem;
+                border-width: 5px;
+                margin: 0 auto;
+            }
+
+            
+            .discord-profile img{
+                width: 8rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+        }
+
+    /* ==#==LARGE SCREEN==== */    
+        @media (max-width: 75em) { 
+            .marquee-item-game {
+                width: 9rem;
+                border-width: 4px;
+                margin: 3px;
+            }
+
+
+            .current-game-art {
+                width: 9.5rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+
+
+            .discord-profile img{
+                width: 7rem;
+                border-width: 3px;
+                margin: 0 auto;
+            }
+        }
+
+    /* ==#==MEDIUM SCREEN==== */    
+        @media (max-width: 57.625em) {
+            .marquee-item-game {
+                width: 8rem;
+                border-width: 3px;
+                margin: 2px;
+            }
+
+
+            .current-game-art {
+                width: 8rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+
+
+            .discord-profile img{
+                width: 6.2rem;
+                border-width: 3px;
+                margin: 0 auto;
+            }
+        }
+
+    /* ==#==SMALL SCREEN==== */
+        @media (max-width: 48em) {
+            .marquee-item-game {
+                width: 7rem;
+                border-width: 3px;
+                margin: 2px;
+            }
+
+
+            .current-game-art {
+                width: 7rem;
+                border-width: 4px;
+                margin: 0 auto;
+            }
+
+
+            .discord-profile img{
+                width: 6rem;
+                border-width: 3px;
+                margin: 0 auto;
+            }
+        }
+
+    /* ==#==EXTRA SMALL SCREEN====*/
+        @media (max-width: 36em) {
+            .marquee-item-game {
+                width: 6rem;
+                border-width: 2px;
+            }
+            
+
+            .current-game-art {
+                width: 6rem;
+                border-width: 3px;
+            }
+            
+
+            .discord-profile img {
+                width: 5rem;
+                border-width: 3px;
+            }    
+        }
+
+    /* ==#==SMALLEST SCREEN====*/
+        @media (max-width: 25em) {
+            .discord-profile img {
+                width: 4.5rem;
+                border-width: 3px;
+            }    
+        }
+/* @==                @== */

@@ -137,6 +137,7 @@
             
             -webkit-font-smoothing: antialiased;
 
+            
             font-size: 1.4rem;
             line-height: 1.2;
             padding-bottom: .2rem;
@@ -144,6 +145,21 @@
         }
 
         
+
+        ::ng-deep .alert {
+            display: block;
+            text-align: center;
+            color: crimson;
+            font-weight: bold;
+            margin-bottom: -5.6rem;
+        }
+
+
+        ::ng-deep .tangent {
+            color:indianred;
+        }
+
+
 
         .review-scroll {
             overflow: scroll;
