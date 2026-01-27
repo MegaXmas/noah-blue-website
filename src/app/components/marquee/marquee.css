@@ -9,7 +9,7 @@
         .marquee-border {
             border-style: ridge;
             border-color: rgb(0, 0, 0);
-
+            
             border-width: 10px;
         }
 
@@ -21,7 +21,7 @@
             overflow: hidden;
             scrollbar-color: rgb(210, 255, 231) rgb(14, 142, 74);
             scrollbar-width: auto;
-        
+            
             padding-top: 10px;
             padding-bottom: 10px;
         }
@@ -81,15 +81,16 @@
         .current-item-title {
             text-align: center;
             text-decoration: underline;
-
+            
             font-family: "League Gothic", sans-serif;
             font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
             font-variation-settings:
             "wdth" 100;
-
-
+            
+            
+            
             font-size: 4rem;
             text-decoration-thickness: 5px;
             margin: 0rem;
@@ -99,9 +100,9 @@
     /* ======*CURRENT REVIEW DISPLAY====== */    
         #item-review {
             font-family: 'Times New Roman', Times, serif;
-
+            
             -webkit-font-smoothing: antialiased;
-
+            
             font-size: 1.4rem;
             column-count: 4;
             column-gap: 2rem;
@@ -136,7 +137,7 @@
             font-family: 'Times New Roman', Times, serif;
             
             -webkit-font-smoothing: antialiased;
-
+            
             
             font-size: 1.4rem;
             line-height: 1.2;
@@ -144,7 +145,7 @@
             padding-top: .1rem;
         }
 
-        
+
 
         ::ng-deep .alert {
             display: block;
@@ -185,7 +186,7 @@
 
 
 /* ==#==  MISC  ====*/
-
+        
 /* ==#==        ====*/
 
 
@@ -220,7 +221,7 @@
 
 
 
-            
+
             #song-lyrics {
                 font-size: 1.4rem;
                 line-height: 1.2;
@@ -333,7 +334,7 @@
                 margin-bottom: .25rem!important;
             }
 
-            
+
     /* ======*REVIEW SCALING====== */
             .current-item-title {
                 font-size: 2.25rem;

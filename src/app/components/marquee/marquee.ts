@@ -1,15 +1,15 @@
 import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input, effect, untracked, computed} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
-import { TextAestheticPipe } from '../../pipes/text-aesthetic.pipe';
-
 import { FavoriteStuff } from '../../models/favorite-stuff';
-
-import { FavoriteSong } from '../../models/favorite-song'
-import { FavoriteMovie } from '../../models/favorite-movie';
-import { FavoriteGame } from '../../models/favorite-game';
+    import { FavoriteSong } from '../../models/favorite-song'
+    import { FavoriteMovie } from '../../models/favorite-movie';
+    import { FavoriteGame } from '../../models/favorite-game';
+    import { FavoriteShow } from '../../models/favorite-show';
 
 import { ArrayDataService } from '../../services/array-data-service';
+
+import { TextAestheticPipe } from '../../pipes/text-aesthetic.pipe';
 
 
 
@@ -20,66 +20,73 @@ import { ArrayDataService } from '../../services/array-data-service';
     styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css', '../stuff-i-like/songs-i-like/songs-i-like.css', '../stuff-i-like/games-i-like/games-i-like.css']
 })
 export class Marquee implements OnInit, OnDestroy {
-    
-    // ======IMPORTANT PROPERTIES======
+
+// ======IMPORTANT MISC PROPERTIES======
+// ======                         ======
         private readonly platformId = inject(PLATFORM_ID);
         
         private resizeListener?: () => void;
         private resumeTimeout?: number;
-    
-    
+// ======                         ======
 
-    // ======ARRAY DATA SERVICE STUFF======
+
+
+// ======ARRAY DATA SERVICE STUFF======
+// ======                        ======
         private readonly arrayDataService = inject(ArrayDataService);
-        
+
         public indexFromService: WritableSignal<number> = signal(0); 
-        
-        
-        private readonly selectionListner = effect(() => {
-            let newServiceIndex = this.arrayDataService.getArrayItemIndex();
-            
-            const stuff = untracked(() => this.stuffArray());
-            
-            let currentItem = untracked(() => this.currentFavoriteItem());
-            let currentItemTitle = untracked(() => this.currentItemTitle());
-            
-            const displayIndex = stuff.indexOf(currentItem);
-            
-            console.log(`MARQUEE COMPONENT: item with index ${newServiceIndex} selected.`);
-            console.log(`MARQUEE COMPONENT: currentItemTitle: ${currentItemTitle}
-                        current displayed index: ${displayIndex}`
-            );
-            
-            console.log(`MARQUEE COMPONENT: setting indexFromService to: ${newServiceIndex}`);
-            this.indexFromService.set(newServiceIndex);
-            let currentServiceIndex = this.indexFromService();
-            if (newServiceIndex === currentServiceIndex) {
-                console.log(`MARQUEE COMPONENT: index ${currentServiceIndex} properly updated`)
-            } else {
-                console.log(`MARQUEE COMPONENT: index failed to be sent by array-data-service. 
-                        selected index: ${newServiceIndex}
-                        service index currently stored in marquee component: ${currentServiceIndex}`)
-                };
-                
-                console.log(`MARQUEE COMPONENT: attempting to set currentFavoriteItem to stuffArray[] index: ${newServiceIndex}`);
-                this.setAllCurrentItemData(currentServiceIndex);
-                currentItem = untracked(() => this.currentFavoriteItem());
-                currentItemTitle = untracked(() => this.currentItemTitle());
-                if (currentItem === stuff.at(newServiceIndex) || currentServiceIndex) {
-                    console.log(`MARQUEE COMPONENT: currentFavoriteItem updated successfully with index ${currentServiceIndex}.
-                        currentItemTitle: ${currentItemTitle}`)
+
+
+        //  ==========* LISTENER EFFECT FOR ARRAY DATA SERVICE==========
+
+                private readonly selectionListner = effect(() => {
+                    let newServiceIndex = this.arrayDataService.getArrayItemIndex();
+                    
+                    const stuff = untracked(() => this.stuffArray());
+                    
+                    let currentItem = untracked(() => this.currentFavoriteItem());
+                    let currentItemTitle = untracked(() => this.currentItemTitle());
+                    
+                    const displayIndex = stuff.indexOf(currentItem);
+                    
+                    console.log(`MARQUEE COMPONENT: item with index ${newServiceIndex} selected.`);
+                    console.log(`MARQUEE COMPONENT: currentItemTitle: ${currentItemTitle}
+                                current displayed index: ${displayIndex}`
+                    );
+                    
+                    console.log(`MARQUEE COMPONENT: setting indexFromService to: ${newServiceIndex}`);
+                    this.indexFromService.set(newServiceIndex);
+                    let currentServiceIndex = this.indexFromService();
+                    if (newServiceIndex === currentServiceIndex) {
+                        console.log(`MARQUEE COMPONENT: index ${currentServiceIndex} properly updated`)
                     } else {
-                        console.log(`MARQUEE COMPONENT: currentFavoriteItem failed to update successfully.
-                        currentItemTitle: ${currentItemTitle}
-                        index of currentFavoriteItem: ${stuff.indexOf(currentItem)}.
-                        index recieved from service: ${currentServiceIndex}.
-                        index stored in array-data-service: ${newServiceIndex}`)
-                        }
-        });
-    
-    
-    
-    // ======MARQUEE SINGALS AND INPUTS======
+                        console.log(`MARQUEE COMPONENT: index failed to be sent by array-data-service. 
+                                selected index: ${newServiceIndex}
+                                service index currently stored in marquee component: ${currentServiceIndex}`)
+                        };
+                        
+                        console.log(`MARQUEE COMPONENT: attempting to set currentFavoriteItem to stuffArray[] index: ${newServiceIndex}`);
+                        this.setAllCurrentItemData(currentServiceIndex);
+                        currentItem = untracked(() => this.currentFavoriteItem());
+                        currentItemTitle = untracked(() => this.currentItemTitle());
+                        if (currentItem === stuff.at(newServiceIndex) || currentServiceIndex) {
+                            console.log(`MARQUEE COMPONENT: currentFavoriteItem updated successfully with index ${currentServiceIndex}.
+                                currentItemTitle: ${currentItemTitle}`)
+                            } else {
+                                console.log(`MARQUEE COMPONENT: currentFavoriteItem failed to update successfully.
+                                currentItemTitle: ${currentItemTitle}
+                                index of currentFavoriteItem: ${stuff.indexOf(currentItem)}.
+                                index recieved from service: ${currentServiceIndex}.
+                                index stored in array-data-service: ${newServiceIndex}`)
+                                }
+                });
+// ======                        ======
+
+
+
+// ======MARQUEE SINGALS AND INPUTS======
+// ======                          ======
         stuffArray = input.required<FavoriteStuff[]>();
         
         kindOfItem = input.required<string>();
@@ -104,10 +111,12 @@ export class Marquee implements OnInit, OnDestroy {
         
         relevantImgClass = input<string>();
         marqueeArtClass: WritableSignal<string> = signal("");
-        
-        
+// ======                          ======
 
-    // ======ON INIT/DESTROY======
+
+
+// ======ON INIT/DESTROY======
+// ======               ======
         ngOnInit(): void {
             console.log("MARQUEE COMPONENT: initializing component")
             
@@ -141,8 +150,8 @@ export class Marquee implements OnInit, OnDestroy {
             
             // console.log("MARQUEE COMPONENT: " + JSON.stringify(this.stuffArray()));
         }
-        
-        
+
+
         ngOnDestroy(): void {
             console.log(`MAARQUEE COMPONENT: destryoing component`)
             
@@ -155,10 +164,12 @@ export class Marquee implements OnInit, OnDestroy {
                 }
             }
         }
-        
-        
+// ======               ======
 
-    // ======MARQUEE ANIMATION LOGIC======
+
+
+// ======MARQUEE ANIMATION LOGIC======
+// ======                       ======
         calculateMarqueeAnimation() {
             if (!isPlatformBrowser(this.platformId)) return;
             
@@ -180,7 +191,7 @@ export class Marquee implements OnInit, OnDestroy {
                 document.documentElement.style.setProperty('--marquee-duration', `${duration}s`);
             }
         }
-        
+
 
         pauseAnimation() {
             if (this.resumeTimeout) {
@@ -193,7 +204,7 @@ export class Marquee implements OnInit, OnDestroy {
                 if (track) track.style.animationPlayState = 'paused';
             }
         }
-        
+
 
         resumeAnimation() {
             if (this.resumeTimeout) {
@@ -214,7 +225,7 @@ export class Marquee implements OnInit, OnDestroy {
             }
         }
 
-        
+
         // TODO: make the stop betton work properly with a signal
         
         stopAnimation(event: Event) {
@@ -238,7 +249,7 @@ export class Marquee implements OnInit, OnDestroy {
                 this.pauseAnimation();
             }
         }
-        
+
 
         playAnimation(event: Event) {
             if (isPlatformBrowser(this.platformId)) {
@@ -251,15 +262,17 @@ export class Marquee implements OnInit, OnDestroy {
                 this.resumeAnimation();
             }
         }
-        
-    
+// ======               ======        
 
-    // ======ARRAY DATA METHODS======
+
+
+// ======ARRAY DATA METHODS======
+// ======                  ======
         sendArrayData(): void {
             this.arrayDataService.setArrayData(this.stuffArray());
             this.arrayDataService.itemType.set(this.kindOfItem());
         }
-        
+
 
         getItemArt(item: FavoriteStuff): string {
             switch (item!.type) {
@@ -269,9 +282,11 @@ export class Marquee implements OnInit, OnDestroy {
                 return item!.songAlbumCover;
                 case `game`:
                 return item!.gamePoster;
+                case 'show':
+                return item!.showPoster;
             }
         }
-        
+
 
         getItemTitle(item: FavoriteStuff): string {
             switch (item!.type) {
@@ -281,9 +296,11 @@ export class Marquee implements OnInit, OnDestroy {
                 return item!.songTitle;
                 case `game`:
                 return item!.gameTitle;
+                case 'show':
+                return item!.showPoster;
             }
         }
-        
+
 
         setAllCurrentItemData(index: number): void {
             const items = this.stuffArray();
@@ -312,6 +329,14 @@ export class Marquee implements OnInit, OnDestroy {
                 this.currentItemArt.set(item.gamePoster);
                 this.currentItemLink.set(item.gameLink);
                 this.currentItemReview.set(item.gameReview);
-            }
+            } else if (this.kindOfItem() === `show` && `showTitle` in item!) {
+                const game = item as FavoriteShow;
+                this.currentItemTitle.set(item.showTitle);
+                this.currentItemArt.set(item.showPoster);
+                this.currentItemLink.set(item.showLink);
+                this.currentItemReview.set(item.showReview);
         }
+    }
+// ======                  ======
+
 }
