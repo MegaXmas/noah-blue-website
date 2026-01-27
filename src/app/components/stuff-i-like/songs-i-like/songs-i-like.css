@@ -5,8 +5,8 @@
         aspect-ratio: 1 / 1;
         border-style: solid;
         overflow: hidden;
-
-
+        
+        
         width: 12.5rem;
         border-width: 5px;
         margin: 3px;
@@ -31,7 +31,7 @@
         border-color: gold; 
         border-radius: 2%;
         border-style: solid;
-    
+        
         
         width: 12.75rem;
         border-width: 5px;
@@ -45,8 +45,8 @@
         border-color: rgb(93, 147, 228); 
         border-radius: 15%;
         aspect-ratio: 1 / 1;
-
-
+        
+        
         width: 9.375rem;
         border-width: 3px;
     }
@@ -74,7 +74,7 @@
         border-top: none;
     }
 
-    
+
     .full-song-list .list-group-item:last-child {
         border-bottom: none;
     }
@@ -83,8 +83,7 @@
 
 
 /* ==#===MISC====== */
-
-
+    
 /* ==#==        ====*/
 
 
@@ -189,13 +188,13 @@
                 width: 6rem;
                 border-width: 2px;
             }
-            
+
 
             .current-album-cover {
                 width: 6rem;
                 border-width: 3px;
             }
-            
+
 
             .spotify-profile img {
                 width: 5rem;

@@ -6,7 +6,7 @@
         border-color: green;
         border-style: solid;
         overflow: hidden;
-
+        
         
         width: 12.5rem;
         border-width: 5px;
@@ -32,8 +32,8 @@
         border-color: gold; 
         border-radius: 2%;
         aspect-ratio: 2 / 3;
-
-
+        
+        
         width: 12.75rem;
         border-width: 7px;
         margin: 0 auto;
@@ -47,8 +47,8 @@
         overflow: hidden;
         border-radius: 15%;
         aspect-ratio: 1 / 1;
-
-
+        
+        
         width: 9.375rem;
         border-width: 4px;
         margin: 0 auto;
@@ -58,7 +58,6 @@
 
 
 /* ==#===MISC====== */
-
 
 /* ==#==        ====*/
 
@@ -82,7 +81,7 @@
                 margin: 0 auto;
             }
 
-            
+
             .letterboxd-profile img{
                 width: 8rem;
                 border-width: 4px;
@@ -165,13 +164,13 @@
                 width: 6rem;
                 border-width: 2px;
             }
-            
+
 
             .current-movie-poster {
                 width: 6rem;
                 border-width: 3px;
             }
-            
+
 
             .letterboxd-profile img {
                 width: 5rem;

@@ -7,7 +7,7 @@
         border-color: green;
         border-style: solid;
         overflow: hidden;
-
+        
         width: 12.5rem;
         border-width: 5px;
         margin: 5px;
@@ -56,7 +56,7 @@
         border-radius: 2%;
         border-style: solid;
         aspect-ratio: 2 / 3;
-
+        
         width: 12.75rem;
         border-width: 7px;
         margin: 0 auto;
@@ -69,8 +69,8 @@
         border-color: rgb(93, 147, 228); 
         border-radius: 15%;
         aspect-ratio: 1 / 1;
-
-
+        
+        
         width: 9.375rem;
         border-width: 4px;
     }
@@ -79,7 +79,7 @@
 
 
 /* ==#== MISC ====== */
-
+    
 /* ==#==        ===== */
 
 
@@ -101,7 +101,7 @@
                 margin: 0 auto;
             }
 
-            
+
             .discord-profile img{
                 width: 8rem;
                 border-width: 4px;
@@ -184,7 +184,7 @@
                 width: 6rem;
                 border-width: 2px;
             }
-            
+
 
             .current-game-art {
                 width: 6rem;
