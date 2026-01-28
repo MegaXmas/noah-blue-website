@@ -342,11 +342,6 @@ export class MoviesILike implements OnInit, OnDestroy {
     
             moviePosterStyle: string = `current-movie-poster`;
             movieString: string = `movie`;
-    
-            currentMovieTitle: WritableSignal<string> = signal(``);
-            currentMoviePoster: WritableSignal<string> = signal(``);
-            currentMovieLink: WritableSignal<string> = signal(``);
-            currentMovieReview: WritableSignal<string> = signal(``);
     // ======                      ======
 
 
@@ -364,4 +359,14 @@ export class MoviesILike implements OnInit, OnDestroy {
             }
     // ======               ======
 
+
+
+    // ======DEPRECATED STUFF IM SCARED TO DELETE FOR NOW======
+    // ======                                            ======
+    // ======* UTILITY SIGNALS ======*
+        currentMovieTitle: WritableSignal<string> = signal(``);
+        currentMoviePoster: WritableSignal<string> = signal(``);
+        currentMovieLink: WritableSignal<string> = signal(``);
+        currentMovieReview: WritableSignal<string> = signal(``);
+    // ======                                            ======
 }

@@ -40,7 +40,7 @@ export class Marquee implements OnInit, OnDestroy {
     
     
             //  ==========* LISTENER EFFECT FOR ARRAY DATA SERVICE==========
-    
+                    
                     private readonly selectionListner = effect(() => {
                         let newServiceIndex = this.arrayDataService.getArrayItemIndex();
                         

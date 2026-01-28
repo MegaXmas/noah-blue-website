@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, inject, output } from '@angular/core'
+import { Component, OnInit, OnDestroy, inject, output, WritableSignal, signal } from '@angular/core'
 import { DomSanitizer} from '@angular/platform-browser';
 
 import { FavoriteSong } from '../../../models/favorite-song';
@@ -2124,7 +2124,7 @@ export class SongsILike implements OnInit, OnDestroy {
             You are armed to the teeth and looking for a fight
 
             It was in your mother's dress that the temper finally
-            Showed signs of slowing down
+            Songed signs of slowing down
             Your fingers traced the route of the seam
             ^^Like a map of your body that landed just shy of your knees^/^
 
@@ -3581,6 +3581,13 @@ export class SongsILike implements OnInit, OnDestroy {
             selectSong(index: number, marqueeComponent: Marquee): void {
                 marqueeComponent.setAllCurrentItemData(index);
             }
+    
+        // ======* UTILITY SIGNALS ======*
+            currentSongTitle: WritableSignal<string> = signal(``);
+            currentSongArtist: WritableSignal<string> = signal(``);
+            currentSongAlbumArt: WritableSignal<string> = signal(``);
+            currentSongLink: WritableSignal<string> = signal(``);
+            currentSongReview: WritableSignal<string> = signal(``);
     // ======                                            ======
 
 }
