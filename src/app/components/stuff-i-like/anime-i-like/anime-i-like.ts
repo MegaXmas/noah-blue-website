@@ -31,8 +31,8 @@ export class AnimeILike implements OnInit, OnDestroy {
 
     // ======SIGNALS AND PROPERTIES======
     // ======                      ======
-            myAnimeListProfile: string = ``;
-            myAnimeListProfilePic: string = ``;
+            myAnimeListProfile: string = `https://myanimelist.net/animelist/noahblueily`;
+            myAnimeListProfilePic: string = `https://cdn.myanimelist.net/s/common/userimages/80ebbbdb-87fc-4e5e-bff8-db05dc7fe92a_225w?s=670bec3c4640735847f9c482e93cb6a4`;
             myAnimeListProfileStyle: string = `myAnimeList-profile`;
     
             animePosterStyle: string = `current-anime-poster`;
