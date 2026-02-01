@@ -6,6 +6,7 @@ import { FavoriteStuff } from '../../models/favorite-stuff';
     import { FavoriteMovie } from '../../models/favorite-movie';
     import { FavoriteGame } from '../../models/favorite-game';
     import { FavoriteShow } from '../../models/favorite-show';
+    import { FavoriteAnime } from '../../models/favorite-anime';
 
 import { ArrayDataService } from '../../services/array-data-service';
 
@@ -17,7 +18,14 @@ import { TextAestheticPipe } from '../../pipes/text-aesthetic.pipe';
     selector: 'app-marquee',
     imports: [TextAestheticPipe], 
     templateUrl: './marquee.html',
-    styleUrls: ['./marquee.css', '../stuff-i-like/movies-i-like/movies-i-like.css', '../stuff-i-like/songs-i-like/songs-i-like.css', '../stuff-i-like/games-i-like/games-i-like.css']
+    styleUrls: [
+        './marquee.css', 
+        '../stuff-i-like/movies-i-like/movies-i-like.css', 
+        '../stuff-i-like/songs-i-like/songs-i-like.css', 
+        '../stuff-i-like/games-i-like/games-i-like.css',
+        '../stuff-i-like/shows-i-like/shows-i-like.css',
+        '../stuff-i-like/anime-i-like/anime-i-like.css',
+    ]
 })
 
 export class Marquee implements OnInit, OnDestroy {
@@ -39,8 +47,7 @@ export class Marquee implements OnInit, OnDestroy {
             public indexFromService: WritableSignal<number> = signal(0); 
     
     
-            //  ==========* LISTENER EFFECT FOR ARRAY DATA SERVICE==========
-                    
+            //  ==========* LISTENER EFFECT FOR ARRAY DATA SERVICE==========                    
                     private readonly selectionListner = effect(() => {
                         let newServiceIndex = this.arrayDataService.getArrayItemIndex();
                         
@@ -269,38 +276,42 @@ export class Marquee implements OnInit, OnDestroy {
 
     // ======ARRAY DATA METHODS======
     // ======                  ======
-            sendArrayData(): void {
-                this.arrayDataService.setArrayData(this.stuffArray());
-                this.arrayDataService.itemType.set(this.kindOfItem());
-            }
+        sendArrayData(): void {
+            this.arrayDataService.setArrayData(this.stuffArray());
+            this.arrayDataService.itemType.set(this.kindOfItem());
+        }
     
     
-            getItemArt(item: FavoriteStuff): string {
-                switch (item!.type) {
-                    case 'movie':
+        getItemArt(item: FavoriteStuff): string {
+            switch (item!.type) {
+                case 'movie':
                     return item!.moviePoster;
-                    case 'song':
+                case 'song':
                     return item!.songAlbumCover;
-                    case `game`:
+                case `game`:
                     return item!.gamePoster;
-                    case 'show':
+                case 'show':
                     return item!.showPoster;
-                }
+                case 'anime':
+                    return item!.animePoster;
             }
+        }
     
     
-            getItemTitle(item: FavoriteStuff): string {
-                switch (item!.type) {
-                    case 'movie':
+        getItemTitle(item: FavoriteStuff): string {
+            switch (item!.type) {
+                case 'movie':
                     return item!.movieTitle;
-                    case 'song':
+                case 'song':
                     return item!.songTitle;
-                    case `game`:
+                case `game`:
                     return item!.gameTitle;
-                    case 'show':
-                    return item!.showPoster;
-                }
+                case 'show':
+                    return item!.showTitle;  // Fixed: was showPoster, should be showTitle
+                case 'anime':
+                    return item!.animeTitle;
             }
+        }
     
     
             setAllCurrentItemData(index: number): void {
@@ -336,8 +347,15 @@ export class Marquee implements OnInit, OnDestroy {
                     this.currentItemArt.set(item.showPoster);
                     this.currentItemLink.set(item.showLink);
                     this.currentItemReview.set(item.showReview);
+                } else if (this.kindOfItem() === `anime` && `animeTitle` in item!) {
+                    const anime = item as FavoriteAnime;
+                    this.currentItemTitle.set(item.animeTitle);
+                    this.currentItemArt.set(item.animePoster);
+                    this.currentItemLink.set(item.animeLink);
+                    this.currentItemReview.set(item.animeReview);
+                }
             }
-        }
+    
     // ======                  ======
 
 }

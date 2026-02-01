@@ -87,49 +87,85 @@ export class GamesILike implements OnInit, OnDestroy {
                     gameTitle: `Dark Souls`,
                     gamePoster: `https://upload.wikimedia.org/wikipedia/en/8/8d/Dark_Souls_Cover_Art.jpg`,
                     gameLink: `https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/`,
-                    gameReview: ``,
+                    gameReview: `Dark souls 1 man, what a legendary moment for gaming. It inspired a whole new genre of games. I think it deserves all the praise it gets and should go down in history as one of the greatest and most influential games of all time. This might just be nostalgia, but there is a certain wonder that ds1 has i dont think any of the other games in the series have matched. The tranquility of firelink shrine, the camaraderie from certain npcs, the sense of scale and awe at the world… i gasped the first time i saw ash lake and anor londo. Its just such an enchanting game while also being dark and evil. I think its this juxtaposition that creates such an engaging world that compels curiosity.
+
+Its funny, most people play ds1 and then halfway thru are like “wtf is going on what am i doing here?” and then go research the lore. I was the opposite. My interest for dark souls was initiated from learning some snippets of the story. I was instantly drawn into this dark fantasy narrative from the get go. Im the mf who reads every items description and goes thru all the dialogue of every character i find just to get an extra kernel of lore. David lynch said “were all like detectives. We want to figure things out… its beautiful that people are thinking”. I hate it when things are just given to me up front and require no critical thinking or analysis. I have always been fascinated by literature and literary devices like symbolism, foreshadowing, etc... and the darker the themes and narrative of the story, the better. Dark souls and i, we just get each other yknow?
+
+Ds1 is an old game now. the sequels have added so many new features, upgrades in qol, improvements of the game engine to make things feel smoother and snappier, etc... But i cant help but still prefer ds1 to its sequels. I really like clunky and methodical gameplay when its done well. The game world and level design has to account for it, but when properly realized it feels so satisfying. Every press of a button must be purposeful and precise. strategy and patience are rewarded and encouraged. U can tell this game was designed with love and care in all its aspects. Not saying the other games are not, but ds1 specifically feels like a labor or love when you play it. I love this game and i will always recommend it to people who havent yet played it.`,
                 },
                 {
                     gameTitle: `Dark Souls II: Scholar of the First Sin`,
                     gamePoster: `https://m.media-amazon.com/images/M/MV5BMTM4N2JjZTEtNzE2YS00MTdmLTg1NTctZjVkNGFlOWU5OWFmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg`,
                     gameLink: `https://store.steampowered.com/app/335300/DARK_SOULS_II_Scholar_of_the_First_Sin/`,
-                    gameReview: ``,
+                    gameReview: `So many people are dark souls 2 haters. I mean, i get it. The story is arguably very disconnected from the overall narrative, its made some questionable changes to game mechanics, and when the game was first released it was way worse than the scholar of the first sin edition. I didnt play ds2 when it first released so my view isnt influenced by that inferior version. Theres a reason i specified the “scholar of the first sin” edition. I think this remake/remaster of the game is freakin awesum sauce!!!! The developers patched a lot of the bugs, changed level layouts and enemy placement, and included the 3 dlcs (which i think are essential to understanding the themes the story is trying to tell). The dlcs are debatably the best levels in the game too. 
+
+I personally like how the story of dark souls 2 is kinda separate from ds1 and ds3. I think it is a great way to accentuate themes the series was trying to convey while also adding so much of its own. Tbh one of my gripes with dark souls 3 is it feels very “nostalgia baity”. Like– “hey guys look over here! Remember this thing from dark souls 1?!??! Oh btw… this fan favorite character is back and you are gonna love it! And omg… is that firelink shrine?? Is that anor londo??? I know theres no way u could forget those places from the first game!!!” dont get me wrong i love ds3, but this is one of the criticisms i have of it. 
+
+Ds2 also just has so much content, i think thats part of the reason the game can feel disconnected as well. Sometimes u are doing all this random bs and are like “ok wtf am i actually doing? What is the point of all this?” which i think is a double edged sword. Some of the content feels a bit thrown together with a lack of purpose as opposed to dark souls 1s brilliantly designed game world/map. But as someone who likes to do all the sidequests, fight all the bosses, and beat all the levels– its a plus for me. I just like playing the game. Also because i am a huge nerd about the lore of the souls series i just know what the significance of all these places and enemies are. Any extra bit of lore i can get is alright with me. I think my ^^least favorite aspect^/^ of ds2 is that some of the boss runbacks (when u die to the boss and have to get to the boss arena again) are ^!^[UP]WAY TOO FUCKING LONG!!!!![/UP]^/!^. Ds2 actually has the only boss i never beat in any of the souls games. it has the most infamous boss runback in the game and a fight so tedious for the build i was using i just couldnt be asked try 50 more times.
+
+I suggest all those who havent played ds2 to play the game and make a judgement for urself. As much as i love it, its still on the bottom of my list of the fromsoft releases. And to the people who havent gone back and tried scholar of the first sin after playing the original– give it another shot.
+`,
                 },
                 {
                     gameTitle: `Dark Souls III`,
                     gamePoster: `https://upload.wikimedia.org/wikipedia/en/b/bb/Dark_souls_3_cover_art.jpg`,
                     gameLink: `https://store.steampowered.com/app/374320/DARK_SOULS_III/`,
-                    gameReview: ``,
+                    gameReview: `When i was 20 years old and this game came out i was so excited to play it. I worked at fucking ^^office depot^/^ at the time which might just be the worst retail job ever. All i wanted to do was clock out and play it. But alas, life had other plans. When i got home my computer blue screened and bricked… i actually cried ^!^[up]lmao[/up] i was so upset!!!^/!^ i hated my job and life a lot and i needed ^^something^/^ to keep me going and i thought it would be ds3. In a moment of grief and depression i made a decision: that was the night i started one piece [up]lmao[/up]. I didnt have a computer for 4 months and all i did was watch one piece on my ps3 using my friends crunchyroll account. It might have been a blessing in disguise cuz tbh one piece is better than ds3 anyway and i might never have watched it if it wasnt for this unfortunate event.
+
+Uhhhh if u want a review– tldr: the game is a banger. its widely regarded as the best dark souls in the series (although i disagree). It has the smoothest combat, lots of qol upgrades, and so many new weapons, spells, miracles to try out and play fun builds. Its got really fun and cool and hard bosses and the lore in ds3 is also debatably the best in the series. It finishes so many story lines and ties up loose ends, its very satisfying. Shit slaps 10/10
+`,
                 },
                 {
                     gameTitle: `Sekiro: Shadows Die Twice`,
                     gamePoster: `https://upload.wikimedia.org/wikipedia/en/6/6e/Sekiro_art.jpg`,
                     gameLink: `https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/`,
-                    gameReview: ``,
+                    gameReview: `Sekiro is the most underrated title in new gen fromsoft catalogue imo. This game has the most satisfying combat to master. The boss fights in this game are [up]so hard lmao[/up] but figuring out the timings of their attacks and the ways to counter them feels ^^sooooooooo goooooood^/^. Maybe i am biased in how highly i rate this game, because i play all the souls-like games like sekiro. I demand myself to learn the boss to near perfection and make no mistakes, i rarely ever upgrade my health or defenses in these games. I treat many boss fights in souls like puzzle/rhythm games and i think that style of gameplay is basically mandatory in sekiro.
+
+Sekiro is also hands down the most cinematic souls-like game also. The art style is beautiful. I was in awe of all the breathtaking landscapes and creativity on display on the level design. There are jaw-dropping moments in this game around every corner. An early example is when ur navigating these snowy mountain peaks, and u have to avoid the sight of a ^^giant snake god^/^ to pass through. The boss fights are also just so fucking rad. The character design of the bosses is exceptional, but ^^especially^/^ the human characters you fight. Its some epic anime battle shit where u are sword fighting superheroes using all these explosive powers and abilities god its so fucking cool man. The cutscenes are dope and the animations are so smooth and buttery. Dont get me started on the boss executions either. 
+
+Sekiro is just a spectacular game. I have heard a lot of people dont like it and a lot of fans of souls havent played it. ^!^[up]Foolish mistake![/up]^/!^
+`,
                 },
                 {
                     gameTitle: `Elden Ring`,
                     gamePoster: `https://m.media-amazon.com/images/I/6110RSDn3PL._AC_SL1050_.jpg`,
                     gameLink: `https://store.steampowered.com/app/1245620/ELDEN_RING/`,
-                    gameReview: ``,
+                    gameReview: `Elden ring… ooooohhh mannn. One of the greatest games of all time, if not the best. Its def top 3 for me. First off, soulslike combat was perfected here i think. Its just slow and methodical enough to make mistakes punishing, and just fast and smooth enough to feel like you have control and skill expression. Fulfills that “power fantasy” that so many action games try to fulfil while still being challenging. 
+
+I really want to praise how successfully fromsoft created an actual engaging open world video game. First off the landscapes and environments are beautiful and creative. It takes the concept of video game biomes like forest, mountain, fire, snow, etc and gives them an entirely new identity. Like its not just a snow biome, there is actually immense ruins and structures created by an extinct race of giants that give the environment so much more to wonder at. It encourages curiosity and exploration. Many areas have twists like this and usually multiple. Theres a moment in the beginning of the game where you step out of the tutorial area cave and are greeted with the wonder of ^^the lands between^/^ for the first time. It was an unforgettable gaming experience for me. 
+
+Continuing on from me praising the environments, i want to talk about the story and worldbuilding. Fromsoft is famous for their "environmental storytelling”, which is basically creating your game world with strict intention. Placing items in areas which hint at an untold story, altering environments to allude to past events, and adding small and sometimes insignificant details to make the world feel real and lived in. this goes hand in hand with the actual areas and levels of elden ring to create that engaging open world i talked about. Going from one place to the next isnt just travel like it is in many open world game, it becomes an enjoyable experience core to the game itself. 
+
+The story is also my favorite that fromsoft has written thus far. Its a masterpiece within the “dark fantasy” genre (which i think still needs way more content and stories than it currently has. imo it is ^!^[up]HEAVILY SUPERIOR[/UP]^/!^ to medieval or traditional fantasy). I love stories with all powerful gods, cosmic forces beyond our comprehension, and well written characters both evil and just. I dont wanna go into the entire story because its very nuanced and complicated with a lot of moving parts, but i find it fascinating. Ive watched ^!^way to many^/!^ elden ring lore videos (not enough i crave more).
+
+I have criticisms like the repetition of certain dungeon environments and bosses, but at the end of the day you have to reuse assets to create this big of a game on a reasonable budget. Elden ring is my favorite single player action game in the last 20 years, probably my 3rd favorite single player game behind “disco elysium” and “paper mario ttyd”.
+`,
                 },
                 {
                     gameTitle: `Batman: Arkham Asylum`,
                     gamePoster: `https://upload.wikimedia.org/wikipedia/en/4/42/Batman_Arkham_Asylum_Videogame_Cover.jpg`,
                     gameLink: `https://store.steampowered.com/app/35140/Batman_Arkham_Asylum_Game_of_the_Year_Edition/`,
-                    gameReview: ``,
+                    gameReview: `Arkham asylum was my first stealth game and first horror game all in one. The combat is so smooth. i remember them advertising their combat system “freeflow combat” as brand new and innovative, which it was. The stealth sections were challenging but rewarding. They encouraged experimentation with all the tools in batmans kit to get past them without being detected. The story and characters were really dark and stunning to me at the time, especially the scarecrow sections. Super creepy and awesome. The riddler puzzles are probably one of the best sidequest collectathons in gaming. Some of these puzzles are genuinely super difficult to figure out. I think arkham asylum was the first game i ever got all trophies and fully completed. I replayed it multiple times on the hardest difficulty, and challenged myself to beat every stealth section with perfection. If i was spotted, that was a reset. I dont remember going out of the way to impose self regulated difficulty on myself before playing this game. I think thats the mark of a great game, one that keeps you coming back, one that enables and inspires you to play in different ways. Top it all off with the fact that this game came out around the same time as ^^the dark knight^/^ and dc had me a batman fan for life. I dont see people talk about this game online, but i think its in the conversation for one of the best of all time. 
+
+Im currently playing the sequel “arkham city” rn and its also great, although i dont feel as engaged as i did in the original. I think thats probably just a drawback of open world games vs curated world games. The asylum was such a brilliant setting and each part was designed so well. I recommend this game to anyone interested in stealth gameplay and/or dark stories.`,
                 },
                 {
                     gameTitle: `Phantasy Star Online Blue Burst`,
                     gamePoster: `https://www.pioneer2.net/community/data/attachments/16/16353-903401da9490e5b892bcdc57dc24f378.jpg?hash=kDQB2pSQ5b`,
                     gameLink: `https://ephinea.pioneer2.net/`,
-                    gameReview: ``,
+                    gameReview: `Grab a friend or two and get on this pso private server for a truly unique experience. The server is a labor of love from the fans and still has events and updates to this day. It has an incredibly helpful and active community which is very welcoming to new players. 
+
+As for gameplay, its really hard to describe. There is no other game with combat like pso. Its one of the most clunky combat systems of all time. If u thought dark souls and demons souls were clunky u aint see nothing. But this is almost to its advantage. Instead of fast paced and action oriented combat, pso rewards precise timing and spacing spacing, tactics, patience, and game knowledge. You must become one with the clunk. As an example ill explain combat from the perspective of using a sword weilding class (which is what primarily played): 
+
+Position yourself in a secure but open area so you dont get flanked. Attack the enemy with the very tip of the sword and knock them back with your attack combo (which must be timed correctly) to keep them at bay. When you attack you stay planted to that area and are unable to move, so pick your spots carefully. How many attacks does it take to defeat this particular enemy? If they are getting too close or ur in danger of being surrounded you might have to cut your combo short and block or kite away. Make sure u dont mash, because once you input an attack u cannot cancel it. you must be very intentional with your button presses to leave yourself unexposed. Which of my special moves should i use and when should i use it optimize its impact (as it takes awhile to build up your special meter)? In particularly hard rooms during late game, you are going to have to manage enemy aggro and tightly weave in between them to get to better positions. There is a lot more to the combat mastery (like weapon switching and spell swapping), but i hope this describes how methodical you gotta be to succeed. Its one of the most satisfying games to play perfectly and master. Every mistake you make is punishing but you are always aware of how u messed up and what you couldve done better to have not taken damage. 
+
+This probably doesnt sound appealing to most, and thats fine. I dont think it is the most widely appealing or modern feeling game. But there is a niche this game fills to certain gamers. I havent played in years, but writing this and looking up gameplay videos is making me want to hop back in.`,
                 },
                 {
                     gameTitle: `Alan Wake`,
                     gamePoster: `https://upload.wikimedia.org/wikipedia/en/1/1f/Alan_Wake_Game_Cover.jpg`,
                     gameLink: `https://store.steampowered.com/app/108710/Alan_Wake/`,
-                    gameReview: ``,
+                    gameReview: `Alan wake is ^^suuuuper^/^ inspired by twin peaks. Small town, charismatic lead character, drama, mystery, ^!^a being made of pure light who is trying to subdue the mysterious power of a dark entity who resides in a parallel world—and said entity’s power is currently seeping through the cracks of reality and influencing the events of our world for its own incomprehensible, but undoubtedly evil goals…^/!^ Yknow, the usual.`,
                 },
                 {
                     gameTitle: `Life is Strange`,
@@ -147,13 +183,13 @@ export class GamesILike implements OnInit, OnDestroy {
                     gameTitle: `Monster Hunter: World`,
                     gamePoster: `https://cdn.displate.com/artwork/857x1200/2025-02-27/8e0d43ca994716344334eeecb7495e7f_c0308bba71147adcfe63f6f776e8e7f5.jpg`,
                     gameLink: `https://store.steampowered.com/app/582010/Monster_Hunter_World/`,
-                    gameReview: ``,
+                    gameReview: `Rise and grind motherfucka– those armor and weapon materials arent gonna drop themselves. 2% drop rate from the hardest boss in the game on highest difficulty, and youre complaining? I need those 3 extra stat points on my boots, and you better believe im gonna fuckin get them.`,
                 },
                 {
                     gameTitle: `Pokémon Emerald Version`,
                     gamePoster: `https://m.media-amazon.com/images/M/MV5BMmU5YmM4MGQtODE5MS00NmYwLWEwNDItY2Q2ZmJjYzFhOTFhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg`,
                     gameLink: `https://www.serebii.net/pokemon/`,
-                    gameReview: ``,
+                    gameReview: `Im 7 years old and this is the greatest thing to happen to me in my entire life. My machoke is level 86, and i have no idea why its not evolving. There is a seaking in my party for some reason. Im learning how to read braille. Life is good.`,
                 },
                 {
                     gameTitle: `Halo 3`,
@@ -171,31 +207,31 @@ export class GamesILike implements OnInit, OnDestroy {
                     gameTitle: `Rivals of Aether II`,
                     gamePoster: `https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8v8r.jpg`,
                     gameLink: `https://store.steampowered.com/app/2217000/Rivals_of_Aether_II/#app_reviews_hash`,
-                    gameReview: ``,
+                    gameReview: `Its a lot like super smash bros melee, but more forgiving. The characters all have unique mechanics which is pretty cool. Very satisfying to play. Unfortunately— some of the characters in this game might be among the most frustrating and unfun characters to be pitted against in any fighting game ive ever played. If the world were just, orcane would be erased from existence and all kragg players would be put on trail for crimes against humanity.`,
                 },
                 {
                     gameTitle: `Darkest Dungeon: Black Reliquary`,
                     gamePoster: `https://howlongtobeat.com/games/129165_Black_Reliquary.jpg`,
                     gameLink: `https://store.steampowered.com/app/2119270/Black_Reliquary/`,
-                    gameReview: ``,
+                    gameReview: `A mod for darkest dungeon which adds a fuck ton of original content and rebalaces many classes and game mechanics to make it more engaging to play. Its a grind, but its a very fun grind. I love minmaxing my stats and equipment. The dopamine u get from getting good drops and character rolls, or a good virtuous outcome when you are sure ur gonna party wipe is very hard to recreate.`,
                 },
                 {
                     gameTitle: `Metroid Prime`,
                     gamePoster: `https://www.aryammedia.com/wp-content/uploads/2023/07/w-vgs-action-metroid.jpg`,
                     gameLink: `https://www.nintendo.com/us/store/products/metroid-prime-remastered-switch/`,
-                    gameReview: ``,
+                    gameReview: `The atmosphere and vibe of the metroid prime series is still lowkey unmatched to this day. One of the greatest videogame soundtracks of all time as well. If u like immersive game series this is one of the best out there.`,
                 },
                 {
                     gameTitle: `Animal Crossing: Wild World`,
                     gamePoster: `https://howlongtobeat.com/games/475_Animal_Crossing_Wild_World.png`,
                     gameLink: `https://nookipedia.com/wiki/Animal_Crossing:_Wild_World`,
-                    gameReview: ``,
+                    gameReview: `One of my favorite gaming experiences as a child. All my friends had this game, we would all play together and just vibe out. The other animal crossing games have more content and are prob better, this is on the list purely for nostalgia and to honor the game that gave me so many wonderful gaming memories.`,
                 },
                 {
                     gameTitle: `Pokémon Unbound`,
                     gamePoster: `https://cdn2.steamgriddb.com/thumb/e1dc0039261b0ef4f18498d68a351b8c.jpg`,
                     gameLink: `https://www.pokecommunity.com/threads/pok%C3%A9mon-unbound-completed.382178/`,
-                    gameReview: ``,
+                    gameReview: `By far my favorite pokemon rom hack ive ever played. The story is ^!^[up]actually[/up]^/!^ pretty good. Many of the gyms and bosses and elite 4 are ^!^[up]actually[/up]^/!^ really hard. The postgame is ^!^[up]actually[/up]^/!^ really fun. Only problem is that it only has up to gen 7, so i cant use my darling <b>iron bundle…</b>`,
                 },
             ].map((g) => ({ ...g, type: 'game' as const }));
     // ======           ======

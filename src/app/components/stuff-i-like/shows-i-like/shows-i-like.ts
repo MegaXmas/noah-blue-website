@@ -25,12 +25,41 @@ export class ShowsILike implements OnInit, OnDestroy {
                     showReview: `goat`,
                 },
                 {
+                    showTitle: `Pysch`,
+                    showPoster: `https://serializd-tmdb-images.b-cdn.net/t/p/w500/fDI15gTVbtW5Sbv5QenqecRxWKJ.jpg`,
+                    showLink: `https://www.serializd.com/show/Psych-1447`,
+                    showReview: `tha bruthas`,
+                },
+                {
+                    showTitle: `Andor`,
+                    showPoster: `https://serializd-tmdb-images.b-cdn.net/t/p/w500/khZqmwHQicTYoS7Flreb9EddFZC.jpg`,
+                    showLink: `https://www.serializd.com/show/Andor-83867`,
+                    showReview: `best thing star wars has put out since episode 5 and its not even close (excluding episode 3)`,
+                },                
+                {
+                    showTitle: `Dark`,
+                    showPoster: `https://serializd-tmdb-images.b-cdn.net/t/p/w500/7CFCzWIZZcnxHke3yAQiGPWXHwF.jpg`,
+                    showLink: `https://www.serializd.com/show/Dark-70523`,
+                    showReview: `best western time travel show its so msyterious and girtty, and well... dark`,
+                },
+                {
+                    showTitle: `Midnight Mass`,
+                    showPoster: `https://serializd-tmdb-images.b-cdn.net/t/p/w500/iYoMZYVD775MtBYJfv6OGY1FsnL.jpg`,
+                    showLink: `https://www.serializd.com/show/Midnight-Mass-97400`,
+                    showReview: `best horror show/mini series of the modern era`,
+                },
+                {
+                    showTitle: `Malcolm in the Middle`,
+                    showPoster: `https://serializd-tmdb-images.b-cdn.net/t/p/w500/ckLLIsNy3Z0Go1PYHA2PHzVymUA.jpg`,
+                    showLink: `https://www.serializd.com/show/Malcolm-in-the-Middle-2004`,
+                    showReview: `fire`,
+                },
+                {
                     showTitle: ``,
                     showPoster: ``,
                     showLink: ``,
                     showReview: ``,
-                },
-
+                },                                
             ].map((sh) => ({ ...sh, type: 'show' as const }));
     // ======           ======
 
