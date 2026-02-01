@@ -38,9 +38,9 @@ export class AnimeILike implements OnInit, OnDestroy {
             animePosterStyle: string = `current-anime-poster`;
             animeString: string = `anime`;
     // ======                      ======
-    
-    
-    
+
+
+
     // ======ON INIT/DESTROY======
     // ======               ======
             ngOnInit(): void {
