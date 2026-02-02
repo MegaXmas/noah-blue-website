@@ -8,6 +8,7 @@ import { MoviesILike } from './components/stuff-i-like/movies-i-like/movies-i-li
 import { SongsILike } from './components/stuff-i-like/songs-i-like/songs-i-like';
 import { GamesILike } from './components/stuff-i-like/games-i-like/games-i-like';
 import { ShowsILike } from './components/stuff-i-like/shows-i-like/shows-i-like';
+import { AnimeILike } from './components/stuff-i-like/anime-i-like/anime-i-like';
 
 
 
@@ -22,6 +23,7 @@ export const routes: Routes = [
         { path: 'songs-i-like', component: SongsILike },
         { path: 'games-i-like', component: GamesILike },
         { path: 'shows-i-like', component: ShowsILike},
+        { path: 'anime-i-like', component: AnimeILike},
 
 
         { path: '**', redirectTo: '' }

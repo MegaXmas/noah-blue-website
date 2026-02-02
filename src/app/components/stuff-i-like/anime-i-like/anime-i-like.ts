@@ -50,7 +50,7 @@ export class AnimeILike implements OnInit, OnDestroy {
                 },
                 {
                     animeTitle: `Your Name.`,
-                    animePoster: `https://myanimelist.net/anime/32281/Kimi_no_Na_wa`,
+                    animePoster: `https://cdn.myanimelist.net/images/anime/5/87048.jpg`,
                     animeLink: `https://myanimelist.net/anime/32281/Kimi_no_Na_wa`,
                     animeReview: ``,
                 },
@@ -88,6 +88,12 @@ export class AnimeILike implements OnInit, OnDestroy {
                     animeTitle: `Naruto + Naruto: Shippuuden`,
                     animePoster: `https://cdn.myanimelist.net/images/anime/1141/142503.jpg`,
                     animeLink: `https://myanimelist.net/anime/20/Naruto`,
+                    animeReview: ``,
+                },
+                {
+                    animeTitle: `Fullmetal Alchemist + Fullmetal Alchemist: Brotherhood`,
+                    animePoster: `https://cdn.myanimelist.net/images/anime/1208/94745.jpg`,
+                    animeLink: `https://myanimelist.net/anime/121/Fullmetal_Alchemist`,
                     animeReview: ``,
                 },
                 {
@@ -188,7 +194,7 @@ export class AnimeILike implements OnInit, OnDestroy {
                 },
                 {
                     animeTitle: `My Teen Romantic Comedy SNAFU`,
-                    animePoster: `https://myanimelist.net/anime/14813/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru/pics`,
+                    animePoster: `https://cdn.myanimelist.net/images/anime/1786/120117.jpg`,
                     animeLink: `https://myanimelist.net/anime/14813/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru`,
                     animeReview: ``,
                 },
@@ -196,12 +202,6 @@ export class AnimeILike implements OnInit, OnDestroy {
                     animeTitle: `Kaguya-sama: Love is War`,
                     animePoster: `https://cdn.myanimelist.net/images/anime/1295/106551.jpg`,
                     animeLink: `https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen`,
-                    animeReview: ``,
-                },
-                {
-                    animeTitle: `Fullmetal Alchemist + Fullmetal Alchemist: Brotherhood`,
-                    animePoster: `https://cdn.myanimelist.net/images/anime/1208/94745.jpg`,
-                    animeLink: `https://myanimelist.net/anime/121/Fullmetal_Alchemist`,
                     animeReview: ``,
                 },
                 {
