@@ -74,20 +74,20 @@ export class Marquee implements OnInit, OnDestroy {
                                     service index currently stored in marquee component: ${currentServiceIndex}`)
                             };
                             
-                            console.log(`MARQUEE COMPONENT: attempting to set currentFavoriteItem to stuffArray[] index: ${newServiceIndex}`);
-                            this.setAllCurrentItemData(currentServiceIndex);
-                            currentItem = untracked(() => this.currentFavoriteItem());
-                            currentItemTitle = untracked(() => this.currentItemTitle());
-                            if (currentItem === stuff.at(newServiceIndex) || currentServiceIndex) {
-                                console.log(`MARQUEE COMPONENT: currentFavoriteItem updated successfully with index ${currentServiceIndex}.
-                                    currentItemTitle: ${currentItemTitle}`)
-                                } else {
-                                    console.log(`MARQUEE COMPONENT: currentFavoriteItem failed to update successfully.
-                                    currentItemTitle: ${currentItemTitle}
-                                    index of currentFavoriteItem: ${stuff.indexOf(currentItem)}.
-                                    index recieved from service: ${currentServiceIndex}.
-                                    index stored in array-data-service: ${newServiceIndex}`)
-                                    }
+                        console.log(`MARQUEE COMPONENT: attempting to set currentFavoriteItem to stuffArray[] index: ${newServiceIndex}`);
+                        this.setAllCurrentItemData(currentServiceIndex);
+                        currentItem = untracked(() => this.currentFavoriteItem());
+                        currentItemTitle = untracked(() => this.currentItemTitle());
+                        if (currentItem === stuff.at(newServiceIndex) || currentServiceIndex) {
+                            console.log(`MARQUEE COMPONENT: currentFavoriteItem updated successfully with index ${currentServiceIndex}.
+                                currentItemTitle: ${currentItemTitle}`)
+                            } else {
+                                console.log(`MARQUEE COMPONENT: currentFavoriteItem failed to update successfully.
+                                currentItemTitle: ${currentItemTitle}
+                                index of currentFavoriteItem: ${stuff.indexOf(currentItem)}.
+                                index recieved from service: ${currentServiceIndex}.
+                                index stored in array-data-service: ${newServiceIndex}`)
+                                }
                     });
     // ======                        ======
 
@@ -276,42 +276,42 @@ export class Marquee implements OnInit, OnDestroy {
 
     // ======ARRAY DATA METHODS======
     // ======                  ======
-        sendArrayData(): void {
-            this.arrayDataService.setArrayData(this.stuffArray());
-            this.arrayDataService.itemType.set(this.kindOfItem());
-        }
-    
-    
-        getItemArt(item: FavoriteStuff): string {
-            switch (item!.type) {
-                case 'movie':
-                    return item!.moviePoster;
-                case 'song':
-                    return item!.songAlbumCover;
-                case `game`:
-                    return item!.gamePoster;
-                case 'show':
-                    return item!.showPoster;
-                case 'anime':
-                    return item!.animePoster;
+            sendArrayData(): void {
+                this.arrayDataService.setArrayData(this.stuffArray());
+                this.arrayDataService.itemType.set(this.kindOfItem());
             }
-        }
     
     
-        getItemTitle(item: FavoriteStuff): string {
-            switch (item!.type) {
-                case 'movie':
-                    return item!.movieTitle;
-                case 'song':
-                    return item!.songTitle;
-                case `game`:
-                    return item!.gameTitle;
-                case 'show':
-                    return item!.showTitle;  // Fixed: was showPoster, should be showTitle
-                case 'anime':
-                    return item!.animeTitle;
+            getItemArt(item: FavoriteStuff): string {
+                switch (item!.type) {
+                    case 'movie':
+                        return item!.moviePoster;
+                    case 'song':
+                        return item!.songAlbumCover;
+                    case `game`:
+                        return item!.gamePoster;
+                    case 'show':
+                        return item!.showPoster;
+                    case 'anime':
+                        return item!.animePoster;
+                }
             }
-        }
+    
+    
+            getItemTitle(item: FavoriteStuff): string {
+                switch (item!.type) {
+                    case 'movie':
+                        return item!.movieTitle;
+                    case 'song':
+                        return item!.songTitle;
+                    case `game`:
+                        return item!.gameTitle;
+                    case 'show':
+                        return item!.showTitle;  // Fixed: was showPoster, should be showTitle
+                    case 'anime':
+                        return item!.animeTitle;
+                }
+            }
     
     
             setAllCurrentItemData(index: number): void {

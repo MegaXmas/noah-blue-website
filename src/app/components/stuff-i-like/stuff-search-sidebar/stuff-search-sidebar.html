@@ -9,25 +9,35 @@
 <div class="list-group align-items-center stuff-search-sidebar">
 
     @for (item of filteredItems(); track item) {
-
-        @if (isSong(item)) {
-            <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center listgroup-font" 
-                target="_blank" rel="noopener noreferrer">
-
-                <b>{{ item.songArtist }} - {{ item.songTitle }}</b></a>
-        }
-        @if (isMovie(item)) {
-            <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center listgroup-font"    
-                target="_blank" rel="noopener noreferrer">
-
-                <b>{{ item.movieTitle }}</b></a>
-        }
-        @if (isGame(item)) {
+            @if (isSong(item)) {
+                <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center listgroup-font" 
+                    target="_blank" rel="noopener noreferrer">
+                    <b>{{ item.songArtist }} - {{ item.songTitle }}</b></a>
+            }
+    
+            @if (isMovie(item)) {
                 <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center listgroup-font"    
                     target="_blank" rel="noopener noreferrer">
-
-                    <b>{{ item.gameTitle }}</b></a>
-        }
-    }
+                    <b>{{ item.movieTitle }}</b></a>
+            }
     
+            @if (isGame(item)) {
+                    <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center listgroup-font"    
+                        target="_blank" rel="noopener noreferrer">
+                        <b>{{ item.gameTitle }}</b></a>
+            }
+    
+            @if (isShow(item)) {
+                    <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center listgroup-font"    
+                        target="_blank" rel="noopener noreferrer">
+                        <b>{{ item.showTitle }}</b></a>
+            }
+    
+            @if (isAnime(item)) {
+                    <a (click)="selectItem(item)" class="list-group-item list-group-item-action text-center listgroup-font"    
+                        target="_blank" rel="noopener noreferrer">
+                        <b>{{ item.animeTitle }}</b></a>
+            }
+    }
+
 </div>
