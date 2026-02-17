@@ -11,45 +11,60 @@
     @for (item of filteredItems(); track item) {
             @if (isSong(item)) {
                 <a (click)="selectItem(item)"
-                    class="list-group-item list-group-item-action text-center listgroup-font"
-                    [style.background]="getBackgroundGradient(item)" 
+                    class="list-group-item list-group-item-action text-center"
+                    [style.background-image]="'url(' + item.songAlbumCover + ')'"
+                    [style.background-size]="'cover'"
+                    [style.background-position]="'center'"
                     target="_blank" rel="noopener noreferrer">
+                    <span class="bg-overlay"></span>
                     <b>{{ item.songArtist }} - {{ item.songTitle }}</b>
                 </a>
             }
     
             @if (isMovie(item)) {
                 <a (click)="selectItem(item)" 
-                    class="list-group-item list-group-item-action text-center listgroup-font"
-                    [style.background]="getBackgroundGradient(item)"   
+                    class="list-group-item list-group-item-action text-center"
+                    [style.background-image]="'url(' + item.moviePoster + ')'"
+                    [style.background-size]="'cover'"
+                    [style.background-position]="'center'"  
                     target="_blank" rel="noopener noreferrer">
+                    <span class="bg-overlay"></span>
                     <b>{{ item.movieTitle }}</b>
                 </a>
             }
     
             @if (isGame(item)) {
                 <a (click)="selectItem(item)" 
-                    class="list-group-item list-group-item-action text-center listgroup-font"
-                    [style.background]="getBackgroundGradient(item)"   
+                    class="list-group-item list-group-item-action text-center"
+                    [style.background-image]="'url(' + item.gamePoster + ')'"
+                    [style.background-size]="'cover'"
+                    [style.background-position]="'center'"  
                     target="_blank" rel="noopener noreferrer">
+                    <span class="bg-overlay"></span>
                     <b>{{ item.gameTitle }}</b>
                 </a>
             }
     
             @if (isShow(item)) {
                 <a (click)="selectItem(item)" 
-                    class="list-group-item list-group-item-action text-center listgroup-font"
-                    [style.background]="getBackgroundGradient(item)" 
+                    class="list-group-item list-group-item-action text-center"
+                    [style.background-image]="'url(' + item.showPoster + ')'"
+                    [style.background-size]="'cover'"
+                    [style.background-position]="'center'"
                     target="_blank" rel="noopener noreferrer">
+                    <span class="bg-overlay"></span>
                     <b>{{ item.showTitle }}</b>
                 </a>
             }
     
             @if (isAnime(item)) {
                 <a (click)="selectItem(item)" 
-                    class="list-group-item list-group-item-action text-center listgroup-font"
-                    [style.background]="getBackgroundGradient(item)" 
+                    class="list-group-item list-group-item-action text-center"
+                    [style.background-image]="'url(' + item.animePoster + ')'"
+                    [style.background-size]="'cover'"
+                    [style.background-position]="'center'"
                     target="_blank" rel="noopener noreferrer">
+                    <span class="bg-overlay"></span>
                     <b>{{ item.animeTitle }}</b>
                 </a>
             }

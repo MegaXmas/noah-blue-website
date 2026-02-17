@@ -307,7 +307,7 @@ export class Marquee implements OnInit, OnDestroy {
                     case `game`:
                         return item!.gameTitle;
                     case 'show':
-                        return item!.showTitle;  // Fixed: was showPoster, should be showTitle
+                        return item!.showTitle;
                     case 'anime':
                         return item!.animeTitle;
                 }

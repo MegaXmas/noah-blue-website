@@ -1,7 +1,3 @@
-h2 {
-    font-size: 1.25rem;
-}
-
 .stuff-search-sidebar {
     max-height: 300px;
     max-width: fit-content!important;
@@ -9,14 +5,53 @@ h2 {
     pointer-events: all;
 }
 
+
 .stuff-search-sidebar .list-group-item {
-    color: #333;
+    color: #644647;
+    text-shadow:  
+        1.3px 1.3px 0.7px #47ff52,      /* bottom-right */
+        -1.3px -1.3px 0.7px #47ff52,    /* top-left */
+        0.7px -1.3px 0.7px #47ff52,     /* top-right */
+        -1.3px 1.3px 0.7px #47ff52,     /* bottom-left */
+        0px 1.3px 1.3px #47ff52,        /* directly below */
+        1.3px 0px 1.3px #47ff52,        /* directly right */
+        0px -1.3px 1.3px #47ff52,       /* directly above */
+        -1.3px 0px 1.3px #47ff52,       /* directly left */
+
+        2.7px 2.7px 1.3px #000000;
     padding: 0.75rem;
+    pointer-events: all!important;
+
+    border-color: #000000;
+    border-width: 3px 3px 3px 3px;
+    border-style:groove;
+
+    position: relative;
+}
+
+
+.list-group-item b {
+    position: relative;
+    z-index: 1;
     pointer-events: all!important;
 }
 
+
+.bg-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    pointer-events: none!important;
+}
+
+
 .stuff-search-sidebar .list-group-item:hover {  
     cursor: pointer;
+}
+
+.list-group-item:hover .bg-overlay {
+    display: none;
 }
 
 .stuff-search-sidebar input {
@@ -31,9 +66,6 @@ h2 {
     font-size: 1rem;
 }
 
-.listgroupFont {
-    font-size: 2rem;
-}
 
 
 /* ========= MEDIA FLEX ========== */
@@ -42,9 +74,5 @@ h2 {
 
     .placeholder-text {
         font-size: .75rem;
-    }
-
-    .listgroup-font{
-        font-size: .80rem;
     }
 }

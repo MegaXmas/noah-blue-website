@@ -231,7 +231,6 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
     
                     getBackgroundGradient(item: FavoriteStuff): string {
                         const imageUrl = this.getItemImageUrl(item);
-                        console.log(`gradient image source: ${imageUrl}`)
                         
                         return this.gradientCache.get(imageUrl)
                         || 'linerar-gradient(to right, #ccc, #eee)';
@@ -271,53 +270,41 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
                     }
 
 
-                    extractColorsFromLoadedImage(img: HTMLImageElement): string {
-                        const canvas = document.createElement('canvas');
-                        const ctx = canvas.getContext('2d')!;
+                    // extractColorsFromLoadedImage(img: HTMLImageElement): string {
+                    //     const canvas = document.createElement('canvas');
+                    //     const ctx = canvas.getContext('2d')!;
                         
-                        canvas.width = img.width;
-                        canvas.height = img.height;
+                    //     canvas.width = img.width;
+                    //     canvas.height = img.height;
                         
-                        try {
-                            ctx.drawImage(img, 0, 0);
+                    //     try {
+                    //         ctx.drawImage(img, 0, 0);
                             
-                            const colors = [
-                                this.getColorAt(ctx, img.width * 0.25, img.height / 2),
-                                this.getColorAt(ctx, img.width * 0.5, img.height / 2),
-                                this.getColorAt(ctx, img.width * 0.75, img.height / 2)
-                            ];
+                    //         const colors = [
+                    //             this.getColorAt(ctx, img.width * 0.25, img.height / 2),
+                    //             this.getColorAt(ctx, img.width * 0.5, img.height / 2),
+                    //             this.getColorAt(ctx, img.width * 0.75, img.height / 2)
+                    //         ];
                             
-                            return `linear-gradient(to right, ${colors.join(', ')})`;
+                    //         return `linear-gradient(to right, ${colors.join(', ')})`;
                             
-                        } catch (error) {
-                            console.warn('CORS error with existing image:', error);
-                            return 'linear-gradient(to right, #ccc, #eee)';
-                        }
-                    }
+                    //     } catch (error) {
+                    //         console.warn('CORS error with existing image:', error);
+                    //         return 'linear-gradient(to right, #ccc, #eee)';
+                    //     }
+                    // }
     
     
                     async loadAllGradients() {
                         console.log('Starting to load gradients...');
-                        
-                        await new Promise(resolve => setTimeout(resolve, 1000));
-                        
+
                         for (const item of this.filteredItems()) {
                             const imageUrl = this.getItemImageUrl(item);
                             
-                            
                             if (imageUrl && !this.gradientCache.has(imageUrl)) {
-                                const existingImg = document.querySelector(`img[src="${imageUrl}"]`) as HTMLImageElement;
-                                
-                                if (existingImg && existingImg.complete) {
-                                    const gradient = this.extractColorsFromLoadedImage(existingImg);
-                                    this.gradientCache.set(imageUrl, gradient);
-                                    console.log('Gradient created from existing image:', gradient)
-                                
-                                } else {
                                 const gradient = await this.extractColorsFromImage(imageUrl);
                                 this.gradientCache.set(imageUrl, gradient);
                                 console.log('Gradient created:', gradient);
-                                }
                             }
                         }
                         
