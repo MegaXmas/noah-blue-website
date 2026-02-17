@@ -23,6 +23,8 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
     // ======IMPORTANT MISC PROPERTIES======
     // ======                         ======
             private readonly arrayDataService = inject(ArrayDataService);
+
+            gradientCache = new Map<string, string>();
     // ======                         ======
 
 
@@ -91,6 +93,8 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
                         if (dataFromService.length > 0) {
                             this.stuffArray.set(dataFromService);
                             console.log(`SIDEBAR SEARCH COMPONENT: received ${dataFromService.length} items`);
+                            
+                            this.loadAllGradients();
                         }
                         
                         if (this.stuffArray().length === 0 ) {
@@ -194,4 +198,130 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
                             return `search ${length} of my fav ${type}s ♥️`;
                         });
     // ======                                 ======
+
+
+
+    // ======GRADIENT STYLE METHODS======
+    // ======                      ======
+                    getItemImageUrl(item: FavoriteStuff): string {
+                        if (this.isSong(item)) {
+                            return item.songAlbumCover;
+                        }
+                        if (this.isMovie(item)) {
+                            return item.moviePoster;
+                        }
+                        if (this.isGame(item)) {
+                            return item.gamePoster;
+                        }
+                        if (this.isShow(item)) {
+                            return item.showPoster;
+                        }
+                        if (this.isAnime(item)) {
+                            return item.animePoster;
+                        }
+                        return '';
+                    }
+    
+    
+                    getColorAt(ctx: CanvasRenderingContext2D, x: number, y: number): string {
+                        const pixel = ctx.getImageData(x, y, 1, 1).data;
+                        return `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`
+                    }
+    
+    
+                    getBackgroundGradient(item: FavoriteStuff): string {
+                        const imageUrl = this.getItemImageUrl(item);
+                        console.log(`gradient image source: ${imageUrl}`)
+                        
+                        return this.gradientCache.get(imageUrl)
+                        || 'linerar-gradient(to right, #ccc, #eee)';
+                    }
+    
+    
+                    extractColorsFromImage(imageUrl: string): Promise<string> {
+                        return new Promise((resolve) => {
+                            const img = new Image();
+                            img.crossOrigin = 'Anonymous';
+                            
+                            img.onload = () => {
+                                const canvas = document.createElement('canvas');
+                                const ctx = canvas.getContext('2d')!;
+                                
+                                canvas.width = img.width;
+                                canvas.height = img.height;
+                                
+                                ctx.drawImage(img, 0, 0)
+                                
+                                const colors = [
+                                    this.getColorAt(ctx, img.width * 0.25, img.height / 2),
+                                    this.getColorAt(ctx, img.width * 0.5, img.height / 2),
+                                    this.getColorAt(ctx, img.width * 0.75, img.height / 2) 
+                                ]
+                                
+                                resolve(`linear-gradient(to right, ${colors.join(', ')})`)
+                            };
+                            
+                            img.onerror = () => {
+                                console.warn('Failed to load image:', imageUrl);
+                                resolve('linear-gradient(to right, #ccc, #eee)');
+                            };
+                            
+                            img.src = imageUrl;
+                        })
+                    }
+
+
+                    extractColorsFromLoadedImage(img: HTMLImageElement): string {
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d')!;
+                        
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        
+                        try {
+                            ctx.drawImage(img, 0, 0);
+                            
+                            const colors = [
+                                this.getColorAt(ctx, img.width * 0.25, img.height / 2),
+                                this.getColorAt(ctx, img.width * 0.5, img.height / 2),
+                                this.getColorAt(ctx, img.width * 0.75, img.height / 2)
+                            ];
+                            
+                            return `linear-gradient(to right, ${colors.join(', ')})`;
+                            
+                        } catch (error) {
+                            console.warn('CORS error with existing image:', error);
+                            return 'linear-gradient(to right, #ccc, #eee)';
+                        }
+                    }
+    
+    
+                    async loadAllGradients() {
+                        console.log('Starting to load gradients...');
+                        
+                        await new Promise(resolve => setTimeout(resolve, 1000));
+                        
+                        for (const item of this.filteredItems()) {
+                            const imageUrl = this.getItemImageUrl(item);
+                            
+                            
+                            if (imageUrl && !this.gradientCache.has(imageUrl)) {
+                                const existingImg = document.querySelector(`img[src="${imageUrl}"]`) as HTMLImageElement;
+                                
+                                if (existingImg && existingImg.complete) {
+                                    const gradient = this.extractColorsFromLoadedImage(existingImg);
+                                    this.gradientCache.set(imageUrl, gradient);
+                                    console.log('Gradient created from existing image:', gradient)
+                                
+                                } else {
+                                const gradient = await this.extractColorsFromImage(imageUrl);
+                                this.gradientCache.set(imageUrl, gradient);
+                                console.log('Gradient created:', gradient);
+                                }
+                            }
+                        }
+                        
+                        console.log('Cache after loading:', this.gradientCache);
+                    }
+    // ======                      ======
 }
