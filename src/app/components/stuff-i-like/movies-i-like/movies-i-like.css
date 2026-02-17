@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=League+Gothic&family=Michroma&display=swap);
+
 /* ==#==MARQUEE MOVIE POSTER====*/
 /* ==#==                    ====*/
     .marquee-item-movie {
@@ -6,7 +8,7 @@
         border-color: green;
         border-style: solid;
         overflow: hidden;
-        
+        position: relative;
         
         width: 12.5rem;
         border-width: 5px;
@@ -19,6 +21,54 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+
+    .hover-filter {
+        background-color: transparent;
+        background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1f1d3db0-bb51-4da7-874b-fc4bda5f2395/dclwg5d-3249b800-65b3-4ad5-9a42-d0519ba70d4c.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8xZjFkM2RiMC1iYjUxLTRkYTctODc0Yi1mYzRiZGE1ZjIzOTUvZGNsd2c1ZC0zMjQ5YjgwMC02NWIzLTRhZDUtOWE0Mi1kMDUxOWJhNzBkNGMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.mJOPzWMBz3pPxbkZ_N1x-AzrTn-I38S6xN8T-hwNP1c);
+        border-radius: 4px;
+        
+        opacity: 0;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none!important;
+    }
+
+
+    b {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none!important;
+        
+        font-family: "Michroma", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-transform: uppercase;
+        
+        color: whitesmoke;
+        text-shadow: 2px 2px 1px #000000;    /* bottom-right, further away */
+        
+        opacity: 0;
+        
+        
+        font-size: 1.28rem;
+    }
+
+
+
+    .marquee-item-movie:hover .hover-filter{
+        opacity: .2;
+    }
+
+    .marquee-item-movie:hover b{
+        opacity: .8;
     }
 /* ==#==                    ====*/
 

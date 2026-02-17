@@ -20,24 +20,28 @@
     
                                 @for (stuff of stuffArray(); track getItemTitle(stuff); let i = $index) {
                                     <div [class]="marqueeArtClass()">
+                                        <span class="hover-filter"></span>
+                                        <b class="text-center">{{  getItemTitle(stuff) }}</b>
                                         <img
-                                        [src]="getItemArt(stuff)"
-                                        (mouseover)="setAllCurrentItemData(i); pauseAnimation()"
-                                        (focus)="setAllCurrentItemData(i); pauseAnimation()"
-                                        (mouseleave)="resumeAnimation()"
-                                        [alt]="getItemTitle(stuff)"
+                                            [src]="getItemArt(stuff)"
+                                            (mouseover)="setAllCurrentItemData(i); pauseAnimation()"
+                                            (focus)="setAllCurrentItemData(i); pauseAnimation()"
+                                            (mouseleave)="resumeAnimation()"
+                                            [alt]="getItemTitle(stuff)"
                                         >
                                     </div>
                                 }
     
                                 @for (stuff of stuffArray(); track getItemTitle(stuff); let i = $index) {
                                     <div [class]="marqueeArtClass()">
+                                        <span class="hover-filter"></span>
+                                        <b class="text-center">{{  getItemTitle(stuff) }}</b>
                                         <img
-                                        [src]="getItemArt(stuff)"
-                                        (mouseover)="setAllCurrentItemData(i); pauseAnimation()"
-                                        (focus)="setAllCurrentItemData(i); pauseAnimation()"
-                                        (mouseleave)="resumeAnimation()"
-                                        [alt]="getItemTitle(stuff)"
+                                            [src]="getItemArt(stuff)"
+                                            (mouseover)="setAllCurrentItemData(i); pauseAnimation()"
+                                            (focus)="setAllCurrentItemData(i); pauseAnimation()"
+                                            (mouseleave)="resumeAnimation()"
+                                            [alt]="getItemTitle(stuff)"
                                         >
                                     </div>
                                 }

@@ -17,15 +17,15 @@
         1.3px 0px 1.3px #47ff52,        /* directly right */
         0px -1.3px 1.3px #47ff52,       /* directly above */
         -1.3px 0px 1.3px #47ff52,       /* directly left */
-
+        
         2.7px 2.7px 1.3px #000000;
     padding: 0.75rem;
     pointer-events: all!important;
-
+    
     border-color: #000000;
     border-width: 3px 3px 3px 3px;
     border-style:groove;
-
+    
     position: relative;
 }
 
@@ -75,4 +75,5 @@
     .placeholder-text {
         font-size: .75rem;
     }
+
 }
