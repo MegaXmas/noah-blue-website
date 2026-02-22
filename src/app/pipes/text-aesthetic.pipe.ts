@@ -18,6 +18,7 @@ export class TextAestheticPipe implements PipeTransform {
             .replaceAll("'", "")     // straight apostrophe
             .replaceAll("’", "")    // curly apostrophe
 
+            .replaceAll(` youre `, ' ur ')
             .replaceAll(' you ', ' u ')
             .replaceAll(' are', ' r')
             .replaceAll(' your', ' ur')

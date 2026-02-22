@@ -18,23 +18,34 @@ export class AnimeILike implements OnInit, OnDestroy {
     // ======ANIME ARRAY======
     // ======           ======
             animeArray: FavoriteAnime[] = [
-                {
-                    animeTitle: `Fullmetal Alchemist + Fullmetal Alchemist: Brotherhood`,
-                    animePoster: `https://cdn.myanimelist.net/images/anime/1208/94745.jpg`,
-                    animeLink: `https://myanimelist.net/anime/121/Fullmetal_Alchemist`,
-                    animeReview: ``,
-                },
-                {
-                    animeTitle: `Katanagatari`,
-                    animePoster: `https://cdn.myanimelist.net/images/anime/1112/119225.jpg`,
-                    animeLink: `https://myanimelist.net/anime/6594/Katanagatari`,
-                    animeReview: ``,
-                },                
+    {
+        animeTitle: `Fullmetal Alchemist + Fullmetal Alchemist: Brotherhood`,
+        animePoster: `https://cdn.myanimelist.net/images/anime/1208/94745.jpg`,
+        animeLink: `https://myanimelist.net/anime/121/Fullmetal_Alchemist`,
+        animeReview: ``,
+    },
+    {
+        animeTitle: `Katanagatari`,
+        animePoster: `https://cdn.myanimelist.net/images/anime/1112/119225.jpg`,
+        animeLink: `https://myanimelist.net/anime/6594/Katanagatari`,
+        animeReview: ``,
+    },
+    {
+        animeTitle: `Naruto + Naruto: Shippuuden`,
+        animePoster: `https://cdn.myanimelist.net/images/anime/1141/142503.jpg`,
+        animeLink: `https://myanimelist.net/anime/20/Naruto`,
+        animeReview: ``,
+    },          
                 {
                     animeTitle: `One Piece`,
                     animePoster: `https://cdn.myanimelist.net/images/anime/1244/138851.jpg`,
                     animeLink: `https://myanimelist.net/anime/21/One_Piece`,
-                    animeReview: ``,
+                    animeReview: `I mean there is a reason this is the most popular anime in the world. Its actually just a genius work of timeless literature. In the future they are going to look at one piece the same way we look at the illad and the odyssey.
+
+The characters are so lovable and well written. Luffy is the best shonen protagonist of all time and its not really close. Each relevant player in the story has their own motivations and fleshed out backstory. Because of this extra effort to flesh out characters, the world building in one piece is unparalleled. Literally the best of all time. You are constantly wondering what other pirate crews and marines are up to. The world is constantly evolving behind the scenes. Some of the best parts of the show are the asides where you find out updates on current events and flashbacks showing important history. 
+
+Its also just really funny and the action is top tier. No matter how good the worldbuilding and character writing is, if the show isnt entertaining its not gonna be worth watching as a shonen. You might think its too long to get into, but thats where youre wrong. Once you catch up you’ll wish you had more episodes 😭
+`,
                 },
                 {
                     animeTitle: `Steins;Gate`,

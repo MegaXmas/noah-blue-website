@@ -42,6 +42,7 @@
         }
 
 
+
     /* ======*HOVER FILTER====== */ 
         b {
             display: flex;
@@ -90,7 +91,7 @@
         }
 
         .marquee-item:hover b{
-            opacity: .9;
+            opacity: .85;
         }
 
 
@@ -284,9 +285,11 @@
                 padding-top: .1rem;
             }
 
+
+
         /* ======*HOVER FILTER====== */
-            .marquee-item-anime b{
-                font-size: .8rem
+            .marquee-item b{
+                font-size: .95rem
             }
         }
 
@@ -323,6 +326,13 @@
                 padding-bottom: .2rem;
                 padding-top: .1rem;
             }
+
+
+
+    /* ======*HOVER FILTER====== */
+            .marquee-item b{
+                font-size: .85rem
+            }
         }
 
     /* ==#==MEDIUM SCREEN==== 768px - 992px*/    
@@ -338,6 +348,7 @@
             .marquee-border {
                 border-width: 7px;
             }
+
 
 
     /* ======*REVIEW SCALING====== */
@@ -372,6 +383,17 @@
                 padding-bottom: .2rem;
                 padding-top: .1rem;
             }
+
+
+
+    /* ======*HOVER FILTER====== */
+            .marquee-item b{
+                font-size: .75rem;
+            }
+
+            .marquee-item:hover b{
+                opacity: .95;
+            }
         }
 
     /* ==#==SMALL SCREEN==== 576px - 768px*/
@@ -393,6 +415,7 @@
                 margin-top: .5rem!important;
                 margin-bottom: .25rem!important;
             }
+
 
 
     /* ======*REVIEW SCALING====== */
@@ -429,6 +452,7 @@
             }
 
 
+
     /* ======*REVIEW FOUNDATION====== */
             h2 {
                 margin-top: auto;
@@ -438,6 +462,13 @@
 
             #review-container {
                 margin-top: .125rem!important;       
+            }
+
+
+
+    /* ======*HOVER FILTER====== */
+            .marquee-item b{
+                font-size: .65rem;
             }
         }
 
@@ -454,6 +485,7 @@
             .marquee-border {
                 border-width: 6px;
             }
+
 
 
     /* ======*REVIEW SCALING====== */
@@ -494,6 +526,17 @@
                 line-height: 1.1;
                 padding-bottom: .2rem;
                 padding-top: .1rem;
+            }
+
+
+
+    /* ======*HOVER FILTER====== */
+            .marquee-item b{
+                font-size: .55rem;
+            }
+
+            .marquee-item:hover b{
+                opacity: .99;
             }
         }
 

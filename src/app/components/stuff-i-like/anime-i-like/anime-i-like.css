@@ -74,7 +74,7 @@
 
 /* @=====MEDIA FLEX====== */
 /* @==                @== */
-    /* ==#==EXTRA LARGE SCREEN==== */
+    /* ==#==EXTRA LARGE SCREEN  1200px+ ==== */
         @media (max-width: 87.5em) {
             .marquee-item-anime {
                 width: 10rem;
@@ -100,11 +100,15 @@
 
     /* ======*SPECIFIC CHANGES PER ITEM====== */ 
             [id="fullmetal-alchemist-+-fullmetal-alchemist:-brotherhood-filter-font"] {
-                font-size: 1rem!important;
+                font-size: .75rem!important;
+            }
+
+            [id="katanagatari-filter-font"] {
+                font-size: .78rem!important;
             }
         }
 
-    /* ==#==LARGE SCREEN==== */    
+    /* ==#==LARGE SCREEN==== 992px - 1200px*/    
         @media (max-width: 75em) { 
             .marquee-item-anime {
                 width: 9rem;
@@ -130,19 +134,17 @@
 
 
 
-    /* ======*HOVER FILTER====== */ 
-            .marquee-item-anime b{
-                font-size: .74rem
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="fullmetal-alchemist-+-fullmetal-alchemist:-brotherhood-filter-font"] {
+                font-size: .7rem!important;
             }
-            
-            
 
-            .marquee-item-anime:hover b{
-                opacity: .99;
+            [id="katanagatari-filter-font"] {
+                font-size: .7rem!important;
             }
         }
 
-    /* ==#==MEDIUM SCREEN==== */    
+    /* ==#==MEDIUM SCREEN==== 768px - 992px*/    
         @media (max-width: 57.625em) {
             .marquee-item-anime {
                 width: 8rem;
@@ -168,13 +170,17 @@
 
 
 
-    /* ======*HOVER FILTER====== */ 
-            .marquee-item-anime b{
-                font-size: .65rem
-            }             
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="fullmetal-alchemist-+-fullmetal-alchemist:-brotherhood-filter-font"] {
+                font-size: .65rem!important;
+            }
+
+            [id="katanagatari-filter-font"] {
+                font-size: .65rem!important;
+            }
         }
 
-    /* ==#==SMALL SCREEN==== */
+    /* ==#==SMALL SCREEN==== 576px - 768px*/
         @media (max-width: 48em) {
             .marquee-item-anime {
                 width: 7rem;
@@ -200,13 +206,17 @@
 
 
 
-    /* ======*HOVER FILTER====== */
-            .marquee-item-anime b{
-                font-size: .57rem
-            }    
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="fullmetal-alchemist-+-fullmetal-alchemist:-brotherhood-filter-font"] {
+                font-size: .55rem!important;
+            }
+
+            [id="katanagatari-filter-font"] {
+                font-size: .55rem!important;
+            }  
         }
 
-    /* ==#==EXTRA SMALL SCREEN====*/
+    /* ==#==EXTRA SMALL SCREEN==== 576px - 400px*/
         @media (max-width: 36em) {
             .marquee-item-anime {
                 width: 6rem;
@@ -228,13 +238,18 @@
             }
 
 
-    /* ======*HOVER FILTER====== */
-            .marquee-item-anime b{
-                font-size: .48rem
-            }                
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="fullmetal-alchemist-+-fullmetal-alchemist:-brotherhood-filter-font"] {
+                font-size: .48rem!important;
+            }
+
+            [id="katanagatari-filter-font"] {
+                font-size: .48rem!important;
+            }  
         }
 
-    /* ==#==SMALLEST SCREEN====*/
+    /* ==#==SMALLEST SCREEN==== 400px- */
         @media (max-width: 25em) {
             .myAnimeList-profile img {
                 width: 4.5rem;
@@ -242,9 +257,13 @@
             }
 
 
-    /* ======*HOVER FILTER====== */
-            .marquee-item-anime b{
-                font-size: .48rem
-            }                
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="fullmetal-alchemist-+-fullmetal-alchemist:-brotherhood-filter-font"] {
+                font-size: .48rem!important;
+            }
+
+            [id="katanagatari-filter-font"] {
+                font-size: .48rem!important;
+            }               
         }
 /* @==                @== */
