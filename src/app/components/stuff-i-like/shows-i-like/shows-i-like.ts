@@ -97,7 +97,7 @@ export class ShowsILike implements OnInit, OnDestroy {
                 },
                 {
                     showTitle: `Flight of the Conchords`,
-                    showPoster: `https://www.serializd.com/show/Flight-of-the-Conchords-2742`,
+                    showPoster: `https://serializd-tmdb-images.b-cdn.net/t/p/w500/ynboK8qiOTz0X44r59LpfF8jBP5.jpg`,
                     showLink: `https://www.serializd.com/show/Flight-of-the-Conchords-2742`,
                     showReview: ``,
                 },
@@ -115,8 +115,8 @@ export class ShowsILike implements OnInit, OnDestroy {
                 },
                 {
                     showTitle: `The Haunting of Hill House`,
-                    showPoster: `https://www.serializd.com/show/The-Haunting-of-Hill-House-72844`,
-                    showLink: `https://serializd-tmdb-images.b-cdn.net/t/p/w500/38PkhBGRQtmVx2drvPik3F42qHO.jpg`,
+                    showPoster: `https://serializd-tmdb-images.b-cdn.net/t/p/w500/38PkhBGRQtmVx2drvPik3F42qHO.jpg`,
+                    showLink: `https://www.serializd.com/show/The-Haunting-of-Hill-House-72844`,
                     showReview: `very cool and scary :) hill house has ^^the best^/^ horror scene in any movie/show ever. its been 8 years and i still think about it like every week [up]LMAO[/up] its such a mindfuck`,
                 },
                 {

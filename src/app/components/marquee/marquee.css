@@ -2,6 +2,8 @@
 /* TODO change systle to showing title and a design on hover (maybe some static or something) */
 
 @import url(https://fonts.googleapis.com/css2?family=League+Gothic&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Michroma&display=swap);
+
 
 
 /* ==#==MARQUEE STUFF====*/
@@ -37,6 +39,58 @@
             overflow: hidden;
             display: flex;
             gap: 0; 
+        }
+
+
+    /* ======*HOVER FILTER====== */ 
+        b {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none!important;
+            
+            font-family: "Michroma", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-transform: uppercase;
+            
+            color: whitesmoke;
+            text-shadow: 2px 2px 1px #000000;    /* bottom-right, further away */
+            
+            opacity: 0;
+            
+            margin-left: 1rem;
+            margin-right: 1.1rem;
+            font-size: 1.03rem
+        }
+
+        .hover-filter {
+            background-color: transparent;
+            background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1f1d3db0-bb51-4da7-874b-fc4bda5f2395/dclwg5d-3249b800-65b3-4ad5-9a42-d0519ba70d4c.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8xZjFkM2RiMC1iYjUxLTRkYTctODc0Yi1mYzRiZGE1ZjIzOTUvZGNsd2c1ZC0zMjQ5YjgwMC02NWIzLTRhZDUtOWE0Mi1kMDUxOWJhNzBkNGMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.mJOPzWMBz3pPxbkZ_N1x-AzrTn-I38S6xN8T-hwNP1c);
+            border-radius: 4px;
+            
+            opacity: 0;
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none!important;
+        }
+
+
+        .marquee-item b{
+            font-size: 1.1rem
+        }
+
+        .marquee-item:hover .hover-filter{
+            opacity: .2;
+        }
+
+        .marquee-item:hover b{
+            opacity: .9;
         }
 
 
@@ -92,7 +146,7 @@
             
             
             
-            font-size: 4rem;
+            font-size: 3.4rem;
             text-decoration-thickness: 5px;
             margin: 0rem;
         }
@@ -194,10 +248,10 @@
 
 /* @=====MEDIA FLEX====== */
 /* @==                @== */
-    /* ==#==EXTRA LARGE SCREEN==== */
+    /* ==#==EXTRA LARGE SCREEN  1200px+ ==== */
         @media (max-width: 87.5em) {
             .current-item-title {
-                font-size: 3rem;
+                font-size: 2.6rem;
                 text-decoration-thickness: 4px;
                 margin: 0rem;
             }
@@ -229,12 +283,17 @@
                 padding-bottom: .2rem;
                 padding-top: .1rem;
             }
+
+        /* ======*HOVER FILTER====== */
+            .marquee-item-anime b{
+                font-size: .8rem
+            }
         }
 
-    /* ==#==LARGE SCREEN==== */    
+    /* ==#==LARGE SCREEN==== 992px - 1200px*/    
         @media (max-width: 75em) { 
             .current-item-title {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
                 text-decoration-thickness: 3px;
                 margin: 0rem;
             }
@@ -266,7 +325,7 @@
             }
         }
 
-    /* ==#==MEDIUM SCREEN==== */    
+    /* ==#==MEDIUM SCREEN==== 768px - 992px*/    
         @media (max-width: 57.625rem) {
 
     /* ======*MARQUEE FOUNDATION====== */
@@ -283,7 +342,7 @@
 
     /* ======*REVIEW SCALING====== */
             .current-item-title {
-                font-size: 2.25rem;
+                font-size: 2.22rem;
                 text-decoration-thickness: 3px;
                 margin: 0rem;
             }
@@ -315,7 +374,7 @@
             }
         }
 
-    /* ==#==SMALL SCREEN==== */
+    /* ==#==SMALL SCREEN==== 576px - 768px*/
         @media (max-width: 48em) {
 
     /* ======*MARQUEE FOUNDATION====== */
@@ -338,7 +397,7 @@
 
     /* ======*REVIEW SCALING====== */
             .current-item-title {
-                font-size: 2.25rem;
+                font-size: 1.77rem;
                 text-decoration-thickness: 3px;
                 margin: 0rem;
             }
@@ -382,9 +441,9 @@
             }
         }
 
-    /* ==#==EXTRA SMALL SCREEN====*/
+    /* ==#==EXTRA SMALL SCREEN==== 576px - 400px*/
         @media (max-width: 36em) {
-
+    
     /* ======*MARQUEE FOUNDATION====== */
             .marquee-wrapper-outer {
                 padding-top: 2px;
@@ -398,8 +457,15 @@
 
 
     /* ======*REVIEW SCALING====== */
+            .col-4 {
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+
+
+
             .current-item-title {
-                font-size: 1.75rem;
+                font-size: 1.6rem;
                 text-decoration-thickness: 2px;
                 margin: 0rem;
             }
@@ -431,12 +497,12 @@
             }
         }
 
-    /* ==#==SMALLEST SCREEN====*/
+    /* ==#==SMALLEST SCREEN==== 400px- */
         @media (max-width: 25em) {
 
     /* ======*CURRENT ITEM DISPLAY====== */
             .current-item-title {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
                 text-decoration-thickness: 2px;
                 margin: 0rem;
             }

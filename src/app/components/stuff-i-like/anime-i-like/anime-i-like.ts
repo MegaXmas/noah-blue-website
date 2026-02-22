@@ -19,6 +19,18 @@ export class AnimeILike implements OnInit, OnDestroy {
     // ======           ======
             animeArray: FavoriteAnime[] = [
                 {
+                    animeTitle: `Fullmetal Alchemist + Fullmetal Alchemist: Brotherhood`,
+                    animePoster: `https://cdn.myanimelist.net/images/anime/1208/94745.jpg`,
+                    animeLink: `https://myanimelist.net/anime/121/Fullmetal_Alchemist`,
+                    animeReview: ``,
+                },
+                {
+                    animeTitle: `Katanagatari`,
+                    animePoster: `https://cdn.myanimelist.net/images/anime/1112/119225.jpg`,
+                    animeLink: `https://myanimelist.net/anime/6594/Katanagatari`,
+                    animeReview: ``,
+                },                
+                {
                     animeTitle: `One Piece`,
                     animePoster: `https://cdn.myanimelist.net/images/anime/1244/138851.jpg`,
                     animeLink: `https://myanimelist.net/anime/21/One_Piece`,

@@ -1046,7 +1046,7 @@ export class SongsILike implements OnInit, OnDestroy {
             I got too caught up in my own shit
             That's how every outcome's such a comedown`,
                     },
-                { songTitle: `Straightjacket Feeling`,
+                { songTitle: `Straight jacket Feeling`,
                     songArtist: `the all american rejects`, songAlbumTitle: `move along`, songAlbumCover: `https://i.scdn.co/image/ab67616d0000b273aaf8c068ffe217db825a1945`,
                     songLink: `https://open.spotify.com/track/00GIEePaWvA8PYKlvwszIO?si=fdde837abeea467a`,
                     songReview: ``,

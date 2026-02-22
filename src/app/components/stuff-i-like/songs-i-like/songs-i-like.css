@@ -1,83 +1,98 @@
 /* ==#==MARQUEE ALBUM ART====*/
 /* ==#==                 ====*/
-    .marquee-item-song {
-        display: inline-block;
-        aspect-ratio: 1 / 1;
-        border-style: solid;
-        overflow: hidden;
-        
-        
-        width: 12.5rem;
-        border-width: 5px;
-        margin: 3px;
-        padding: 0!important;
-    }
+        .marquee-item-song {
+            display: inline-block;
+            aspect-ratio: 1 / 1;
+            border-style: solid;
+            overflow: hidden;
+            position: relative;
+            
+            
+            width: 12.5rem;
+            border-width: 5px;
+            margin: 3px;
+            padding: 0!important;
+        }
 
 
-    .marquee-item-song img{
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+        .marquee-item-song img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+    /* ======*HOVER FILTER====== */ 
+        .marquee-item-song b {
+            font-size: 1.1rem
+        }
+
+        .marquee-item-song:hover .hover-filter{
+            opacity: .2;
+        }
+
+        .marquee-item-song:hover b{
+            opacity: .9;
+        }
 /* ==#==                ====*/
 
 
 
 /* ==#==REVIEW SECTION====== */
 /* ==#==              ====== */
-    .current-album-cover {
-        display: block;
-        border-color: gold; 
-        border-radius: 2%;
-        border-style: solid;
-        
-        
-        width: 12.75rem;
-        border-width: 5px;
-        margin: 0 auto;
-    }
+        .current-album-cover {
+            display: block;
+            border-color: gold; 
+            border-radius: 2%;
+            border-style: solid;
+            
+            
+            width: 12.75rem;
+            border-width: 5px;
+            margin: 0 auto;
+        }
 
 
-    .spotify-profile img{
-        display: block;
-        border-style: solid;
-        border-color: rgb(93, 147, 228); 
-        border-radius: 15%;
-        aspect-ratio: 1 / 1;
-        
-        
-        width: 9.375rem;
-        border-width: 3px;
-    }
+        .spotify-profile img{
+            display: block;
+            border-style: solid;
+            border-color: rgb(93, 147, 228); 
+            border-radius: 15%;
+            aspect-ratio: 1 / 1;
+            
+            
+            width: 9.375rem;
+            border-width: 3px;
+        }
 /* ==#==                 ====*/
 
 
 
 /* ==#=== SONG LIST STUFF ====== */
 /* ==#==                     ====*/
-    .full-song-list {
-        max-width: fit-content;
-        max-height: 25vh;
-        overflow-y: scroll;
-        border: 5px solid blueviolet !important;
-    }
+        .full-song-list {
+            max-width: fit-content;
+            max-height: 25vh;
+            overflow-y: scroll;
+            border: 5px solid blueviolet !important;
+        }
 
 
-    .full-song-list .list-group-item {
-        border-left: none;
-        border-right: none;
-    }
+        .full-song-list .list-group-item {
+            border-left: none;
+            border-right: none;
+        }
 
 
-    .full-song-list .list-group-item:first-child {
-        border-top: none;
-    }
+        .full-song-list .list-group-item:first-child {
+            border-top: none;
+        }
 
 
-    .full-song-list .list-group-item:last-child {
-        border-bottom: none;
-    }
+        .full-song-list .list-group-item:last-child {
+            border-bottom: none;
+        }
 /* ==#==                     ====*/
 
 
@@ -182,7 +197,7 @@
             }
         }
 
-    /* ==#==EXTRA SMALL SCREEN====*/
+    /* ==#==EXTRA SMALL SCREEN==== 576px - 400px*/
         @media (max-width: 36em) {
             .marquee-item-song {
                 width: 6rem;
@@ -199,7 +214,14 @@
             .spotify-profile img {
                 width: 5rem;
                 border-width: 3px;
-            }    
+            }
+
+
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */
+            [id="Piano Man Abridged-style"] {
+                font-size: 1.28rem!important;
+            }
         }
 
     /* ==#==SMALLEST SCREEN====*/
@@ -208,5 +230,12 @@
                 width: 4.5rem;
                 border-width: 3px;
             }    
+
+
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */
+            [id="Piano Man Abridged-style"] {
+                font-size: 1.23rem!important;
+            }
         }
 /* @==                @== */

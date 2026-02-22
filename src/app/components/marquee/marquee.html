@@ -19,9 +19,14 @@
     
     
                                 @for (stuff of stuffArray(); track getItemTitle(stuff); let i = $index) {
-                                    <div [class]="marqueeArtClass()">
+                                    <div [class]="marqueeArtClass()" class="marquee-item">
                                         <span class="hover-filter"></span>
-                                        <b class="text-center">{{  getItemTitle(stuff) }}</b>
+                                        <b 
+                                            class="text-center" 
+                                            [id]="getItemStyleId(getItemTitle(stuff)) + `-filter-font`"
+                                        >
+                                            {{  getItemTitle(stuff) }}
+                                        </b>
                                         <img
                                             [src]="getItemArt(stuff)"
                                             (mouseover)="setAllCurrentItemData(i); pauseAnimation()"
@@ -33,9 +38,14 @@
                                 }
     
                                 @for (stuff of stuffArray(); track getItemTitle(stuff); let i = $index) {
-                                    <div [class]="marqueeArtClass()">
+                                    <div [class]="marqueeArtClass()"  class="marquee-item" [id]="getItemTitle(stuff) + `-filter-font`">
                                         <span class="hover-filter"></span>
-                                        <b class="text-center">{{  getItemTitle(stuff) }}</b>
+                                        <b 
+                                            class="text-center" 
+                                            [id]="getItemStyleId(getItemTitle(stuff)) + `-filter-font`"
+                                        >
+                                            {{  getItemTitle(stuff) }}
+                                        </b>
                                         <img
                                             [src]="getItemArt(stuff)"
                                             (mouseover)="setAllCurrentItemData(i); pauseAnimation()"
@@ -79,11 +89,14 @@
                             <a class="item-link current-item-title d-block" 
                                 [href]="currentItemLink()" 
                                 target="_blank" 
-                                rel="noopener noreferrer"> 
+                                rel="noopener noreferrer"
+                                [id]="itemStyleId()"> 
+
                                 {{ currentItemTitle() }} 
                                 @if (kindOfItem() === 'song') {
                                     - {{ currentSongArtist() }}
                                 }
+
                             </a>
                         </div>
     

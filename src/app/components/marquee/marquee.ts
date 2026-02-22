@@ -1,4 +1,4 @@
-import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input, effect, untracked} from '@angular/core';
+import { Component, inject, signal, WritableSignal, OnInit, PLATFORM_ID, OnDestroy, input, effect, untracked, computed} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { FavoriteStuff } from '../../models/favorite-stuff';
@@ -119,6 +119,10 @@ export class Marquee implements OnInit, OnDestroy {
     
             relevantImgClass = input<string>();
             marqueeArtClass: WritableSignal<string> = signal("");
+
+            itemStyleId = computed(() => {
+                const currentItemNoSpaces = this.currentItemTitle().replaceAll(' ', '-')
+                return currentItemNoSpaces.toLowerCase() + `style`});
     // ======                          ======
 
 
@@ -311,6 +315,12 @@ export class Marquee implements OnInit, OnDestroy {
                     case 'anime':
                         return item!.animeTitle;
                 }
+            }
+    
+    
+            getItemStyleId(item: string): string {
+                const itemNoSpace= item.replaceAll(' ', '-')
+                return itemNoSpace.toLowerCase()
             }
     
     

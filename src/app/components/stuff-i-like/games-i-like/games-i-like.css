@@ -7,6 +7,7 @@
         border-color: green;
         border-style: solid;
         overflow: hidden;
+        position: relative;
         
         width: 12.5rem;
         border-width: 5px;
@@ -18,7 +19,20 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }    
+    }
+
+
+    .marquee-item-game b {
+        font-size: 1.38rem!important
+    }
+
+    .marquee-item-game:hover .hover-filter{
+        opacity: .2;
+    }
+
+    .marquee-item-game:hover b{
+        opacity: .9;
+    }
 /* ==#==                      ====*/
 
 

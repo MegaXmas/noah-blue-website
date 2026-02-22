@@ -1,58 +1,73 @@
 /* ==#==MARQUEE SHOW POSTER====*/
 /* ==#==                   ====*/
-    .marquee-item-show {
-        display: inline-block;
-        aspect-ratio: 2 / 3; 
-        border-color: green;
-        border-style: solid;
-        overflow: hidden;
-        
-        
-        width: 12.5rem;
-        border-width: 5px;
-        margin: 5px;
-    }
+        .marquee-item-show {
+            display: inline-block;
+            aspect-ratio: 2 / 3; 
+            border-color: green;
+            border-style: solid;
+            overflow: hidden;
+            position: relative;
+            
+            
+            width: 12.5rem;
+            border-width: 5px;
+            margin: 5px;
+        }
 
 
-    .marquee-item-show img{
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+        .marquee-item-show img{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+    /* ======*HOVER FILTER====== */
+        .marquee-item-show b {
+            font-size: 1.04rem!important
+        }
+
+        .marquee-item-show:hover .hover-filter{
+            opacity: .2;
+        }
+
+        .marquee-item-show:hover b{
+            opacity: .9;
+        }
 /* ==#==                   ====*/
 
 
 
 /* ==#==REVIEW SECTION====*/
 /* ==#==              ====*/
-    .current-show-poster {
-        display: block;
-        border-style: solid;
-        border-color: gold; 
-        border-radius: 2%;
-        aspect-ratio: 2 / 3;
-        
-        
-        width: 12.75rem;
-        border-width: 7px;
-        margin: 0 auto;
-    }
+        .current-show-poster {
+            display: block;
+            border-style: solid;
+            border-color: gold; 
+            border-radius: 2%;
+            aspect-ratio: 2 / 3;
+            
+            
+            width: 12.75rem;
+            border-width: 7px;
+            margin: 0 auto;
+        }
 
 
-    .serializd-profile img{
-        display: block;
-        border-style: solid;
-        border-color: rgb(93, 147, 228); 
-        overflow: hidden;
-        border-radius: 15%;
-        aspect-ratio: 1 / 1;
-        
+        .serializd-profile img{
+            display: block;
+            border-style: solid;
+            border-color: rgb(93, 147, 228); 
+            overflow: hidden;
+            border-radius: 15%;
+            aspect-ratio: 1 / 1;
+            
 
-        width: 9.375rem;
-        border-width: 4px;
-        margin: 0 auto;
-    }
+            width: 9.375rem;
+            border-width: 4px;
+            margin: 0 auto;
+        }
 /* ==#==             ====*/
 
 
