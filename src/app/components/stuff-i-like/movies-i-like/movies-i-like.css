@@ -1,6 +1,6 @@
 
 /* ==#==MARQUEE MOVIE POSTER====*/
-    /* ==#==                    ====*/
+/* ==#==                    ====*/
         .marquee-item-movie {
             display: inline-block;
             aspect-ratio: 2 / 3; 
@@ -81,7 +81,7 @@
 
 /* @=====MEDIA FLEX====== */
 /* @==                @== */
-    /* ==#==EXTRA LARGE SCREEN==== */
+    /* ==#==EXTRA LARGE SCREEN  1200px+ ==== */
         @media (max-width: 87.5em) {
             .marquee-item-movie {
                 width: 10rem;
@@ -104,7 +104,7 @@
             }
         }
 
-    /* ==#==LARGE SCREEN==== */    
+    /* ==#==LARGE SCREEN==== 992px - 1200px*/    
         @media (max-width: 75em) { 
             .marquee-item-movie {
                 width: 9rem;
@@ -127,7 +127,7 @@
             }
         }
 
-    /* ==#==MEDIUM SCREEN==== */    
+    /* ==#==MEDIUM SCREEN==== 768px - 992px*/    
         @media (max-width: 57.625em) {
             .marquee-item-movie {
                 width: 8rem;
@@ -150,7 +150,7 @@
             }
         }
 
-    /* ==#==SMALL SCREEN==== */
+    /* ==#==SMALL SCREEN==== 576px - 768px*/
         @media (max-width: 48em) {
             .marquee-item-movie {
                 width: 7rem;
@@ -173,7 +173,7 @@
             }
         }
 
-    /* ==#==EXTRA SMALL SCREEN====*/
+    /* ==#==EXTRA SMALL SCREEN==== 576px - 400px*/
         @media (max-width: 36em) {
             .marquee-item-movie {
                 width: 6rem;
@@ -193,7 +193,7 @@
             }    
         }
 
-    /* ==#==SMALLEST SCREEN====*/
+    /* ==#==SMALLEST SCREEN==== 400px- */
         @media (max-width: 25em) {
             .letterboxd-profile img {
                 width: 4.5rem;

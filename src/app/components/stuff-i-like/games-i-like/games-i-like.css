@@ -1,93 +1,80 @@
 
 /* ==#==MARQUEE GAME COVER ART====*/
 /* ==#==                      ====*/
-    .marquee-item-game {
-        display: inline-block;
-        aspect-ratio: 2 / 3; 
-        border-color: green;
-        border-style: solid;
-        overflow: hidden;
-        position: relative;
-        
-        width: 12.5rem;
-        border-width: 5px;
-        margin: 5px;
-    }
+        .marquee-item-game {
+            display: inline-block;
+            aspect-ratio: 2 / 3; 
+            border-color: green;
+            border-style: solid;
+            overflow: hidden;
+            position: relative;
+            
+            width: 12.5rem;
+            border-width: 5px;
+            margin: 5px;
+        }
 
-    .marquee-item-game img{
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-
-    .marquee-item-game b {
-        font-size: 1.38rem!important
-    }
-
-    .marquee-item-game:hover .hover-filter{
-        opacity: .2;
-    }
-
-    .marquee-item-game:hover b{
-        opacity: .9;
-    }
+        .marquee-item-game img{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 /* ==#==                      ====*/
 
 
 
 /* ==#==GAME LIST====*/
 /* ==#==         ====*/
-    .full-game-list {
-        max-width: fit-content;
-        max-height: 25vh;
-        overflow-y: scroll;
-        border: 5px solid blueviolet !important;
-    }
+        .full-game-list {
+            max-width: fit-content;
+            max-height: 25vh;
+            overflow-y: scroll;
+            border: 5px solid blueviolet !important;
+        }
 
-    .full-game-list .list-group-item {
-        border-left: none;
-        border-right: none;
-    }
+        .full-game-list .list-group-item {
+            border-left: none;
+            border-right: none;
+        }
 
-    .full-game-list .list-group-item:first-child {
-        border-top: none;
-    }
+        .full-game-list .list-group-item:first-child {
+            border-top: none;
+        }
 
-    .full-game-list .list-group-item:last-child {
-        border-bottom: none;
-    }
+        .full-game-list .list-group-item:last-child {
+            border-bottom: none;
+        }
 /* ==#==         ====*/
 
 
 
 /* ==#==REVIEW SECTION====== */
 /* ==#==              ====== */
-    .current-game-art {
-        display: block;
-        border-color: gold; 
-        border-radius: 2%;
-        border-style: solid;
-        aspect-ratio: 2 / 3;
-        
-        width: 12.75rem;
-        border-width: 7px;
-        margin: 0 auto;
-    }
+        .current-game-art {
+            display: block;
+            border-color: gold; 
+            border-radius: 2%;
+            border-style: solid;
+            aspect-ratio: 2 / 3;
+            
+            width: 12.75rem;
+            border-width: 7px;
+            margin: 0 auto;
+        }
 
 
-    .discord-profile img{
-        display: block;
-        border-style: solid;
-        border-color: rgb(93, 147, 228); 
-        border-radius: 15%;
-        aspect-ratio: 1 / 1;
-        
-        
-        width: 9.375rem;
-        border-width: 4px;
-    }
+        .discord-profile img{
+            display: block;
+            border-style: solid;
+            border-color: rgb(93, 147, 228); 
+            border-radius: 15%;
+            aspect-ratio: 1 / 1;
+            
+            
+            width: 9.375rem;
+            border-width: 4px;
+        }
 /* ==#==              ====== */
 
 
@@ -100,7 +87,7 @@
 
 /* @=====MEDIA FLEX====== */
 /* @==                @== */
-    /* ==#==EXTRA LARGE SCREEN==== */
+    /* ==#==EXTRA LARGE SCREEN  1200px+ ==== */
         @media (max-width: 87.5em) {
             .marquee-item-game {
                 width: 10rem;
@@ -123,7 +110,7 @@
             }
         }
 
-    /* ==#==LARGE SCREEN==== */    
+    /* ==#==LARGE SCREEN==== 992px - 1200px*/    
         @media (max-width: 75em) { 
             .marquee-item-game {
                 width: 9rem;
@@ -146,7 +133,7 @@
             }
         }
 
-    /* ==#==MEDIUM SCREEN==== */    
+    /* ==#==MEDIUM SCREEN==== 768px - 992px*/    
         @media (max-width: 57.625em) {
             .marquee-item-game {
                 width: 8rem;
@@ -169,7 +156,7 @@
             }
         }
 
-    /* ==#==SMALL SCREEN==== */
+    /* ==#==SMALL SCREEN==== 576px - 768px*/
         @media (max-width: 48em) {
             .marquee-item-game {
                 width: 7rem;
@@ -192,7 +179,7 @@
             }
         }
 
-    /* ==#==EXTRA SMALL SCREEN====*/
+    /* ==#==EXTRA SMALL SCREEN==== 576px - 400px*/
         @media (max-width: 36em) {
             .marquee-item-game {
                 width: 6rem;
@@ -212,7 +199,7 @@
             }    
         }
 
-    /* ==#==SMALLEST SCREEN====*/
+    /* ==#==SMALLEST SCREEN==== 400px- */
         @media (max-width: 25em) {
             .discord-profile img {
                 width: 4.5rem;

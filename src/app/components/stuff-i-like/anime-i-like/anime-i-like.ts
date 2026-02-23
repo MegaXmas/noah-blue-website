@@ -17,25 +17,7 @@ export class AnimeILike implements OnInit, OnDestroy {
 
     // ======ANIME ARRAY======
     // ======           ======
-            animeArray: FavoriteAnime[] = [
-    {
-        animeTitle: `Fullmetal Alchemist + Fullmetal Alchemist: Brotherhood`,
-        animePoster: `https://cdn.myanimelist.net/images/anime/1208/94745.jpg`,
-        animeLink: `https://myanimelist.net/anime/121/Fullmetal_Alchemist`,
-        animeReview: ``,
-    },
-    {
-        animeTitle: `Katanagatari`,
-        animePoster: `https://cdn.myanimelist.net/images/anime/1112/119225.jpg`,
-        animeLink: `https://myanimelist.net/anime/6594/Katanagatari`,
-        animeReview: ``,
-    },
-    {
-        animeTitle: `Naruto + Naruto: Shippuuden`,
-        animePoster: `https://cdn.myanimelist.net/images/anime/1141/142503.jpg`,
-        animeLink: `https://myanimelist.net/anime/20/Naruto`,
-        animeReview: ``,
-    },          
+            animeArray: FavoriteAnime[] = [        
                 {
                     animeTitle: `One Piece`,
                     animePoster: `https://cdn.myanimelist.net/images/anime/1244/138851.jpg`,
@@ -51,7 +33,14 @@ Its also just really funny and the action is top tier. No matter how good the wo
                     animeTitle: `Steins;Gate`,
                     animePoster: `https://cdn.myanimelist.net/images/anime/1935/127974.jpg`,
                     animeLink: `https://myanimelist.net/anime/9253/Steins_Gate`,
-                    animeReview: ``,
+                    animeReview: `I think its the best series about time travel ive seen so far. The story is weaved together very well. The mechanics of time travel are explained in a way that makes sense, which enables you to understand the multilayered storyline taking place. Its good and engaging fake science or hard scifi. 
+
+But the real star of steins gate is the character development of the series’s protagonist, Okabe rintaro. Some of the best character development ive seen in a story. Okabe is such an interesting and unique character. The highlights of the show are the interactions between him and Makise Kurisu, the series’s female lead. These two have a very fun relationship to watch unfold and their chemistry is extremely charming. 
+
+The show starts off slow. There is literally like 12 episodes of set up which establishes the plot, setting, characters, and themes of the show before it “starts”. Many people find this to be too much. ^!^[up]PERSONALLY[/up]^/!^ i think its soooo good. i just enjoy the interactions between the characters and the start of the time travel narrative a lot.
+
+If u like scifi and/or you value good character writing highly i think you wont be disappointed here
+`,
                 },
                 {
                     animeTitle: `Anohana: The Flower We Saw That Day`,

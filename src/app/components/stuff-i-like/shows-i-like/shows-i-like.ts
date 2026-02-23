@@ -18,6 +18,12 @@ export class ShowsILike implements OnInit, OnDestroy {
     // ======SHOWS ARRAY======
     // ======           ======
             showArray: FavoriteShow[] = [
+        {
+            showTitle: `SpongeBob SquarePants`,
+            showPoster: `https://serializd-tmdb-images.b-cdn.net/t/p/w500/5h0EU2lqBb03dp5vtRuUHJwqzem.jpg`,
+            showLink: `https://www.serializd.com/show/SpongeBob-SquarePants-387`,
+            showReview: `sponch boy :)`,
+        },
                 {
                     showTitle: `Twin Peaks`,
                     showPoster: `https://serializd-tmdb-images.b-cdn.net/t/p/w500/lA9CNSdo50iQPZ8A2fyVpMvJZAf.jpg`,

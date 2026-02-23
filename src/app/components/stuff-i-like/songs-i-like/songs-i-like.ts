@@ -3455,7 +3455,7 @@ export class SongsILike implements OnInit, OnDestroy {
                     songLyrics: ``,
                     },
                 { songTitle: `Wonder Future`,
-                    songArtist: `asian kung-fu generation`, songAlbumTitle: ``, songAlbumCover: ``,
+                    songArtist: `asian kung-fu generation`, songAlbumTitle: ``, songAlbumCover: `https://upload.wikimedia.org/wikipedia/en/f/f7/AKFG_Wonder_Future_Cover_Art.jpg`,
                     songLink: `https://open.spotify.com/track/33MHzoZQ9fjTSlbgaJBu6D?si=8460499847c747d6`,
                     songReview: ``,
                     songLyrics: ``,

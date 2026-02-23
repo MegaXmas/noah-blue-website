@@ -21,20 +21,6 @@
             height: 100%;
             object-fit: cover;
         }
-
-
-    /* ======*HOVER FILTER====== */ 
-        .marquee-item-song b {
-            font-size: 1.1rem
-        }
-
-        .marquee-item-song:hover .hover-filter{
-            opacity: .2;
-        }
-
-        .marquee-item-song:hover b{
-            opacity: .9;
-        }
 /* ==#==                ====*/
 
 
@@ -98,7 +84,32 @@
 
 
 /* ==#===MISC====== */
-    
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="the-background-filter-font"] {
+                font-size: 1.03rem!important;
+            }
+
+            [id="thingsudo2me-filter-font"] {
+                font-size: .9rem!important;
+            }
+
+            [id="fall-asleep-to-the-thought-of-me-trying-to-fall-asleep-filter-font"] {
+                font-size: 1.1rem!important;
+                line-height: 1.1;
+            }
+
+            [id="rally-the-troops!-poke-holes-in-their-defenses!-line-our-coffers-with-their-coffins!-filter-font"] {
+                font-size: .85rem!important;
+                line-height: 1.5;
+            }
+
+            [id="your-body-is-a-wonderland-filter-font"] {
+                font-size: 1rem!important;
+            }
+
+            [id="waterworks-filter-font"] {
+                font-size: 1rem!important;
+            }
 /* ==#==        ====*/
 
 
@@ -126,6 +137,34 @@
                 border-width: 4px;
                 margin: 0 auto;
             }
+
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="the-background-filter-font"] {
+                font-size: .85rem!important;
+            }
+            
+            [id="thingsudo2me-filter-font"] {
+                font-size: .78rem!important;
+            }
+
+            [id="fall-asleep-to-the-thought-of-me-trying-to-fall-asleep-filter-font"] {
+                font-size: .93rem!important;
+                line-height: 1.2;
+            }
+
+            [id="rally-the-troops!-poke-holes-in-their-defenses!-line-our-coffers-with-their-coffins!-filter-font"] {
+                font-size: .73rem!important;
+                line-height: 1.4;
+            }
+
+            [id="your-body-is-a-wonderland-filter-font"] {
+                font-size: .85rem!important;
+            }
+
+            [id="waterworks-filter-font"] {
+                font-size: .8rem!important;
+            }
         }
 
     /* ==#==LARGE SCREEN==== */    
@@ -148,6 +187,34 @@
                 width: 7rem;
                 border-width: 3px;
                 margin: 0 auto;
+            }
+
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="the-background-filter-font"] {
+                font-size: .7rem!important;
+            }
+            
+            [id="thingsudo2me-filter-font"] {
+                font-size: .69rem!important;
+            }
+
+            [id="fall-asleep-to-the-thought-of-me-trying-to-fall-asleep-filter-font"] {
+                font-size: .75rem!important;
+                line-height: 1.3;
+            }
+
+            [id="rally-the-troops!-poke-holes-in-their-defenses!-line-our-coffers-with-their-coffins!-filter-font"] {
+                font-size: .68rem!important;
+                line-height: 1.3;
+            }
+
+            [id="your-body-is-a-wonderland-filter-font"] {
+                font-size: .75rem!important;
+            }
+
+            [id="waterworks-filter-font"] {
+                font-size: .72rem!important;
             }
         }
 
@@ -172,6 +239,34 @@
                 border-width: 3px;
                 margin: 0 auto;
             }
+
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="the-background-filter-font"] {
+                font-size: .7rem!important;
+            }
+            
+            [id="thingsudo2me-filter-font"] {
+                font-size: .62rem!important;
+            }
+
+            [id="fall-asleep-to-the-thought-of-me-trying-to-fall-asleep-filter-font"] {
+                font-size: .7rem!important;
+                line-height: 1.2;
+            }
+
+            [id="rally-the-troops!-poke-holes-in-their-defenses!-line-our-coffers-with-their-coffins!-filter-font"] {
+                font-size: .56rem!important;
+                line-height: 1.35;
+            }
+
+            [id="your-body-is-a-wonderland-filter-font"] {
+                font-size: .68rem!important;
+            }
+
+            [id="waterworks-filter-font"] {
+                font-size: .65rem!important;
+            }
         }
 
     /* ==#==SMALL SCREEN==== */
@@ -194,6 +289,34 @@
                 width: 6rem;
                 border-width: 3px;
                 margin: 0 auto;
+            }
+
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="the-background-filter-font"] {
+                font-size: .6rem!important;
+            }
+            
+            [id="thingsudo2me-filter-font"] {
+                font-size: .5rem!important;
+            }
+
+            [id="fall-asleep-to-the-thought-of-me-trying-to-fall-asleep-filter-font"] {
+                font-size: .58rem!important;
+                line-height: 1.38;
+            }
+
+            [id="rally-the-troops!-poke-holes-in-their-defenses!-line-our-coffers-with-their-coffins!-filter-font"] {
+                font-size: .48rem!important;
+                line-height: 1.48;
+            }
+
+            [id="your-body-is-a-wonderland-filter-font"] {
+                font-size: .55rem!important;
+            }
+
+            [id="waterworks-filter-font"] {
+                font-size: .55rem!important;
             }
         }
 
@@ -219,8 +342,36 @@
 
 
     /* ======*SPECIFIC CHANGES PER ITEM====== */
-            [id="Piano Man Abridged-style"] {
+            [id="piano-man-abridged-style"] {
                 font-size: 1.28rem!important;
+            }
+
+
+
+            [id="the-background-filter-font"] {
+                font-size: .5rem!important;
+            }
+            
+            [id="thingsudo2me-filter-font"] {
+                font-size: .468rem!important;
+            }
+
+            [id="fall-asleep-to-the-thought-of-me-trying-to-fall-asleep-filter-font"] {
+                font-size: .48rem!important;
+                line-height: 1.4;
+            }
+
+            [id="rally-the-troops!-poke-holes-in-their-defenses!-line-our-coffers-with-their-coffins!-filter-font"] {
+                font-size: .45rem!important;
+                line-height: 1.4;
+            }
+
+            [id="your-body-is-a-wonderland-filter-font"] {
+                font-size: .48rem!important;
+            }
+
+            [id="waterworks-filter-font"] {
+                font-size: .48rem!important;
             }
         }
 
@@ -234,7 +385,7 @@
 
 
     /* ======*SPECIFIC CHANGES PER ITEM====== */
-            [id="Piano Man Abridged-style"] {
+            [id="piano-man-abridged-style"] {
                 font-size: 1.23rem!important;
             }
         }

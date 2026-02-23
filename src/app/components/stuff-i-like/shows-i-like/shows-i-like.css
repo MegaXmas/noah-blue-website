@@ -21,20 +21,6 @@
             height: 100%;
             object-fit: cover;
         }
-
-
-    /* ======*HOVER FILTER====== */
-        .marquee-item-show b {
-            font-size: 1.04rem!important
-        }
-
-        .marquee-item-show:hover .hover-filter{
-            opacity: .2;
-        }
-
-        .marquee-item-show:hover b{
-            opacity: .9;
-        }
 /* ==#==                   ====*/
 
 
@@ -74,7 +60,10 @@
 
 /* ==#===MISC====== */
 /* ==#==        ====*/
-
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="spongebob-squarepants-filter-font"] {
+                font-size: 1rem!important;
+            }
 /* ==#==        ====*/
 
 
@@ -82,7 +71,7 @@
 
 /* @=====MEDIA FLEX====== */
 /* @==                @== */
-    /* ==#==EXTRA LARGE SCREEN==== */
+    /* ==#==EXTRA LARGE SCREEN  1200px+ ==== */
         @media (max-width: 87.5em) {
             .marquee-item-show {
                 width: 10rem;
@@ -103,9 +92,16 @@
                 border-width: 4px;
                 margin: 0 auto;
             }
+
+
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="spongebob-squarepants-filter-font"] {
+                font-size: .8rem!important;
+            }
         }
 
-    /* ==#==LARGE SCREEN==== */    
+    /* ==#==LARGE SCREEN==== 992px - 1200px*/    
         @media (max-width: 75em) { 
             .marquee-item-show {
                 width: 9rem;
@@ -126,9 +122,16 @@
                 border-width: 3px;
                 margin: 0 auto;
             }
+
+
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="spongebob-squarepants-filter-font"] {
+                font-size: .7rem!important;
+            }           
         }
 
-    /* ==#==MEDIUM SCREEN==== */    
+    /* ==#==MEDIUM SCREEN==== 768px - 992px*/    
         @media (max-width: 57.625em) {
             .marquee-item-show {
                 width: 8rem;
@@ -149,9 +152,16 @@
                 border-width: 3px;
                 margin: 0 auto;
             }
+
+
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="spongebob-squarepants-filter-font"] {
+                font-size: .65rem!important;
+            }
         }
 
-    /* ==#==SMALL SCREEN==== */
+    /* ==#==SMALL SCREEN==== 576px - 768px*/
         @media (max-width: 48em) {
             .marquee-item-show {
                 width: 7rem;
@@ -172,9 +182,16 @@
                 border-width: 3px;
                 margin: 0 auto;
             }
+
+
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="spongebob-squarepants-filter-font"] {
+                font-size: .54rem!important;
+            }
         }
 
-    /* ==#==EXTRA SMALL SCREEN====*/
+    /* ==#==EXTRA SMALL SCREEN==== 576px - 400px*/
         @media (max-width: 36em) {
             .marquee-item-show {
                 width: 6rem;
@@ -191,10 +208,17 @@
             .serializd-profile img {
                 width: 5rem;
                 border-width: 2px;
-            }    
+            }
+
+
+
+    /* ======*SPECIFIC CHANGES PER ITEM====== */ 
+            [id="spongebob-squarepants-filter-font"] {
+                font-size: .48rem!important;
+            }
         }
 
-    /* ==#==SMALLEST SCREEN====*/
+    /* ==#==SMALLEST SCREEN==== 400px- */
         @media (max-width: 25em) {
             .serializd-profile img {
                 width: 4.5rem;

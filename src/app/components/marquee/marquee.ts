@@ -122,7 +122,7 @@ export class Marquee implements OnInit, OnDestroy {
 
             itemStyleId = computed(() => {
                 const currentItemNoSpaces = this.currentItemTitle().replaceAll(' ', '-')
-                return currentItemNoSpaces.toLowerCase() + `style`});
+                return currentItemNoSpaces.toLowerCase() + `-style`});
     // ======                          ======
 
 
