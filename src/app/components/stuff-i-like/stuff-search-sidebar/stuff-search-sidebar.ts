@@ -304,7 +304,7 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
                             if (imageUrl && !this.gradientCache.has(imageUrl)) {
                                 const gradient = await this.extractColorsFromImage(imageUrl);
                                 this.gradientCache.set(imageUrl, gradient);
-                                console.log('Gradient created:', gradient);
+                                // console.log('Gradient created:', gradient);
                             }
                         }
                         

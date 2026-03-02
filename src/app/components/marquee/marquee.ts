@@ -58,31 +58,31 @@ export class Marquee implements OnInit, OnDestroy {
                         
                         const displayIndex = stuff.indexOf(currentItem);
                         
-                        console.log(`MARQUEE COMPONENT: item with index ${newServiceIndex} selected.`);
-                        console.log(`MARQUEE COMPONENT: currentItemTitle: ${currentItemTitle}
+                        console.log(`MARQUEE DATA SERVICE LISTENER: item with index ${newServiceIndex} selected.`);
+                        console.log(`MARQUEE DATA SERVICE LISTENER: currentItemTitle: ${currentItemTitle}
                                     current displayed index: ${displayIndex}`
                         );
                         
-                        console.log(`MARQUEE COMPONENT: setting indexFromService to: ${newServiceIndex}`);
+                        console.log(`MARQUEE DATA SERVICE LISTENER: setting indexFromService to: ${newServiceIndex}`);
                         this.indexFromService.set(newServiceIndex);
                         let currentServiceIndex = this.indexFromService();
                         if (newServiceIndex === currentServiceIndex) {
-                            console.log(`MARQUEE COMPONENT: index ${currentServiceIndex} properly updated`)
+                            console.log(`MARQUEE DATA SERVICE LISTENER: index ${currentServiceIndex} properly updated`)
                         } else {
-                            console.log(`MARQUEE COMPONENT: index failed to be sent by array-data-service. 
+                            console.log(`MARQUEE DATA SERVICE LISTENER: index failed to be sent by array-data-service. 
                                     selected index: ${newServiceIndex}
                                     service index currently stored in marquee component: ${currentServiceIndex}`)
                             };
                             
-                        console.log(`MARQUEE COMPONENT: attempting to set currentFavoriteItem to stuffArray[] index: ${newServiceIndex}`);
+                        console.log(`MARQUEE DATA SERVICE LISTENER: attempting to set currentFavoriteItem to stuffArray[] index: ${newServiceIndex}`);
                         this.setAllCurrentItemData(currentServiceIndex);
                         currentItem = untracked(() => this.currentFavoriteItem());
                         currentItemTitle = untracked(() => this.currentItemTitle());
                         if (currentItem === stuff.at(newServiceIndex) || currentServiceIndex) {
-                            console.log(`MARQUEE COMPONENT: currentFavoriteItem updated successfully with index ${currentServiceIndex}.
+                            console.log(`MARQUEE DATA SERVICE LISTENER: currentFavoriteItem updated successfully with index ${currentServiceIndex}.
                                 currentItemTitle: ${currentItemTitle}`)
                             } else {
-                                console.log(`MARQUEE COMPONENT: currentFavoriteItem failed to update successfully.
+                                console.log(`MARQUEE DATA SERVICE LISTENER: currentFavoriteItem failed to update successfully.
                                 currentItemTitle: ${currentItemTitle}
                                 index of currentFavoriteItem: ${stuff.indexOf(currentItem)}.
                                 index recieved from service: ${currentServiceIndex}.
@@ -130,17 +130,19 @@ export class Marquee implements OnInit, OnDestroy {
     // ======ON INIT/DESTROY======
     // ======               ======
             ngOnInit(): void {
-                console.log("MARQUEE COMPONENT: initializing component")
+                console.log("MARQUEE COMPONENT: initializing component");
                 
-                this.marqueeArtClass.set(`marquee-item-` + this.kindOfItem())
+                this.marqueeArtClass.set(`marquee-item-` + this.kindOfItem());
                 
-                console.log("MARQUEE COMPONENT: " + this.stuffArray().length + " items displayed")
-                this.currentItemTitle.set("Hover over a " + this.kindOfItem() + " for my thoughts!")
-                this.currentItemReview.set("*yapping*")
-                
+                console.log("MARQUEE COMPONENT: " + this.stuffArray().length + " items displayed");
+                this.currentItemTitle.set("Hover over a " + this.kindOfItem() + " for my thoughts!");
+                this.currentItemReview.set("*yapping*");
                 
                 
                 if (isPlatformBrowser(this.platformId)) {
+                    this.waitForItems(this.stuffArray().length)
+                    
+                    this.calculateMarqueeAnimation();
                     
                     this.resizeListener = () => {
                         this.calculateMarqueeAnimation();
@@ -150,7 +152,6 @@ export class Marquee implements OnInit, OnDestroy {
                         this.calculateMarqueeAnimation();
                     }, 100);
                     
-                    
                     window.addEventListener('resize', this.resizeListener);
                     
                     this.resumeAnimation();
@@ -158,7 +159,6 @@ export class Marquee implements OnInit, OnDestroy {
                 
                 console.log("MARQUEE COMPONENT:sending stuffArray data to array-data-service")
                 this.sendArrayData();
-                
                 
                 // console.log("MARQUEE COMPONENT: " + JSON.stringify(this.stuffArray()));
             }
@@ -191,7 +191,6 @@ export class Marquee implements OnInit, OnDestroy {
                     
                     const trackWidth = track.scrollWidth;
                     console.log("MARQUEE COMPONENT: track width is " + trackWidth + " px")
-                    
                     
                     const scrollDistance = trackWidth / 2;
                     console.log("MARQUEE COMPONENT: scroll distance is " + scrollDistance + " px")
@@ -280,6 +279,27 @@ export class Marquee implements OnInit, OnDestroy {
 
     // ======ARRAY DATA METHODS======
     // ======                  ======
+            waitForItems(expectedItems: number, attempts = 0): void {
+                const renderedItems = document.getElementsByClassName('marquee-item').length / 2;
+                
+                if (renderedItems !== expectedItems) {
+                    console.log(`MARQUEE ARRAY LISTENER: waiting for rendered items to = ${expectedItems}.
+                    current rendered items = ${renderedItems}`)
+                        
+                    if (attempts > 20) {
+                        console.log(`MARQUEE ARRAY LISTENER: gave up waiting`)
+                        return;
+                    }
+                    
+                    setTimeout(() => this.waitForItems(expectedItems, attempts + 1), 100)
+                    console.log(`MARQUEE ARRAY LISTENER: current rendered items = ${renderedItems}`)
+                    return
+                }
+                console.log(`MARQUEE ARRAY LISTENER: current rendered items = ${renderedItems}`)
+                console.log(`MARQUEE ARRAY LISTENER: items ready`);
+            }
+    
+    
             sendArrayData(): void {
                 this.arrayDataService.setArrayData(this.stuffArray());
                 this.arrayDataService.itemType.set(this.kindOfItem());
@@ -367,5 +387,4 @@ export class Marquee implements OnInit, OnDestroy {
             }
     
     // ======                  ======
-
 }
