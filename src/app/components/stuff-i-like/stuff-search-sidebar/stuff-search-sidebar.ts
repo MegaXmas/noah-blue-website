@@ -23,8 +23,8 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
     // ======IMPORTANT MISC PROPERTIES======
     // ======                         ======
             private readonly arrayDataService = inject(ArrayDataService);
-
-            gradientCache = new Map<string, string>();
+    
+            imgCache = new Map<string, number>();
     // ======                         ======
 
 
@@ -94,7 +94,7 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
                             this.stuffArray.set(dataFromService);
                             console.log(`SIDEBAR SEARCH COMPONENT: received ${dataFromService.length} items`);
                             
-                            this.loadAllGradients();
+                            this.loadAllImgs();
                         }
                         
                         if (this.stuffArray().length === 0 ) {
@@ -223,92 +223,18 @@ export class StuffSearchSidebar implements OnDestroy, OnInit {
                     }
     
     
-                    getColorAt(ctx: CanvasRenderingContext2D, x: number, y: number): string {
-                        const pixel = ctx.getImageData(x, y, 1, 1).data;
-                        return `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`
-                    }
-    
-    
-                    getBackgroundGradient(item: FavoriteStuff): string {
-                        const imageUrl = this.getItemImageUrl(item);
+                    async loadAllImgs() {
+                        console.log('Starting to load imgs...');
                         
-                        return this.gradientCache.get(imageUrl)
-                        || 'linerar-gradient(to right, #ccc, #eee)';
-                    }
-    
-    
-                    extractColorsFromImage(imageUrl: string): Promise<string> {
-                        return new Promise((resolve) => {
-                            const img = new Image();
-                            img.crossOrigin = 'Anonymous';
-                            
-                            img.onload = () => {
-                                const canvas = document.createElement('canvas');
-                                const ctx = canvas.getContext('2d')!;
-                                
-                                canvas.width = img.width;
-                                canvas.height = img.height;
-                                
-                                ctx.drawImage(img, 0, 0)
-                                
-                                const colors = [
-                                    this.getColorAt(ctx, img.width * 0.25, img.height / 2),
-                                    this.getColorAt(ctx, img.width * 0.5, img.height / 2),
-                                    this.getColorAt(ctx, img.width * 0.75, img.height / 2) 
-                                ]
-                                
-                                resolve(`linear-gradient(to right, ${colors.join(', ')})`)
-                            };
-                            
-                            img.onerror = () => {
-                                console.warn('Failed to load image:', imageUrl);
-                                resolve('linear-gradient(to right, #ccc, #eee)');
-                            };
-                            
-                            img.src = imageUrl;
-                        })
-                    }
-
-
-                    // extractColorsFromLoadedImage(img: HTMLImageElement): string {
-                    //     const canvas = document.createElement('canvas');
-                    //     const ctx = canvas.getContext('2d')!;
-                        
-                    //     canvas.width = img.width;
-                    //     canvas.height = img.height;
-                        
-                    //     try {
-                    //         ctx.drawImage(img, 0, 0);
-                            
-                    //         const colors = [
-                    //             this.getColorAt(ctx, img.width * 0.25, img.height / 2),
-                    //             this.getColorAt(ctx, img.width * 0.5, img.height / 2),
-                    //             this.getColorAt(ctx, img.width * 0.75, img.height / 2)
-                    //         ];
-                            
-                    //         return `linear-gradient(to right, ${colors.join(', ')})`;
-                            
-                    //     } catch (error) {
-                    //         console.warn('CORS error with existing image:', error);
-                    //         return 'linear-gradient(to right, #ccc, #eee)';
-                    //     }
-                    // }
-    
-    
-                    async loadAllGradients() {
-                        console.log('Starting to load gradients...');
-
                         for (const item of this.filteredItems()) {
                             const imageUrl = this.getItemImageUrl(item);
                             
-                            if (imageUrl && !this.gradientCache.has(imageUrl)) {
-                                const gradient = await this.extractColorsFromImage(imageUrl);
-                                this.gradientCache.set(imageUrl, gradient);
-                                // console.log('Gradient created:', gradient);
+                            if (imageUrl && !this.imgCache.has(imageUrl)) {
+                                this.imgCache.set(imageUrl, this.imgCache.size);
                             }
                         }
                         
-                        console.log('Cache after loading:', this.gradientCache);
+                        console.log('Cache after loading:', this.imgCache);
                     }
     // ======                      ======
 }
